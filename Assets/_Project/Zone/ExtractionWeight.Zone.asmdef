@@ -2,7 +2,11 @@
   "name": "ExtractionWeight.Zone",
   "rootNamespace": "ExtractionWeight.Zone",
   "references": [
-    "ExtractionWeight.Core"
+    "ExtractionWeight.Core",
+    "ExtractionWeight.Weight",
+    "ExtractionWeight.Loot",
+    "Unity.Addressables",
+    "Unity.ResourceManager"
   ],
   "includePlatforms": [],
   "excludePlatforms": [],

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Zones
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: Zones
+  m_GUID: 6c8365fc4f27c2d4e8e7f9cce4d8a53d
+  m_SerializeEntries:
+  - m_GUID: 6e09551260c0215499ebc809e44dee42
+    m_Address: Zones/Drydock
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ZoneScene
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 7920b8a7d83ffef4396c7c9aeab6e0fe, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: d0274c84bc6c8d047a940f8c575fb886, type: 2}
+    - {fileID: 11400000, guid: 3f68dda72ab11dc489224c553bfc19ff, type: 2}

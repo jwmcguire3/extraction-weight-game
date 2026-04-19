@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: ExtractionWeight.Loot::ExtractionWeight.Loot.LootDefinition
   _itemId: relic-medium-painting
   _displayName: Medium Painting
-  _icon: {fileID: 0}
+  _icon: {fileID: 21300000, guid: ddff262bd574654479baf387979ad51e, type: 3}
   _category: 1
   _baseCost:
     Noise: 0.12

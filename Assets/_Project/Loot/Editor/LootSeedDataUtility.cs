@@ -148,13 +148,31 @@ namespace ExtractionWeight.Loot.Editor
             if (importer is not null)
             {
                 importer.textureType = TextureImporterType.Sprite;
+                importer.spriteImportMode = SpriteImportMode.Single;
                 importer.alphaIsTransparency = true;
                 importer.spritePixelsPerUnit = 64f;
                 importer.mipmapEnabled = false;
                 importer.SaveAndReimport();
             }
 
-            return AssetDatabase.LoadAssetAtPath<Sprite>(assetPath)!;
+            AssetDatabase.ImportAsset(assetPath, ImportAssetOptions.ForceSynchronousImport | ImportAssetOptions.ForceUpdate);
+
+            var directSprite = AssetDatabase.LoadAssetAtPath<Sprite>(assetPath);
+            if (directSprite is not null)
+            {
+                return directSprite;
+            }
+
+            var subAssets = AssetDatabase.LoadAllAssetRepresentationsAtPath(assetPath);
+            for (var i = 0; i < subAssets.Length; i++)
+            {
+                if (subAssets[i] is Sprite sprite)
+                {
+                    return sprite;
+                }
+            }
+
+            throw new FileNotFoundException($"Sprite import failed for icon asset '{assetPath}'.", assetPath);
         }
 
         private static void EnsureFolder(string path)

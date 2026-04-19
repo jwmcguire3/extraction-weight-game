@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b8f5cd2be85cb04fb77e45ab61a2405, type: 3}
+  m_Name: DrydockZoneDefinition
+  m_EditorClassIdentifier: ExtractionWeight.Zone::ExtractionWeight.Zone.ZoneDefinition
+  <ZoneId>k__BackingField: drydock
+  <DisplayName>k__BackingField: Drydock
+  <SceneAddressableKey>k__BackingField: Zones/Drydock
+  <DefaultAxisWeights>k__BackingField:
+    _noise: 0.3
+    _silhouette: 0.2
+    _handling: 0.15
+    _mobility: 0.35
+  <TideDurationSeconds>k__BackingField: 600
+  <ExtractionPoints>k__BackingField:
+  - <PointId>k__BackingField: A
+    <ExtractionType>k__BackingField: 2
+    <Position>k__BackingField: {x: -95, y: 1.5, z: -95}
+    <TideCloseTime>k__BackingField: 150
+    <ItemSizeFilter>k__BackingField: 0
+    <HoldDurationSeconds>k__BackingField: 0
+  - <PointId>k__BackingField: B
+    <ExtractionType>k__BackingField: 0
+    <Position>k__BackingField: {x: 95, y: 1.5, z: -95}
+    <TideCloseTime>k__BackingField: 360
+    <ItemSizeFilter>k__BackingField: 0
+    <HoldDurationSeconds>k__BackingField: 90
+  - <PointId>k__BackingField: C
+    <ExtractionType>k__BackingField: 1
+    <Position>k__BackingField: {x: -95, y: 1.5, z: 95}
+    <TideCloseTime>k__BackingField: 300
+    <ItemSizeFilter>k__BackingField: 1
+    <HoldDurationSeconds>k__BackingField: 30
+  - <PointId>k__BackingField: D
+    <ExtractionType>k__BackingField: 0
+    <Position>k__BackingField: {x: 95, y: 1.5, z: 95}
+    <TideCloseTime>k__BackingField: 480
+    <ItemSizeFilter>k__BackingField: 2
+    <HoldDurationSeconds>k__BackingField: 90
+  <LootSpawnRegions>k__BackingField:
+  - <Center>k__BackingField: {x: -72, y: 0, z: -48}
+    <Radius>k__BackingField: 18
+    <AllowedCategories>k__BackingField: 0000000004000000
+    <MinSpawnCount>k__BackingField: 1
+    <MaxSpawnCount>k__BackingField: 3
+    <RegionTier>k__BackingField: 0
+  - <Center>k__BackingField: {x: 70, y: 0, z: -42}
+    <Radius>k__BackingField: 16
+    <AllowedCategories>k__BackingField: 0000000003000000
+    <MinSpawnCount>k__BackingField: 1
+    <MaxSpawnCount>k__BackingField: 3
+    <RegionTier>k__BackingField: 0.1
+  - <Center>k__BackingField: {x: -24, y: 0, z: -6}
+    <Radius>k__BackingField: 14
+    <AllowedCategories>k__BackingField: 0000000001000000
+    <MinSpawnCount>k__BackingField: 2
+    <MaxSpawnCount>k__BackingField: 4
+    <RegionTier>k__BackingField: 0.45
+  - <Center>k__BackingField: {x: 28, y: 0, z: 12}
+    <Radius>k__BackingField: 15
+    <AllowedCategories>k__BackingField: 0100000004000000
+    <MinSpawnCount>k__BackingField: 2
+    <MaxSpawnCount>k__BackingField: 4
+    <RegionTier>k__BackingField: 0.55
+  - <Center>k__BackingField: {x: -10, y: 0, z: 62}
+    <Radius>k__BackingField: 12
+    <AllowedCategories>k__BackingField: 0100000002000000
+    <MinSpawnCount>k__BackingField: 2
+    <MaxSpawnCount>k__BackingField: 5
+    <RegionTier>k__BackingField: 0.85
+  - <Center>k__BackingField: {x: 52, y: 0, z: 58}
+    <Radius>k__BackingField: 11
+    <AllowedCategories>k__BackingField: 050000000200000001000000
+    <MinSpawnCount>k__BackingField: 1
+    <MaxSpawnCount>k__BackingField: 3
+    <RegionTier>k__BackingField: 1
+  <PatrolRoutes>k__BackingField:
+  - <RouteId>k__BackingField: perimeter-west
+    <Waypoints>k__BackingField: []
+  - <RouteId>k__BackingField: perimeter-east
+    <Waypoints>k__BackingField: []
+  <EditorScenePath>k__BackingField: Assets/_Project/Scenes/Zones/Drydock.unity

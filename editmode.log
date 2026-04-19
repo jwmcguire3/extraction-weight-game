@@ -2,10 +2,10 @@
 Built from '6000.4/staging' branch; Version is '6000.4.3f1 (39d1a88d4dd1) revision 3789224'; Using compiler version '194234433'; Build Type 'Release'
 OS: 'Windows 11  (10.0.26200) Core' Language: 'en' Physical Memory: 32609 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-jwmcg" at "2026-04-19T15:25:18.6866443Z"
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-jwmcg" at "2026-04-19T15:44:51.7388319Z"
 System  architecture: x64
 Process architecture: x64
-Date: 2026-04-19T15:25:18Z
+Date: 2026-04-19T15:44:51Z
 
 COMMAND LINE ARGUMENTS:
 C:\Program Files\Unity\Hub\Editor\6000.4.3f1\Editor\Unity.exe
@@ -57,16 +57,16 @@ C:/Users/jwmcg/OneDrive/Documents/AI Projects/Live Envirnments/extraction-weight
     "memorysetup-job-temp-allocator-block-size=2097152"
     "memorysetup-job-temp-allocator-block-size-background=1048576"
     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
-Player connection [10088]  Target information:
+Player connection [20208]  Target information:
 
-Player connection [10088]  * "[IP] 10.0.0.151 [Port] 55504 [Flags] 2 [Guid] 1755928426 [EditorId] 1755928426 [Version] 1048832 [Id] WindowsEditor(7,Johnnys_Super) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [20208]  * "[IP] 10.0.0.151 [Port] 55504 [Flags] 2 [Guid] 980698551 [EditorId] 980698551 [Version] 1048832 [Id] WindowsEditor(7,Johnnys_Super) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [10088] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [10088] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [20208] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [20208] Host joined alternative multi-casting on [225.0.0.222:34997]...
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
 [Physics::Module] Id: 0xdecafbad
-[Package Manager] Connected to IPC stream "Upm-4468" after 0.2 seconds.
+[Package Manager] Connected to IPC stream "Upm-27172" after 0.2 seconds.
 [Licensing::Module] Licensing is not yet initialized.
 [Licensing::Client] Error: HandshakeResponse reported an error:
 	ResponseCode: 505
@@ -74,17 +74,17 @@ Input System module state changed to: Initialized.
 [Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-jwmcg"
 [Licensing::IpcConnector] LicenseClient-jwmcg channel disconnected successfully.
 [Licensing::IpcConnector] Channel LicenseClient-jwmcg-6000.4.3 doesn't exist
-[Licensing::Module] Successfully launched the LicensingClient (PId: 21772)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-jwmcg-6000.4.3" at "2026-04-19T15:25:20.1466536Z"
+[Licensing::Module] Successfully launched the LicensingClient (PId: 9644)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-jwmcg-6000.4.3" at "2026-04-19T15:44:53.2785784Z"
 [Licensing::Client] Handshaking with LicensingClient:
   Version:                 1.18.1+9fbee8e
-  Session Id:              cc4d6534a48a49e6b3cace93ac24e317
-  Correlation Id:          65dabcf74fbde46c8a22fc5a1f45e90a
-  External correlation Id: 8894938702853040331
+  Session Id:              01f1149a71494dcbbd1e470fd051cab2
+  Correlation Id:          93ee4440f2e9c42789782c2c044d8a28
+  External correlation Id: 7657837897880229472
   Machine Id:              1BeB/TLi2XvtpQs0S1BLgEO37gQ=
-[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-jwmcg-6000.4.3" (connect: 0.16s, validation: 0.03s, handshake: 1.25s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-jwmcg-6000.4.3-notifications" at "2026-04-19T15:25:21.4271791Z"
-[Licensing::Module] Connected to LicensingClient (PId: 21772, launch time: 0.00, total connection time: 1.44s)
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-jwmcg-6000.4.3" (connect: 0.25s, validation: 0.05s, handshake: 1.29s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-jwmcg-6000.4.3-notifications" at "2026-04-19T15:44:54.6117452Z"
+[Licensing::Module] Connected to LicensingClient (PId: 9644, launch time: 0.00, total connection time: 1.58s)
 [Licensing::Module] Error: Access token is unavailable; failed to update
 [Licensing::Client] Successfully resolved entitlement details
 [Licensing::Module] License group:
@@ -92,9 +92,9 @@ Input System module state changed to: Initialized.
   Product: Unity Personal
   Type: Assigned
   Expiration: Unlimited
-[Licensing::Client] Successfully updated license, isAsync: True, time: 0.00
-[Licensing::Module] Licensing Background thread has ended after 2.75s
-[Licensing::Module] Licensing is initialized (took 2.49s).
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.01
+[Licensing::Module] Licensing Background thread has ended after 2.89s
+[Licensing::Module] Licensing is initialized (took 2.57s).
 [Licensing::Client] Successfully resolved entitlement details
 Library Redirect Path: Library/
 [Physics::Module] Selected backend.
@@ -116,7 +116,7 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.4.3f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.4.3f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.4.3f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56468
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56172
 CodeReloadManager initialized
 Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
 Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
@@ -126,30 +126,30 @@ Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.4.3f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.4.3f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001687 seconds.
+Registered in 0.001340 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Package Manager log level set to [2]
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:False
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.249 seconds
-Domain Reload Profiling: 557ms
+- Finished resetting the current domain, in  0.253 seconds
+Domain Reload Profiling: 553ms
 	BeginReloadAssembly (97ms)
-		CreateAndSetChildDomain (18ms)
+		CreateAndSetChildDomain (19ms)
 	RebuildCommonClasses (25ms)
 	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (42ms)
-	LoadAllAssembliesAndSetupDomain (134ms)
-		LoadAssemblies (78ms)
-		AnalyzeDomain (128ms)
-			TypeCache.Refresh (126ms)
-				TypeCache.ScanAssembly (117ms)
-	FinalizeReload (250ms)
+	initialDomainReloadingComplete (41ms)
+	LoadAllAssembliesAndSetupDomain (129ms)
+		LoadAssemblies (77ms)
+		AnalyzeDomain (123ms)
+			TypeCache.Refresh (122ms)
+				TypeCache.ScanAssembly (113ms)
+	FinalizeReload (254ms)
 		SetupLoadedEditorAssemblies (0ms)
-			InitializePlatformSupportModulesInManaged (35ms)
-			BeforeProcessingInitializeOnLoad (55ms)
-			ProcessInitializeOnLoadAttributes (68ms)
-			ProcessInitializeOnLoadMethodAttributes (51ms)
+			InitializePlatformSupportModulesInManaged (32ms)
+			BeforeProcessingInitializeOnLoad (53ms)
+			ProcessInitializeOnLoadAttributes (73ms)
+			ProcessInitializeOnLoadMethodAttributes (55ms)
 [Licensing::Client] Successfully resolved entitlement details
 Application.AssetDatabase Initial Refresh Start
 [Package Manager] Restoring resolved packages state from cache
@@ -218,16 +218,12 @@ Application.AssetDatabase Initial Refresh Start
     com.unity.ext.nunit@2.0.5 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.ext.nunit@d8c07649098d)
 [Subsystems] No new subsystems found in resolved package list.
 [Package Manager] Done registering packages in 0.01 seconds
-[ScriptCompilation] Requested script compilation because: AssetDatabase observed changes in script compilation related files
 Starting: C:\Program Files\Unity\Hub\Editor\6000.4.3f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
 WorkingDir: C:/Users/jwmcg/OneDrive/Documents/AI Projects/Live Envirnments/extraction-weight-game
 DisplayProgressbar: Compiling Scripts
-ExitCode: 0 Duration: 1s316ms
-[897/900    1s] Csc Library/Bee/artifacts/1900b0aE.dag/ExtractionWeight.Tests.EditMode.dll (+2 others)
-[898/900    0s] CopyFiles Library/ScriptAssemblies/ExtractionWeight.Tests.EditMode.pdb
-[899/900    0s] CopyFiles Library/ScriptAssemblies/ExtractionWeight.Tests.EditMode.dll
-*** Tundra build success (1.30 seconds), 3 items updated, 900 evaluated
-AssetDatabase: script compilation time: 1.582162s
+ExitCode: 0 Duration: 0s121ms
+*** Tundra build success (0.10 seconds), 0 items updated, 908 evaluated
+AssetDatabase: script compilation time: 0.387493s
 Begin MonoManager ReloadAssembly
 Assembly Assembly-CSharp-Editor-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll not valid. Loading of assembly skipped.
 Assembly Assembly-CSharp-Editor.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor.dll not valid. Loading of assembly skipped.
@@ -263,126 +259,96 @@ Assembly UnityEngine.Purchasing.Security.dll at Library/ScriptAssemblies/UnityEn
 Assembly UnityEngine.Purchasing.WinRT.dll at Library/ScriptAssemblies/UnityEngine.Purchasing.WinRT.dll not valid. Loading of assembly skipped.
 Assembly UnityEngine.SpatialTracking.Tests.dll at Library/ScriptAssemblies/UnityEngine.SpatialTracking.Tests.dll not valid. Loading of assembly skipped.
 Assembly UnityEngine.UI.Tests.dll at Library/ScriptAssemblies/UnityEngine.UI.Tests.dll not valid. Loading of assembly skipped.
-Refreshing native plugins compatible for Editor in 2.97 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 2.99 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:False
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.643 seconds
-Domain Reload Profiling: 1323ms
-	BeginReloadAssembly (247ms)
-		DisableScriptedObjects (15ms)
+- Finished resetting the current domain, in  0.627 seconds
+Domain Reload Profiling: 1236ms
+	BeginReloadAssembly (240ms)
+		DisableScriptedObjects (14ms)
 		CreateAndSetChildDomain (138ms)
-	RebuildCommonClasses (24ms)
+	RebuildCommonClasses (25ms)
 	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (105ms)
-	LoadAllAssembliesAndSetupDomain (295ms)
-		LoadAssemblies (242ms)
-		AnalyzeDomain (116ms)
-			TypeCache.Refresh (79ms)
+	initialDomainReloadingComplete (38ms)
+	LoadAllAssembliesAndSetupDomain (298ms)
+		LoadAssemblies (240ms)
+		AnalyzeDomain (115ms)
+			TypeCache.Refresh (78ms)
 				TypeCache.ScanAssembly (69ms)
 			BuildScriptInfoCaches (33ms)
 			ResolveRequiredComponents (3ms)
-	FinalizeReload (643ms)
+	FinalizeReload (627ms)
 		SetupLoadedEditorAssemblies (0ms)
-			InitializePlatformSupportModulesInManaged (17ms)
-			BeforeProcessingInitializeOnLoad (127ms)
-			ProcessInitializeOnLoadAttributes (247ms)
+			InitializePlatformSupportModulesInManaged (16ms)
+			BeforeProcessingInitializeOnLoad (128ms)
+			ProcessInitializeOnLoadAttributes (232ms)
 			ProcessInitializeOnLoadMethodAttributes (147ms)
 			AfterProcessingInitializeOnLoad (4ms)
 		AwakeInstancesAfterBackupRestoration (12ms)
-Refreshing native plugins compatible for Editor in 3.05 ms, found 3 plugins.
 (Values over 0.050ms)
-Asset Pipeline Refresh (id=9ebc6abce51151e47a74c33f7ef093d0): Total: 3.424 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+Asset Pipeline Refresh (id=5f7df1e1ae353a9418ceabe8dbca8e8c): Total: 2.030 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
 	Summary:
 		Imports: total=0 (actual=0, local cache=0, cache server=0)
-		Asset DB Process Time: managed=0 ms, native=997 ms
-		Asset DB Callback time: managed=88 ms, native=18 ms
-		Scripting: domain reloads=1, domain reload time=683 ms, compile time=1583 ms, other=53 ms
-		Project Asset Count: scripts=1085, non-scripts=1392
-		Asset File Changes: new=0, changed=1, moved=0, deleted=0
+		Asset DB Process Time: managed=0 ms, native=946 ms
+		Asset DB Callback time: managed=12 ms, native=12 ms
+		Scripting: domain reloads=1, domain reload time=612 ms, compile time=389 ms, other=56 ms
+		Project Asset Count: scripts=1096, non-scripts=1408
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
 		Scan Filter Count: 0
-	InvokePackagesCallback: 13.844ms
-	ApplyChangesToAssetFolders: 0.461ms
-	Scan: 163.304ms
-	OnSourceAssetsModified: 0.638ms
-	CategorizeScriptCompilationAssets: 17.739ms
-	ProcessAssetsWithTransientArtifactChanges: 32.717ms
-	CategorizeAssets: 12.695ms
-	CompileScripts: 1583.234ms
-	ImportOutOfDateAssets: 654.620ms (653.286ms without children)
-		UnloadImportedAssets: 0.895ms
-		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.229ms
-		OnDemandSchedulerStart: 0.208ms
-	PostProcessAllAssets: 89.171ms
-		XRBuildSystem.XRAssetImported 0.799ms
-		VCAutoAddAssetPostprocess 0.620ms
-		MonoPostProcessAllAssets: 87.467ms
-			AssetPostprocessor.OnPostprocessAllAssets 48.559ms
-			StyleCatalogPostProcessor.OnPostprocessAllAssets 10.556ms
-			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 4.613ms
-			BuilderAssetPostprocessor.OnPostprocessAllAssets 3.994ms
-			PackageManagerResolver.OnPostprocessAllAssets 2.768ms
-			AssetChangedListener.OnPostprocessAllAssets 1.093ms
-			VersionHandlerImpl.OnPostprocessAllAssets 0.901ms
-			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 0.841ms
-			AddressablesAssetPostProcessor.OnPostprocessAllAssets 0.641ms
-			AssetPathToTypes.OnPostprocessAllAssets 0.608ms
-			SpeedTree9Postprocessor.OnPostprocessAllAssets 0.519ms
-			SpriteEditorTexturePostprocessor.OnPostprocessAllAssets 0.440ms
-			TextAssetPostProcessor.OnPostprocessAllAssets 0.372ms
-			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.358ms
-			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.264ms
-			PlayServicesResolver.OnPostprocessAllAssets 0.256ms
-			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.251ms
-			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.236ms
-			IOSResolver.OnPostprocessAllAssets 0.207ms
-			UVCSAssetPostprocessor.OnPostprocessAllAssets 0.203ms
-			AssetProcessor.OnPostprocessAllAssets 0.198ms
-			CinemachineSettings.OnPostprocessAllAssets 0.191ms
-			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.185ms
-			AudioMixerPostprocessor.OnPostprocessAllAssets 0.162ms
-			AssetEvents.OnPostprocessAllAssets 0.146ms
-			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.112ms
-			SamplePostprocessor.OnPostprocessAllAssets 0.105ms
-			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.102ms
-			SpeedTreePostProcessor.OnPostprocessAllAssets 0.095ms
-			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.093ms
-			ConfigAssetsTracker.OnPostprocessAllAssets 0.076ms
+	InvokePackagesCallback: 14.045ms
+	ApplyChangesToAssetFolders: 0.508ms
+	Scan: 128.942ms
+	CategorizeScriptCompilationAssets: 18.529ms
+	ProcessAssetsWithTransientArtifactChanges: 31.793ms
+	CategorizeAssets: 14.325ms
+	CompileScripts: 388.538ms
+	ImportOutOfDateAssets: 638.185ms (636.692ms without children)
+		UnloadImportedAssets: 1.017ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.263ms
+		OnDemandSchedulerStart: 0.211ms
+	PostProcessAllAssets: 12.983ms
+		MonoPostProcessAllAssets: 12.944ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 4.755ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 0.480ms
+			CinemachineSettings.OnPostprocessAllAssets 0.248ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.223ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.178ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.136ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.108ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.098ms
 			SyncVS.PostprocessSyncProject 0.073ms
-			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.072ms
-			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.061ms
-	PostAssetChangesProfiler: 3.778ms
-	UnloadStreamsBegin: 0.892ms
-	PersistCurrentRevisions: 0.050ms
-	GenerateScriptTypeHashes: 1.344ms
-	GenerateScriptTypeSerializationHashes: 2.686ms
-	Untracked: 847.194ms
+	UnloadStreamsBegin: 0.912ms
+	PersistCurrentRevisions: 0.053ms
+	GenerateScriptTypeHashes: 1.583ms
+	GenerateScriptTypeSerializationHashes: 3.046ms
+	Untracked: 778.198ms
 
 Application.AssetDatabase Initial Refresh End
-Scanning for USB devices : 17.130ms
+Scanning for USB devices : 17.402ms
 Initializing Unity extensions:
 [MODES] ModeService[none].Initialize
 [MODES] ModeService[none].LoadModes
 [MODES] Loading mode Default (0) for mode-current-id-extraction-weight-game
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 4471 unused Assets / (2.1 MB). Loaded Objects now: 5077.
+Unloading 4481 unused Assets / (2.1 MB). Loaded Objects now: 5084.
 Memory consumption went from 135.4 MB to 133.3 MB.
-Total: 7.492600 ms (FindLiveObjects: 0.224900 ms CreateObjectMapping: 0.119200 ms MarkObjects: 6.328600 ms  DeleteObjects: 0.818200 ms)
+Total: 7.598600 ms (FindLiveObjects: 0.232100 ms CreateObjectMapping: 0.126500 ms MarkObjects: 6.385800 ms  DeleteObjects: 0.852500 ms)
 
 Microsoft Media Foundation video decoding to texture disabled: graphics device is Null, only Direct3D 11 and Direct3D 12 (only on desktop) are supported for hardware-accelerated video decoding.
-[Project] Loading completed in 7.076 seconds
-	Project init time: 				6.930 seconds
+[Project] Loading completed in 5.878 seconds
+	Project init time: 				5.613 seconds
 		Template init time: 		0.000 seconds
-		Package Manager init time: 		2.663 seconds
-		Asset Database init time: 		0.111 seconds
+		Package Manager init time: 		2.718 seconds
+		Asset Database init time: 		0.114 seconds
 		Global illumination init time: 	0.002 seconds
-		Assemblies load time: 			0.583 seconds
-		Unity extensions init time: 	0.003 seconds
-		Asset Database refresh time: 	3.424 seconds
-	Scene opening time: 			0.071 seconds
-##utp:{"type":"ProjectInfo","version":2,"phase":"Immediate","time":1776612325756,"processId":4468,"projectLoad":7.075509,"projectInit":6.930212,"templateInit":0.0,"packageManagerInit":2.6628255,"assetDatabaseInit":0.1113484,"globalIlluminationInit":0.0017162,"assembliesLoad":0.5830396,"unityExtensionsInit":0.0033689,"assetDatabaseRefresh":3.4244667,"sceneOpening":0.0708449}
-##utp:{"type":"EditorInfo","version":2,"phase":"Immediate","time":1776612325756,"processId":4468,"editorVersion":"6000.4.3f1 (39d1a88d4dd1)","branch":"6000.4/staging","buildType":"Release","platform":"Windows"}
+		Assemblies load time: 			0.580 seconds
+		Unity extensions init time: 	0.014 seconds
+		Asset Database refresh time: 	2.031 seconds
+	Scene opening time: 			0.114 seconds
+##utp:{"type":"ProjectInfo","version":2,"phase":"Immediate","time":1776613497611,"processId":27172,"projectLoad":5.8783642,"projectInit":5.6125994,"templateInit":0.0,"packageManagerInit":2.7180429,"assetDatabaseInit":0.1138297,"globalIlluminationInit":0.0017908,"assembliesLoad":0.5797691,"unityExtensionsInit":0.0135376,"assetDatabaseRefresh":2.0307228,"sceneOpening":0.1141013}
+##utp:{"type":"EditorInfo","version":2,"phase":"Immediate","time":1776613497611,"processId":27172,"editorVersion":"6000.4.3f1 (39d1a88d4dd1)","branch":"6000.4/staging","buildType":"Release","platform":"Windows"}
 [Licensing::Client] Successfully resolved entitlement details
 Running tests for ExecutionSettings with details:
 targetPlatform = 
@@ -410,110 +376,172 @@ UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
 
 (Filename: ./Library/PackageCache/com.unity.test-framework@76560ee600cb/UnityEditor.TestRunner/CommandLineTest/Executer.cs Line: 53)
 
-[UnityConnectServicesConfig] config is NOT valid, switching to default
-Created GICache directory at C:/Users/jwmcg/AppData/LocalLow/Unity/Caches/GiCache. Took: 0.010s, timestamps: [7.077 - 7.087]
-[Licensing::Client] Successfully resolved entitlement details
-Unloading 25 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 15 unused Assets / (60.2 KB). Loaded Objects now: 5118.
-Memory consumption went from 131.4 MB to 131.4 MB.
-Total: 6.604700 ms (FindLiveObjects: 0.122500 ms CreateObjectMapping: 0.044400 ms MarkObjects: 6.411700 ms  DeleteObjects: 0.025500 ms)
+Opening scene 'Assets/_Project/Scenes/Boot.unity'
+Unloading 27 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/_Project/Scenes/Boot.unity'
+	Deserialize:            0.576 ms
+	Integration:            5.315 ms
+	Integration of assets:  0.001 ms
+	Thread Wait Time:       0.011 ms
+	Total Operation Time:   5.903 ms
+Unloading 21 unused Assets / (54.5 KB). Loaded Objects now: 5126.
+Memory consumption went from 129.2 MB to 129.1 MB.
+Total: 6.542600 ms (FindLiveObjects: 0.148000 ms CreateObjectMapping: 0.048100 ms MarkObjects: 6.262300 ms  DeleteObjects: 0.083500 ms)
 
-Start importing Assets/_Project/Data/Loot/Icons/currency-small-bag.png using Guid(e886609ffb3ce2e4a985afc8f0553409) (TextureImporter) -> (Import Result ID: '98618ee0f0206a4879510a0fe1e0547c') in 0.0102879 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5676a0740be6d26604d10f9ef25500d8 DependenciesID=f13225a29f25f79499bfda1958e4ca78 StaticDependenciesID=3e5a5423738618f492947d0bc05ec2b3 
-Refreshing native plugins compatible for Editor in 2.88 ms, found 3 plugins.
-Asset Pipeline Refresh (id=cf1b8c333287daf4d9422eb847c3910d): Total: 0.043 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Start importing Assets/_Project/Data/Loot/Icons/currency-small-bag.png using Guid(e886609ffb3ce2e4a985afc8f0553409) (TextureImporter) -> (Import Result ID: '98618ee0f0206a4879510a0fe1e0547c') in 0.0014805 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5676a0740be6d26604d10f9ef25500d8 DependenciesID=f13225a29f25f79499bfda1958e4ca78 StaticDependenciesID=3e5a5423738618f492947d0bc05ec2b3 
-Refreshing native plugins compatible for Editor in 2.85 ms, found 3 plugins.
-Asset Pipeline Refresh (id=bc6d956751a34364a855aca70065b036): Total: 0.013 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Start importing Assets/_Project/Data/Loot/Icons/currency-cash-roll.png using Guid(d47ab656639712840915aa2bdbeb0887) (TextureImporter) -> (Import Result ID: 'a60a6cb9ce766e3b8800385af79facd2') in 0.0015019 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c70319c999c93614cd4e9ab3eb059407 DependenciesID=9376b024fe409e9726d8e87d0eec4c6f StaticDependenciesID=bb75444888251a1547c73375cb722eeb 
-Refreshing native plugins compatible for Editor in 2.87 ms, found 3 plugins.
-Asset Pipeline Refresh (id=e7e71648dc9275643bf01e5b375ea1a2): Total: 0.012 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Start importing Assets/_Project/Data/Loot/Icons/currency-cash-roll.png using Guid(d47ab656639712840915aa2bdbeb0887) (TextureImporter) -> (Import Result ID: 'a60a6cb9ce766e3b8800385af79facd2') in 0.0013863 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c70319c999c93614cd4e9ab3eb059407 DependenciesID=9376b024fe409e9726d8e87d0eec4c6f StaticDependenciesID=bb75444888251a1547c73375cb722eeb 
-Refreshing native plugins compatible for Editor in 3.02 ms, found 3 plugins.
-Asset Pipeline Refresh (id=f44cbb5d65822084997f612a9fe2d949): Total: 0.013 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Start importing Assets/_Project/Data/Loot/Icons/currency-data-chip.png using Guid(f354f0f2889980a4a85a5a537c7040c7) (TextureImporter) -> (Import Result ID: '22f2a813366d7ccf376408aa272b2b82') in 0.0013726 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3a2747eaa996fcabdd55e4d8fc17dddb DependenciesID=1ec1e9e9caa999e5bc9211da860e542f StaticDependenciesID=7334c37c10009a89fa065ad43b273c21 
-Refreshing native plugins compatible for Editor in 3.24 ms, found 3 plugins.
-Asset Pipeline Refresh (id=3e5602cdb9d116f45997d03adba00519): Total: 0.013 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Start importing Assets/_Project/Data/Loot/Icons/currency-data-chip.png using Guid(f354f0f2889980a4a85a5a537c7040c7) (TextureImporter) -> (Import Result ID: '22f2a813366d7ccf376408aa272b2b82') in 0.001556 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3a2747eaa996fcabdd55e4d8fc17dddb DependenciesID=1ec1e9e9caa999e5bc9211da860e542f StaticDependenciesID=7334c37c10009a89fa065ad43b273c21 
-Refreshing native plugins compatible for Editor in 2.88 ms, found 3 plugins.
-Asset Pipeline Refresh (id=d326094ca1062ca42a85845a924f4a8e): Total: 0.012 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Start importing Assets/_Project/Data/Loot/Icons/currency-coin-stack.png using Guid(48e49ab64a7ab504aa44e70a7e275209) (TextureImporter) -> (Import Result ID: '91b99214aa9f0ed50f71e32c8a52a5ed') in 0.0014291 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=80022d4e717937f401d79abf50bac9b2 DependenciesID=aa71725d77a704f2e63a1f357caad26f StaticDependenciesID=7e3c040f8ad835ce9e92aa2f34b138ea 
-Refreshing native plugins compatible for Editor in 2.98 ms, found 3 plugins.
-Asset Pipeline Refresh (id=c87627c9e4f7d0c47aa5e0a1ae9e16b8): Total: 0.013 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Start importing Assets/_Project/Data/Loot/Icons/currency-coin-stack.png using Guid(48e49ab64a7ab504aa44e70a7e275209) (TextureImporter) -> (Import Result ID: '91b99214aa9f0ed50f71e32c8a52a5ed') in 0.0018037 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=80022d4e717937f401d79abf50bac9b2 DependenciesID=aa71725d77a704f2e63a1f357caad26f StaticDependenciesID=7e3c040f8ad835ce9e92aa2f34b138ea 
-Refreshing native plugins compatible for Editor in 3.23 ms, found 3 plugins.
-Asset Pipeline Refresh (id=72469971c37d3ff43a087c35c8ac65d4): Total: 0.014 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Start importing Assets/_Project/Data/Loot/Icons/relic-small-sculpture.png using Guid(93001190f9f5caf47926b0efe3592fe6) (TextureImporter) -> (Import Result ID: '906a22ef35241df3668a0a45780809de') in 0.0016504 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d68dca9bef95e12e24b6a8d84f25995c DependenciesID=9784bccfc41556def3cb8a406df81b00 StaticDependenciesID=255382e2c21219b087e93e3ab3b67fb3 
-Refreshing native plugins compatible for Editor in 2.79 ms, found 3 plugins.
-Asset Pipeline Refresh (id=33c51e4f47cc80d45938774a433a67d2): Total: 0.012 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Start importing Assets/_Project/Data/Loot/Icons/relic-small-sculpture.png using Guid(93001190f9f5caf47926b0efe3592fe6) (TextureImporter) -> (Import Result ID: '906a22ef35241df3668a0a45780809de') in 0.001415 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d68dca9bef95e12e24b6a8d84f25995c DependenciesID=9784bccfc41556def3cb8a406df81b00 StaticDependenciesID=255382e2c21219b087e93e3ab3b67fb3 
-Refreshing native plugins compatible for Editor in 3.15 ms, found 3 plugins.
-Asset Pipeline Refresh (id=6c2a0d9a10786584f8e90130242135ac): Total: 0.012 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Start importing Assets/_Project/Data/Loot/Icons/relic-medium-painting.png using Guid(ddff262bd574654479baf387979ad51e) (TextureImporter) -> (Import Result ID: 'e547333b1cda4168b544a06e26804e5f') in 0.0017965 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=df73a16bd19d5134ed859e37b3bb6ce1 DependenciesID=51ccdfaf26e805ce45420a2cd819a1f3 StaticDependenciesID=a553996164693de9293ca670c46074ca 
-Refreshing native plugins compatible for Editor in 2.97 ms, found 3 plugins.
-Asset Pipeline Refresh (id=ca1af7886273f8f46a493677cfca4d27): Total: 0.013 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Start importing Assets/_Project/Data/Loot/Icons/relic-medium-painting.png using Guid(ddff262bd574654479baf387979ad51e) (TextureImporter) -> (Import Result ID: 'e547333b1cda4168b544a06e26804e5f') in 0.0013656 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=df73a16bd19d5134ed859e37b3bb6ce1 DependenciesID=51ccdfaf26e805ce45420a2cd819a1f3 StaticDependenciesID=a553996164693de9293ca670c46074ca 
-Refreshing native plugins compatible for Editor in 3.17 ms, found 3 plugins.
-Asset Pipeline Refresh (id=bd9f85c13f7d58d4da4b8146a2a2881c): Total: 0.012 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Start importing Assets/_Project/Data/Loot/Icons/relic-large-machine.png using Guid(1847571c96a1cb440a8ebdc2b8a5efc6) (TextureImporter) -> (Import Result ID: '5d69b43e061b37b7631a41efe3793ab2') in 0.0015173 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=10646e430ab9b7cb55cc47ffa4ab5c41 DependenciesID=f9538f7a14ee400cdb026a0291b79358 StaticDependenciesID=79ad8c80b5ba2641b5f231e672b47f21 
+Start importing Assets/AddressableAssetsData/AssetGroups/Zones.asset using Guid(76208f5deb6ed3344841909dd1da4611) (NativeFormatImporter) -> (Import Result ID: '4b3587bc6c9507a9329a8c2cf8fab609') in 0.0035584 seconds [static dependencies only]. Details - ImportResultOutputID=6d9a9c068bc3f14721ac9724cbaa9d96 DependenciesID=07066772179b2949a8a9cc89ab6abaec StaticDependenciesID=dcd1df86635860d7ebe571ad1e2474fc 
+Start importing Assets/AddressableAssetsData/AddressableAssetSettings.asset using Guid(7920b8a7d83ffef4396c7c9aeab6e0fe) (NativeFormatImporter) -> (Import Result ID: '28ea1e413e85adf041d6ae22481900f6') in 0.0010447 seconds [static dependencies only]. Details - ImportResultOutputID=f86a6aae8793ea573f655f5a887bd193 DependenciesID=529015d52094adc022fe00aee08e6a3b StaticDependenciesID=1815a0a73278fdb451566dbc3c42d8f5 
+Refreshing native plugins compatible for Editor in 3.16 ms, found 3 plugins.
+Asset Pipeline Refresh (id=c223901895aeea8488a8b3f500274258): Total: 0.058 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Project/Scenes/Boot.unity using Guid(d6c7d0af33823664dbf2070202b73cd4) (DefaultImporter) -> (Import Result ID: '34e22d84a70f5d9a7b038ed9f600231c') in 0.0005703 seconds [static dependencies only]. Details - ImportResultOutputID=f79860d5602d1efb372f873e1da78988 DependenciesID=62cc62ca9fe28efb0e3628ab68435d6f StaticDependenciesID=43f3dc22e7721aa3362ce8385f0885b2 
+Refreshing native plugins compatible for Editor in 3.04 ms, found 3 plugins.
+Asset Pipeline Refresh (id=0730d0aca3a3c7340b4ca8c24a75c540): Total: 0.013 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+[UnityConnectServicesConfig] config is NOT valid, switching to default
+Created GICache directory at C:/Users/jwmcg/AppData/LocalLow/Unity/Caches/GiCache. Took: 0.009s, timestamps: [5.880 - 5.889]
+[Licensing::Client] Successfully resolved entitlement details
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 48 unused Assets / (5.8 KB). Loaded Objects now: 5144.
+Memory consumption went from 129.9 MB to 129.9 MB.
+Total: 6.578900 ms (FindLiveObjects: 0.125600 ms CreateObjectMapping: 0.051300 ms MarkObjects: 6.359300 ms  DeleteObjects: 0.042100 ms)
+
+Start importing Assets/_Project/Data/Loot/Icons/currency-small-bag.png using Guid(e886609ffb3ce2e4a985afc8f0553409) (TextureImporter) -> (Import Result ID: '98618ee0f0206a4879510a0fe1e0547c') in 0.0085409 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5676a0740be6d26604d10f9ef25500d8 DependenciesID=f13225a29f25f79499bfda1958e4ca78 StaticDependenciesID=3e5a5423738618f492947d0bc05ec2b3 
+Refreshing native plugins compatible for Editor in 3.07 ms, found 3 plugins.
+Asset Pipeline Refresh (id=cc7a0d5447015da419a1fafe0de4a0ca): Total: 0.031 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Project/Data/Loot/Icons/currency-small-bag.png using Guid(e886609ffb3ce2e4a985afc8f0553409) (TextureImporter) -> (Import Result ID: '9e0c381af27b19850570af4012ee8e48') in 0.0073715 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=fc79e7c18846bc2bec007ee8450719c7 DependenciesID=88ccc1e6e9ab8fb44746882d64815e81 StaticDependenciesID=429b31b1596f2e37533b054cade6a82f 
+Refreshing native plugins compatible for Editor in 3.64 ms, found 3 plugins.
+Asset Pipeline Refresh (id=fd60e99eb21aa52458e18134b005a1de): Total: 0.031 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Project/Data/Loot/Icons/currency-small-bag.png using Guid(e886609ffb3ce2e4a985afc8f0553409) (TextureImporter) -> (Import Result ID: '9e0c381af27b19850570af4012ee8e48') in 0.0018304 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=fc79e7c18846bc2bec007ee8450719c7 DependenciesID=88ccc1e6e9ab8fb44746882d64815e81 StaticDependenciesID=429b31b1596f2e37533b054cade6a82f 
+Refreshing native plugins compatible for Editor in 3.51 ms, found 3 plugins.
+Asset Pipeline Refresh (id=986c0140e385872489273be5c1581c28): Total: 0.015 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Project/Data/Loot/Icons/currency-cash-roll.png using Guid(d47ab656639712840915aa2bdbeb0887) (TextureImporter) -> (Import Result ID: 'a60a6cb9ce766e3b8800385af79facd2') in 0.0015677 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c70319c999c93614cd4e9ab3eb059407 DependenciesID=9376b024fe409e9726d8e87d0eec4c6f StaticDependenciesID=bb75444888251a1547c73375cb722eeb 
+Refreshing native plugins compatible for Editor in 4.39 ms, found 3 plugins.
+Asset Pipeline Refresh (id=22fb72b005fcedf46a833462e4911465): Total: 0.015 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Project/Data/Loot/Icons/currency-cash-roll.png using Guid(d47ab656639712840915aa2bdbeb0887) (TextureImporter) -> (Import Result ID: 'f19e6ed3c7bf54e929fb96a9630e93f0') in 0.0081124 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d126ffca3ac3a1e7bfbbcb7c42662f40 DependenciesID=c7dcab08a46e74378ae3e90184648f60 StaticDependenciesID=e69ef0594fe849fda2523b88ac6ade33 
+Refreshing native plugins compatible for Editor in 3.66 ms, found 3 plugins.
+Asset Pipeline Refresh (id=d44b4bb5524d8bf4aa2445d4c924f5c3): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Project/Data/Loot/Icons/currency-cash-roll.png using Guid(d47ab656639712840915aa2bdbeb0887) (TextureImporter) -> (Import Result ID: 'f19e6ed3c7bf54e929fb96a9630e93f0') in 0.0016282 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d126ffca3ac3a1e7bfbbcb7c42662f40 DependenciesID=c7dcab08a46e74378ae3e90184648f60 StaticDependenciesID=e69ef0594fe849fda2523b88ac6ade33 
+Refreshing native plugins compatible for Editor in 4.03 ms, found 3 plugins.
+Asset Pipeline Refresh (id=821df7aac8e3bd049882b23d5a301fbd): Total: 0.014 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Project/Data/Loot/Icons/currency-data-chip.png using Guid(f354f0f2889980a4a85a5a537c7040c7) (TextureImporter) -> (Import Result ID: '22f2a813366d7ccf376408aa272b2b82') in 0.001576 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3a2747eaa996fcabdd55e4d8fc17dddb DependenciesID=1ec1e9e9caa999e5bc9211da860e542f StaticDependenciesID=7334c37c10009a89fa065ad43b273c21 
+Refreshing native plugins compatible for Editor in 3.07 ms, found 3 plugins.
+Asset Pipeline Refresh (id=a3750dd77c02fd145a58d96b29b05d18): Total: 0.013 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Project/Data/Loot/Icons/currency-data-chip.png using Guid(f354f0f2889980a4a85a5a537c7040c7) (TextureImporter) -> (Import Result ID: '41764251eecd4c1ab10bd7feb24d72dd') in 0.0074827 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2601f67c9027bb6f34491d72cdf23d13 DependenciesID=80142e86e58a508a650efcd883181757 StaticDependenciesID=70b60276f5551a408c1497a26adc94bc 
+Refreshing native plugins compatible for Editor in 3.07 ms, found 3 plugins.
+Asset Pipeline Refresh (id=fc7508611a000db4d9e3d48017ea2460): Total: 0.031 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Project/Data/Loot/Icons/currency-data-chip.png using Guid(f354f0f2889980a4a85a5a537c7040c7) (TextureImporter) -> (Import Result ID: '41764251eecd4c1ab10bd7feb24d72dd') in 0.0017345 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2601f67c9027bb6f34491d72cdf23d13 DependenciesID=80142e86e58a508a650efcd883181757 StaticDependenciesID=70b60276f5551a408c1497a26adc94bc 
+Refreshing native plugins compatible for Editor in 3.52 ms, found 3 plugins.
+Asset Pipeline Refresh (id=b1e9f03461440bb4490b85c7b6c6da5a): Total: 0.013 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Project/Data/Loot/Icons/currency-coin-stack.png using Guid(48e49ab64a7ab504aa44e70a7e275209) (TextureImporter) -> (Import Result ID: '91b99214aa9f0ed50f71e32c8a52a5ed') in 0.0016882 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=80022d4e717937f401d79abf50bac9b2 DependenciesID=aa71725d77a704f2e63a1f357caad26f StaticDependenciesID=7e3c040f8ad835ce9e92aa2f34b138ea 
 Refreshing native plugins compatible for Editor in 2.78 ms, found 3 plugins.
-Asset Pipeline Refresh (id=3ee7fdf29b0a74542b0bbfa2ab24483c): Total: 0.012 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Start importing Assets/_Project/Data/Loot/Icons/relic-large-machine.png using Guid(1847571c96a1cb440a8ebdc2b8a5efc6) (TextureImporter) -> (Import Result ID: '5d69b43e061b37b7631a41efe3793ab2') in 0.0012553 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=10646e430ab9b7cb55cc47ffa4ab5c41 DependenciesID=f9538f7a14ee400cdb026a0291b79358 StaticDependenciesID=79ad8c80b5ba2641b5f231e672b47f21 
-Refreshing native plugins compatible for Editor in 2.98 ms, found 3 plugins.
-Asset Pipeline Refresh (id=428e2a8575564554faf8ae064a8669ee): Total: 0.012 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Start importing Assets/_Project/Data/Loot/Icons/relic-old-console.png using Guid(588071a7aeaba3c44bbd4c0a25ad9c3c) (TextureImporter) -> (Import Result ID: 'a1a284891b4c4282cb4fddfb7229d7d6') in 0.0014206 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8abb11b610c72398e28aa3aac3d63aeb DependenciesID=4521b3a607754a3f6dbfa4328815933f StaticDependenciesID=5b0222a731c23bb9e4b991cc965d38fa 
+Asset Pipeline Refresh (id=916acc2a2e5c1c641a56b82ea29d5a0b): Total: 0.013 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Project/Data/Loot/Icons/currency-coin-stack.png using Guid(48e49ab64a7ab504aa44e70a7e275209) (TextureImporter) -> (Import Result ID: '2c334113d1501a5abe6732002c76ca85') in 0.0101428 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c75b4d37cced6dee346ae0123951b2e4 DependenciesID=722257d639d73559b9538384e4033b79 StaticDependenciesID=4fd7ef7f7de5a3ebb68d0983ef3e95b0 
+Refreshing native plugins compatible for Editor in 3.44 ms, found 3 plugins.
+Asset Pipeline Refresh (id=799855a7b21393a4d8f9caaac207bfc4): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Project/Data/Loot/Icons/currency-coin-stack.png using Guid(48e49ab64a7ab504aa44e70a7e275209) (TextureImporter) -> (Import Result ID: '2c334113d1501a5abe6732002c76ca85') in 0.0019554 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c75b4d37cced6dee346ae0123951b2e4 DependenciesID=722257d639d73559b9538384e4033b79 StaticDependenciesID=4fd7ef7f7de5a3ebb68d0983ef3e95b0 
+Refreshing native plugins compatible for Editor in 2.95 ms, found 3 plugins.
+Asset Pipeline Refresh (id=4f915f72852797f438985c459e8073ec): Total: 0.013 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Project/Data/Loot/Icons/relic-small-sculpture.png using Guid(93001190f9f5caf47926b0efe3592fe6) (TextureImporter) -> (Import Result ID: '906a22ef35241df3668a0a45780809de') in 0.0015375 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d68dca9bef95e12e24b6a8d84f25995c DependenciesID=9784bccfc41556def3cb8a406df81b00 StaticDependenciesID=255382e2c21219b087e93e3ab3b67fb3 
 Refreshing native plugins compatible for Editor in 2.83 ms, found 3 plugins.
-Asset Pipeline Refresh (id=aae2d9228a7639741b1965387c1cd2aa): Total: 0.012 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Start importing Assets/_Project/Data/Loot/Icons/relic-old-console.png using Guid(588071a7aeaba3c44bbd4c0a25ad9c3c) (TextureImporter) -> (Import Result ID: 'a1a284891b4c4282cb4fddfb7229d7d6') in 0.0013205 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8abb11b610c72398e28aa3aac3d63aeb DependenciesID=4521b3a607754a3f6dbfa4328815933f StaticDependenciesID=5b0222a731c23bb9e4b991cc965d38fa 
-Refreshing native plugins compatible for Editor in 2.78 ms, found 3 plugins.
-Asset Pipeline Refresh (id=d43c70978e8bfcc4ca9315cb3060ab90): Total: 0.012 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Start importing Assets/_Project/Data/Loot/Icons/relic-preserved-specimen.png using Guid(837dac31bff0f8a4ab6b23fec9c1b6db) (TextureImporter) -> (Import Result ID: '2249e922cb9ce069ec8acd8888026b5c') in 0.0013175 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b024cf17f42eb53566c0ff7717576309 DependenciesID=015ced352f5a9d2eaf5571e1edd0faf2 StaticDependenciesID=1bd25d94b36777bfc1d6a7b72c1ec1f6 
-Refreshing native plugins compatible for Editor in 2.73 ms, found 3 plugins.
-Asset Pipeline Refresh (id=4117744d25297694d922cf3b67f77aa2): Total: 0.012 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Start importing Assets/_Project/Data/Loot/Icons/relic-preserved-specimen.png using Guid(837dac31bff0f8a4ab6b23fec9c1b6db) (TextureImporter) -> (Import Result ID: '2249e922cb9ce069ec8acd8888026b5c') in 0.0013582 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b024cf17f42eb53566c0ff7717576309 DependenciesID=015ced352f5a9d2eaf5571e1edd0faf2 StaticDependenciesID=1bd25d94b36777bfc1d6a7b72c1ec1f6 
-Refreshing native plugins compatible for Editor in 2.94 ms, found 3 plugins.
-Asset Pipeline Refresh (id=a40766f6105ed1942ad67bdb24c22836): Total: 0.012 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Start importing Assets/_Project/Data/Loot/Icons/volatile-leaking-battery.png using Guid(8142af13d6483f344baac88f172580d8) (TextureImporter) -> (Import Result ID: '6ad1a2750264f8878f0baa98f53b8f87') in 0.0014724 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9857e2263403576458b1bb72892b3a15 DependenciesID=a8bd35b0a640f5a1c093b4e5d9b6fe3a StaticDependenciesID=e205e497572b21cbce212e95462b2512 
-Refreshing native plugins compatible for Editor in 3.36 ms, found 3 plugins.
-Asset Pipeline Refresh (id=a6e7063cca7580146919afc46f06dcba): Total: 0.013 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Start importing Assets/_Project/Data/Loot/Icons/volatile-leaking-battery.png using Guid(8142af13d6483f344baac88f172580d8) (TextureImporter) -> (Import Result ID: '6ad1a2750264f8878f0baa98f53b8f87') in 0.0013662 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9857e2263403576458b1bb72892b3a15 DependenciesID=a8bd35b0a640f5a1c093b4e5d9b6fe3a StaticDependenciesID=e205e497572b21cbce212e95462b2512 
-Refreshing native plugins compatible for Editor in 3.03 ms, found 3 plugins.
-Asset Pipeline Refresh (id=5605e306e60007b439cd13f4a99eebde): Total: 0.013 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Start importing Assets/_Project/Data/Loot/Icons/volatile-caged-bird.png using Guid(ac7bb182239ab2c489f7ffddd0b477c3) (TextureImporter) -> (Import Result ID: '8cd6e209c2f557f68ccb7a1ba0f46f2d') in 0.0014701 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ee8fc7314216f0440194fa03f340307f DependenciesID=d8f16bf4c806bf9ea4af90bb1836541a StaticDependenciesID=5b9cd80880709886294802a21a4f123f 
-Refreshing native plugins compatible for Editor in 3.02 ms, found 3 plugins.
-Asset Pipeline Refresh (id=cc3092ee07e9252429b8f235feb1ba66): Total: 0.013 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Start importing Assets/_Project/Data/Loot/Icons/volatile-caged-bird.png using Guid(ac7bb182239ab2c489f7ffddd0b477c3) (TextureImporter) -> (Import Result ID: '8cd6e209c2f557f68ccb7a1ba0f46f2d') in 0.0015188 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ee8fc7314216f0440194fa03f340307f DependenciesID=d8f16bf4c806bf9ea4af90bb1836541a StaticDependenciesID=5b9cd80880709886294802a21a4f123f 
-Refreshing native plugins compatible for Editor in 3.13 ms, found 3 plugins.
-Asset Pipeline Refresh (id=9d16b9463ba88134bb600a9146b6d2dc): Total: 0.013 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Start importing Assets/_Project/Data/Loot/Icons/volatile-cracked-vial.png using Guid(9e7eada27a335d040baab66028627828) (TextureImporter) -> (Import Result ID: 'c379e30d2851de6732807c3e1f176654') in 0.0014791 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5afaaf614965f288ee016d30c8db797d DependenciesID=1870f30137d4f161ffe6703ce2fe94b1 StaticDependenciesID=074d534e60e44da7e69b278016e9eb1e 
-Refreshing native plugins compatible for Editor in 2.94 ms, found 3 plugins.
-Asset Pipeline Refresh (id=80986dd66cf51f64da6ff0fa74825a6a): Total: 0.012 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Start importing Assets/_Project/Data/Loot/Icons/volatile-cracked-vial.png using Guid(9e7eada27a335d040baab66028627828) (TextureImporter) -> (Import Result ID: 'c379e30d2851de6732807c3e1f176654') in 0.0013538 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5afaaf614965f288ee016d30c8db797d DependenciesID=1870f30137d4f161ffe6703ce2fe94b1 StaticDependenciesID=074d534e60e44da7e69b278016e9eb1e 
-Refreshing native plugins compatible for Editor in 3.32 ms, found 3 plugins.
-Asset Pipeline Refresh (id=3776440fcacdf8742812967607daaea5): Total: 0.014 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Start importing Assets/_Project/Data/Loot/relic-medium-painting.asset using Guid(1335ac54227f55b41bf6ea55b7855a01) (NativeFormatImporter) -> (Import Result ID: '1c2f6585ecd55ab71d4a16b058c67ab1') in 0.0012765 seconds [static dependencies only]. Details - ImportResultOutputID=7cd0dcc7735dc680e075e8c076a2561b DependenciesID=9fb1ce9a05b503d79121ecfb27bb12b7 StaticDependenciesID=6abf1c0dc6478ec2d177dc7e64e2f320 
-Start importing Assets/_Project/Data/Loot/currency-cash-roll.asset using Guid(54e2cc7e4318c7142a93201db325bba1) (NativeFormatImporter) -> (Import Result ID: '5cba8c38f2baaccefb458d5c70becec8') in 0.0008799 seconds [static dependencies only]. Details - ImportResultOutputID=4b7401cb2d241d44082d159de36942ba DependenciesID=f9b9075aa3087724034ce3a55eae4e00 StaticDependenciesID=450ad56e5b2214765ec72a84f67e34d3 
-Start importing Assets/_Project/Data/Loot/relic-large-machine.asset using Guid(84852a5c3d4536c47b4346dd36c90539) (NativeFormatImporter) -> (Import Result ID: 'c73d647f57f52bf2b80c6360ee5b41e4') in 0.0008268 seconds [static dependencies only]. Details - ImportResultOutputID=4f9345c82dd001cc2d95b83ebfb47fe0 DependenciesID=af1f2efb65abae44e6cfedda0b66e5c2 StaticDependenciesID=d95ae6f6317d88914b129e6431023124 
-Start importing Assets/_Project/Data/Loot/volatile-cracked-vial.asset using Guid(25c95f018ffdaff4aacd92e1b240fddd) (NativeFormatImporter) -> (Import Result ID: '6f69cbcf59984c159be8934b18ea3175') in 0.0008661 seconds [static dependencies only]. Details - ImportResultOutputID=ff938cac8833097a622612c165259240 DependenciesID=1e4542c0860742449fe18e3911dd7cc0 StaticDependenciesID=82c6269893a709690b988e766bf17dd3 
-Start importing Assets/_Project/Data/Loot/LootDatabase.asset using Guid(e61f9b18aeb49054fa0fde51c716fe59) (NativeFormatImporter) -> (Import Result ID: 'cc3e98d6f5739c5f6c0ce0bdda897fd5') in 0.000815 seconds [static dependencies only]. Details - ImportResultOutputID=9d10fb0a37d3db271653371ef6deb5b9 DependenciesID=dc73b43351bd3389de0654aada957cde StaticDependenciesID=2a4b5b0b59a6818e26d4a688feb325ff 
-Start importing Assets/_Project/Data/Loot/relic-preserved-specimen.asset using Guid(07726e4b2decbee41bbcc21df443a7f5) (NativeFormatImporter) -> (Import Result ID: '4c7f6734cf26a625d1f9263aaece2998') in 0.0010408 seconds [static dependencies only]. Details - ImportResultOutputID=67a93842efd82031680c5083a2c49ece DependenciesID=10acfbd9bcefdc3397ee64f6f6826b44 StaticDependenciesID=13ddea57c9dd9b6e7c586c36b67da399 
-Start importing Assets/_Project/Data/Loot/relic-old-console.asset using Guid(77904a72d1781c547b7b4e493e6408f3) (NativeFormatImporter) -> (Import Result ID: 'e3b6ec2d87574433173ba39972dd3f55') in 0.0009151 seconds [static dependencies only]. Details - ImportResultOutputID=68a4f3afcf46f72c4e5075a8f60c0a0d DependenciesID=a5042a6402639c76226273f141931932 StaticDependenciesID=fc75b9d740dc3b0ebe1a3828fb423932 
-Start importing Assets/_Project/Data/Loot/volatile-leaking-battery.asset using Guid(f7fcbfb101f2c564c9264a7cc05498f6) (NativeFormatImporter) -> (Import Result ID: '349c1bee69a34b174647bb0560bef458') in 0.0009435 seconds [static dependencies only]. Details - ImportResultOutputID=9fe8c258b5bae287ad2c562c77efbc12 DependenciesID=831b3a1b4b70b65e75a2942c3ebcaaa4 StaticDependenciesID=b9c4c6773a256ab09c0cf1aed8ea57bc 
-Start importing Assets/_Project/Data/Loot/currency-coin-stack.asset using Guid(6a023e1b95042dc4f9180464a8aae710) (NativeFormatImporter) -> (Import Result ID: '4e4794f7ceda30b03865d922c2c0e075') in 0.0008006 seconds [static dependencies only]. Details - ImportResultOutputID=7a47b2fbcb4e8ef47f9877b2da35a9e4 DependenciesID=d1d5d790a7e21dc944d9a64746b92233 StaticDependenciesID=2dd016fdcd4f0ff4e1c1bc59a4c48bff 
-Start importing Assets/_Project/Data/Loot/volatile-caged-bird.asset using Guid(ea9e200eee165e14884b4a99e96bf131) (NativeFormatImporter) -> (Import Result ID: 'd4b0a919117fd9a4062fa07fc8667b92') in 0.0008422 seconds [static dependencies only]. Details - ImportResultOutputID=e0b7c22483af1c1dba41b955c87f6685 DependenciesID=427b88e11e93dd3ce94e9b71a15d3f99 StaticDependenciesID=4e89c501193c2fd8670cbdcb9503bac6 
-Start importing Assets/_Project/Data/Loot/relic-small-sculpture.asset using Guid(0b9d8b48630a02b44bf9fee969ad7a6b) (NativeFormatImporter) -> (Import Result ID: '00bfd4ebbf0f2ad37e9347051490ac1e') in 0.0008425 seconds [static dependencies only]. Details - ImportResultOutputID=11e112cbbe7732707919365ee392b7aa DependenciesID=db4e08680029b17e0d89339daad6cdab StaticDependenciesID=13236944ac82ee3e0d8046927304f61f 
-Start importing Assets/_Project/Data/Loot/currency-data-chip.asset using Guid(2d8c39186f09fce49a4716e979103996) (NativeFormatImporter) -> (Import Result ID: '91bf1ff508d38fc4d27fc4b5c4b76567') in 0.0008474 seconds [static dependencies only]. Details - ImportResultOutputID=be0befdee63e7e3a67ea294c58962ec1 DependenciesID=ce3694a436f70e381d4e6d3df4be44cc StaticDependenciesID=bfa432b4d7da20835e37967f9cdbe10e 
-Start importing Assets/_Project/Data/Loot/currency-small-bag.asset using Guid(2ed6f16b3511cf24895f998bcc692d1f) (NativeFormatImporter) -> (Import Result ID: '788dadbaab4ba4b2d3ccd14fd246006c') in 0.0008864 seconds [static dependencies only]. Details - ImportResultOutputID=810c32153d635ca9716a24953fcae89e DependenciesID=c1c619ae48880689ae8e161af234397a StaticDependenciesID=79fe296779bc0ead65353b6702a72ccb 
+Asset Pipeline Refresh (id=54033c109bc160c498ed7f64f5eb8784): Total: 0.013 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Project/Data/Loot/Icons/relic-small-sculpture.png using Guid(93001190f9f5caf47926b0efe3592fe6) (TextureImporter) -> (Import Result ID: '5c7769deebdc0cb0bb024eaac8cff6f7') in 0.009412 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ceee8fbc912a2a7c541b1a8b5bd51c7f DependenciesID=f18eec1ebd37865f53e47b05371597db StaticDependenciesID=8fc09e9455a8dafd407e00b3a6df3d92 
 Refreshing native plugins compatible for Editor in 2.91 ms, found 3 plugins.
-Asset Pipeline Refresh (id=fae9ef28013b87241ad1cd3ce6f0c7f6): Total: 0.026 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Asset Pipeline Refresh (id=19b0a742a5d052544ac0030143790f33): Total: 0.007 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=a611b856a22376945ab1bb97fc94cde2): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Project/Data/Loot/Icons/relic-small-sculpture.png using Guid(93001190f9f5caf47926b0efe3592fe6) (TextureImporter) -> (Import Result ID: '5c7769deebdc0cb0bb024eaac8cff6f7') in 0.0016483 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ceee8fbc912a2a7c541b1a8b5bd51c7f DependenciesID=f18eec1ebd37865f53e47b05371597db StaticDependenciesID=8fc09e9455a8dafd407e00b3a6df3d92 
+Refreshing native plugins compatible for Editor in 2.96 ms, found 3 plugins.
+Asset Pipeline Refresh (id=9dddea7c5d3f2a644afd1ca9e29f0559): Total: 0.013 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Project/Data/Loot/Icons/relic-medium-painting.png using Guid(ddff262bd574654479baf387979ad51e) (TextureImporter) -> (Import Result ID: 'e547333b1cda4168b544a06e26804e5f') in 0.0015494 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=df73a16bd19d5134ed859e37b3bb6ce1 DependenciesID=51ccdfaf26e805ce45420a2cd819a1f3 StaticDependenciesID=a553996164693de9293ca670c46074ca 
+Refreshing native plugins compatible for Editor in 2.89 ms, found 3 plugins.
+Asset Pipeline Refresh (id=bab0d69f2cac342429ba8f9db1802174): Total: 0.016 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Project/Data/Loot/Icons/relic-medium-painting.png using Guid(ddff262bd574654479baf387979ad51e) (TextureImporter) -> (Import Result ID: 'e11a3322c04cd3093e31a75a5b5a554a') in 0.0093302 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=28ff515af72582a395bb900e6ff88f9a DependenciesID=1da3079370c0ebc2348140b77678f3d7 StaticDependenciesID=569beafbe15ab854d41879d87c2f84e6 
+Refreshing native plugins compatible for Editor in 2.93 ms, found 3 plugins.
+Asset Pipeline Refresh (id=cd1fdd4164d99ab4daa43fabf87dce48): Total: 0.035 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Project/Data/Loot/Icons/relic-medium-painting.png using Guid(ddff262bd574654479baf387979ad51e) (TextureImporter) -> (Import Result ID: 'e11a3322c04cd3093e31a75a5b5a554a') in 0.0015456 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=28ff515af72582a395bb900e6ff88f9a DependenciesID=1da3079370c0ebc2348140b77678f3d7 StaticDependenciesID=569beafbe15ab854d41879d87c2f84e6 
+Refreshing native plugins compatible for Editor in 3.70 ms, found 3 plugins.
+Asset Pipeline Refresh (id=4c3606ef5d6272647a507e14cc218906): Total: 0.013 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Project/Data/Loot/Icons/relic-large-machine.png using Guid(1847571c96a1cb440a8ebdc2b8a5efc6) (TextureImporter) -> (Import Result ID: '5d69b43e061b37b7631a41efe3793ab2') in 0.0015145 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=10646e430ab9b7cb55cc47ffa4ab5c41 DependenciesID=f9538f7a14ee400cdb026a0291b79358 StaticDependenciesID=79ad8c80b5ba2641b5f231e672b47f21 
+Refreshing native plugins compatible for Editor in 3.16 ms, found 3 plugins.
+Asset Pipeline Refresh (id=f80d557dff4977a418e4f8aee701d636): Total: 0.013 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Project/Data/Loot/Icons/relic-large-machine.png using Guid(1847571c96a1cb440a8ebdc2b8a5efc6) (TextureImporter) -> (Import Result ID: '4227ce7d119f8752c7a60fe58fd1d9da') in 0.0102944 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3868f897558d2e2cb8dcfdbb5e42b476 DependenciesID=838658e2aacf43e560b1cea0efb72763 StaticDependenciesID=56dfb9e58e055ea2a8f24dceadd996ac 
+Refreshing native plugins compatible for Editor in 2.99 ms, found 3 plugins.
+Asset Pipeline Refresh (id=8df0db1e9cf394c438351b2fb8626fb8): Total: 0.037 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Project/Data/Loot/Icons/relic-large-machine.png using Guid(1847571c96a1cb440a8ebdc2b8a5efc6) (TextureImporter) -> (Import Result ID: '4227ce7d119f8752c7a60fe58fd1d9da') in 0.0016288 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3868f897558d2e2cb8dcfdbb5e42b476 DependenciesID=838658e2aacf43e560b1cea0efb72763 StaticDependenciesID=56dfb9e58e055ea2a8f24dceadd996ac 
+Refreshing native plugins compatible for Editor in 3.05 ms, found 3 plugins.
+Asset Pipeline Refresh (id=7d69090238755934ba2d5758b0159eb3): Total: 0.013 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Project/Data/Loot/Icons/relic-old-console.png using Guid(588071a7aeaba3c44bbd4c0a25ad9c3c) (TextureImporter) -> (Import Result ID: 'a1a284891b4c4282cb4fddfb7229d7d6') in 0.0014512 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8abb11b610c72398e28aa3aac3d63aeb DependenciesID=4521b3a607754a3f6dbfa4328815933f StaticDependenciesID=5b0222a731c23bb9e4b991cc965d38fa 
+Refreshing native plugins compatible for Editor in 2.83 ms, found 3 plugins.
+Asset Pipeline Refresh (id=168e9a91fce3cab4682536c09f0517fb): Total: 0.012 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Project/Data/Loot/Icons/relic-old-console.png using Guid(588071a7aeaba3c44bbd4c0a25ad9c3c) (TextureImporter) -> (Import Result ID: 'aa97b57407ed320743fbe8143d95f4e2') in 0.0071041 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b677145136d08ea560eb5ac652faa724 DependenciesID=eace8c140ff7edd4d43c141930fa26d8 StaticDependenciesID=e71790722bec044809b33ba6cbafc654 
+Refreshing native plugins compatible for Editor in 3.17 ms, found 3 plugins.
+Asset Pipeline Refresh (id=cb80a14d4aee2d9409836288d274b23e): Total: 0.033 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Project/Data/Loot/Icons/relic-old-console.png using Guid(588071a7aeaba3c44bbd4c0a25ad9c3c) (TextureImporter) -> (Import Result ID: 'aa97b57407ed320743fbe8143d95f4e2') in 0.0017233 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b677145136d08ea560eb5ac652faa724 DependenciesID=eace8c140ff7edd4d43c141930fa26d8 StaticDependenciesID=e71790722bec044809b33ba6cbafc654 
+Refreshing native plugins compatible for Editor in 3.41 ms, found 3 plugins.
+Asset Pipeline Refresh (id=df521fc5a1b9e524385b4ac084aef925): Total: 0.013 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Project/Data/Loot/Icons/relic-preserved-specimen.png using Guid(837dac31bff0f8a4ab6b23fec9c1b6db) (TextureImporter) -> (Import Result ID: '2249e922cb9ce069ec8acd8888026b5c') in 0.0015461 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b024cf17f42eb53566c0ff7717576309 DependenciesID=015ced352f5a9d2eaf5571e1edd0faf2 StaticDependenciesID=1bd25d94b36777bfc1d6a7b72c1ec1f6 
+Refreshing native plugins compatible for Editor in 3.10 ms, found 3 plugins.
+Asset Pipeline Refresh (id=559ae2cea9b58564cb05aa30cdb823d2): Total: 0.013 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Project/Data/Loot/Icons/relic-preserved-specimen.png using Guid(837dac31bff0f8a4ab6b23fec9c1b6db) (TextureImporter) -> (Import Result ID: '16c11f91b7479093b277ca74ddaaa275') in 0.0089639 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3b4d00bdbb74d156e21dae482b489ed0 DependenciesID=ca810c131caf5988dfd320585562ddbd StaticDependenciesID=ed7949fd12fea144a3d83489f120fbaf 
+Refreshing native plugins compatible for Editor in 3.08 ms, found 3 plugins.
+Asset Pipeline Refresh (id=332f4f0711c878f4e96abab3113c7745): Total: 0.033 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Project/Data/Loot/Icons/relic-preserved-specimen.png using Guid(837dac31bff0f8a4ab6b23fec9c1b6db) (TextureImporter) -> (Import Result ID: '16c11f91b7479093b277ca74ddaaa275') in 0.0016042 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3b4d00bdbb74d156e21dae482b489ed0 DependenciesID=ca810c131caf5988dfd320585562ddbd StaticDependenciesID=ed7949fd12fea144a3d83489f120fbaf 
+Refreshing native plugins compatible for Editor in 3.07 ms, found 3 plugins.
+Asset Pipeline Refresh (id=118146409fed72b4c98424333bb0bed3): Total: 0.013 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Project/Data/Loot/Icons/volatile-leaking-battery.png using Guid(8142af13d6483f344baac88f172580d8) (TextureImporter) -> (Import Result ID: '6ad1a2750264f8878f0baa98f53b8f87') in 0.0014745 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9857e2263403576458b1bb72892b3a15 DependenciesID=a8bd35b0a640f5a1c093b4e5d9b6fe3a StaticDependenciesID=e205e497572b21cbce212e95462b2512 
+Refreshing native plugins compatible for Editor in 3.45 ms, found 3 plugins.
+Asset Pipeline Refresh (id=5462a0d5a590d664daa185f0d431803e): Total: 0.014 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Project/Data/Loot/Icons/volatile-leaking-battery.png using Guid(8142af13d6483f344baac88f172580d8) (TextureImporter) -> (Import Result ID: '31a2dd30a4931e69bb889aee4b72c4b4') in 0.009409 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e4033a26e9ada4f605e2a37138e79621 DependenciesID=6431cf43a22dc8f9881abccb46b5b8f3 StaticDependenciesID=b4ff5cbb8e84526584e9a53a01f0ade7 
+Refreshing native plugins compatible for Editor in 2.93 ms, found 3 plugins.
+Asset Pipeline Refresh (id=bd3ad82c18d95144597b0b630046d6b3): Total: 0.037 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Project/Data/Loot/Icons/volatile-leaking-battery.png using Guid(8142af13d6483f344baac88f172580d8) (TextureImporter) -> (Import Result ID: '31a2dd30a4931e69bb889aee4b72c4b4') in 0.0015465 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e4033a26e9ada4f605e2a37138e79621 DependenciesID=6431cf43a22dc8f9881abccb46b5b8f3 StaticDependenciesID=b4ff5cbb8e84526584e9a53a01f0ade7 
+Refreshing native plugins compatible for Editor in 3.38 ms, found 3 plugins.
+Asset Pipeline Refresh (id=59d5cfd8314394347a17cc3f193e7da0): Total: 0.014 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Project/Data/Loot/Icons/volatile-caged-bird.png using Guid(ac7bb182239ab2c489f7ffddd0b477c3) (TextureImporter) -> (Import Result ID: '8cd6e209c2f557f68ccb7a1ba0f46f2d') in 0.0014848 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ee8fc7314216f0440194fa03f340307f DependenciesID=d8f16bf4c806bf9ea4af90bb1836541a StaticDependenciesID=5b9cd80880709886294802a21a4f123f 
+Refreshing native plugins compatible for Editor in 3.56 ms, found 3 plugins.
+Asset Pipeline Refresh (id=34059147f1285ae429c1bbb40b6b1b52): Total: 0.013 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Project/Data/Loot/Icons/volatile-caged-bird.png using Guid(ac7bb182239ab2c489f7ffddd0b477c3) (TextureImporter) -> (Import Result ID: '8a1c4d2ca0c5b6991f6b3e6dab005dac') in 0.0100246 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c5e1052a7898636b5e740e5c8cfaf493 DependenciesID=31cd283db014b86639186cbf06ca2c2c StaticDependenciesID=40a3f52141645aed1fc30868b6261dfa 
+Refreshing native plugins compatible for Editor in 2.97 ms, found 3 plugins.
+Asset Pipeline Refresh (id=49fb1fd6d8f320446bd96b5c8307a7af): Total: 0.036 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Project/Data/Loot/Icons/volatile-caged-bird.png using Guid(ac7bb182239ab2c489f7ffddd0b477c3) (TextureImporter) -> (Import Result ID: '8a1c4d2ca0c5b6991f6b3e6dab005dac') in 0.0015621 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c5e1052a7898636b5e740e5c8cfaf493 DependenciesID=31cd283db014b86639186cbf06ca2c2c StaticDependenciesID=40a3f52141645aed1fc30868b6261dfa 
+Refreshing native plugins compatible for Editor in 3.12 ms, found 3 plugins.
+Asset Pipeline Refresh (id=7b417578c0e2dd34f8063cac67f43874): Total: 0.012 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Project/Data/Loot/Icons/volatile-cracked-vial.png using Guid(9e7eada27a335d040baab66028627828) (TextureImporter) -> (Import Result ID: 'c379e30d2851de6732807c3e1f176654') in 0.0016378 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5afaaf614965f288ee016d30c8db797d DependenciesID=1870f30137d4f161ffe6703ce2fe94b1 StaticDependenciesID=074d534e60e44da7e69b278016e9eb1e 
+Refreshing native plugins compatible for Editor in 2.89 ms, found 3 plugins.
+Asset Pipeline Refresh (id=b157ed712e6793b46aa10a9a16560f66): Total: 0.012 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Project/Data/Loot/Icons/volatile-cracked-vial.png using Guid(9e7eada27a335d040baab66028627828) (TextureImporter) -> (Import Result ID: 'b499ad757ab9852eeced31f23491e360') in 0.0074676 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=dd5c51ca05ea0d3f489b8b50a2151860 DependenciesID=d4b560b6df777a4067f71abf34cd0775 StaticDependenciesID=bbd065d7a783360c05c4d08479340519 
+Refreshing native plugins compatible for Editor in 3.06 ms, found 3 plugins.
+Asset Pipeline Refresh (id=b8bfd9deea1a97e47bc72970ec300351): Total: 0.030 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Project/Data/Loot/Icons/volatile-cracked-vial.png using Guid(9e7eada27a335d040baab66028627828) (TextureImporter) -> (Import Result ID: 'b499ad757ab9852eeced31f23491e360') in 0.001698 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=dd5c51ca05ea0d3f489b8b50a2151860 DependenciesID=d4b560b6df777a4067f71abf34cd0775 StaticDependenciesID=bbd065d7a783360c05c4d08479340519 
+Refreshing native plugins compatible for Editor in 3.17 ms, found 3 plugins.
+Asset Pipeline Refresh (id=1bee8ebc9617b274ab41f55d60db1551): Total: 0.013 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing ProjectSettings/EditorBuildSettings.asset using Guid(0000000000000000b000000000000000) (LibraryAssetImporter) -> (Import Result ID: '6278ea1159212ef5ef427240486e4071') in 0.0013577 seconds [static dependencies only]. Details - ImportResultOutputID=d777934f36c664454d62eda103573334 DependenciesID=59b8623b308ee837dd6b9fe1860947d0 StaticDependenciesID=af7784b1388ce2df5d4a849fdee281e6 
+Start importing Assets/_Project/Data/Loot/relic-medium-painting.asset using Guid(1335ac54227f55b41bf6ea55b7855a01) (NativeFormatImporter) -> (Import Result ID: '5a809895de2f673da66f4050177dae63') in 0.0010842 seconds [static dependencies only]. Details - ImportResultOutputID=7cd0dcc7735dc680e075e8c076a2561b DependenciesID=197622d6aec5b8dd8f4bdb46e41b26ff StaticDependenciesID=c145aef25595504c7e58861052c683fc 
+Start importing Assets/_Project/Data/Loot/currency-cash-roll.asset using Guid(54e2cc7e4318c7142a93201db325bba1) (NativeFormatImporter) -> (Import Result ID: 'a473e86385935a802a20f6eee3285eab') in 0.0010987 seconds [static dependencies only]. Details - ImportResultOutputID=4b7401cb2d241d44082d159de36942ba DependenciesID=b251de46c50fb099ae9cf01b7e44ee68 StaticDependenciesID=6e31db5932aa4ea19ac69ad7e32bdcd0 
+Start importing Assets/_Project/Data/Loot/relic-large-machine.asset using Guid(84852a5c3d4536c47b4346dd36c90539) (NativeFormatImporter) -> (Import Result ID: 'dac7450e01f201d5396c5ecf2144c091') in 0.0012563 seconds [static dependencies only]. Details - ImportResultOutputID=4f9345c82dd001cc2d95b83ebfb47fe0 DependenciesID=e4a74fd76ec1124ab77eb549cb4af498 StaticDependenciesID=bd4618f2ec566071397078d5a5e9ce8f 
+Start importing Assets/_Project/Data/Loot/volatile-cracked-vial.asset using Guid(25c95f018ffdaff4aacd92e1b240fddd) (NativeFormatImporter) -> (Import Result ID: '8135cd0714a2e8d57b4a1f630d29d97f') in 0.0009391 seconds [static dependencies only]. Details - ImportResultOutputID=ff938cac8833097a622612c165259240 DependenciesID=4a7ed886394aeab03cd6d6f0f2853120 StaticDependenciesID=469a57feccfc22c9f4e573e9226f8f2f 
+Start importing Assets/_Project/Data/Loot/LootDatabase.asset using Guid(e61f9b18aeb49054fa0fde51c716fe59) (NativeFormatImporter) -> (Import Result ID: 'cc3e98d6f5739c5f6c0ce0bdda897fd5') in 0.0009063 seconds [static dependencies only]. Details - ImportResultOutputID=9d10fb0a37d3db271653371ef6deb5b9 DependenciesID=dc73b43351bd3389de0654aada957cde StaticDependenciesID=2a4b5b0b59a6818e26d4a688feb325ff 
+Start importing Assets/_Project/Data/Loot/relic-preserved-specimen.asset using Guid(07726e4b2decbee41bbcc21df443a7f5) (NativeFormatImporter) -> (Import Result ID: 'fab7e25e83dc003928194bab9bb750fe') in 0.000981 seconds [static dependencies only]. Details - ImportResultOutputID=67a93842efd82031680c5083a2c49ece DependenciesID=530304b8e7b5d9bdc2792db57788ed92 StaticDependenciesID=241d63bf425b9fb0efb9f9af72d18d2e 
+Start importing Assets/_Project/Data/Loot/relic-old-console.asset using Guid(77904a72d1781c547b7b4e493e6408f3) (NativeFormatImporter) -> (Import Result ID: 'a3cfaa8a9570755c0096e22d2629be66') in 0.0008654 seconds [static dependencies only]. Details - ImportResultOutputID=68a4f3afcf46f72c4e5075a8f60c0a0d DependenciesID=b825338be4417637297f4fd7d9b3bec5 StaticDependenciesID=3856d99b4383c31672fdec017f24b61d 
+Start importing Assets/_Project/Data/Loot/volatile-leaking-battery.asset using Guid(f7fcbfb101f2c564c9264a7cc05498f6) (NativeFormatImporter) -> (Import Result ID: 'bdc6d0ff05e694b9c5118f00eb28521e') in 0.0009939 seconds [static dependencies only]. Details - ImportResultOutputID=9fe8c258b5bae287ad2c562c77efbc12 DependenciesID=cff7925e0ac12598873527164b35eab1 StaticDependenciesID=d94daa0005546bca1fb7497593a600ec 
+Start importing Assets/_Project/Data/Loot/currency-coin-stack.asset using Guid(6a023e1b95042dc4f9180464a8aae710) (NativeFormatImporter) -> (Import Result ID: '51bf7a68dd718a11f2101297527c2bf3') in 0.0009779 seconds [static dependencies only]. Details - ImportResultOutputID=7a47b2fbcb4e8ef47f9877b2da35a9e4 DependenciesID=135df8d62a2bbfa0260de59bde41d6a5 StaticDependenciesID=01e2a03b83bd4195a827d72db1d8d9c0 
+Start importing Assets/_Project/Data/Loot/volatile-caged-bird.asset using Guid(ea9e200eee165e14884b4a99e96bf131) (NativeFormatImporter) -> (Import Result ID: '799d4c3c4ad6892d78f6d804bbf5e13c') in 0.0011605 seconds [static dependencies only]. Details - ImportResultOutputID=e0b7c22483af1c1dba41b955c87f6685 DependenciesID=468cc8773dcba3dade863f033493e635 StaticDependenciesID=30c4bc0a08a83aa6ee4967e26c6d71d5 
+Start importing Assets/_Project/Data/Loot/relic-small-sculpture.asset using Guid(0b9d8b48630a02b44bf9fee969ad7a6b) (NativeFormatImporter) -> (Import Result ID: '4a28736b8b6adeba18f75b39c8090442') in 0.0010043 seconds [static dependencies only]. Details - ImportResultOutputID=11e112cbbe7732707919365ee392b7aa DependenciesID=38d4fcb95cd435f6bca474782f570805 StaticDependenciesID=2c9bfc5184e74e736395fcd5ea3c99d2 
+Start importing Assets/_Project/Data/Loot/currency-data-chip.asset using Guid(2d8c39186f09fce49a4716e979103996) (NativeFormatImporter) -> (Import Result ID: '9153e37ed0e7e3ea3c12c595bf60f9ac') in 0.0009365 seconds [static dependencies only]. Details - ImportResultOutputID=be0befdee63e7e3a67ea294c58962ec1 DependenciesID=ada6ac30a5ed5c3624e14ab547339378 StaticDependenciesID=628d55446162b613a176287367a88d49 
+Start importing Assets/_Project/Data/Loot/currency-small-bag.asset using Guid(2ed6f16b3511cf24895f998bcc692d1f) (NativeFormatImporter) -> (Import Result ID: '32fb00e1aacaae4280ba4759d99f4f8f') in 0.0009541 seconds [static dependencies only]. Details - ImportResultOutputID=810c32153d635ca9716a24953fcae89e DependenciesID=783129dfcbbd4db01a4a0c9cf803f894 StaticDependenciesID=b20b72a8c2085973ca48b73a642be090 
+Refreshing native plugins compatible for Editor in 2.94 ms, found 3 plugins.
+Asset Pipeline Refresh (id=45dc1629422557e4ab6477f2baeebc84): Total: 0.030 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=2bbb7fe3b76982641ac9968c1acbe52a): Total: 0.007 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
 Saving results to: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\editmode-results.xml
-Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 87 unused Assets / (22.0 KB). Loaded Objects now: 5106.
-Memory consumption went from 129.6 MB to 129.6 MB.
-Total: 7.653500 ms (FindLiveObjects: 0.180100 ms CreateObjectMapping: 0.064400 ms MarkObjects: 7.331000 ms  DeleteObjects: 0.077500 ms)
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/_Project/Scenes/Boot.unity'
+	Deserialize:            0.681 ms
+	Integration:            5.190 ms
+	Integration of assets:  0.075 ms
+	Thread Wait Time:       0.010 ms
+	Total Operation Time:   5.956 ms
+Unloading 105 unused Assets / (78.2 KB). Loaded Objects now: 5131.
+Memory consumption went from 128.7 MB to 128.6 MB.
+Total: 6.589800 ms (FindLiveObjects: 0.157400 ms CreateObjectMapping: 0.057200 ms MarkObjects: 6.241500 ms  DeleteObjects: 0.133200 ms)
 
 DisplayProgressbar: Undo
-Test run completed. Exiting with code 2 (Failed). One or more tests failed.
+Test run completed. Exiting with code 0 (Ok). Run completed.
 UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
 UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
@@ -539,4 +567,4 @@ CodeReloadManager destroyed
 Checking for leaked weakptr:
   Found no leaked weakptrs.
 [Package Manager] Server process was shutdown
-##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1776612326842,"processId":4468,"allocatedMemory":13238805,"memoryLabels":[{"Default":168145},{"Permanent":15276},{"NewDelete":65299},{"Thread":4230344},{"Manager":50469},{"VertexData":8},{"Geometry":816},{"Texture":24},{"Shader":851967},{"Material":24},{"GfxDevice":55321},{"Animation":392},{"Audio":3008},{"FreeType":8},{"FontEngine":736},{"Physics":2090},{"Physics2D":16},{"Serialization":1016},{"Input":9880},{"JobScheduler":33024},{"TextLib":216},{"Mono":32},{"ScriptingNativeRuntime":155052},{"BaseObject":1620832},{"Resource":1184},{"Renderer":3008},{"Transform":4685},{"File":21615},{"WebCam":616},{"Culling":32},{"Terrain":11394},{"Wind":24},{"STL":40},{"String":13082},{"StaticString":6718},{"Utility":2675494},{"Curl":2559},{"PoolAlloc":2072},{"AI":80},{"TypeTree":13637},{"ScriptManager":448},{"RuntimeInitializeOnLoadManager":64},{"SpriteAtlas":120},{"GI":7792},{"Director":8320},{"CloudService":288},{"WebRequest":808},{"VR":48050},{"SceneManager":504},{"Video":64},{"LazyScriptCache":32},{"Camera":17},{"Secure":2113},{"SerializationCache":1576},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57888},{"StaticSafetyDebugInfo":278528},{"Analytics":336},{"Hierarchy":608},{"CoreStats":13032},{"Identifiers":12960},{"Gui":128},{"EditorUtility":111243},{"VersionControl":4},{"Undo":931},{"AssetDatabase":2608263},{"EditorGi":328},{"UnityConnect":37777},{"Upm":1912},{"UpmDiagnostics":8},{"AssetCompliance":64},{"DrivenProperties":72},{"LocalIPC":211},{"ProfilerEditor":9746},{"CoreBusinessMetrics":2599},{"Windowing":456},{"Licensing":664},{"AssetReference":32},{"IPCStream":32}]}
+##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1776613499438,"processId":27172,"allocatedMemory":13256504,"memoryLabels":[{"Default":168274},{"Permanent":15276},{"NewDelete":65299},{"Thread":4230344},{"Manager":50981},{"VertexData":8},{"Geometry":816},{"Texture":24},{"Shader":851967},{"Material":24},{"GfxDevice":55321},{"Animation":392},{"Audio":3008},{"FreeType":8},{"FontEngine":736},{"Physics":2090},{"Physics2D":16},{"Serialization":1016},{"Input":9880},{"JobScheduler":33024},{"TextLib":216},{"Mono":32},{"ScriptingNativeRuntime":155052},{"BaseObject":1631968},{"Resource":1184},{"Renderer":3008},{"Transform":4685},{"File":27453},{"WebCam":616},{"Culling":32},{"Terrain":11394},{"Wind":24},{"STL":40},{"String":13082},{"StaticString":6718},{"Utility":2675494},{"Curl":2559},{"PoolAlloc":2072},{"AI":80},{"TypeTree":13637},{"ScriptManager":448},{"RuntimeInitializeOnLoadManager":64},{"SpriteAtlas":120},{"GI":7792},{"Director":8320},{"CloudService":288},{"WebRequest":808},{"VR":48050},{"SceneManager":504},{"Video":64},{"LazyScriptCache":32},{"Camera":17},{"Secure":2113},{"SerializationCache":1576},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57888},{"StaticSafetyDebugInfo":278528},{"Analytics":336},{"Hierarchy":608},{"CoreStats":13032},{"Identifiers":12960},{"Gui":128},{"EditorUtility":111287},{"VersionControl":4},{"Undo":931},{"AssetDatabase":2608303},{"EditorGi":328},{"UnityConnect":37777},{"Upm":1912},{"UpmDiagnostics":8},{"AssetCompliance":64},{"DrivenProperties":72},{"LocalIPC":211},{"ProfilerEditor":9746},{"CoreBusinessMetrics":2599},{"Windowing":456},{"Licensing":664},{"AssetReference":32},{"IPCStream":32}]}

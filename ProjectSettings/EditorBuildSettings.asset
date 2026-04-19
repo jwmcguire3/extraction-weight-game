@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_Project/Scenes/Boot.unity
+    guid: d6c7d0af33823664dbf2070202b73cd4
+  - enabled: 1
+    path: Assets/_Project/Scenes/Zones/Drydock.unity
+    guid: 6e09551260c0215499ebc809e44dee42
   m_configObjects: {}

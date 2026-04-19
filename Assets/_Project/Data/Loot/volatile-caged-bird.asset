@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: ExtractionWeight.Loot::ExtractionWeight.Loot.LootDefinition
   _itemId: volatile-caged-bird
   _displayName: Caged Bird
-  _icon: {fileID: 0}
+  _icon: {fileID: 21300000, guid: ac7bb182239ab2c489f7ffddd0b477c3, type: 3}
   _category: 2
   _baseCost:
     Noise: 0.24
