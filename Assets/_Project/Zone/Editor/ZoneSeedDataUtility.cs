@@ -1,6 +1,8 @@
 #nullable enable
 using System.Collections.Generic;
 using System.IO;
+using ExtractionWeight.Core;
+using ExtractionWeight.Extraction;
 using ExtractionWeight.Loot;
 using ExtractionWeight.Threat;
 using ExtractionWeight.Weight;
@@ -160,6 +162,7 @@ namespace ExtractionWeight.Zone.Editor
             CreatePerimeterWalls(environmentRoot.transform);
             CreateCover(environmentRoot.transform);
             CreateLootRooms(environmentRoot.transform);
+            CreateOverlandCorridor(environmentRoot.transform);
 
             var lightObject = new GameObject("Directional Light");
             var light = lightObject.AddComponent<Light>();
@@ -168,10 +171,10 @@ namespace ExtractionWeight.Zone.Editor
             light.shadows = LightShadows.Soft;
             lightObject.transform.rotation = Quaternion.Euler(50f, -30f, 0f);
 
-            CreateExtractionPointAnchor("ExtractionPoint_A", new Vector3(-95f, 0f, -95f));
-            CreateExtractionPointAnchor("ExtractionPoint_B", new Vector3(95f, 0f, -95f));
-            CreateExtractionPointAnchor("ExtractionPoint_C", new Vector3(-95f, 0f, 95f));
-            CreateExtractionPointAnchor("ExtractionPoint_D", new Vector3(95f, 0f, 95f));
+            CreateExtractionPoint("ExtractionPoint_A", "A", new Vector3(-86f, 0f, -82f), null, spawnExtraThreat: true);
+            CreateExtractionPoint("ExtractionPoint_B", "B", new Vector3(58f, 0f, -70f), null, spawnExtraThreat: true);
+            CreateExtractionPoint("ExtractionPoint_C", "C", new Vector3(-38f, 4f, 82f), null, spawnExtraThreat: false);
+            CreateExtractionPoint("ExtractionPoint_D", "D", new Vector3(82f, 0f, 22f), new Vector3(95f, 0f, 22f), spawnExtraThreat: true);
             CreateWardenRoutesAndThreats();
             CreateListeners();
             CreateLootSpawner();
@@ -261,10 +264,10 @@ namespace ExtractionWeight.Zone.Editor
         {
             return new List<ExtractionPointData>
             {
-                new("A", ExtractionType.Overland, new Vector3(-95f, 1.5f, -95f), 150f, ItemSizeFilter.AcceptsAll, 0f),
-                new("B", ExtractionType.Standard, new Vector3(95f, 1.5f, -95f), 360f, ItemSizeFilter.AcceptsAll, 90f),
-                new("C", ExtractionType.Drone, new Vector3(-95f, 1.5f, 95f), 300f, ItemSizeFilter.SmallOnly, 30f),
-                new("D", ExtractionType.Standard, new Vector3(95f, 1.5f, 95f), 480f, ItemSizeFilter.MediumAndSmaller, 90f),
+                new("A", ExtractionType.Standard, new Vector3(-86f, 1.5f, -82f), 480f, ItemSizeFilter.AcceptsAll, 45f, holdRadius: 8f),
+                new("B", ExtractionType.Standard, new Vector3(58f, 1.5f, -70f), 600f, ItemSizeFilter.AcceptsAll, 45f, holdRadius: 8f),
+                new("C", ExtractionType.Drone, new Vector3(-38f, 5.5f, 82f), 540f, ItemSizeFilter.SmallOnly, 20f, holdRadius: 3f, maxCarryCapacityFraction: 0.45f),
+                new("D", ExtractionType.Overland, new Vector3(82f, 1.5f, 22f), 420f, ItemSizeFilter.AcceptsAll, 0f, holdRadius: 8f, approachDurationSeconds: 15f),
             };
         }
 
@@ -312,10 +315,39 @@ namespace ExtractionWeight.Zone.Editor
             };
         }
 
-        private static void CreateExtractionPointAnchor(string name, Vector3 position)
+        private static void CreateExtractionPoint(string name, string pointId, Vector3 position, Vector3? boundaryPosition, bool spawnExtraThreat)
         {
-            var anchor = new GameObject(name);
-            anchor.transform.position = position;
+            var root = new GameObject(name);
+            root.transform.position = position;
+
+            var trigger = root.AddComponent<SphereCollider>();
+            trigger.isTrigger = true;
+            trigger.radius = 3f;
+
+            var actionTarget = root.AddComponent<PlayerContextActionTarget>();
+            actionTarget.Configure(ContextActionKind.Extract, "Extract", 3f, 5);
+
+            var controller = root.AddComponent<ExtractionController>();
+            Warden? extraThreat = null;
+
+            if (boundaryPosition.HasValue)
+            {
+                var boundary = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
+                boundary.name = "BoundaryMarker";
+                boundary.transform.SetParent(root.transform, false);
+                boundary.transform.position = boundaryPosition.Value;
+                boundary.transform.localScale = new Vector3(1.2f, 0.15f, 1.2f);
+                extraThreat = spawnExtraThreat ? CreateExtraThreat(root.transform, $"{name}_ExtraThreat", position + new Vector3(-6f, 0f, 0f)) : null;
+                controller.EditorConfigure(pointId, root.transform, boundary.transform, extraThreat);
+                return;
+            }
+
+            if (spawnExtraThreat)
+            {
+                extraThreat = CreateExtraThreat(root.transform, $"{name}_ExtraThreat", position + new Vector3(0f, 0f, -6f));
+            }
+
+            controller.EditorConfigure(pointId, root.transform, null, extraThreat);
         }
 
         private static void CreateGround(Transform parent)
@@ -416,6 +448,17 @@ namespace ExtractionWeight.Zone.Editor
             root.AddComponent<LootSpawner>();
         }
 
+        private static Warden CreateExtraThreat(Transform parent, string name, Vector3 position)
+        {
+            var root = new GameObject(name);
+            root.transform.SetParent(parent, false);
+            root.transform.position = position;
+            var warden = root.AddComponent<Warden>();
+            warden.EditorSetThreatId(name.ToLowerInvariant());
+            root.SetActive(false);
+            return warden;
+        }
+
         private static void CreateWarden(string name, Vector3 startPosition, IReadOnlyList<Vector3> waypoints)
         {
             var root = new GameObject(name);
@@ -493,6 +536,12 @@ namespace ExtractionWeight.Zone.Editor
                 };
                 renderer.sharedMaterial = material;
             }
+        }
+
+        private static void CreateOverlandCorridor(Transform parent)
+        {
+            CreateBox(parent, "OverlandCorridor_WallNorth", new Vector3(88f, 2f, 28f), new Vector3(18f, 4f, 1.5f), new Color(0.3f, 0.32f, 0.36f));
+            CreateBox(parent, "OverlandCorridor_WallSouth", new Vector3(88f, 2f, 16f), new Vector3(18f, 4f, 1.5f), new Color(0.3f, 0.32f, 0.36f));
         }
 
         private enum RoomOpening

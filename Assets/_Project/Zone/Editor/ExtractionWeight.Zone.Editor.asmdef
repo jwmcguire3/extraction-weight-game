@@ -3,9 +3,11 @@
   "rootNamespace": "ExtractionWeight.Zone.Editor",
   "references": [
     "ExtractionWeight.Zone",
+    "ExtractionWeight.Core.Runtime",
     "ExtractionWeight.Weight",
     "ExtractionWeight.Loot",
     "ExtractionWeight.Threat",
+    "ExtractionWeight.Extraction",
     "Unity.Addressables.Editor",
     "Unity.Addressables",
     "Unity.ResourceManager"

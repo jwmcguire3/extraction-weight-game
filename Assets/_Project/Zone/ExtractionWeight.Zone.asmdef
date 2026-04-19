@@ -3,6 +3,7 @@
   "rootNamespace": "ExtractionWeight.Zone",
   "references": [
     "ExtractionWeight.Core",
+    "ExtractionWeight.Core.Runtime",
     "ExtractionWeight.Weight",
     "ExtractionWeight.Loot",
     "Unity.Addressables",

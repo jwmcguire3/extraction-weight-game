@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1013100686146036264}
   - component: {fileID: 6204900890310134389}
+  - component: {fileID: 6092274469389354923}
   - component: {fileID: 7892041639746827444}
   - component: {fileID: 1043498253737726202}
   - component: {fileID: 5606311482254509391}
@@ -68,6 +69,19 @@ CharacterController:
   m_SkinWidth: 0.05
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 0.9, z: 0}
+--- !u!114 &6092274469389354923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928218244016203653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e39a0c1bc420e94e9d8510dcb1c0348, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ExtractionWeight.Core.Runtime::ExtractionWeight.Core.InteractionTracker
+  _fallbackScanRadius: 2
 --- !u!114 &7892041639746827444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,6 +97,7 @@ MonoBehaviour:
   _characterController: {fileID: 6204900890310134389}
   _playerControls: {fileID: -944628639613478452, guid: 9afcd9e7a5d675f4f97bf014b1714db6, type: 3}
   _movementReference: {fileID: 1013100686146036264}
+  _interactionTracker: {fileID: 0}
   _walkSpeed: 4
   _sprintSpeed: 7
   _crouchSpeedMultiplier: 0.65

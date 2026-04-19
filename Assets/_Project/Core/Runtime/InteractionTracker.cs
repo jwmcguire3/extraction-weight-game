@@ -195,7 +195,7 @@ namespace ExtractionWeight.Core
             return null;
         }
 
-        private void ShowHudMessage(string message)
+        public void ShowHudMessage(string message)
         {
             if (string.IsNullOrWhiteSpace(message))
             {

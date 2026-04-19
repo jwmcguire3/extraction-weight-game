@@ -71,6 +71,7 @@ namespace ExtractionWeight.Zone
             }
 
             CurrentZoneDefinition = zoneDefinition;
+            InitializeZoneRuntime(zoneDefinition);
             SpawnExtractionPointMarkers(zoneDefinition);
             SpawnLoot(zoneDefinition);
             OnZoneLoaded?.Invoke(zoneDefinition);
@@ -246,6 +247,34 @@ namespace ExtractionWeight.Zone
             }
 
             spawner.SpawnForZone(zoneDefinition, _currentRunSeed);
+        }
+
+        private void InitializeZoneRuntime(ZoneDefinition zoneDefinition)
+        {
+            if (!_loadedScene.HasValue || !_loadedScene.Value.IsValid())
+            {
+                return;
+            }
+
+            var rootObjects = _loadedScene.Value.GetRootGameObjects();
+            ZoneRuntime? zoneRuntime = null;
+            for (var i = 0; i < rootObjects.Length; i++)
+            {
+                zoneRuntime = rootObjects[i].GetComponentInChildren<ZoneRuntime>(true);
+                if (zoneRuntime != null)
+                {
+                    break;
+                }
+            }
+
+            if (zoneRuntime == null)
+            {
+                var runtimeRoot = new GameObject("ZoneRuntime");
+                SceneManager.MoveGameObjectToScene(runtimeRoot, _loadedScene.Value);
+                zoneRuntime = runtimeRoot.AddComponent<ZoneRuntime>();
+            }
+
+            zoneRuntime.Initialize(zoneDefinition);
         }
 
         private void DestroySpawnedMarkers()

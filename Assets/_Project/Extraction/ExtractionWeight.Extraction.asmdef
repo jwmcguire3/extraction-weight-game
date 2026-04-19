@@ -2,7 +2,12 @@
   "name": "ExtractionWeight.Extraction",
   "rootNamespace": "ExtractionWeight.Extraction",
   "references": [
-    "ExtractionWeight.Core"
+    "ExtractionWeight.Core",
+    "ExtractionWeight.Core.Runtime",
+    "ExtractionWeight.Weight",
+    "ExtractionWeight.Zone",
+    "ExtractionWeight.Threat",
+    "ExtractionWeight.Loot"
   ],
   "includePlatforms": [],
   "excludePlatforms": [],

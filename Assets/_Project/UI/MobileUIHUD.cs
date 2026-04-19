@@ -1,5 +1,6 @@
 #nullable enable
 using ExtractionWeight.Core;
+using ExtractionWeight.Zone;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem.OnScreen;
@@ -39,6 +40,7 @@ namespace ExtractionWeight.UI
         private Image? _staminaFill;
         private Text? _staminaText;
         private Text? _tideTimerText;
+        private Text? _openExitsText;
         private Image? _actionButtonImage;
         private Image? _actionButtonFillRing;
         private Text? _actionButtonText;
@@ -46,6 +48,7 @@ namespace ExtractionWeight.UI
         private Text? _crouchButtonText;
         private Text? _hudMessageText;
         private static Sprite? s_fallbackSprite;
+        private ZoneRuntime? _zoneRuntime;
 
         private void Awake()
         {
@@ -93,6 +96,12 @@ namespace ExtractionWeight.UI
             if (_tideTimerText != null)
             {
                 _tideTimerText.text = $"{Mathf.CeilToInt(_playerController.CurrentTideSecondsRemaining)}s";
+            }
+
+            _zoneRuntime ??= FindAnyObjectByType<ZoneRuntime>();
+            if (_openExitsText != null)
+            {
+                _openExitsText.text = _zoneRuntime?.OpenExtractionSummary ?? string.Empty;
             }
 
             if (_actionButtonText != null)
@@ -184,6 +193,10 @@ namespace ExtractionWeight.UI
             _tideTimerText.rectTransform.anchorMin = new Vector2(1f, 1f);
             _tideTimerText.rectTransform.anchorMax = new Vector2(1f, 1f);
             _tideTimerText.rectTransform.sizeDelta = new Vector2(180f, 40f);
+            _openExitsText = CreateText("OpenExitsText", rootRect, new Vector2(0f, -52f), 18, TextAnchor.MiddleCenter, "Open exits: A B C D");
+            _openExitsText.rectTransform.anchorMin = new Vector2(0.5f, 1f);
+            _openExitsText.rectTransform.anchorMax = new Vector2(0.5f, 1f);
+            _openExitsText.rectTransform.sizeDelta = new Vector2(360f, 32f);
 
             var joystickArea = CreateRect("JoystickArea", rootRect, new Vector2(0f, 0f), new Vector2(0f, 0f), new Vector2(128f, 128f), new Vector2(220f, 220f));
             var joystickBack = CreateImage("JoystickBack", joystickArea, builtinSprite, new Color(0.08f, 0.09f, 0.11f, 0.45f));
@@ -234,6 +247,7 @@ namespace ExtractionWeight.UI
             _staminaFill = transform.Find("TopCenter/StaminaBack/StaminaFill")?.GetComponent<Image>();
             _staminaText = transform.Find("TopCenter/StaminaText")?.GetComponent<Text>();
             _tideTimerText = transform.Find("TideTimer")?.GetComponent<Text>();
+            _openExitsText = transform.Find("OpenExitsText")?.GetComponent<Text>();
             _actionButtonImage = transform.Find("ActionButton/ActionButtonImage")?.GetComponent<Image>();
             _actionButtonFillRing = transform.Find("ActionButton/ActionButtonFillRing")?.GetComponent<Image>();
             _actionButtonText = transform.Find("ActionButton/ActionButtonText")?.GetComponent<Text>();

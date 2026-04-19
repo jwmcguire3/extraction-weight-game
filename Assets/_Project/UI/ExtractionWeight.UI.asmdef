@@ -4,6 +4,7 @@
   "references": [
     "ExtractionWeight.Core",
     "ExtractionWeight.Core.Runtime",
+    "ExtractionWeight.Zone",
     "Unity.InputSystem"
   ],
   "includePlatforms": [],

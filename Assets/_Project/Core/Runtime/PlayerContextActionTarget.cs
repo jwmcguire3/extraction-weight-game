@@ -40,14 +40,19 @@ namespace ExtractionWeight.Core
             Activated?.Invoke(playerController);
         }
 
-#if UNITY_EDITOR
-        public void EditorConfigure(ContextActionKind actionKind, string label, float interactionRadius, int priority)
+        public void Configure(ContextActionKind actionKind, string label, float interactionRadius, int priority)
         {
             _actionKind = actionKind;
             _labelOverride = label;
             _interactionRadius = interactionRadius;
             _priority = priority;
             _isEnabled = true;
+        }
+
+#if UNITY_EDITOR
+        public void EditorConfigure(ContextActionKind actionKind, string label, float interactionRadius, int priority)
+        {
+            Configure(actionKind, label, interactionRadius, priority);
         }
 #endif
     }
