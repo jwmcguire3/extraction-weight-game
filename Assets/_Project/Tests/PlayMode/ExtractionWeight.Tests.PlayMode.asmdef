@@ -1,0 +1,30 @@
+{
+  "name": "ExtractionWeight.Tests.PlayMode",
+  "rootNamespace": "ExtractionWeight.Tests.PlayMode",
+  "references": [
+    "ExtractionWeight.Core",
+    "ExtractionWeight.Weight",
+    "ExtractionWeight.Loot",
+    "ExtractionWeight.Zone",
+    "ExtractionWeight.Threat",
+    "ExtractionWeight.Extraction",
+    "ExtractionWeight.UI",
+    "ExtractionWeight.Audio"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [
+    "Editor"
+  ],
+  "allowUnsafeCode": false,
+  "overrideReferences": true,
+  "precompiledReferences": [
+    "nunit.framework.dll"
+  ],
+  "autoReferenced": false,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false,
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ]
+}

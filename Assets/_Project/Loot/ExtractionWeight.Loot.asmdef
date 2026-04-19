@@ -1,0 +1,16 @@
+{
+  "name": "ExtractionWeight.Loot",
+  "rootNamespace": "ExtractionWeight.Loot",
+  "references": [
+    "ExtractionWeight.Core"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}
