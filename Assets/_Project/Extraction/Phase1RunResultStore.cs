@@ -10,6 +10,8 @@ namespace ExtractionWeight.Extraction
     {
         public static Phase1RunResult? LastRunResult { get; private set; }
 
+        public static event System.Action<Phase1RunResult>? RunCompleted;
+
         public static IReadOnlyList<string> PlayerStashItemIds => s_playerStashItemIds;
 
         private static readonly List<string> s_playerStashItemIds = new();
@@ -33,6 +35,7 @@ namespace ExtractionWeight.Extraction
             }
 
             LastRunResult = runResult;
+            RunCompleted?.Invoke(runResult);
             carryState.Clear();
             return runResult;
         }
@@ -46,6 +49,7 @@ namespace ExtractionWeight.Extraction
             };
 
             LastRunResult = runResult;
+            RunCompleted?.Invoke(runResult);
             carryState.Clear();
             return runResult;
         }

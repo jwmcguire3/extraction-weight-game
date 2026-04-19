@@ -66,7 +66,7 @@ namespace ExtractionWeight.Zone.Editor
             CreateOrUpdateDrydockScene();
             var definition = CreateOrUpdateDrydockDefinition();
             ConfigureAddressables();
-            ConfigureBootScene(definition, markerPrefab);
+            Phase1MetaBootstrapUtility.CreateOrUpdateBaseAndBootContent(definition, markerPrefab);
             ConfigureBuildSettings();
 
             AssetDatabase.SaveAssets();
@@ -94,7 +94,7 @@ namespace ExtractionWeight.Zone.Editor
                 AssetDatabase.LoadAssetAtPath<SceneAsset>(DrydockScenePath) != null)
             {
                 ConfigureAddressables();
-                ConfigureBootScene(
+                Phase1MetaBootstrapUtility.EnsureBaseAndBootContentExists(
                     AssetDatabase.LoadAssetAtPath<ZoneDefinition>(DrydockDefinitionPath)!,
                     AssetDatabase.LoadAssetAtPath<GameObject>(ExtractionMarkerPrefabPath)!);
                 ConfigureBuildSettings();
@@ -231,31 +231,12 @@ namespace ExtractionWeight.Zone.Editor
             EditorUtility.SetDirty(settings);
         }
 
-        private static void ConfigureBootScene(ZoneDefinition definition, GameObject markerPrefab)
-        {
-            var scene = EditorSceneManager.OpenScene(BootScenePath, OpenSceneMode.Single);
-            var bootstrap = GameObject.Find("Bootstrap");
-            if (bootstrap == null)
-            {
-                bootstrap = new GameObject("Bootstrap");
-            }
-
-            var loader = bootstrap.GetComponent<ZoneLoader>();
-            if (loader == null)
-            {
-                loader = bootstrap.AddComponent<ZoneLoader>();
-            }
-
-            loader.EditorConfigure(new List<ZoneDefinition> { definition }, markerPrefab);
-            EditorUtility.SetDirty(loader);
-            EditorSceneManager.SaveScene(scene);
-        }
-
         private static void ConfigureBuildSettings()
         {
             EditorBuildSettings.scenes = new[]
             {
                 new EditorBuildSettingsScene(BootScenePath, true),
+                new EditorBuildSettingsScene("Assets/_Project/Scenes/Base.unity", true),
                 new EditorBuildSettingsScene(DrydockScenePath, true),
             };
         }

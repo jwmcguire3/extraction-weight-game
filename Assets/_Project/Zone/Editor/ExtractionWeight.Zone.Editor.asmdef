@@ -8,6 +8,8 @@
     "ExtractionWeight.Loot",
     "ExtractionWeight.Threat",
     "ExtractionWeight.Extraction",
+    "ExtractionWeight.MetaState",
+    "ExtractionWeight.UI",
     "Unity.Addressables.Editor",
     "Unity.Addressables",
     "Unity.ResourceManager"

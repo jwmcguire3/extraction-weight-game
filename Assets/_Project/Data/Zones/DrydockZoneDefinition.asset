@@ -23,29 +23,53 @@ MonoBehaviour:
   <TideDurationSeconds>k__BackingField: 600
   <ExtractionPoints>k__BackingField:
   - <PointId>k__BackingField: A
-    <ExtractionType>k__BackingField: 2
-    <Position>k__BackingField: {x: -95, y: 1.5, z: -95}
-    <TideCloseTime>k__BackingField: 150
+    <ExtractionType>k__BackingField: 0
+    <Position>k__BackingField: {x: -86, y: 1.5, z: -82}
+    <TideCloseTime>k__BackingField: 480
     <ItemSizeFilter>k__BackingField: 0
-    <HoldDurationSeconds>k__BackingField: 0
+    <HoldDurationSeconds>k__BackingField: 45
+    <InteractionRadius>k__BackingField: 3
+    <HoldRadius>k__BackingField: 8
+    <InitiationDurationSeconds>k__BackingField: 5
+    <DepartureDurationSeconds>k__BackingField: 3
+    <ApproachDurationSeconds>k__BackingField: 0
+    <MaxCarryCapacityFraction>k__BackingField: 1.2
   - <PointId>k__BackingField: B
     <ExtractionType>k__BackingField: 0
-    <Position>k__BackingField: {x: 95, y: 1.5, z: -95}
-    <TideCloseTime>k__BackingField: 360
+    <Position>k__BackingField: {x: 58, y: 1.5, z: -70}
+    <TideCloseTime>k__BackingField: 600
     <ItemSizeFilter>k__BackingField: 0
-    <HoldDurationSeconds>k__BackingField: 90
+    <HoldDurationSeconds>k__BackingField: 45
+    <InteractionRadius>k__BackingField: 3
+    <HoldRadius>k__BackingField: 8
+    <InitiationDurationSeconds>k__BackingField: 5
+    <DepartureDurationSeconds>k__BackingField: 3
+    <ApproachDurationSeconds>k__BackingField: 0
+    <MaxCarryCapacityFraction>k__BackingField: 1.2
   - <PointId>k__BackingField: C
     <ExtractionType>k__BackingField: 1
-    <Position>k__BackingField: {x: -95, y: 1.5, z: 95}
-    <TideCloseTime>k__BackingField: 300
+    <Position>k__BackingField: {x: -38, y: 5.5, z: 82}
+    <TideCloseTime>k__BackingField: 540
     <ItemSizeFilter>k__BackingField: 1
-    <HoldDurationSeconds>k__BackingField: 30
+    <HoldDurationSeconds>k__BackingField: 20
+    <InteractionRadius>k__BackingField: 3
+    <HoldRadius>k__BackingField: 3
+    <InitiationDurationSeconds>k__BackingField: 5
+    <DepartureDurationSeconds>k__BackingField: 3
+    <ApproachDurationSeconds>k__BackingField: 0
+    <MaxCarryCapacityFraction>k__BackingField: 0.45
   - <PointId>k__BackingField: D
-    <ExtractionType>k__BackingField: 0
-    <Position>k__BackingField: {x: 95, y: 1.5, z: 95}
-    <TideCloseTime>k__BackingField: 480
-    <ItemSizeFilter>k__BackingField: 2
-    <HoldDurationSeconds>k__BackingField: 90
+    <ExtractionType>k__BackingField: 2
+    <Position>k__BackingField: {x: 82, y: 1.5, z: 22}
+    <TideCloseTime>k__BackingField: 420
+    <ItemSizeFilter>k__BackingField: 0
+    <HoldDurationSeconds>k__BackingField: 0
+    <InteractionRadius>k__BackingField: 3
+    <HoldRadius>k__BackingField: 8
+    <InitiationDurationSeconds>k__BackingField: 5
+    <DepartureDurationSeconds>k__BackingField: 3
+    <ApproachDurationSeconds>k__BackingField: 15
+    <MaxCarryCapacityFraction>k__BackingField: 1.2
   <LootSpawnRegions>k__BackingField:
   - <Center>k__BackingField: {x: -72, y: 0, z: -48}
     <Radius>k__BackingField: 18

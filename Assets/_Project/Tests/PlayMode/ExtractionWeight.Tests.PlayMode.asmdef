@@ -9,6 +9,7 @@
     "ExtractionWeight.Zone",
     "ExtractionWeight.Threat",
     "ExtractionWeight.Extraction",
+    "ExtractionWeight.MetaState",
     "ExtractionWeight.UI",
     "ExtractionWeight.Audio"
   ],

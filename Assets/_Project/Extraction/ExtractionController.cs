@@ -1,5 +1,7 @@
 #nullable enable
+using System.Collections.Generic;
 using ExtractionWeight.Core;
+using ExtractionWeight.MetaState;
 using ExtractionWeight.Threat;
 using ExtractionWeight.Zone;
 using UnityEngine;
@@ -123,6 +125,7 @@ namespace ExtractionWeight.Extraction
             }
 
             _activePlayer = playerController;
+            GameFlowManager.Instance?.NotifyExtractionStarted();
             _stateMachine.TransitionTo(ExtractionPhaseState.Initiation);
             _stateElapsedSeconds = 0f;
             _extraThreatSpawned = false;
@@ -232,6 +235,8 @@ namespace ExtractionWeight.Extraction
                 return;
             }
 
+            var bankedItems = CollectLootItems(_activePlayer.CarryState);
+            GameFlowManager.Instance?.CompleteSuccessfulRun(_zoneRuntime.CurrentZoneDefinition.ZoneId, bankedItems);
             Phase1RunResultStore.CompleteSuccessfulExtraction(
                 _zoneRuntime.CurrentZoneDefinition.ZoneId,
                 _pointData.PointId,
@@ -301,6 +306,20 @@ namespace ExtractionWeight.Extraction
                     _contextActionTarget.Configure(ContextActionKind.Extract, GetActionLabel(pointData), pointData.InteractionRadius, 5);
                 }
             }
+        }
+
+        private static List<ExtractionWeight.Loot.LootItem> CollectLootItems(ExtractionWeight.Weight.CarryState carryState)
+        {
+            var items = new List<ExtractionWeight.Loot.LootItem>(carryState.Items.Count);
+            for (var i = 0; i < carryState.Items.Count; i++)
+            {
+                if (carryState.Items[i] is ExtractionWeight.Loot.LootItem lootItem)
+                {
+                    items.Add(lootItem);
+                }
+            }
+
+            return items;
         }
 
         private string GetActionLabel(ExtractionPointData pointData)

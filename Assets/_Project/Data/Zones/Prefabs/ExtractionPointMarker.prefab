@@ -127,5 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63e6b04b34a2079458a1d7f52a354fec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ExtractionWeight.Zone::ExtractionWeight.Zone.ZoneExtractionPointMarker
+  _openColor: {r: 0.9, g: 0.22, b: 0.16, a: 1}
+  _closedColor: {r: 0.28, g: 0.28, b: 0.32, a: 0.9}
   <PointId>k__BackingField: 
   <ExtractionType>k__BackingField: 0

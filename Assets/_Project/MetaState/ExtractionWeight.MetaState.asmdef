@@ -1,13 +1,12 @@
 {
-  "name": "ExtractionWeight.UI",
-  "rootNamespace": "ExtractionWeight.UI",
+  "name": "ExtractionWeight.MetaState",
+  "rootNamespace": "ExtractionWeight.MetaState",
   "references": [
     "ExtractionWeight.Core",
     "ExtractionWeight.Core.Runtime",
+    "ExtractionWeight.Weight",
     "ExtractionWeight.Loot",
-    "ExtractionWeight.MetaState",
-    "ExtractionWeight.Zone",
-    "Unity.InputSystem"
+    "ExtractionWeight.Zone"
   ],
   "includePlatforms": [],
   "excludePlatforms": [],
