@@ -5,6 +5,7 @@
     "ExtractionWeight.Zone",
     "ExtractionWeight.Weight",
     "ExtractionWeight.Loot",
+    "ExtractionWeight.Threat",
     "Unity.Addressables.Editor",
     "Unity.Addressables",
     "Unity.ResourceManager"

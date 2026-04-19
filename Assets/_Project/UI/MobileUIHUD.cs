@@ -43,17 +43,18 @@ namespace ExtractionWeight.UI
         private Text? _actionButtonText;
         private Image? _crouchButtonImage;
         private Text? _crouchButtonText;
+        private static Sprite? s_fallbackSprite;
 
         private void Awake()
         {
-            _playerController ??= FindFirstObjectByType<PlayerController>();
+            _playerController ??= FindAnyObjectByType<PlayerController>();
             _canvas = GetComponent<Canvas>();
             _canvas.renderMode = RenderMode.ScreenSpaceOverlay;
             var scaler = GetComponent<CanvasScaler>();
             scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
             scaler.referenceResolution = new Vector2(1920f, 1080f);
             scaler.matchWidthOrHeight = 1f;
-            _font = Resources.GetBuiltinResource<Font>("Arial.ttf");
+            _font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
             EnsureEventSystem();
             EnsureLayout();
         }
@@ -133,8 +134,8 @@ namespace ExtractionWeight.UI
                 return;
             }
 
-            var builtinSprite = Resources.GetBuiltinResource<Sprite>("UI/Skin/UISprite.psd");
-            var knobSprite = Resources.GetBuiltinResource<Sprite>("UI/Skin/Knob.psd");
+            var builtinSprite = LoadBuiltinSprite("UI/Skin/UISprite.psd");
+            var knobSprite = LoadBuiltinSprite("UI/Skin/Knob.psd");
 
             var gaugeRoot = CreateRect("TopCenter", rootRect, new Vector2(0.5f, 1f), new Vector2(0.5f, 1f), new Vector2(0f, -56f), new Vector2(180f, 140f));
             var gaugeBack = CreateImage("CarryGaugeBack", gaugeRoot, builtinSprite, new Color(0f, 0f, 0f, 0.4f));
@@ -272,6 +273,28 @@ namespace ExtractionWeight.UI
 
             var eventSystemObject = new GameObject("EventSystem", typeof(EventSystem), typeof(InputSystemUIInputModule));
             DontDestroyOnLoad(eventSystemObject);
+        }
+
+        private static Sprite LoadBuiltinSprite(string resourcePath)
+        {
+            if (s_fallbackSprite != null)
+            {
+                return s_fallbackSprite;
+            }
+
+            var texture = new Texture2D(2, 2, TextureFormat.RGBA32, false)
+            {
+                name = "HUD_FallbackSprite",
+            };
+            texture.SetPixels(new[]
+            {
+                Color.white, Color.white,
+                Color.white, Color.white,
+            });
+            texture.Apply();
+
+            s_fallbackSprite = Sprite.Create(texture, new Rect(0f, 0f, texture.width, texture.height), new Vector2(0.5f, 0.5f));
+            return s_fallbackSprite;
         }
 
 #if UNITY_EDITOR

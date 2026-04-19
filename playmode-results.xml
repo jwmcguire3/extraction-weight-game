@@ -1,25 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<test-run id="2" testcasecount="5" result="Passed" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-04-19 15:44:50Z" end-time="2026-04-19 15:44:50Z" duration="0.1278459">
-  <test-suite type="TestSuite" id="1014" name="extraction-weight-game" fullname="extraction-weight-game" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-04-19 15:44:50Z" end-time="2026-04-19 15:44:50Z" duration="0.127846" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+<test-run id="2" testcasecount="11" result="Passed" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-04-19 16:39:20Z" end-time="2026-04-19 16:39:31Z" duration="11.334756">
+  <test-suite type="TestSuite" id="1022" name="extraction-weight-game" fullname="extraction-weight-game" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-04-19 16:39:20Z" end-time="2026-04-19 16:39:31Z" duration="11.334756" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0">
     <properties>
       <property name="platform" value="PlayMode" />
     </properties>
-    <test-suite type="Assembly" id="1008" name="ExtractionWeight.Tests.PlayMode.dll" fullname="C:/Users/jwmcg/OneDrive/Documents/AI Projects/Live Envirnments/extraction-weight-game/Library/ScriptAssemblies/ExtractionWeight.Tests.PlayMode.dll" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-04-19 15:44:50Z" end-time="2026-04-19 15:44:50Z" duration="0.123236" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <test-suite type="Assembly" id="1016" name="ExtractionWeight.Tests.PlayMode.dll" fullname="C:/Users/jwmcg/OneDrive/Documents/AI Projects/Live Envirnments/extraction-weight-game/Library/ScriptAssemblies/ExtractionWeight.Tests.PlayMode.dll" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-04-19 16:39:20Z" end-time="2026-04-19 16:39:31Z" duration="11.329851" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0">
       <properties>
-        <property name="_PID" value="9564" />
+        <property name="_PID" value="35916" />
         <property name="_APPDOMAIN" value="Unity Child Domain" />
         <property name="platform" value="PlayMode" />
         <property name="EditorOnly" value="False" />
       </properties>
-      <test-suite type="TestSuite" id="1009" name="ExtractionWeight" fullname="ExtractionWeight" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-04-19 15:44:50Z" end-time="2026-04-19 15:44:50Z" duration="0.122942" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <test-suite type="TestSuite" id="1017" name="ExtractionWeight" fullname="ExtractionWeight" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-04-19 16:39:20Z" end-time="2026-04-19 16:39:31Z" duration="11.329497" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0">
         <properties />
-        <test-suite type="TestSuite" id="1010" name="Tests" fullname="ExtractionWeight.Tests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-04-19 15:44:50Z" end-time="2026-04-19 15:44:50Z" duration="0.122828" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <test-suite type="TestSuite" id="1018" name="Tests" fullname="ExtractionWeight.Tests" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-04-19 16:39:20Z" end-time="2026-04-19 16:39:31Z" duration="11.329379" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0">
           <properties />
-          <test-suite type="TestSuite" id="1011" name="PlayMode" fullname="ExtractionWeight.Tests.PlayMode" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-04-19 15:44:50Z" end-time="2026-04-19 15:44:50Z" duration="0.122711" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <test-suite type="TestSuite" id="1019" name="PlayMode" fullname="ExtractionWeight.Tests.PlayMode" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-04-19 16:39:20Z" end-time="2026-04-19 16:39:31Z" duration="11.329250" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0">
             <properties />
-            <test-suite type="TestFixture" id="1001" name="WeightAllocationTests" fullname="ExtractionWeight.Tests.PlayMode.WeightAllocationTests" classname="ExtractionWeight.Tests.PlayMode.WeightAllocationTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-04-19 15:44:50Z" end-time="2026-04-19 15:44:50Z" duration="0.018465" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <test-suite type="TestFixture" id="1001" name="PlayerMovementFeelTests" fullname="ExtractionWeight.Tests.PlayMode.PlayerMovementFeelTests" classname="ExtractionWeight.Tests.PlayMode.PlayerMovementFeelTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-04-19 16:39:20Z" end-time="2026-04-19 16:39:29Z" duration="8.624199" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
               <properties />
-              <test-case id="1002" name="Compute_DoesNotAllocateGcMemory" fullname="ExtractionWeight.Tests.PlayMode.WeightAllocationTests.Compute_DoesNotAllocateGcMemory" methodname="Compute_DoesNotAllocateGcMemory" classname="ExtractionWeight.Tests.PlayMode.WeightAllocationTests" runstate="Runnable" seed="1825091248" result="Passed" start-time="2026-04-19 15:44:50Z" end-time="2026-04-19 15:44:50Z" duration="0.011958" asserts="0">
+              <test-case id="1003" name="BreakpointCrossing_FiresExpectedFeedbackEvents" fullname="ExtractionWeight.Tests.PlayMode.PlayerMovementFeelTests.BreakpointCrossing_FiresExpectedFeedbackEvents" methodname="BreakpointCrossing_FiresExpectedFeedbackEvents" classname="ExtractionWeight.Tests.PlayMode.PlayerMovementFeelTests" runstate="Runnable" seed="2134840627" result="Passed" start-time="2026-04-19 16:39:20Z" end-time="2026-04-19 16:39:21Z" duration="1.220628" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1002" name="TravelTimeOverTenMeters_MatchesExpectedSpeedAcrossWeightStates" fullname="ExtractionWeight.Tests.PlayMode.PlayerMovementFeelTests.TravelTimeOverTenMeters_MatchesExpectedSpeedAcrossWeightStates" methodname="TravelTimeOverTenMeters_MatchesExpectedSpeedAcrossWeightStates" classname="ExtractionWeight.Tests.PlayMode.PlayerMovementFeelTests" runstate="Runnable" seed="1557909084" result="Passed" start-time="2026-04-19 16:39:21Z" end-time="2026-04-19 16:39:29Z" duration="7.396103" asserts="0">
                 <properties>
                   <property name="_JOINTYPE" value="UnityCombinatorial" />
                   <property name="retryIteration" value="0" />
@@ -27,30 +34,71 @@
                 </properties>
               </test-case>
             </test-suite>
-            <test-suite type="TestFixture" id="1003" name="ZoneLoaderTests" fullname="ExtractionWeight.Tests.PlayMode.ZoneLoaderTests" classname="ExtractionWeight.Tests.PlayMode.ZoneLoaderTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-04-19 15:44:50Z" end-time="2026-04-19 15:44:50Z" duration="0.103642" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <test-suite type="TestFixture" id="1004" name="ThreatBehaviorTests" fullname="ExtractionWeight.Tests.PlayMode.ThreatBehaviorTests" classname="ExtractionWeight.Tests.PlayMode.ThreatBehaviorTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-04-19 16:39:29Z" end-time="2026-04-19 16:39:31Z" duration="2.409840" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
               <properties />
-              <test-case id="1004" name="DrydockDefinition_CanBeResolvedById" fullname="ExtractionWeight.Tests.PlayMode.ZoneLoaderTests.DrydockDefinition_CanBeResolvedById" methodname="DrydockDefinition_CanBeResolvedById" classname="ExtractionWeight.Tests.PlayMode.ZoneLoaderTests" runstate="Runnable" seed="2090270980" result="Passed" start-time="2026-04-19 15:44:50Z" end-time="2026-04-19 15:44:50Z" duration="0.021235" asserts="0">
+              <test-case id="1008" name="GiveUpBehavior_ReturnsToPatrolAndRest" fullname="ExtractionWeight.Tests.PlayMode.ThreatBehaviorTests.GiveUpBehavior_ReturnsToPatrolAndRest" methodname="GiveUpBehavior_ReturnsToPatrolAndRest" classname="ExtractionWeight.Tests.PlayMode.ThreatBehaviorTests" runstate="Runnable" seed="1965495065" result="Passed" start-time="2026-04-19 16:39:29Z" end-time="2026-04-19 16:39:29Z" duration="0.606675" asserts="0">
                 <properties>
                   <property name="_JOINTYPE" value="UnityCombinatorial" />
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
-              <test-case id="1006" name="DrydockLoad_SpawnsFourExtractionPointMarkers" fullname="ExtractionWeight.Tests.PlayMode.ZoneLoaderTests.DrydockLoad_SpawnsFourExtractionPointMarkers" methodname="DrydockLoad_SpawnsFourExtractionPointMarkers" classname="ExtractionWeight.Tests.PlayMode.ZoneLoaderTests" runstate="Runnable" seed="400250014" result="Passed" start-time="2026-04-19 15:44:50Z" end-time="2026-04-19 15:44:50Z" duration="0.031057" asserts="0">
+              <test-case id="1006" name="Listener_WakesForLoudPlayer_ButIgnoresQuietOne" fullname="ExtractionWeight.Tests.PlayMode.ThreatBehaviorTests.Listener_WakesForLoudPlayer_ButIgnoresQuietOne" methodname="Listener_WakesForLoudPlayer_ButIgnoresQuietOne" classname="ExtractionWeight.Tests.PlayMode.ThreatBehaviorTests" runstate="Runnable" seed="734527281" result="Passed" start-time="2026-04-19 16:39:29Z" end-time="2026-04-19 16:39:29Z" duration="0.219850" asserts="0">
                 <properties>
                   <property name="_JOINTYPE" value="UnityCombinatorial" />
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
-              <test-case id="1005" name="DrydockScene_LoadsAdditivelyWithinFiveSeconds" fullname="ExtractionWeight.Tests.PlayMode.ZoneLoaderTests.DrydockScene_LoadsAdditivelyWithinFiveSeconds" methodname="DrydockScene_LoadsAdditivelyWithinFiveSeconds" classname="ExtractionWeight.Tests.PlayMode.ZoneLoaderTests" runstate="Runnable" seed="1144205905" result="Passed" start-time="2026-04-19 15:44:50Z" end-time="2026-04-19 15:44:50Z" duration="0.026486" asserts="0">
+              <test-case id="1007" name="PursuitTiming_ThreatReachesPlayerWithinExpectedWindow" fullname="ExtractionWeight.Tests.PlayMode.ThreatBehaviorTests.PursuitTiming_ThreatReachesPlayerWithinExpectedWindow" methodname="PursuitTiming_ThreatReachesPlayerWithinExpectedWindow" classname="ExtractionWeight.Tests.PlayMode.ThreatBehaviorTests" runstate="Runnable" seed="774003984" result="Passed" start-time="2026-04-19 16:39:29Z" end-time="2026-04-19 16:39:31Z" duration="1.360469" asserts="0">
                 <properties>
                   <property name="_JOINTYPE" value="UnityCombinatorial" />
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
-              <test-case id="1007" name="Unload_CleansUpZoneSceneAndSpawnedMarkers" fullname="ExtractionWeight.Tests.PlayMode.ZoneLoaderTests.Unload_CleansUpZoneSceneAndSpawnedMarkers" methodname="Unload_CleansUpZoneSceneAndSpawnedMarkers" classname="ExtractionWeight.Tests.PlayMode.ZoneLoaderTests" runstate="Runnable" seed="1198507929" result="Passed" start-time="2026-04-19 15:44:50Z" end-time="2026-04-19 15:44:50Z" duration="0.023861" asserts="0">
+              <test-case id="1005" name="Warden_DetectsLoadedPlayerAtTwentyFiveMeters_ButNotLightPlayer" fullname="ExtractionWeight.Tests.PlayMode.ThreatBehaviorTests.Warden_DetectsLoadedPlayerAtTwentyFiveMeters_ButNotLightPlayer" methodname="Warden_DetectsLoadedPlayerAtTwentyFiveMeters_ButNotLightPlayer" classname="ExtractionWeight.Tests.PlayMode.ThreatBehaviorTests" runstate="Runnable" seed="1302306052" result="Passed" start-time="2026-04-19 16:39:31Z" end-time="2026-04-19 16:39:31Z" duration="0.220862" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1009" name="WeightAllocationTests" fullname="ExtractionWeight.Tests.PlayMode.WeightAllocationTests" classname="ExtractionWeight.Tests.PlayMode.WeightAllocationTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-04-19 16:39:31Z" end-time="2026-04-19 16:39:31Z" duration="0.004531" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1010" name="Compute_DoesNotAllocateGcMemory" fullname="ExtractionWeight.Tests.PlayMode.WeightAllocationTests.Compute_DoesNotAllocateGcMemory" methodname="Compute_DoesNotAllocateGcMemory" classname="ExtractionWeight.Tests.PlayMode.WeightAllocationTests" runstate="Runnable" seed="581261773" result="Passed" start-time="2026-04-19 16:39:31Z" end-time="2026-04-19 16:39:31Z" duration="0.004133" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1011" name="ZoneLoaderTests" fullname="ExtractionWeight.Tests.PlayMode.ZoneLoaderTests" classname="ExtractionWeight.Tests.PlayMode.ZoneLoaderTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-04-19 16:39:31Z" end-time="2026-04-19 16:39:31Z" duration="0.289872" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1012" name="DrydockDefinition_CanBeResolvedById" fullname="ExtractionWeight.Tests.PlayMode.ZoneLoaderTests.DrydockDefinition_CanBeResolvedById" methodname="DrydockDefinition_CanBeResolvedById" classname="ExtractionWeight.Tests.PlayMode.ZoneLoaderTests" runstate="Runnable" seed="137335946" result="Passed" start-time="2026-04-19 16:39:31Z" end-time="2026-04-19 16:39:31Z" duration="0.018383" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1014" name="DrydockLoad_SpawnsFourExtractionPointMarkers" fullname="ExtractionWeight.Tests.PlayMode.ZoneLoaderTests.DrydockLoad_SpawnsFourExtractionPointMarkers" methodname="DrydockLoad_SpawnsFourExtractionPointMarkers" classname="ExtractionWeight.Tests.PlayMode.ZoneLoaderTests" runstate="Runnable" seed="878426660" result="Passed" start-time="2026-04-19 16:39:31Z" end-time="2026-04-19 16:39:31Z" duration="0.182637" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1013" name="DrydockScene_LoadsAdditivelyWithinFiveSeconds" fullname="ExtractionWeight.Tests.PlayMode.ZoneLoaderTests.DrydockScene_LoadsAdditivelyWithinFiveSeconds" methodname="DrydockScene_LoadsAdditivelyWithinFiveSeconds" classname="ExtractionWeight.Tests.PlayMode.ZoneLoaderTests" runstate="Runnable" seed="1882498843" result="Passed" start-time="2026-04-19 16:39:31Z" end-time="2026-04-19 16:39:31Z" duration="0.044517" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1015" name="Unload_CleansUpZoneSceneAndSpawnedMarkers" fullname="ExtractionWeight.Tests.PlayMode.ZoneLoaderTests.Unload_CleansUpZoneSceneAndSpawnedMarkers" methodname="Unload_CleansUpZoneSceneAndSpawnedMarkers" classname="ExtractionWeight.Tests.PlayMode.ZoneLoaderTests" runstate="Runnable" seed="715061986" result="Passed" start-time="2026-04-19 16:39:31Z" end-time="2026-04-19 16:39:31Z" duration="0.043527" asserts="0">
                 <properties>
                   <property name="_JOINTYPE" value="UnityCombinatorial" />
                   <property name="retryIteration" value="0" />

@@ -84,8 +84,25 @@ MonoBehaviour:
     <MaxSpawnCount>k__BackingField: 3
     <RegionTier>k__BackingField: 1
   <PatrolRoutes>k__BackingField:
-  - <RouteId>k__BackingField: perimeter-west
-    <Waypoints>k__BackingField: []
-  - <RouteId>k__BackingField: perimeter-east
-    <Waypoints>k__BackingField: []
+  - <RouteId>k__BackingField: perimeter-route
+    <Waypoints>k__BackingField:
+    - {x: -78, y: 0, z: -74}
+    - {x: -48, y: 0, z: -74}
+    - {x: -32, y: 0, z: -38}
+    - {x: -48, y: 0, z: -8}
+    - {x: -78, y: 0, z: -18}
+  - <RouteId>k__BackingField: mid-route
+    <Waypoints>k__BackingField:
+    - {x: -12, y: 0, z: -24}
+    - {x: 20, y: 0, z: -18}
+    - {x: 32, y: 0, z: 8}
+    - {x: 8, y: 0, z: 28}
+    - {x: -20, y: 0, z: 12}
+  - <RouteId>k__BackingField: core-route
+    <Waypoints>k__BackingField:
+    - {x: 28, y: 0, z: 36}
+    - {x: 48, y: 0, z: 36}
+    - {x: 62, y: 0, z: 58}
+    - {x: 46, y: 0, z: 78}
+    - {x: 24, y: 0, z: 62}
   <EditorScenePath>k__BackingField: Assets/_Project/Scenes/Zones/Drydock.unity

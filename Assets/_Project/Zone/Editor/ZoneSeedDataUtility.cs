@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using ExtractionWeight.Loot;
+using ExtractionWeight.Threat;
 using ExtractionWeight.Weight;
 using UnityEditor;
 using UnityEditor.AddressableAssets;
@@ -31,7 +32,15 @@ namespace ExtractionWeight.Zone.Editor
         [InitializeOnLoadMethod]
         private static void EnsureSeedDataExistsOnLoad()
         {
-            EditorApplication.delayCall += EnsureSeedDataExists;
+            EditorApplication.delayCall += () =>
+            {
+                if (EditorApplication.isPlayingOrWillChangePlaymode)
+                {
+                    return;
+                }
+
+                EnsureSeedDataExists();
+            };
         }
 
         [MenuItem("Tools/Extraction Weight/Create Drydock Zone Seed Data")]
@@ -73,6 +82,11 @@ namespace ExtractionWeight.Zone.Editor
 
         public static void EnsureSeedDataExists()
         {
+            if (EditorApplication.isPlayingOrWillChangePlaymode)
+            {
+                return;
+            }
+
             if (AssetDatabase.LoadAssetAtPath<ZoneDefinition>(DrydockDefinitionPath) is not null &&
                 AssetDatabase.LoadAssetAtPath<GameObject>(ExtractionMarkerPrefabPath) is not null &&
                 AssetDatabase.LoadAssetAtPath<SceneAsset>(DrydockScenePath) != null)
@@ -141,20 +155,11 @@ namespace ExtractionWeight.Zone.Editor
         {
             var scene = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
 
-            var plane = GameObject.CreatePrimitive(PrimitiveType.Plane);
-            plane.name = "DrydockPlane";
-            plane.transform.position = Vector3.zero;
-            plane.transform.localScale = new Vector3(20f, 1f, 20f);
-
-            var planeRenderer = plane.GetComponent<MeshRenderer>();
-            if (planeRenderer != null)
-            {
-                var planeMaterial = new Material(Shader.Find("Universal Render Pipeline/Lit") ?? Shader.Find("Standard"))
-                {
-                    color = new Color(0.35f, 0.38f, 0.42f, 1f),
-                };
-                planeRenderer.sharedMaterial = planeMaterial;
-            }
+            var environmentRoot = new GameObject("DrydockEnvironment");
+            CreateGround(environmentRoot.transform);
+            CreatePerimeterWalls(environmentRoot.transform);
+            CreateCover(environmentRoot.transform);
+            CreateLootRooms(environmentRoot.transform);
 
             var lightObject = new GameObject("Directional Light");
             var light = lightObject.AddComponent<Light>();
@@ -167,6 +172,8 @@ namespace ExtractionWeight.Zone.Editor
             CreateExtractionPointAnchor("ExtractionPoint_B", new Vector3(95f, 0f, -95f));
             CreateExtractionPointAnchor("ExtractionPoint_C", new Vector3(-95f, 0f, 95f));
             CreateExtractionPointAnchor("ExtractionPoint_D", new Vector3(95f, 0f, 95f));
+            CreateWardenRoutesAndThreats();
+            CreateListeners();
 
             EditorSceneManager.SaveScene(scene, DrydockScenePath);
         }
@@ -188,7 +195,7 @@ namespace ExtractionWeight.Zone.Editor
                 600f,
                 CreateExtractionPoints(),
                 CreateLootSpawnRegions(),
-                CreateStubPatrolRoutes(),
+                CreatePatrolRoutes(),
                 DrydockScenePath);
 
             EditorUtility.SetDirty(zoneDefinition);
@@ -273,12 +280,34 @@ namespace ExtractionWeight.Zone.Editor
             };
         }
 
-        private static List<ThreatPatrolRoute> CreateStubPatrolRoutes()
+        private static List<ThreatPatrolRoute> CreatePatrolRoutes()
         {
             return new List<ThreatPatrolRoute>
             {
-                new("perimeter-west", new List<Vector3>()),
-                new("perimeter-east", new List<Vector3>()),
+                new("perimeter-route", new List<Vector3>
+                {
+                    new(-78f, 0f, -74f),
+                    new(-48f, 0f, -74f),
+                    new(-32f, 0f, -38f),
+                    new(-48f, 0f, -8f),
+                    new(-78f, 0f, -18f),
+                }),
+                new("mid-route", new List<Vector3>
+                {
+                    new(-12f, 0f, -24f),
+                    new(20f, 0f, -18f),
+                    new(32f, 0f, 8f),
+                    new(8f, 0f, 28f),
+                    new(-20f, 0f, 12f),
+                }),
+                new("core-route", new List<Vector3>
+                {
+                    new(28f, 0f, 36f),
+                    new(48f, 0f, 36f),
+                    new(62f, 0f, 58f),
+                    new(46f, 0f, 78f),
+                    new(24f, 0f, 62f),
+                }),
             };
         }
 
@@ -286,6 +315,185 @@ namespace ExtractionWeight.Zone.Editor
         {
             var anchor = new GameObject(name);
             anchor.transform.position = position;
+        }
+
+        private static void CreateGround(Transform parent)
+        {
+            var plane = GameObject.CreatePrimitive(PrimitiveType.Plane);
+            plane.name = "DrydockPlane";
+            plane.transform.SetParent(parent, false);
+            plane.transform.position = Vector3.zero;
+            plane.transform.localScale = new Vector3(20f, 1f, 20f);
+
+            var planeRenderer = plane.GetComponent<MeshRenderer>();
+            if (planeRenderer != null)
+            {
+                var planeMaterial = new Material(Shader.Find("Universal Render Pipeline/Lit") ?? Shader.Find("Standard"))
+                {
+                    color = new Color(0.35f, 0.38f, 0.42f, 1f),
+                };
+                planeRenderer.sharedMaterial = planeMaterial;
+            }
+        }
+
+        private static void CreatePerimeterWalls(Transform parent)
+        {
+            CreateBox(parent, "NorthWall", new Vector3(0f, 3f, 98f), new Vector3(200f, 6f, 4f), new Color(0.24f, 0.25f, 0.28f));
+            CreateBox(parent, "SouthWall", new Vector3(0f, 3f, -98f), new Vector3(200f, 6f, 4f), new Color(0.24f, 0.25f, 0.28f));
+            CreateBox(parent, "EastWall", new Vector3(98f, 3f, 0f), new Vector3(4f, 6f, 200f), new Color(0.24f, 0.25f, 0.28f));
+            CreateBox(parent, "WestWall", new Vector3(-98f, 3f, 0f), new Vector3(4f, 6f, 200f), new Color(0.24f, 0.25f, 0.28f));
+        }
+
+        private static void CreateCover(Transform parent)
+        {
+            CreateBox(parent, "Container_A", new Vector3(-55f, 2f, -48f), new Vector3(14f, 4f, 6f), new Color(0.52f, 0.36f, 0.18f));
+            CreateBox(parent, "Container_B", new Vector3(-28f, 2f, -22f), new Vector3(10f, 4f, 8f), new Color(0.47f, 0.33f, 0.2f));
+            CreateBox(parent, "Container_C", new Vector3(12f, 2f, 4f), new Vector3(12f, 4f, 8f), new Color(0.4f, 0.44f, 0.2f));
+            CreateBox(parent, "Container_D", new Vector3(40f, 2f, 40f), new Vector3(16f, 4f, 8f), new Color(0.2f, 0.42f, 0.45f));
+            CreateBox(parent, "CoreCrate", new Vector3(24f, 2f, 58f), new Vector3(8f, 4f, 8f), new Color(0.52f, 0.18f, 0.16f));
+            CreateBox(parent, "MidBarrier", new Vector3(-6f, 2f, 20f), new Vector3(18f, 4f, 4f), new Color(0.3f, 0.32f, 0.36f));
+        }
+
+        private static void CreateLootRooms(Transform parent)
+        {
+            CreateOpenRoom(parent, "LootRoom_West", new Vector3(-72f, 0f, -48f), new Vector3(18f, 5f, 16f), RoomOpening.East);
+            CreateOpenRoom(parent, "LootRoom_East", new Vector3(70f, 0f, -42f), new Vector3(18f, 5f, 16f), RoomOpening.West);
+            CreateOpenRoom(parent, "LootRoom_NorthWest", new Vector3(-10f, 0f, 62f), new Vector3(16f, 5f, 18f), RoomOpening.South);
+            CreateOpenRoom(parent, "LootRoom_Core", new Vector3(52f, 0f, 58f), new Vector3(18f, 5f, 18f), RoomOpening.West);
+        }
+
+        private static void CreateWardenRoutesAndThreats()
+        {
+            CreateWarden(
+                "Warden_Perimeter",
+                new Vector3(-78f, 0f, -74f),
+                new[]
+                {
+                    new Vector3(-78f, 0f, -74f),
+                    new Vector3(-48f, 0f, -74f),
+                    new Vector3(-32f, 0f, -38f),
+                    new Vector3(-48f, 0f, -8f),
+                    new Vector3(-78f, 0f, -18f),
+                });
+
+            CreateWarden(
+                "Warden_Mid",
+                new Vector3(-12f, 0f, -24f),
+                new[]
+                {
+                    new Vector3(-12f, 0f, -24f),
+                    new Vector3(20f, 0f, -18f),
+                    new Vector3(32f, 0f, 8f),
+                    new Vector3(8f, 0f, 28f),
+                    new Vector3(-20f, 0f, 12f),
+                });
+
+            CreateWarden(
+                "Warden_Core",
+                new Vector3(28f, 0f, 36f),
+                new[]
+                {
+                    new Vector3(28f, 0f, 36f),
+                    new Vector3(48f, 0f, 36f),
+                    new Vector3(62f, 0f, 58f),
+                    new Vector3(46f, 0f, 78f),
+                    new Vector3(24f, 0f, 62f),
+                });
+        }
+
+        private static void CreateListeners()
+        {
+            CreateListener("Listener_WestNest", new Vector3(-75f, 0f, -48f), Quaternion.Euler(0f, 90f, 0f));
+            CreateListener("Listener_EastNest", new Vector3(75f, 0f, -42f), Quaternion.Euler(0f, -90f, 0f));
+            CreateListener("Listener_NorthWestNest", new Vector3(-10f, 0f, 66f), Quaternion.Euler(0f, 180f, 0f));
+            CreateListener("Listener_CoreNest", new Vector3(56f, 0f, 58f), Quaternion.Euler(0f, -90f, 0f));
+        }
+
+        private static void CreateWarden(string name, Vector3 startPosition, IReadOnlyList<Vector3> waypoints)
+        {
+            var root = new GameObject(name);
+            root.transform.position = startPosition;
+            var warden = root.AddComponent<Warden>();
+            warden.EditorSetThreatId(name.ToLowerInvariant());
+
+            var routeRoot = new GameObject($"{name}_Route");
+            var waypointTransforms = new Transform[waypoints.Count];
+            for (var i = 0; i < waypoints.Count; i++)
+            {
+                var waypoint = new GameObject($"Waypoint_{i + 1}");
+                waypoint.transform.SetParent(routeRoot.transform, false);
+                waypoint.transform.position = waypoints[i];
+                waypointTransforms[i] = waypoint.transform;
+            }
+
+            warden.EditorSetWaypoints(waypointTransforms);
+        }
+
+        private static void CreateListener(string name, Vector3 position, Quaternion rotation)
+        {
+            var root = new GameObject(name);
+            root.transform.position = position;
+            root.transform.rotation = rotation;
+            var listener = root.AddComponent<Listener>();
+            listener.EditorSetThreatId(name.ToLowerInvariant());
+        }
+
+        private static void CreateOpenRoom(Transform parent, string name, Vector3 center, Vector3 size, RoomOpening opening)
+        {
+            var root = new GameObject(name);
+            root.transform.SetParent(parent, false);
+
+            var halfWidth = size.x * 0.5f;
+            var wallHeight = size.y;
+            var depth = size.z * 0.5f;
+            const float wallThickness = 1.5f;
+
+            if (opening != RoomOpening.North)
+            {
+                CreateBox(root.transform, "NorthWall", center + new Vector3(0f, wallHeight * 0.5f, depth), new Vector3(size.x, wallHeight, wallThickness), new Color(0.28f, 0.29f, 0.32f));
+            }
+
+            if (opening != RoomOpening.South)
+            {
+                CreateBox(root.transform, "SouthWall", center + new Vector3(0f, wallHeight * 0.5f, -depth), new Vector3(size.x, wallHeight, wallThickness), new Color(0.28f, 0.29f, 0.32f));
+            }
+
+            if (opening != RoomOpening.East)
+            {
+                CreateBox(root.transform, "EastWall", center + new Vector3(halfWidth, wallHeight * 0.5f, 0f), new Vector3(wallThickness, wallHeight, size.z), new Color(0.28f, 0.29f, 0.32f));
+            }
+
+            if (opening != RoomOpening.West)
+            {
+                CreateBox(root.transform, "WestWall", center + new Vector3(-halfWidth, wallHeight * 0.5f, 0f), new Vector3(wallThickness, wallHeight, size.z), new Color(0.28f, 0.29f, 0.32f));
+            }
+        }
+
+        private static void CreateBox(Transform parent, string name, Vector3 position, Vector3 scale, Color color)
+        {
+            var box = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            box.name = name;
+            box.transform.SetParent(parent, false);
+            box.transform.position = position;
+            box.transform.localScale = scale;
+
+            var renderer = box.GetComponent<MeshRenderer>();
+            if (renderer != null)
+            {
+                var material = new Material(Shader.Find("Universal Render Pipeline/Lit") ?? Shader.Find("Standard"))
+                {
+                    color = color,
+                };
+                renderer.sharedMaterial = material;
+            }
+        }
+
+        private enum RoomOpening
+        {
+            North,
+            South,
+            East,
+            West,
         }
 
         private static void EnsureFolder(string path)
