@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Passed" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-04-19 15:16:35Z" end-time="2026-04-19 15:16:35Z" duration="0.0271274">
+  <test-suite type="TestSuite" id="1009" name="extraction-weight-game" fullname="extraction-weight-game" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-04-19 15:16:35Z" end-time="2026-04-19 15:16:35Z" duration="0.027127" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1003" name="ExtractionWeight.Tests.PlayMode.dll" fullname="C:/Users/jwmcg/OneDrive/Documents/AI Projects/Live Envirnments/extraction-weight-game/Library/ScriptAssemblies/ExtractionWeight.Tests.PlayMode.dll" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-04-19 15:16:35Z" end-time="2026-04-19 15:16:35Z" duration="0.022247" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="23080" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1004" name="ExtractionWeight" fullname="ExtractionWeight" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-04-19 15:16:35Z" end-time="2026-04-19 15:16:35Z" duration="0.021926" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1005" name="Tests" fullname="ExtractionWeight.Tests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-04-19 15:16:35Z" end-time="2026-04-19 15:16:35Z" duration="0.021796" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1006" name="PlayMode" fullname="ExtractionWeight.Tests.PlayMode" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-04-19 15:16:35Z" end-time="2026-04-19 15:16:35Z" duration="0.021654" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1001" name="WeightAllocationTests" fullname="ExtractionWeight.Tests.PlayMode.WeightAllocationTests" classname="ExtractionWeight.Tests.PlayMode.WeightAllocationTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-04-19 15:16:35Z" end-time="2026-04-19 15:16:35Z" duration="0.021044" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1002" name="Compute_DoesNotAllocateGcMemory" fullname="ExtractionWeight.Tests.PlayMode.WeightAllocationTests.Compute_DoesNotAllocateGcMemory" methodname="Compute_DoesNotAllocateGcMemory" classname="ExtractionWeight.Tests.PlayMode.WeightAllocationTests" runstate="Runnable" seed="1281223713" result="Passed" start-time="2026-04-19 15:16:35Z" end-time="2026-04-19 15:16:35Z" duration="0.014034" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[Saving results to: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\playmode-results.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

@@ -1,0 +1,454 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.4/staging' branch; Version is '6000.4.3f1 (39d1a88d4dd1) revision 3789224'; Using compiler version '194234433'; Build Type 'Release'
+OS: 'Windows 11  (10.0.26200) Core' Language: 'en' Physical Memory: 32609 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-jwmcg" at "2026-04-19T15:15:59.0025352Z"
+Process architecture: x64
+Date: 2026-04-19T15:15:59Z
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.4.3f1\Editor\Unity.exe
+-batchmode
+-nographics
+-projectPath
+C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game
+-runTests
+-testPlatform
+EditMode
+-testResults
+C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\editmode-results.xml
+-logFile
+C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\editmode.log
+Successfully changed project path to: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game
+C:/Users/jwmcg/OneDrive/Documents/AI Projects/Live Envirnments/extraction-weight-game
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+Player connection [26736]  Target information:
+
+Player connection [26736]  * "[IP] 10.0.0.151 [Port] 55504 [Flags] 2 [Guid] 705374337 [EditorId] 705374337 [Version] 1048832 [Id] WindowsEditor(7,Johnnys_Super) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [26736] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [26736] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Package Manager] Connected to IPC stream "Upm-29280" after 0.2 seconds.
+[Licensing::Module] Licensing is not yet initialized.
+[Licensing::Client] Error: HandshakeResponse reported an error:
+	ResponseCode: 505
+	ResponseStatus: Unsupported protocol version '1.18.1'.
+[Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-jwmcg"
+[Licensing::IpcConnector] LicenseClient-jwmcg channel disconnected successfully.
+[Licensing::IpcConnector] Channel LicenseClient-jwmcg-6000.4.3 doesn't exist
+[Licensing::Module] Successfully launched the LicensingClient (PId: 33612)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-jwmcg-6000.4.3" at "2026-04-19T15:16:00.4429317Z"
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.1+9fbee8e
+  Session Id:              76964d4ff8cc4087a04e22b93947fd87
+  Correlation Id:          3394dd452d983ef4f4bd9a5f0ab05a67
+  External correlation Id: 2897652468493255659
+  Machine Id:              1BeB/TLi2XvtpQs0S1BLgEO37gQ=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-jwmcg-6000.4.3" (connect: 0.16s, validation: 0.03s, handshake: 1.37s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-jwmcg-6000.4.3-notifications" at "2026-04-19T15:16:01.8486026Z"
+[Licensing::Module] Connected to LicensingClient (PId: 33612, launch time: 0.00, total connection time: 1.57s)
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 2475969837267-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.01
+[Licensing::Module] Licensing Background thread has ended after 2.86s
+[Licensing::Module] Licensing is initialized (took 2.57s).
+[Licensing::Client] Successfully resolved entitlement details
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Artifact Garbage Collection - Removed 1 unused hashed content files
+Initialize engine version: 6000.4.3f1 (39d1a88d4dd1)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.4.3f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/jwmcg/OneDrive/Documents/AI Projects/Live Envirnments/extraction-weight-game/Assets
+Forcing GfxDevice: Null
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+NullGfxDevice:
+    Version:  NULL 1.0 [1.0]
+    Renderer: Null Device
+    Vendor:   Unity Technologies
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.4.3f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.4.3f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.4.3f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56280
+CodeReloadManager initialized
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.4.3f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.4.3f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002513 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Package Manager log level set to [2]
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:False
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.261 seconds
+Domain Reload Profiling: 581ms
+	BeginReloadAssembly (97ms)
+		CreateAndSetChildDomain (16ms)
+	RebuildCommonClasses (25ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (47ms)
+	LoadAllAssembliesAndSetupDomain (141ms)
+		LoadAssemblies (79ms)
+		AnalyzeDomain (135ms)
+			TypeCache.Refresh (134ms)
+				TypeCache.ScanAssembly (124ms)
+	FinalizeReload (262ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (34ms)
+			BeforeProcessingInitializeOnLoad (53ms)
+			ProcessInitializeOnLoadAttributes (71ms)
+			ProcessInitializeOnLoadMethodAttributes (60ms)
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 59 packages:
+  Packages from [https://packages.unity.com]:
+    com.unity.addressables@2.9.1 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.addressables@8460f1c9c927)
+    com.unity.ads@4.16.4 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.ads@e89225828059)
+    com.unity.ai.navigation@2.0.12 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.ai.navigation@734c2c4c5591)
+    com.unity.analytics@3.8.2 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.analytics@c9d14a6bdec6)
+    com.unity.cinemachine@2.10.7 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.cinemachine@631385387c5a)
+    com.unity.collab-proxy@2.12.4 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.collab-proxy@0b1559bcd34e)
+    com.unity.ide.rider@3.0.39 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.ide.rider@4504839d03f7)
+    com.unity.ide.visualstudio@2.0.27 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.ide.visualstudio@dc1ddd4f09b6)
+    com.unity.inputsystem@1.19.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.inputsystem@21a28c3a6c83)
+    com.unity.purchasing@4.15.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.purchasing@ffbc76639aab)
+    com.unity.timeline@1.8.12 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.timeline@8cd8509afae5)
+    com.unity.xr.legacyinputhelpers@3.0.1 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.xr.legacyinputhelpers@3f62d634f63b)
+    com.unity.services.core@1.16.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.services.core@8ba50f624741)
+    com.unity.services.analytics@6.3.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.services.analytics@cde4e6cf92f9)
+    com.unity.profiling.core@1.0.3 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.profiling.core@8a49f7027d06)
+    com.unity.scriptablebuildpipeline@2.6.1 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.scriptablebuildpipeline@36e3b5898ee2)
+    com.unity.nuget.newtonsoft-json@3.2.2 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.nuget.newtonsoft-json@4dfd81071c64)
+  Built-in packages:
+    com.unity.2d.sprite@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.2d.sprite@929df5adbb1f)
+    com.unity.2d.tilemap@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.2d.tilemap@c457c5249013)
+    com.unity.multiplayer.center@1.0.1 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.multiplayer.center@f01f4ba8d00a)
+    com.unity.test-framework@1.6.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.test-framework@76560ee600cb)
+    com.unity.ugui@2.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.ugui@d8a2716f3013)
+    com.unity.modules.accessibility@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.accessibility)
+    com.unity.modules.adaptiveperformance@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.adaptiveperformance)
+    com.unity.modules.ai@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.ai)
+    com.unity.modules.androidjni@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.androidjni)
+    com.unity.modules.animation@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.animation)
+    com.unity.modules.assetbundle@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.assetbundle)
+    com.unity.modules.audio@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.audio)
+    com.unity.modules.cloth@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.cloth)
+    com.unity.modules.director@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.director)
+    com.unity.modules.imageconversion@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.imageconversion)
+    com.unity.modules.imgui@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.imgui)
+    com.unity.modules.jsonserialize@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.jsonserialize)
+    com.unity.modules.particlesystem@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.particlesystem)
+    com.unity.modules.physics@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.physics)
+    com.unity.modules.physics2d@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.physics2d)
+    com.unity.modules.screencapture@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.screencapture)
+    com.unity.modules.terrain@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.terrain)
+    com.unity.modules.terrainphysics@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.terrainphysics)
+    com.unity.modules.tilemap@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.tilemap)
+    com.unity.modules.ui@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.ui)
+    com.unity.modules.uielements@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.uielements)
+    com.unity.modules.umbra@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.umbra)
+    com.unity.modules.unityanalytics@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.unityanalytics)
+    com.unity.modules.unitywebrequest@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.unitywebrequest)
+    com.unity.modules.unitywebrequestassetbundle@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle)
+    com.unity.modules.unitywebrequestaudio@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.unitywebrequestaudio)
+    com.unity.modules.unitywebrequesttexture@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.unitywebrequesttexture)
+    com.unity.modules.unitywebrequestwww@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.unitywebrequestwww)
+    com.unity.modules.vectorgraphics@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.vectorgraphics)
+    com.unity.modules.vehicles@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.vehicles)
+    com.unity.modules.video@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.video)
+    com.unity.modules.vr@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.vr)
+    com.unity.modules.wind@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.wind)
+    com.unity.modules.xr@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.xr)
+    com.unity.modules.subsystems@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.subsystems)
+    com.unity.modules.hierarchycore@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.hierarchycore)
+    com.unity.ext.nunit@2.0.5 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.ext.nunit@d8c07649098d)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.02 seconds
+Starting: C:\Program Files\Unity\Hub\Editor\6000.4.3f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: C:/Users/jwmcg/OneDrive/Documents/AI Projects/Live Envirnments/extraction-weight-game
+DisplayProgressbar: Compiling Scripts
+ExitCode: 0 Duration: 0s123ms
+*** Tundra build success (0.10 seconds), 0 items updated, 892 evaluated
+AssetDatabase: script compilation time: 0.414830s
+Begin MonoManager ReloadAssembly
+Assembly Assembly-CSharp-Editor-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll not valid. Loading of assembly skipped.
+Assembly Assembly-CSharp-Editor.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor.dll not valid. Loading of assembly skipped.
+Assembly Assembly-CSharp-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll not valid. Loading of assembly skipped.
+Assembly Assembly-CSharp.dll at Library/ScriptAssemblies/Assembly-CSharp.dll not valid. Loading of assembly skipped.
+Assembly Cinemachine.Editor.Tests.dll at Library/ScriptAssemblies/Cinemachine.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Cinemachine.Runtime.Tests.dll at Library/ScriptAssemblies/Cinemachine.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly DocCodeExamples.dll at Library/ScriptAssemblies/DocCodeExamples.dll not valid. Loading of assembly skipped.
+Assembly TestNewCustomAssembly.dll at Library/ScriptAssemblies/TestNewCustomAssembly.dll not valid. Loading of assembly skipped.
+Assembly Unity.2D.Sprite.Package.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Sprite.Package.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.2D.Tilemap.Package.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Tilemap.Package.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Addressables.Editor.Tests.dll at Library/ScriptAssemblies/Unity.Addressables.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Addressables.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.Addressables.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Analytics.DataPrivacy.Tests.dll at Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Analytics.StandardEvents.EditorTests.dll at Library/ScriptAssemblies/Unity.Analytics.StandardEvents.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.InputSystem.IntegrationTests.dll at Library/ScriptAssemblies/Unity.InputSystem.IntegrationTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Multiplayer.Center.Editor.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Multiplayer.Center.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.ResourceManager.Tests.dll at Library/ScriptAssemblies/Unity.ResourceManager.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.ScriptableBuildPipeline.Editor.Tests.dll at Library/ScriptAssemblies/Unity.ScriptableBuildPipeline.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.ScriptableBuildPipeline.Tests.dll at Library/ScriptAssemblies/Unity.ScriptableBuildPipeline.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.ScriptableBuildPipelineTests.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.ScriptableBuildPipelineTests.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.TextMeshPro.Editor.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.TextMeshPro.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.UI.Common.Tests.dll at Library/ScriptAssemblies/UnityEditor.UI.Common.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.UI.EditorTests.dll at Library/ScriptAssemblies/UnityEditor.UI.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.XR.LegacyInputHelpers.Tests.dll at Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.Advertisements.Editor.Tests.dll at Library/ScriptAssemblies/UnityEngine.Advertisements.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.Advertisements.Tests.dll at Library/ScriptAssemblies/UnityEngine.Advertisements.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.Purchasing.Apple.dll at Library/ScriptAssemblies/UnityEngine.Purchasing.Apple.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.Purchasing.AppleMacos.dll at Library/ScriptAssemblies/UnityEngine.Purchasing.AppleMacos.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.Purchasing.Security.dll at Library/ScriptAssemblies/UnityEngine.Purchasing.Security.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.Purchasing.WinRT.dll at Library/ScriptAssemblies/UnityEngine.Purchasing.WinRT.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.SpatialTracking.Tests.dll at Library/ScriptAssemblies/UnityEngine.SpatialTracking.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.UI.Tests.dll at Library/ScriptAssemblies/UnityEngine.UI.Tests.dll not valid. Loading of assembly skipped.
+Start importing Assets/_Project/Data using Guid(97ac484b0acd2c4488ff9ba9e44ca99f) (DefaultImporter) -> (Import Result ID: '76ef4cc64290efd18c8275179fa78f49') in 0.0156422 seconds [static dependencies only]. Details - ImportResultOutputID=e4024bc89dcddaecce235806977d25e7 DependenciesID=d01f7e739428503dd5c9cd9c9d20502d StaticDependenciesID=cbfb6582c44aa7bdef81c1a1f774582a 
+Refreshing native plugins compatible for Editor in 3.18 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:False
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.617 seconds
+Domain Reload Profiling: 1248ms
+	BeginReloadAssembly (248ms)
+		DisableScriptedObjects (32ms)
+		CreateAndSetChildDomain (126ms)
+	RebuildCommonClasses (24ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (42ms)
+	LoadAllAssembliesAndSetupDomain (308ms)
+		LoadAssemblies (252ms)
+		AnalyzeDomain (119ms)
+			TypeCache.Refresh (83ms)
+				TypeCache.ScanAssembly (73ms)
+			BuildScriptInfoCaches (32ms)
+			ResolveRequiredComponents (3ms)
+	FinalizeReload (618ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (16ms)
+			BeforeProcessingInitializeOnLoad (127ms)
+			ProcessInitializeOnLoadAttributes (228ms)
+			ProcessInitializeOnLoadMethodAttributes (143ms)
+			AfterProcessingInitializeOnLoad (4ms)
+		AwakeInstancesAfterBackupRestoration (13ms)
+Refreshing native plugins compatible for Editor in 2.91 ms, found 3 plugins.
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=e71db9d1c33bae54ebc2427dc4a49610): Total: 2.175 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=2 ms, native=949 ms
+		Asset DB Callback time: managed=86 ms, native=23 ms
+		Scripting: domain reloads=1, domain reload time=635 ms, compile time=416 ms, other=61 ms
+		Project Asset Count: scripts=1081, non-scripts=1367
+		Asset File Changes: new=1, changed=1, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 18.704ms
+	ApplyChangesToAssetFolders: 0.821ms
+	Scan: 118.377ms
+	OnSourceAssetsModified: 0.537ms
+	CategorizeScriptCompilationAssets: 18.843ms
+	ProcessAssetsWithTransientArtifactChanges: 31.947ms
+	CategorizeAssets: 13.631ms
+	CompileScripts: 415.995ms
+	ImportOutOfDateAssets: 647.099ms (627.526ms without children)
+		ImportManagerImport: 18.240ms (2.378ms without children)
+		UnloadImportedAssets: 0.908ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.223ms
+		OnDemandSchedulerStart: 0.199ms
+	PostProcessAllAssets: 88.059ms
+		VCAutoAddAssetPostprocess 0.857ms
+		XRBuildSystem.XRAssetImported 0.839ms
+		VersionControlSettings.HiddenFilePostprocess 0.054ms
+		MonoPostProcessAllAssets: 85.975ms
+			AssetPostprocessor.OnPostprocessAllAssets 46.327ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 10.877ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 4.718ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 4.169ms
+			PackageManagerResolver.OnPostprocessAllAssets 2.996ms
+			AssetChangedListener.OnPostprocessAllAssets 1.038ms
+			VersionHandlerImpl.OnPostprocessAllAssets 0.974ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 0.809ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 0.631ms
+			AddressablesAssetPostProcessor.OnPostprocessAllAssets 0.617ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 0.534ms
+			AssetPathToTypes.OnPostprocessAllAssets 0.514ms
+			SpriteEditorTexturePostprocessor.OnPostprocessAllAssets 0.394ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.298ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.285ms
+			PlayServicesResolver.OnPostprocessAllAssets 0.283ms
+			UVCSAssetPostprocessor.OnPostprocessAllAssets 0.279ms
+			AssetProcessor.OnPostprocessAllAssets 0.248ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.230ms
+			AssetEvents.OnPostprocessAllAssets 0.194ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.191ms
+			IOSResolver.OnPostprocessAllAssets 0.189ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.186ms
+			CinemachineSettings.OnPostprocessAllAssets 0.184ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.174ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.152ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.152ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.131ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.125ms
+			SamplePostprocessor.OnPostprocessAllAssets 0.109ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.101ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.083ms
+			SyncVS.PostprocessSyncProject 0.065ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.063ms
+	PostAssetChangesProfiler: 4.384ms
+	UnloadStreamsBegin: 1.644ms
+	PersistCurrentRevisions: 0.091ms
+	GenerateScriptTypeHashes: 1.457ms
+	GenerateScriptTypeSerializationHashes: 2.884ms
+	Untracked: 811.708ms
+
+Application.AssetDatabase Initial Refresh End
+Scanning for USB devices : 17.597ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-extraction-weight-game
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 4461 unused Assets / (2.1 MB). Loaded Objects now: 5068.
+Memory consumption went from 136.3 MB to 134.2 MB.
+Total: 7.787400 ms (FindLiveObjects: 0.370800 ms CreateObjectMapping: 0.226600 ms MarkObjects: 6.363700 ms  DeleteObjects: 0.824500 ms)
+
+Microsoft Media Foundation video decoding to texture disabled: graphics device is Null, only Direct3D 11 and Direct3D 12 (only on desktop) are supported for hardware-accelerated video decoding.
+[Project] Loading completed in 5.978 seconds
+	Project init time: 				5.798 seconds
+		Template init time: 		0.000 seconds
+		Package Manager init time: 		2.737 seconds
+		Asset Database init time: 		0.118 seconds
+		Global illumination init time: 	0.002 seconds
+		Assemblies load time: 			0.611 seconds
+		Unity extensions init time: 	0.003 seconds
+		Asset Database refresh time: 	2.176 seconds
+	Scene opening time: 			0.069 seconds
+##utp:{"type":"ProjectInfo","version":2,"phase":"Immediate","time":1776611764975,"processId":29280,"projectLoad":5.9781499,"projectInit":5.7977364,"templateInit":0.0,"packageManagerInit":2.7367226,"assetDatabaseInit":0.1184414,"globalIlluminationInit":0.0017794,"assembliesLoad":0.6107001,"unityExtensionsInit":0.0031781,"assetDatabaseRefresh":2.1758544,"sceneOpening":0.0692834}
+##utp:{"type":"EditorInfo","version":2,"phase":"Immediate","time":1776611764975,"processId":29280,"editorVersion":"6000.4.3f1 (39d1a88d4dd1)","branch":"6000.4/staging","buildType":"Release","platform":"Windows"}
+[Licensing::Client] Successfully resolved entitlement details
+Running tests for ExecutionSettings with details:
+targetPlatform = 
+playerHeartbeatTimeout = 600
+filters[0] = 
+   Filter with settings:
+   testMode = EditMode
+   targetPlatform = 
+   testNames = null
+   groupNames = null
+   categoryNames = null
+   assemblyNames = null
+ignoreTests = {}
+featureFlags = null
+
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UnityEditor.TestTools.TestRunner.CommandLineTest.Executer:InitializeAndExecuteRun (string[]) (at ./Library/PackageCache/com.unity.test-framework@76560ee600cb/UnityEditor.TestRunner/CommandLineTest/Executer.cs:53)
+UnityEditor.TestTools.TestRunner.CommandLineTest.TestStarter:InitializeAndExecuteRun () (at ./Library/PackageCache/com.unity.test-framework@76560ee600cb/UnityEditor.TestRunner/CommandLineTest/TestStarter.cs:64)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: ./Library/PackageCache/com.unity.test-framework@76560ee600cb/UnityEditor.TestRunner/CommandLineTest/Executer.cs Line: 53)
+
+[UnityConnectServicesConfig] config is NOT valid, switching to default
+Created GICache directory at C:/Users/jwmcg/AppData/LocalLow/Unity/Caches/GiCache. Took: 0.009s, timestamps: [5.980 - 5.989]
+[Licensing::Client] Successfully resolved entitlement details
+Unloading 12 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 15 unused Assets / (56.3 KB). Loaded Objects now: 5094.
+Memory consumption went from 131.7 MB to 131.6 MB.
+Total: 7.276100 ms (FindLiveObjects: 0.203900 ms CreateObjectMapping: 0.073300 ms MarkObjects: 6.963700 ms  DeleteObjects: 0.034200 ms)
+
+Saving results to: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\editmode-results.xml
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 0 unused Assets / (0 B). Loaded Objects now: 5095.
+Memory consumption went from 129.0 MB to 129.0 MB.
+Total: 6.623900 ms (FindLiveObjects: 0.120800 ms CreateObjectMapping: 0.047600 ms MarkObjects: 6.445100 ms  DeleteObjects: 0.009500 ms)
+
+DisplayProgressbar: Undo
+Test run completed. Exiting with code 0 (Ok). Run completed.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UnityEditor.TestTools.TestRunner.CommandLineTest.Executer:ExitApplication (UnityEditor.TestTools.TestRunner.CommandLineTest.Executer/ReturnCodes,string) (at ./Library/PackageCache/com.unity.test-framework@76560ee600cb/UnityEditor.TestRunner/CommandLineTest/Executer.cs:81)
+UnityEditor.TestTools.TestRunner.CommandLineTest.Executer:ExitIfRunIsCompleted () (at ./Library/PackageCache/com.unity.test-framework@76560ee600cb/UnityEditor.TestRunner/CommandLineTest/Executer.cs:74)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: ./Library/PackageCache/com.unity.test-framework@76560ee600cb/UnityEditor.TestRunner/CommandLineTest/Executer.cs Line: 81)
+
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+[Licensing::IpcConnector] LicenseClient-jwmcg-6000.4.3-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-jwmcg-6000.4.3 channel disconnected successfully.
+AcceleratorClientConnectionCallback - disconnected - :0
+Cleanup mono
+CodeReloadManager destroyed
+Checking for leaked weakptr:
+  Found no leaked weakptrs.
+[Package Manager] Server process was shutdown
+##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1776611765603,"processId":29280,"allocatedMemory":13246448,"memoryLabels":[{"Default":167953},{"Permanent":15276},{"NewDelete":65341},{"Thread":4230344},{"Manager":50469},{"VertexData":8},{"Geometry":816},{"Texture":24},{"Shader":851967},{"Material":24},{"GfxDevice":55321},{"Animation":392},{"Audio":3008},{"FreeType":8},{"FontEngine":736},{"Physics":2090},{"Physics2D":16},{"Serialization":1016},{"Input":9880},{"JobScheduler":33024},{"TextLib":216},{"Mono":32},{"ScriptingNativeRuntime":155052},{"BaseObject":1620368},{"Resource":1184},{"Renderer":3008},{"Transform":4685},{"File":24532},{"WebCam":616},{"Culling":32},{"Terrain":11394},{"Wind":24},{"STL":40},{"String":16847},{"StaticString":6718},{"Utility":2675494},{"Curl":4238},{"PoolAlloc":2072},{"AI":80},{"TypeTree":13637},{"ScriptManager":448},{"RuntimeInitializeOnLoadManager":64},{"SpriteAtlas":120},{"GI":7792},{"Director":8320},{"CloudService":288},{"WebRequest":808},{"VR":48050},{"SceneManager":504},{"Video":64},{"LazyScriptCache":32},{"Camera":17},{"Secure":2113},{"SerializationCache":1576},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57888},{"StaticSafetyDebugInfo":278528},{"Analytics":336},{"Hierarchy":608},{"CoreStats":13032},{"Identifiers":12960},{"Gui":128},{"EditorUtility":111139},{"VersionControl":4},{"Undo":931},{"AssetDatabase":2608263},{"EditorGi":328},{"UnityConnect":37777},{"Upm":1912},{"UpmDiagnostics":8},{"AssetCompliance":64},{"DrivenProperties":72},{"LocalIPC":211},{"ProfilerEditor":9746},{"CoreBusinessMetrics":2599},{"Windowing":456},{"Licensing":664},{"AssetReference":32},{"IPCStream":32}]}

@@ -12,9 +12,7 @@
     "ExtractionWeight.Audio"
   ],
   "includePlatforms": [],
-  "excludePlatforms": [
-    "Editor"
-  ],
+  "excludePlatforms": [],
   "allowUnsafeCode": false,
   "overrideReferences": true,
   "precompiledReferences": [
