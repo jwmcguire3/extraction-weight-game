@@ -5,7 +5,7 @@ using UnityEngine;
 namespace ExtractionWeight.Loot
 {
     [CreateAssetMenu(fileName = "LootDefinition", menuName = "Extraction Weight/Loot/Loot Definition")]
-    public sealed class LootDefinition : ScriptableObject
+    public sealed class LootDefinition : ScriptableObject, IAmbientLoadoutItem
     {
         [SerializeField]
         private string _itemId = string.Empty;

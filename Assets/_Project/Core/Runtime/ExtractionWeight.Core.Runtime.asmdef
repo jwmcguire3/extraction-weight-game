@@ -1,10 +1,11 @@
 {
-  "name": "ExtractionWeight.UI",
-  "rootNamespace": "ExtractionWeight.UI",
+  "name": "ExtractionWeight.Core.Runtime",
+  "rootNamespace": "ExtractionWeight.Core",
   "references": [
     "ExtractionWeight.Core",
-    "ExtractionWeight.Core.Runtime",
-    "Unity.InputSystem"
+    "ExtractionWeight.Weight",
+    "Unity.InputSystem",
+    "Cinemachine"
   ],
   "includePlatforms": [],
   "excludePlatforms": [],

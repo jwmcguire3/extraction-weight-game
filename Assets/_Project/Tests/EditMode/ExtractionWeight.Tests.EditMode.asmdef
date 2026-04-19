@@ -3,6 +3,7 @@
   "rootNamespace": "ExtractionWeight.Tests.EditMode",
   "references": [
     "ExtractionWeight.Core",
+    "ExtractionWeight.Core.Runtime",
     "ExtractionWeight.Weight",
     "ExtractionWeight.Loot",
     "ExtractionWeight.Loot.Editor",
