@@ -14,6 +14,9 @@ namespace ExtractionWeight.Weight
         public const float MaxCapacityFraction = 1.2f;
 
         private readonly List<ILoadoutItem> _items;
+        private readonly List<IAmbientEffect> _ambientEffects;
+        private CostSignature _baseCost;
+        private CostSignature _ambientCost;
 
         public CarryState(float carryCapacity)
         {
@@ -24,6 +27,9 @@ namespace ExtractionWeight.Weight
 
             CarryCapacity = carryCapacity;
             _items = new List<ILoadoutItem>();
+            _ambientEffects = new List<IAmbientEffect>();
+            _baseCost = new CostSignature();
+            _ambientCost = new CostSignature();
             TotalCost = new CostSignature();
         }
 
@@ -76,9 +82,37 @@ namespace ExtractionWeight.Weight
             }
 
             _items.Add(item);
-            TotalCost = projectedTotal;
+            _baseCost += item.BaseCost;
+            TotalCost = _baseCost + _ambientCost;
             OnCarryChanged?.Invoke();
             return true;
+        }
+
+        public void AttachAmbientEffect(IAmbientEffect effect)
+        {
+            if (effect is null)
+            {
+                throw new ArgumentNullException(nameof(effect));
+            }
+
+            _ambientEffects.Add(effect);
+            RecalculateAmbientCost();
+            OnCarryChanged?.Invoke();
+        }
+
+        public void TickAmbientEffects(float deltaTimeSeconds)
+        {
+            if (_ambientEffects.Count == 0 || deltaTimeSeconds <= 0f)
+            {
+                return;
+            }
+
+            for (var i = 0; i < _ambientEffects.Count; i++)
+            {
+                _ambientEffects[i].Tick(deltaTimeSeconds);
+            }
+
+            RecalculateAmbientCost();
         }
 
         public bool Remove(ILoadoutItem item)
@@ -93,7 +127,7 @@ namespace ExtractionWeight.Weight
                 return false;
             }
 
-            RecalculateTotalCost();
+            RecalculateBaseCost();
             OnCarryChanged?.Invoke();
             return true;
         }
@@ -106,11 +140,14 @@ namespace ExtractionWeight.Weight
             }
 
             _items.Clear();
+            _ambientEffects.Clear();
+            _baseCost = new CostSignature();
+            _ambientCost = new CostSignature();
             TotalCost = new CostSignature();
             OnCarryChanged?.Invoke();
         }
 
-        private void RecalculateTotalCost()
+        private void RecalculateBaseCost()
         {
             var total = new CostSignature();
             for (var i = 0; i < _items.Count; i++)
@@ -118,7 +155,20 @@ namespace ExtractionWeight.Weight
                 total += _items[i].BaseCost;
             }
 
-            TotalCost = total;
+            _baseCost = total;
+            TotalCost = _baseCost + _ambientCost;
+        }
+
+        private void RecalculateAmbientCost()
+        {
+            var total = new CostSignature();
+            for (var i = 0; i < _ambientEffects.Count; i++)
+            {
+                total += _ambientEffects[i].CurrentContribution;
+            }
+
+            _ambientCost = total;
+            TotalCost = _baseCost + _ambientCost;
         }
     }
 }

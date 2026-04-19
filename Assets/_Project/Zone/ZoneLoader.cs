@@ -21,12 +21,19 @@ namespace ExtractionWeight.Zone
         private Scene? _loadedScene;
         private GameObject? _markerRoot;
         private bool _loadedViaAddressables;
+        private int _currentRunSeed = 1337;
 
         public event Action<ZoneDefinition>? OnZoneLoaded;
 
         public ZoneDefinition? CurrentZoneDefinition { get; private set; }
         public Scene? LoadedZoneScene => _loadedScene;
         public IReadOnlyList<GameObject> SpawnedMarkers => _spawnedMarkers;
+        public int CurrentRunSeed => _currentRunSeed;
+
+        public void SetRunSeed(int seed)
+        {
+            _currentRunSeed = seed;
+        }
 
         public async Task<ZoneDefinition> LoadZoneByIdAsync(string zoneId)
         {
@@ -65,6 +72,7 @@ namespace ExtractionWeight.Zone
 
             CurrentZoneDefinition = zoneDefinition;
             SpawnExtractionPointMarkers(zoneDefinition);
+            SpawnLoot(zoneDefinition);
             OnZoneLoaded?.Invoke(zoneDefinition);
             return zoneDefinition;
         }
@@ -208,6 +216,36 @@ namespace ExtractionWeight.Zone
             var projectRoot = Directory.GetCurrentDirectory();
             var settingsPath = Path.Combine(projectRoot, "Library", "com.unity.addressables", "aa", "Windows", "settings.json");
             return File.Exists(settingsPath);
+        }
+
+        private void SpawnLoot(ZoneDefinition zoneDefinition)
+        {
+            if (!_loadedScene.HasValue || !_loadedScene.Value.IsValid())
+            {
+                return;
+            }
+
+            var rootObjects = _loadedScene.Value.GetRootGameObjects();
+            LootSpawner? spawner = null;
+            for (var i = 0; i < rootObjects.Length; i++)
+            {
+                spawner = rootObjects[i].GetComponentInChildren<LootSpawner>(true);
+                if (spawner == null)
+                {
+                    continue;
+                }
+
+                break;
+            }
+
+            if (spawner == null)
+            {
+                var spawnerRoot = new GameObject("LootSpawner_Auto");
+                SceneManager.MoveGameObjectToScene(spawnerRoot, _loadedScene.Value);
+                spawner = spawnerRoot.AddComponent<LootSpawner>();
+            }
+
+            spawner.SpawnForZone(zoneDefinition, _currentRunSeed);
         }
 
         private void DestroySpawnedMarkers()

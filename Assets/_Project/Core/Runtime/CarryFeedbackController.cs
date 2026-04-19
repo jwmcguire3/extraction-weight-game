@@ -114,6 +114,14 @@ namespace ExtractionWeight.Core
                 return;
             }
 
+            var currentBreakpoint = _playerController.CurrentBreakpoint;
+            if (currentBreakpoint > _lastBreakpoint)
+            {
+                HandleBreakpointCrossed(_lastBreakpoint, currentBreakpoint);
+            }
+
+            _lastBreakpoint = currentBreakpoint;
+
             var capacityFraction = _playerController.CarryState.CapacityFraction;
             var normalizedFraction = Mathf.Clamp01(capacityFraction / MaxCapacityFraction);
             ApplyCameraFeedback(normalizedFraction, capacityFraction);
@@ -132,22 +140,27 @@ namespace ExtractionWeight.Core
             var currentBreakpoint = _playerController.CurrentBreakpoint;
             if (currentBreakpoint > _lastBreakpoint)
             {
-                AudioDriverOverride?.HandleBreakpointCrossed(_lastBreakpoint, currentBreakpoint);
-
-                if (HapticsOverride != null)
-                {
-                    HapticsOverride.PlayBreakpointPulse(currentBreakpoint);
-                }
-                else if (Application.isMobilePlatform)
-                {
-                    Handheld.Vibrate();
-                }
-
-                BreakpointCrossedUpward?.Invoke(currentBreakpoint);
+                HandleBreakpointCrossed(_lastBreakpoint, currentBreakpoint);
             }
 
             _lastBreakpoint = currentBreakpoint;
             UpdateAmbientAudio();
+        }
+
+        private void HandleBreakpointCrossed(CarryBreakpoint previousBreakpoint, CarryBreakpoint currentBreakpoint)
+        {
+            AudioDriverOverride?.HandleBreakpointCrossed(previousBreakpoint, currentBreakpoint);
+
+            if (HapticsOverride != null)
+            {
+                HapticsOverride.PlayBreakpointPulse(currentBreakpoint);
+            }
+            else if (Application.isMobilePlatform)
+            {
+                Handheld.Vibrate();
+            }
+
+            BreakpointCrossedUpward?.Invoke(currentBreakpoint);
         }
 
         private void UpdateFootsteps()

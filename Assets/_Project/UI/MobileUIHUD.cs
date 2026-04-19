@@ -40,9 +40,11 @@ namespace ExtractionWeight.UI
         private Text? _staminaText;
         private Text? _tideTimerText;
         private Image? _actionButtonImage;
+        private Image? _actionButtonFillRing;
         private Text? _actionButtonText;
         private Image? _crouchButtonImage;
         private Text? _crouchButtonText;
+        private Text? _hudMessageText;
         private static Sprite? s_fallbackSprite;
 
         private void Awake()
@@ -107,6 +109,12 @@ namespace ExtractionWeight.UI
                     : GetCarryColor(_playerController.CurrentBreakpointIndex);
             }
 
+            if (_actionButtonFillRing != null)
+            {
+                _actionButtonFillRing.fillAmount = _playerController.CurrentContextActionProgress;
+                _actionButtonFillRing.color = GetCarryColor(_playerController.CurrentBreakpointIndex);
+            }
+
             if (_crouchButtonImage != null)
             {
                 _crouchButtonImage.color = _playerController.IsCrouched
@@ -117,6 +125,12 @@ namespace ExtractionWeight.UI
             if (_crouchButtonText != null)
             {
                 _crouchButtonText.text = _playerController.IsCrouched ? "Crouched" : "Crouch";
+            }
+
+            if (_hudMessageText != null)
+            {
+                _hudMessageText.text = _playerController.CurrentHudMessage;
+                _hudMessageText.enabled = !string.IsNullOrWhiteSpace(_playerController.CurrentHudMessage);
             }
         }
 
@@ -184,12 +198,25 @@ namespace ExtractionWeight.UI
             onScreenStick.useIsolatedInputActions = true;
 
             var actionButtonRoot = CreateRect("ActionButton", rootRect, new Vector2(1f, 0f), new Vector2(1f, 0f), new Vector2(-128f, 128f), new Vector2(170f, 170f));
+            _actionButtonFillRing = CreateImage("ActionButtonFillRing", actionButtonRoot, builtinSprite, _loadedColor);
+            _actionButtonFillRing.type = Image.Type.Filled;
+            _actionButtonFillRing.fillMethod = Image.FillMethod.Radial360;
+            _actionButtonFillRing.fillOrigin = (int)Image.Origin360.Top;
+            _actionButtonFillRing.fillClockwise = false;
+            _actionButtonFillRing.rectTransform.sizeDelta = new Vector2(164f, 164f);
+            _actionButtonFillRing.fillAmount = 0f;
+            _actionButtonFillRing.raycastTarget = false;
             _actionButtonImage = CreateImage("ActionButtonImage", actionButtonRoot, builtinSprite, _disabledActionColor);
             _actionButtonImage.rectTransform.sizeDelta = new Vector2(150f, 150f);
             _actionButtonImage.raycastTarget = true;
             var actionButton = _actionButtonImage.gameObject.AddComponent<OnScreenButton>();
             actionButton.controlPath = "<Gamepad>/buttonSouth";
             _actionButtonText = CreateText("ActionButtonText", actionButtonRoot, Vector2.zero, 24, TextAnchor.MiddleCenter, "...");
+            _hudMessageText = CreateText("HudMessageText", rootRect, new Vector2(0f, 120f), 28, TextAnchor.MiddleCenter, string.Empty);
+            _hudMessageText.rectTransform.anchorMin = new Vector2(0.5f, 0f);
+            _hudMessageText.rectTransform.anchorMax = new Vector2(0.5f, 0f);
+            _hudMessageText.rectTransform.sizeDelta = new Vector2(420f, 40f);
+            _hudMessageText.enabled = false;
 
             var crouchButtonRoot = CreateRect("CrouchButton", rootRect, new Vector2(1f, 0f), new Vector2(1f, 0f), new Vector2(-292f, 88f), new Vector2(124f, 124f));
             _crouchButtonImage = CreateImage("CrouchButtonImage", crouchButtonRoot, builtinSprite, new Color(0.14f, 0.16f, 0.18f, 0.8f));
@@ -208,9 +235,11 @@ namespace ExtractionWeight.UI
             _staminaText = transform.Find("TopCenter/StaminaText")?.GetComponent<Text>();
             _tideTimerText = transform.Find("TideTimer")?.GetComponent<Text>();
             _actionButtonImage = transform.Find("ActionButton/ActionButtonImage")?.GetComponent<Image>();
+            _actionButtonFillRing = transform.Find("ActionButton/ActionButtonFillRing")?.GetComponent<Image>();
             _actionButtonText = transform.Find("ActionButton/ActionButtonText")?.GetComponent<Text>();
             _crouchButtonImage = transform.Find("CrouchButton/CrouchButtonImage")?.GetComponent<Image>();
             _crouchButtonText = transform.Find("CrouchButton/CrouchButtonText")?.GetComponent<Text>();
+            _hudMessageText = transform.Find("HudMessageText")?.GetComponent<Text>();
         }
 
         private Color GetCarryColor(int breakpointIndex)

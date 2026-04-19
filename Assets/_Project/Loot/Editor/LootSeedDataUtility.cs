@@ -42,7 +42,7 @@ namespace ExtractionWeight.Loot.Editor
                 CreateOrUpdateDefinition("relic-large-machine", "Large Machine", LootCategory.Relic, new CostSignature(0.28f, 0.34f, 0.32f, 0.44f), 300f, false, new Vector3(0.90f, 0.70f, 0.65f), new Color(0.44f, 0.47f, 0.55f)),
                 CreateOrUpdateDefinition("relic-old-console", "Old Console", LootCategory.Relic, new CostSignature(0.14f, 0.18f, 0.28f, 0.22f), 160f, false, new Vector3(0.50f, 0.18f, 0.28f), new Color(0.30f, 0.34f, 0.30f)),
                 CreateOrUpdateDefinition("relic-preserved-specimen", "Preserved Specimen", LootCategory.Relic, new CostSignature(0.20f, 0.24f, 0.18f, 0.16f), 220f, false, new Vector3(0.34f, 0.52f, 0.24f), new Color(0.47f, 0.66f, 0.54f)),
-                CreateOrUpdateDefinition("volatile-leaking-battery", "Leaking Battery", LootCategory.Volatile, new CostSignature(0.16f, 0.14f, 0.22f, 0.16f), 240f, true, new Vector3(0.20f, 0.16f, 0.12f), new Color(0.78f, 0.63f, 0.12f), new AmbientAxisEffect(CostAxis.Handling, 0.02f)),
+                CreateOrUpdateDefinition("volatile-leaking-battery", "Leaking Battery", LootCategory.Volatile, new CostSignature(0.16f, 0.14f, 0.22f, 0.16f), 240f, true, new Vector3(0.20f, 0.16f, 0.12f), new Color(0.78f, 0.63f, 0.12f), new AmbientAxisEffect(CostAxis.Noise, 0.05f)),
                 CreateOrUpdateDefinition("volatile-caged-bird", "Caged Bird", LootCategory.Volatile, new CostSignature(0.24f, 0.22f, 0.18f, 0.20f), 320f, true, new Vector3(0.40f, 0.34f, 0.34f), new Color(0.71f, 0.42f, 0.22f), new AmbientAxisEffect(CostAxis.Noise, 0.03f)),
                 CreateOrUpdateDefinition("volatile-cracked-vial", "Cracked Vial", LootCategory.Volatile, new CostSignature(0.18f, 0.26f, 0.24f, 0.18f), 500f, true, new Vector3(0.10f, 0.24f, 0.10f), new Color(0.69f, 0.25f, 0.25f), new AmbientAxisEffect(CostAxis.Silhouette, 0.025f)),
             };
@@ -177,7 +177,7 @@ namespace ExtractionWeight.Loot.Editor
 
         private static void EnsureFolder(string path)
         {
-            if (AssetDatabase.IsValidFolder(path))
+            if (string.IsNullOrWhiteSpace(path) || AssetDatabase.IsValidFolder(path))
             {
                 return;
             }

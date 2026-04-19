@@ -24,7 +24,7 @@ namespace ExtractionWeight.Tests.PlayMode
         [UnityTearDown]
         public IEnumerator TearDown()
         {
-            var loader = Object.FindFirstObjectByType<ZoneLoader>();
+            var loader = Object.FindAnyObjectByType<ZoneLoader>();
             if (loader != null)
             {
                 var unloadTask = loader.UnloadCurrentZoneAsync();
@@ -66,7 +66,7 @@ namespace ExtractionWeight.Tests.PlayMode
             yield return WaitForTask(loadTask);
             yield return null;
 
-            var markers = Object.FindObjectsByType<ZoneExtractionPointMarker>(FindObjectsSortMode.None);
+            var markers = Object.FindObjectsByType<ZoneExtractionPointMarker>();
             Assert.That(markers, Has.Length.EqualTo(4));
             Assert.That(loader.SpawnedMarkers, Has.Count.EqualTo(4));
         }
@@ -82,7 +82,7 @@ namespace ExtractionWeight.Tests.PlayMode
             yield return WaitForTask(unloadTask);
             yield return null;
 
-            var markers = Object.FindObjectsByType<ZoneExtractionPointMarker>(FindObjectsSortMode.None);
+            var markers = Object.FindObjectsByType<ZoneExtractionPointMarker>();
             Assert.That(markers, Is.Empty);
             Assert.That(loader.SpawnedMarkers, Is.Empty);
             Assert.That(loader.CurrentZoneDefinition, Is.Null);
@@ -93,7 +93,7 @@ namespace ExtractionWeight.Tests.PlayMode
 
         private static ZoneLoader GetLoader()
         {
-            var loader = Object.FindFirstObjectByType<ZoneLoader>();
+            var loader = Object.FindAnyObjectByType<ZoneLoader>();
             Assert.That(loader, Is.Not.Null, "Boot scene should contain a ZoneLoader.");
             return loader!;
         }

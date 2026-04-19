@@ -6,6 +6,8 @@ namespace ExtractionWeight.Core
     {
         CostAxis AffectedAxis { get; }
 
-        float AxisIncreasePerSecond { get; }
+        CostSignature CurrentContribution { get; }
+
+        void Tick(float deltaTimeSeconds);
     }
 }

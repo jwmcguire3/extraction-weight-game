@@ -49,25 +49,25 @@ MonoBehaviour:
   <LootSpawnRegions>k__BackingField:
   - <Center>k__BackingField: {x: -72, y: 0, z: -48}
     <Radius>k__BackingField: 18
-    <AllowedCategories>k__BackingField: 0000000004000000
+    <AllowedCategories>k__BackingField: 000000000100000002000000
     <MinSpawnCount>k__BackingField: 1
     <MaxSpawnCount>k__BackingField: 3
     <RegionTier>k__BackingField: 0
   - <Center>k__BackingField: {x: 70, y: 0, z: -42}
     <Radius>k__BackingField: 16
-    <AllowedCategories>k__BackingField: 0000000003000000
+    <AllowedCategories>k__BackingField: 000000000100000002000000
     <MinSpawnCount>k__BackingField: 1
     <MaxSpawnCount>k__BackingField: 3
     <RegionTier>k__BackingField: 0.1
   - <Center>k__BackingField: {x: -24, y: 0, z: -6}
     <Radius>k__BackingField: 14
-    <AllowedCategories>k__BackingField: 0000000001000000
+    <AllowedCategories>k__BackingField: 000000000100000002000000
     <MinSpawnCount>k__BackingField: 2
     <MaxSpawnCount>k__BackingField: 4
     <RegionTier>k__BackingField: 0.45
   - <Center>k__BackingField: {x: 28, y: 0, z: 12}
     <Radius>k__BackingField: 15
-    <AllowedCategories>k__BackingField: 0100000004000000
+    <AllowedCategories>k__BackingField: 000000000100000002000000
     <MinSpawnCount>k__BackingField: 2
     <MaxSpawnCount>k__BackingField: 4
     <RegionTier>k__BackingField: 0.55
@@ -79,7 +79,7 @@ MonoBehaviour:
     <RegionTier>k__BackingField: 0.85
   - <Center>k__BackingField: {x: 52, y: 0, z: 58}
     <Radius>k__BackingField: 11
-    <AllowedCategories>k__BackingField: 050000000200000001000000
+    <AllowedCategories>k__BackingField: 000000000100000002000000
     <MinSpawnCount>k__BackingField: 1
     <MaxSpawnCount>k__BackingField: 3
     <RegionTier>k__BackingField: 1

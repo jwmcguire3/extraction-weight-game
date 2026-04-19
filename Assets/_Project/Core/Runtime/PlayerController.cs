@@ -9,7 +9,7 @@ namespace ExtractionWeight.Core
 {
     [DisallowMultipleComponent]
     [RequireComponent(typeof(CharacterController))]
-    public sealed class PlayerController : MonoBehaviour
+    public sealed class PlayerController : MonoBehaviour, IPlayerCarryInteractor, IPickupInteractionSink
     {
         private const float DefaultCarryCapacity = 1f;
         public const float MaxCapacityFraction = WeightCarryState.MaxCapacityFraction;
@@ -29,6 +29,9 @@ namespace ExtractionWeight.Core
 
         [SerializeField]
         private Transform? _movementReference;
+
+        [SerializeField]
+        private InteractionTracker? _interactionTracker;
 
         [Header("Movement")]
         [Min(0f)]
@@ -102,6 +105,7 @@ namespace ExtractionWeight.Core
         private InputAction? _crouchAction;
         private Vector2 _uiMoveInput;
         private bool _uiActionQueued;
+        private bool _uiActionHeld;
         private bool _uiSprintHeld;
         private bool _uiCrouchQueued;
         private bool _useUiInput;
@@ -146,16 +150,24 @@ namespace ExtractionWeight.Core
 
         public string CurrentContextActionLabel { get; private set; } = string.Empty;
 
+        public float CurrentContextActionProgress { get; private set; }
+
+        public string CurrentHudMessage => _interactionTracker?.HudMessage ?? string.Empty;
+
         public float CurrentTideSecondsRemaining => _currentTideSecondsRemaining;
 
         public event Action<PlayerContextActionTarget?>? ContextTargetChanged;
 
         public PlayerContextActionTarget? CurrentContextTarget { get; private set; }
 
+        public float CurrentHandlingMultiplier => _currentPenalty.HandlingMultiplier;
+
         private void Awake()
         {
             _characterController ??= GetComponent<CharacterController>();
             _movementReference ??= transform;
+            _interactionTracker ??= GetComponent<InteractionTracker>();
+            _interactionTracker ??= gameObject.AddComponent<InteractionTracker>();
 
             if (_zoneAxisWeights.Sum <= 0f)
             {
@@ -183,20 +195,24 @@ namespace ExtractionWeight.Core
 
         private void Update()
         {
+            CarryState.TickAmbientEffects(Time.deltaTime);
             _currentPenalty = WeightPenaltyCalculator.Compute(CarryState, _zoneAxisWeights);
             _currentTideSecondsRemaining = Mathf.Max(0f, _currentTideSecondsRemaining - Time.deltaTime);
 
             var inputState = ReadInputState();
             _cachedInputState = inputState;
             HandleCrouchToggle(inputState.CrouchPressed);
-            UpdateContextTarget();
+            _interactionTracker?.Tick(this, inputState.ActionHeld, Time.deltaTime);
+            UpdateContextState();
 
-            if (inputState.ActionPressed && !_previousActionPressed)
+            if ((_interactionTracker == null || !_interactionTracker.HasPickupCandidate) &&
+                inputState.ActionHeld &&
+                !_previousActionPressed)
             {
                 TriggerContextAction();
             }
 
-            _previousActionPressed = inputState.ActionPressed;
+            _previousActionPressed = inputState.ActionHeld;
         }
 
         private void FixedUpdate()
@@ -241,6 +257,12 @@ namespace ExtractionWeight.Core
         {
             _useUiInput = true;
             _uiActionQueued = true;
+        }
+
+        public void SetUiContextActionHeld(bool isHeld)
+        {
+            _useUiInput = true;
+            _uiActionHeld = isHeld;
         }
 
         public void QueueUiCrouchToggle()
@@ -289,6 +311,26 @@ namespace ExtractionWeight.Core
         public static bool CanSprint(CarryBreakpoint breakpoint, bool isCrouched, float stamina)
         {
             return breakpoint < CarryBreakpoint.Overburdened && !isCrouched && stamina > 0f;
+        }
+
+        public bool TryAddCarryItem(ILoadoutItem item)
+        {
+            return CarryState.TryAdd(item);
+        }
+
+        public void AttachAmbientEffect(IAmbientEffect effect)
+        {
+            CarryState.AttachAmbientEffect(effect);
+        }
+
+        public void RegisterPickupCandidate(IPickupInteractable pickup)
+        {
+            _interactionTracker?.RegisterPickupCandidate(pickup);
+        }
+
+        public void UnregisterPickupCandidate(IPickupInteractable pickup)
+        {
+            _interactionTracker?.UnregisterPickupCandidate(pickup);
         }
 
         public void DebugApplyMobilityLoad(float capacityFraction)
@@ -376,7 +418,7 @@ namespace ExtractionWeight.Core
             {
                 Move = _moveAction?.ReadValue<Vector2>() ?? Vector2.zero,
                 SprintHeld = (_sprintAction?.IsPressed() ?? false),
-                ActionPressed = (_contextAction?.IsPressed() ?? false),
+                ActionHeld = (_contextAction?.IsPressed() ?? false),
                 CrouchPressed = (_crouchAction?.IsPressed() ?? false),
             };
 
@@ -387,13 +429,28 @@ namespace ExtractionWeight.Core
 
             inputState.Move = _uiMoveInput;
             inputState.SprintHeld |= _uiSprintHeld;
-            inputState.ActionPressed |= _uiActionQueued;
+            inputState.ActionHeld |= _uiActionHeld || _uiActionQueued;
             inputState.CrouchPressed |= _uiCrouchQueued;
 
             _uiActionQueued = false;
             _uiCrouchQueued = false;
 
             return inputState;
+        }
+
+        private void UpdateContextState()
+        {
+            if (_interactionTracker != null && _interactionTracker.HasPickupCandidate)
+            {
+                CurrentContextTarget = null;
+                CurrentContextActionKind = ContextActionKind.Pickup;
+                CurrentContextActionLabel = _interactionTracker.ActionLabel;
+                CurrentContextActionProgress = _interactionTracker.HoldProgress;
+                return;
+            }
+
+            CurrentContextActionProgress = 0f;
+            UpdateContextTarget();
         }
 
         private void UpdateContextTarget()
@@ -494,7 +551,7 @@ namespace ExtractionWeight.Core
         {
             public Vector2 Move { get; set; }
             public bool SprintHeld { get; set; }
-            public bool ActionPressed { get; set; }
+            public bool ActionHeld { get; set; }
             public bool CrouchPressed { get; set; }
         }
 

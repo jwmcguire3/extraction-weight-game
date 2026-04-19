@@ -66,6 +66,22 @@ namespace ExtractionWeight.Loot
 
         public float TotalBaseCost => _baseCost.Noise + _baseCost.Silhouette + _baseCost.Handling + _baseCost.Mobility;
 
+        public LootItemSize GetSizeClass()
+        {
+            var maxDimension = Mathf.Max(_physicalSize.x, Mathf.Max(_physicalSize.y, _physicalSize.z));
+            if (maxDimension <= 0.35f)
+            {
+                return LootItemSize.Small;
+            }
+
+            if (maxDimension <= 0.7f)
+            {
+                return LootItemSize.Medium;
+            }
+
+            return LootItemSize.Large;
+        }
+
 #if UNITY_EDITOR
         public void EditorSetData(
             string itemId,

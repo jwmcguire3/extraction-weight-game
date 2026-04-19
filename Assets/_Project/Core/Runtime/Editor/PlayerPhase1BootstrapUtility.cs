@@ -72,6 +72,7 @@ namespace ExtractionWeight.Core.Editor
                 characterController.minMoveDistance = 0f;
                 characterController.skinWidth = 0.05f;
 
+                playerRoot.AddComponent<InteractionTracker>();
                 var playerController = playerRoot.AddComponent<PlayerController>();
                 var carryFeedbackController = playerRoot.AddComponent<CarryFeedbackController>();
                 var footstepLightSource = playerRoot.AddComponent<AudioSource>();

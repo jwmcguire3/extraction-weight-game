@@ -174,6 +174,7 @@ namespace ExtractionWeight.Zone.Editor
             CreateExtractionPointAnchor("ExtractionPoint_D", new Vector3(95f, 0f, 95f));
             CreateWardenRoutesAndThreats();
             CreateListeners();
+            CreateLootSpawner();
 
             EditorSceneManager.SaveScene(scene, DrydockScenePath);
         }
@@ -271,12 +272,12 @@ namespace ExtractionWeight.Zone.Editor
         {
             return new List<LootSpawnRegion>
             {
-                new(new Vector3(-72f, 0f, -48f), 18f, new[] { LootCategory.Currency, LootCategory.Tool }, 1, 3, 0.0f),
-                new(new Vector3(70f, 0f, -42f), 16f, new[] { LootCategory.Currency, LootCategory.Commodity }, 1, 3, 0.1f),
-                new(new Vector3(-24f, 0f, -6f), 14f, new[] { LootCategory.Currency, LootCategory.Relic }, 2, 4, 0.45f),
-                new(new Vector3(28f, 0f, 12f), 15f, new[] { LootCategory.Relic, LootCategory.Tool }, 2, 4, 0.55f),
+                new(new Vector3(-72f, 0f, -48f), 18f, new[] { LootCategory.Currency, LootCategory.Relic, LootCategory.Volatile }, 1, 3, 0.0f),
+                new(new Vector3(70f, 0f, -42f), 16f, new[] { LootCategory.Currency, LootCategory.Relic, LootCategory.Volatile }, 1, 3, 0.1f),
+                new(new Vector3(-24f, 0f, -6f), 14f, new[] { LootCategory.Currency, LootCategory.Relic, LootCategory.Volatile }, 2, 4, 0.45f),
+                new(new Vector3(28f, 0f, 12f), 15f, new[] { LootCategory.Currency, LootCategory.Relic, LootCategory.Volatile }, 2, 4, 0.55f),
                 new(new Vector3(-10f, 0f, 62f), 12f, new[] { LootCategory.Relic, LootCategory.Volatile }, 2, 5, 0.85f),
-                new(new Vector3(52f, 0f, 58f), 11f, new[] { LootCategory.Objective, LootCategory.Volatile, LootCategory.Relic }, 1, 3, 1.0f),
+                new(new Vector3(52f, 0f, 58f), 11f, new[] { LootCategory.Currency, LootCategory.Relic, LootCategory.Volatile }, 1, 3, 1.0f),
             };
         }
 
@@ -409,6 +410,12 @@ namespace ExtractionWeight.Zone.Editor
             CreateListener("Listener_CoreNest", new Vector3(56f, 0f, 58f), Quaternion.Euler(0f, -90f, 0f));
         }
 
+        private static void CreateLootSpawner()
+        {
+            var root = new GameObject("LootSpawner");
+            root.AddComponent<LootSpawner>();
+        }
+
         private static void CreateWarden(string name, Vector3 startPosition, IReadOnlyList<Vector3> waypoints)
         {
             var root = new GameObject(name);
@@ -498,7 +505,7 @@ namespace ExtractionWeight.Zone.Editor
 
         private static void EnsureFolder(string path)
         {
-            if (AssetDatabase.IsValidFolder(path))
+            if (string.IsNullOrWhiteSpace(path) || AssetDatabase.IsValidFolder(path))
             {
                 return;
             }
