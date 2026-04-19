@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c441e0af826ec1418879d18f567f503, type: 3}
+  m_Name: LootDatabase
+  m_EditorClassIdentifier: ExtractionWeight.Loot::ExtractionWeight.Loot.LootDatabase
+  _definitions:
+  - {fileID: 11400000, guid: 2ed6f16b3511cf24895f998bcc692d1f, type: 2}
+  - {fileID: 11400000, guid: 54e2cc7e4318c7142a93201db325bba1, type: 2}
+  - {fileID: 11400000, guid: 2d8c39186f09fce49a4716e979103996, type: 2}
+  - {fileID: 11400000, guid: 6a023e1b95042dc4f9180464a8aae710, type: 2}
+  - {fileID: 11400000, guid: 0b9d8b48630a02b44bf9fee969ad7a6b, type: 2}
+  - {fileID: 11400000, guid: 1335ac54227f55b41bf6ea55b7855a01, type: 2}
+  - {fileID: 11400000, guid: 84852a5c3d4536c47b4346dd36c90539, type: 2}
+  - {fileID: 11400000, guid: 77904a72d1781c547b7b4e493e6408f3, type: 2}
+  - {fileID: 11400000, guid: 07726e4b2decbee41bbcc21df443a7f5, type: 2}
+  - {fileID: 11400000, guid: f7fcbfb101f2c564c9264a7cc05498f6, type: 2}
+  - {fileID: 11400000, guid: ea9e200eee165e14884b4a99e96bf131, type: 2}
+  - {fileID: 11400000, guid: 25c95f018ffdaff4aacd92e1b240fddd, type: 2}

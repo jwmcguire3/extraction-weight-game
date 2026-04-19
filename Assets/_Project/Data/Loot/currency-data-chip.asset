@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c14949371370e8f488c816308b4ac1a5, type: 3}
+  m_Name: currency-data-chip
+  m_EditorClassIdentifier: ExtractionWeight.Loot::ExtractionWeight.Loot.LootDefinition
+  _itemId: currency-data-chip
+  _displayName: Data Chip
+  _icon: {fileID: 0}
+  _category: 0
+  _baseCost:
+    Noise: 0.03
+    Silhouette: 0.02
+    Handling: 0.04
+    Mobility: 0.02
+  _value: 30
+  _isVolatile: 0
+  _ambientEffect:
+    _affectedAxis: 0
+    _axisIncreasePerSecond: 0
+  _physicalSize: {x: 0.08, y: 0.05, z: 0.01}
+  _pickupSound: {fileID: 0}
+  _ambientSound: {fileID: 0}

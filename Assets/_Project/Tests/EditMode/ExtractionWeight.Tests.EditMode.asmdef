@@ -5,6 +5,7 @@
     "ExtractionWeight.Core",
     "ExtractionWeight.Weight",
     "ExtractionWeight.Loot",
+    "ExtractionWeight.Loot.Editor",
     "ExtractionWeight.Zone",
     "ExtractionWeight.Threat",
     "ExtractionWeight.Extraction",

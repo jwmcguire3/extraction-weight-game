@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c14949371370e8f488c816308b4ac1a5, type: 3}
+  m_Name: volatile-leaking-battery
+  m_EditorClassIdentifier: ExtractionWeight.Loot::ExtractionWeight.Loot.LootDefinition
+  _itemId: volatile-leaking-battery
+  _displayName: Leaking Battery
+  _icon: {fileID: 0}
+  _category: 2
+  _baseCost:
+    Noise: 0.16
+    Silhouette: 0.14
+    Handling: 0.22
+    Mobility: 0.16
+  _value: 240
+  _isVolatile: 1
+  _ambientEffect:
+    _affectedAxis: 2
+    _axisIncreasePerSecond: 0.02
+  _physicalSize: {x: 0.2, y: 0.16, z: 0.12}
+  _pickupSound: {fileID: 0}
+  _ambientSound: {fileID: 0}
