@@ -1,0 +1,30 @@
+{
+  "name": "ExtractionWeight.Tests.EditMode",
+  "rootNamespace": "ExtractionWeight.Tests.EditMode",
+  "references": [
+    "ExtractionWeight.Core",
+    "ExtractionWeight.Weight",
+    "ExtractionWeight.Loot",
+    "ExtractionWeight.Zone",
+    "ExtractionWeight.Threat",
+    "ExtractionWeight.Extraction",
+    "ExtractionWeight.UI",
+    "ExtractionWeight.Audio"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": true,
+  "precompiledReferences": [
+    "nunit.framework.dll"
+  ],
+  "autoReferenced": false,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false,
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ]
+}

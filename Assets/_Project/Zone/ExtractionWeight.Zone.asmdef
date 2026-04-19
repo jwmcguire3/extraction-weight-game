@@ -1,0 +1,16 @@
+{
+  "name": "ExtractionWeight.Zone",
+  "rootNamespace": "ExtractionWeight.Zone",
+  "references": [
+    "ExtractionWeight.Core"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}
