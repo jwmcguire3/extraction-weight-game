@@ -14,12 +14,18 @@ namespace ExtractionWeight.Tests.PlayMode
 {
     public class DeathFlowTests
     {
+        private const float SetupTimeoutSeconds = 5f;
+        private const float TransitionTimeoutSeconds = 10f;
+
         private Sprite _icon = null!;
         private List<LootDefinition> _originalLootDefinitions = null!;
+        private List<ZoneDefinition> _originalZones = null!;
+        private GameObject? _originalMarkerPrefab;
 
         [UnitySetUp]
         public IEnumerator SetUp()
         {
+            PlayerStash.EditorSetPersistenceEnabled(false);
             PlayerStash.ResetSingletonForTests();
             if (GameFlowManager.Instance == null || !SceneManager.GetSceneByName("Base").isLoaded)
             {
@@ -27,9 +33,10 @@ namespace ExtractionWeight.Tests.PlayMode
                 yield return null;
             }
 
-            yield return new WaitUntil(() => GameFlowManager.Instance != null);
-            yield return new WaitUntil(() => SceneManager.GetSceneByName("Base").isLoaded);
+            yield return WaitForCondition(() => GameFlowManager.Instance != null, SetupTimeoutSeconds, "GameFlowManager was not created after loading Boot.");
+            yield return WaitForCondition(() => SceneManager.GetSceneByName("Base").isLoaded, SetupTimeoutSeconds, "Base scene did not finish loading during PlayMode setup.");
             GameFlowManager.Instance!.ResetProgressForTests();
+            CaptureOriginalZoneLoaderState();
             ConfigureFastDrydockDefinition();
             _originalLootDefinitions = new List<LootDefinition>(LootDatabase.Instance!.Definitions);
 
@@ -49,10 +56,13 @@ namespace ExtractionWeight.Tests.PlayMode
         public IEnumerator TearDown()
         {
             PlayerStash.ResetSingletonForTests();
+            PlayerStash.EditorSetPersistenceEnabled(true);
             if (LootDatabase.Instance != null)
             {
                 LootDatabase.Instance.EditorSetDefinitions(_originalLootDefinitions);
             }
+
+            RestoreOriginalZoneLoaderState();
 
             foreach (var definition in Resources.FindObjectsOfTypeAll<ScriptableObject>())
             {
@@ -83,7 +93,10 @@ namespace ExtractionWeight.Tests.PlayMode
 
             Assert.That(playerHealth.IsDead, Is.True);
             Assert.That(GameFlowManager.Instance!.State, Is.EqualTo(GameFlowState.ReturningToBase));
-            yield return new WaitUntil(() => GameFlowManager.Instance!.State == GameFlowState.AtBase);
+            yield return WaitForCondition(
+                () => GameFlowManager.Instance != null && GameFlowManager.Instance.State == GameFlowState.AtBase,
+                TransitionTimeoutSeconds,
+                "Death flow never settled back to the base state.");
         }
 
         [UnityTest]
@@ -99,7 +112,10 @@ namespace ExtractionWeight.Tests.PlayMode
             Assert.That(pickup.TryCompletePickup(player!, out var failureMessage), Is.True, failureMessage);
 
             health!.TakeDamage(200f, new TestThreat("test-listener"));
-            yield return new WaitUntil(() => GameFlowManager.Instance!.State == GameFlowState.AtBase);
+            yield return WaitForCondition(
+                () => GameFlowManager.Instance != null && GameFlowManager.Instance.State == GameFlowState.AtBase,
+                TransitionTimeoutSeconds,
+                "Failed run did not return to base after player death.");
 
             Assert.That(GameFlowManager.Instance!.LastRunSummary, Is.Not.Null);
             Assert.That(GameFlowManager.Instance!.LastRunSummary!.WasSuccessful, Is.False);
@@ -119,7 +135,10 @@ namespace ExtractionWeight.Tests.PlayMode
             Assert.That(pickup.TryCompletePickup(player!, out var failureMessage), Is.True, failureMessage);
 
             health!.TakeDamage(200f, new TestThreat("test-warden"));
-            yield return new WaitUntil(() => GameFlowManager.Instance!.State == GameFlowState.AtBase);
+            yield return WaitForCondition(
+                () => GameFlowManager.Instance != null && GameFlowManager.Instance.State == GameFlowState.AtBase,
+                TransitionTimeoutSeconds,
+                "Carry state was not cleared because the run never returned to base.");
 
             Assert.That(PlayerStash.Instance.TotalValue, Is.EqualTo(0f).Within(0.0001f));
             Assert.That(PlayerStash.Instance.Items, Is.Empty);
@@ -128,7 +147,24 @@ namespace ExtractionWeight.Tests.PlayMode
         private IEnumerator EnterZone()
         {
             GameFlowManager.Instance!.EnterZone("drydock");
-            yield return new WaitUntil(() => GameFlowManager.Instance!.State == GameFlowState.InZone);
+            yield return WaitForCondition(
+                () => GameFlowManager.Instance != null && GameFlowManager.Instance.State == GameFlowState.InZone,
+                TransitionTimeoutSeconds,
+                "Drydock did not finish loading for the death-flow test.");
+        }
+
+        private static IEnumerator WaitForCondition(System.Func<bool> predicate, float timeoutSeconds, string failureMessage)
+        {
+            var startTime = Time.realtimeSinceStartup;
+            while (!predicate())
+            {
+                if (Time.realtimeSinceStartup - startTime >= timeoutSeconds)
+                {
+                    Assert.Fail(failureMessage);
+                }
+
+                yield return null;
+            }
         }
 
         private void ConfigureFastDrydockDefinition()
@@ -153,6 +189,25 @@ namespace ExtractionWeight.Tests.PlayMode
                 "Assets/_Project/Scenes/Zones/Drydock.unity");
 
             loader!.EditorConfigure(new List<ZoneDefinition> { definition }, null!);
+        }
+
+        private void CaptureOriginalZoneLoaderState()
+        {
+            var loader = Object.FindAnyObjectByType<ZoneLoader>();
+            Assert.That(loader, Is.Not.Null);
+            _originalZones = loader!.EditorGetAvailableZones();
+            _originalMarkerPrefab = loader.EditorGetExtractionPointMarkerPrefab();
+        }
+
+        private void RestoreOriginalZoneLoaderState()
+        {
+            var loader = Object.FindAnyObjectByType<ZoneLoader>();
+            if (loader == null || _originalZones == null || _originalMarkerPrefab == null)
+            {
+                return;
+            }
+
+            loader.EditorConfigure(_originalZones, _originalMarkerPrefab);
         }
 
         private LootPickup CreateLootPickupNearPlayer(PlayerController player, string itemId, float value)

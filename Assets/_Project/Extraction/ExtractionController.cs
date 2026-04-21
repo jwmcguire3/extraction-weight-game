@@ -107,6 +107,7 @@ namespace ExtractionWeight.Extraction
 
         private void HandleActivated(PlayerController playerController)
         {
+            _zoneRuntime ??= FindAnyObjectByType<ZoneRuntime>();
             ResolvePointData();
             if (_pointData == null || _zoneRuntime == null)
             {

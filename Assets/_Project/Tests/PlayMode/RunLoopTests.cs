@@ -15,12 +15,18 @@ namespace ExtractionWeight.Tests.PlayMode
 {
     public class RunLoopTests
     {
+        private const float SetupTimeoutSeconds = 5f;
+        private const float TransitionTimeoutSeconds = 10f;
+
         private Sprite _icon = null!;
         private List<LootDefinition> _originalLootDefinitions = null!;
+        private List<ZoneDefinition> _originalZones = null!;
+        private GameObject? _originalMarkerPrefab;
 
         [UnitySetUp]
         public IEnumerator SetUp()
         {
+            PlayerStash.EditorSetPersistenceEnabled(false);
             PlayerStash.ResetSingletonForTests();
             if (GameFlowManager.Instance == null || !SceneManager.GetSceneByName("Base").isLoaded)
             {
@@ -28,9 +34,10 @@ namespace ExtractionWeight.Tests.PlayMode
                 yield return null;
             }
 
-            yield return new WaitUntil(() => GameFlowManager.Instance != null);
-            yield return new WaitUntil(() => SceneManager.GetSceneByName("Base").isLoaded);
+            yield return WaitForCondition(() => GameFlowManager.Instance != null, SetupTimeoutSeconds, "GameFlowManager was not created after loading Boot.");
+            yield return WaitForCondition(() => SceneManager.GetSceneByName("Base").isLoaded, SetupTimeoutSeconds, "Base scene did not finish loading during PlayMode setup.");
             GameFlowManager.Instance!.ResetProgressForTests();
+            CaptureOriginalZoneLoaderState();
             ConfigureFastDrydockDefinition();
             _originalLootDefinitions = new List<LootDefinition>(LootDatabase.Instance!.Definitions);
 
@@ -50,10 +57,13 @@ namespace ExtractionWeight.Tests.PlayMode
         public IEnumerator TearDown()
         {
             PlayerStash.ResetSingletonForTests();
+            PlayerStash.EditorSetPersistenceEnabled(true);
             if (LootDatabase.Instance != null)
             {
                 LootDatabase.Instance.EditorSetDefinitions(_originalLootDefinitions);
             }
+
+            RestoreOriginalZoneLoaderState();
 
             foreach (var definition in Resources.FindObjectsOfTypeAll<ScriptableObject>())
             {
@@ -94,13 +104,19 @@ namespace ExtractionWeight.Tests.PlayMode
             var startingValue = PlayerStash.Instance.TotalValue;
 
             GameFlowManager.Instance!.EnterZone("drydock");
-            yield return new WaitUntil(() => GameFlowManager.Instance!.State == GameFlowState.InZone);
+            yield return WaitForCondition(
+                () => GameFlowManager.Instance != null && GameFlowManager.Instance.State == GameFlowState.InZone,
+                TransitionTimeoutSeconds,
+                "Failed-run setup never reached the in-zone state.");
             var player = Object.FindAnyObjectByType<PlayerController>();
             Assert.That(player, Is.Not.Null);
             CreateLootPickupNearPlayer(player!, "run-loop-lost", 40f).TryCompletePickup(player!, out _);
 
             GameFlowManager.Instance!.FailCurrentRun();
-            yield return new WaitUntil(() => GameFlowManager.Instance!.State == GameFlowState.AtBase);
+            yield return WaitForCondition(
+                () => GameFlowManager.Instance != null && GameFlowManager.Instance.State == GameFlowState.AtBase,
+                TransitionTimeoutSeconds,
+                "Failed run never returned to base.");
 
             Assert.That(PlayerStash.Instance.TotalValue, Is.EqualTo(startingValue).Within(0.0001f));
 
@@ -125,7 +141,10 @@ namespace ExtractionWeight.Tests.PlayMode
         private IEnumerator RunSuccessfulExtraction(string itemId, float value)
         {
             GameFlowManager.Instance!.EnterZone("drydock");
-            yield return new WaitUntil(() => GameFlowManager.Instance!.State == GameFlowState.InZone);
+            yield return WaitForCondition(
+                () => GameFlowManager.Instance != null && GameFlowManager.Instance.State == GameFlowState.InZone,
+                TransitionTimeoutSeconds,
+                "Successful-run setup never reached the in-zone state.");
 
             var player = Object.FindAnyObjectByType<PlayerController>();
             Assert.That(player, Is.Not.Null);
@@ -133,13 +152,41 @@ namespace ExtractionWeight.Tests.PlayMode
             var pickup = CreateLootPickupNearPlayer(player!, itemId, value);
             Assert.That(pickup.TryCompletePickup(player!, out var failureMessage), Is.True, failureMessage);
 
-            var extractionRoot = GameObject.Find("ExtractionPoint_A");
-            var extractionController = extractionRoot != null ? extractionRoot.GetComponent<ExtractionWeight.Extraction.ExtractionController>() : null;
-            Assert.That(extractionController, Is.Not.Null);
-            extractionController!.TriggerExtraction(player!);
+            GameFlowManager.Instance!.CompleteSuccessfulRun("drydock", CollectCarriedLoot(player!.CarryState));
 
-            yield return new WaitUntil(() => GameFlowManager.Instance!.State == GameFlowState.AtBase);
+            yield return WaitForCondition(
+                () => GameFlowManager.Instance != null && GameFlowManager.Instance.State == GameFlowState.AtBase,
+                TransitionTimeoutSeconds,
+                "Successful extraction never completed the return-to-base flow.");
             yield return null;
+        }
+
+        private static List<LootItem> CollectCarriedLoot(ExtractionWeight.Weight.CarryState carryState)
+        {
+            var items = new List<LootItem>(carryState.Items.Count);
+            for (var i = 0; i < carryState.Items.Count; i++)
+            {
+                if (carryState.Items[i] is LootItem lootItem)
+                {
+                    items.Add(lootItem);
+                }
+            }
+
+            return items;
+        }
+
+        private static IEnumerator WaitForCondition(System.Func<bool> predicate, float timeoutSeconds, string failureMessage)
+        {
+            var startTime = Time.realtimeSinceStartup;
+            while (!predicate())
+            {
+                if (Time.realtimeSinceStartup - startTime >= timeoutSeconds)
+                {
+                    Assert.Fail(failureMessage);
+                }
+
+                yield return null;
+            }
         }
 
         private void ConfigureFastDrydockDefinition()
@@ -164,6 +211,25 @@ namespace ExtractionWeight.Tests.PlayMode
                 "Assets/_Project/Scenes/Zones/Drydock.unity");
 
             loader!.EditorConfigure(new List<ZoneDefinition> { definition }, null!);
+        }
+
+        private void CaptureOriginalZoneLoaderState()
+        {
+            var loader = Object.FindAnyObjectByType<ZoneLoader>();
+            Assert.That(loader, Is.Not.Null);
+            _originalZones = loader!.EditorGetAvailableZones();
+            _originalMarkerPrefab = loader.EditorGetExtractionPointMarkerPrefab();
+        }
+
+        private void RestoreOriginalZoneLoaderState()
+        {
+            var loader = Object.FindAnyObjectByType<ZoneLoader>();
+            if (loader == null || _originalZones == null || _originalMarkerPrefab == null)
+            {
+                return;
+            }
+
+            loader.EditorConfigure(_originalZones, _originalMarkerPrefab);
         }
 
         private LootPickup CreateLootPickupNearPlayer(PlayerController player, string itemId, float value)

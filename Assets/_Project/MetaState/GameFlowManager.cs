@@ -168,6 +168,7 @@ namespace ExtractionWeight.MetaState
 
         public void ResetProgressForTests()
         {
+            ConfigureStashResolver();
             CurrentRunContext = null;
             LastRunSummary = null;
             SessionStats.RunsAttempted = 0;
@@ -183,6 +184,18 @@ namespace ExtractionWeight.MetaState
 
         private void HandleSceneLoaded(Scene scene, LoadSceneMode mode)
         {
+            if (scene.name == BootSceneName)
+            {
+                HookActivePlayerHealth();
+                if (!SceneManager.GetSceneByName(BaseSceneName).isLoaded &&
+                    (CurrentRunContext == null || State == GameFlowState.AtBase || State == GameFlowState.ReturningToBase))
+                {
+                    QueueBaseSceneReload();
+                }
+
+                return;
+            }
+
             if (scene.name == BaseSceneName)
             {
                 SceneManager.SetActiveScene(scene);
@@ -320,6 +333,16 @@ namespace ExtractionWeight.MetaState
             while (!loadTask.IsCompleted)
             {
                 yield return null;
+            }
+
+            if (loadTask.IsFaulted)
+            {
+                Debug.LogException(loadTask.Exception?.GetBaseException() ?? loadTask.Exception);
+            }
+
+            if (!SceneManager.GetSceneByName(BaseSceneName).isLoaded)
+            {
+                _isQueuingBaseReload = false;
             }
         }
 

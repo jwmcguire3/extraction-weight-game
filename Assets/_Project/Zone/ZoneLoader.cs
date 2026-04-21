@@ -130,6 +130,16 @@ namespace ExtractionWeight.Zone
             _availableZones = availableZones;
             _extractionPointMarkerPrefab = extractionPointMarkerPrefab;
         }
+
+        public List<ZoneDefinition> EditorGetAvailableZones()
+        {
+            return new List<ZoneDefinition>(_availableZones);
+        }
+
+        public GameObject? EditorGetExtractionPointMarkerPrefab()
+        {
+            return _extractionPointMarkerPrefab;
+        }
 #endif
 
         private void SpawnExtractionPointMarkers(ZoneDefinition zoneDefinition)

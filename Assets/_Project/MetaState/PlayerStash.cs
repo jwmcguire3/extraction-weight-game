@@ -12,6 +12,7 @@ namespace ExtractionWeight.MetaState
 
         private static PlayerStash? s_instance;
         private static Func<string, float>? s_itemValueResolver;
+        private static bool s_persistenceEnabled = true;
 
         [SerializeField]
         private List<StoredLootItem> _items = new();
@@ -127,12 +128,23 @@ namespace ExtractionWeight.MetaState
 
         public void Save()
         {
+            if (!s_persistenceEnabled)
+            {
+                return;
+            }
+
             PlayerPrefs.SetString(PlayerPrefsKey, ToJson());
             PlayerPrefs.Save();
         }
 
         public void Reload()
         {
+            if (!s_persistenceEnabled)
+            {
+                _items.Clear();
+                return;
+            }
+
             LoadFromJson(PlayerPrefs.GetString(PlayerPrefsKey, string.Empty));
         }
 
@@ -155,6 +167,13 @@ namespace ExtractionWeight.MetaState
             PlayerPrefs.Save();
             s_itemValueResolver = null;
         }
+
+#if UNITY_EDITOR
+        public static void EditorSetPersistenceEnabled(bool enabled)
+        {
+            s_persistenceEnabled = enabled;
+        }
+#endif
 
         private static PlayerStash CreateAndLoad()
         {

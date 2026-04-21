@@ -5,8 +5,8 @@ OS: 'Windows 11  (10.0.26200) Core' Language: 'en' Physical Memory: 32609 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
 System  architecture: x64
 Process architecture: x64
-Date: 2026-04-19T22:13:42Z
-[Licensing::Module] Successfully launched the LicensingClient (PId: 20084)
+Date: 2026-04-21T03:26:22Z
+[Licensing::Module] Successfully launched the LicensingClient (PId: 30204)
 
 COMMAND LINE ARGUMENTS:
 C:\Program Files\Unity\Hub\Editor\6000.4.3f1\Editor\Unity.exe
@@ -56,27 +56,27 @@ C:/Users/jwmcg/OneDrive/Documents/AI Projects/Live Envirnments/extraction-weight
     "memorysetup-job-temp-allocator-block-size=2097152"
     "memorysetup-job-temp-allocator-block-size-background=1048576"
     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
-Player connection [27120]  Target information:
+Player connection [5148]  Target information:
 
-Player connection [27120]  * "[IP] 10.0.0.151 [Port] 55504 [Flags] 2 [Guid] 1501879081 [EditorId] 1501879081 [Version] 1048832 [Id] WindowsEditor(7,Johnnys_Super) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [5148]  * "[IP] 10.0.0.151 [Port] 55504 [Flags] 2 [Guid] 3609759782 [EditorId] 3609759782 [Version] 1048832 [Id] WindowsEditor(7,Johnnys_Super) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [27120] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [27120] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [5148] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [5148] Host joined alternative multi-casting on [225.0.0.222:34997]...
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
 [Physics::Module] Id: 0xdecafbad
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-jwmcg" at "2026-04-19T22:13:42.284785Z"
-[Package Manager] Connected to IPC stream "Upm-15100" after 0.2 seconds.
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-jwmcg" at "2026-04-21T03:26:22.3881501Z"
+[Package Manager] Connected to IPC stream "Upm-19132" after 0.2 seconds.
 [Licensing::Module] Licensing is not yet initialized.
 [Licensing::Client] Handshaking with LicensingClient:
   Version:                 1.18.1+9fbee8e
-  Session Id:              3a834f6fce6740d2a0bc58e99d14e4f4
-  Correlation Id:          b606cdebcef7616a27cb280ef11965ee
-  External correlation Id: 3582520460392180269
+  Session Id:              008f6ee00d7f42f2854c229ad10fa9ad
+  Correlation Id:          deb8e39fd5840c072ec6e4606fa6fd4d
+  External correlation Id: 6183080498261652215
   Machine Id:              1BeB/TLi2XvtpQs0S1BLgEO37gQ=
-[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-jwmcg" (connect: 0.16s, validation: 0.04s, handshake: 1.27s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-jwmcg-notifications" at "2026-04-19T22:13:43.5877719Z"
-[Licensing::Module] Connected to LicensingClient (PId: 20084, launch time: 0.00, total connection time: 1.46s)
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-jwmcg" (connect: 0.16s, validation: 0.03s, handshake: 1.25s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-jwmcg-notifications" at "2026-04-21T03:26:23.6650816Z"
+[Licensing::Module] Connected to LicensingClient (PId: 30204, launch time: 0.00, total connection time: 1.44s)
 [Licensing::Module] Error: Access token is unavailable; failed to update
 [Licensing::Client] Successfully resolved entitlement details
 [Licensing::Module] License group:
@@ -84,10 +84,10 @@ Input System module state changed to: Initialized.
   Product: Unity Personal
   Type: Assigned
   Expiration: Unlimited
-[Licensing::Client] Successfully updated license, isAsync: True, time: 0.00
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.01
 [Licensing::Client] Successfully resolved entitlement details
-[Licensing::Module] Licensing Background thread has ended after 1.48s
-[Licensing::Module] Licensing is initialized (took 1.17s).
+[Licensing::Module] Licensing Background thread has ended after 1.45s
+[Licensing::Module] Licensing is initialized (took 1.10s).
 [Licensing::Client] Successfully resolved entitlement details
 Library Redirect Path: Library/
 [Physics::Module] Selected backend.
@@ -109,7 +109,7 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.4.3f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.4.3f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.4.3f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56100
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56132
 CodeReloadManager initialized
 Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
 Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
@@ -119,28 +119,29 @@ Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.4.3f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.4.3f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001966 seconds.
+Registered in 0.001345 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Package Manager log level set to [2]
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:False
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.245 seconds
-Domain Reload Profiling: 528ms
-	BeginReloadAssembly (80ms)
+- Finished resetting the current domain, in  0.242 seconds
+Domain Reload Profiling: 540ms
+	BeginReloadAssembly (105ms)
+		CreateAndSetChildDomain (17ms)
 	RebuildCommonClasses (23ms)
 	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (40ms)
-	LoadAllAssembliesAndSetupDomain (130ms)
-		LoadAssemblies (77ms)
-		AnalyzeDomain (124ms)
-			TypeCache.Refresh (123ms)
-				TypeCache.ScanAssembly (113ms)
-	FinalizeReload (246ms)
+	initialDomainReloadingComplete (39ms)
+	LoadAllAssembliesAndSetupDomain (122ms)
+		LoadAssemblies (87ms)
+		AnalyzeDomain (116ms)
+			TypeCache.Refresh (115ms)
+				TypeCache.ScanAssembly (106ms)
+	FinalizeReload (243ms)
 		SetupLoadedEditorAssemblies (0ms)
-			InitializePlatformSupportModulesInManaged (33ms)
-			BeforeProcessingInitializeOnLoad (52ms)
-			ProcessInitializeOnLoadAttributes (66ms)
+			InitializePlatformSupportModulesInManaged (31ms)
+			BeforeProcessingInitializeOnLoad (51ms)
+			ProcessInitializeOnLoadAttributes (64ms)
 			ProcessInitializeOnLoadMethodAttributes (53ms)
 [Licensing::Client] Successfully resolved entitlement details
 Application.AssetDatabase Initial Refresh Start
@@ -210,51 +211,13 @@ Application.AssetDatabase Initial Refresh Start
     com.unity.ext.nunit@2.0.5 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.ext.nunit@d8c07649098d)
 [Subsystems] No new subsystems found in resolved package list.
 [Package Manager] Done registering packages in 0.01 seconds
-[ScriptCompilation] Requested script compilation because: Assembly Definition File(s) changed
 [ScriptCompilation] Requested script compilation because: AssetDatabase observed changes in script compilation related files
 Starting: C:\Program Files\Unity\Hub\Editor\6000.4.3f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
 WorkingDir: C:/Users/jwmcg/OneDrive/Documents/AI Projects/Live Envirnments/extraction-weight-game
 DisplayProgressbar: Compiling Scripts
-Starting: C:\Program Files\Unity\Hub\Editor\6000.4.3f1\Editor\Data\netcorerun\netcorerun.exe "C:\Program Files\Unity\Hub\Editor\6000.4.3f1\Editor\Data\Tools\BuildPipeline\ScriptCompilationBuildProgram.exe" "Library/Bee/1900b0aE.dag.json" "Library/Bee/1900b0aE-inputdata.json" "Library\Bee\buildprogram0.traceevents"
-WorkingDir: C:/Users/jwmcg/OneDrive/Documents/AI Projects/Live Envirnments/extraction-weight-game
-ExitCode: 4 Duration: 1s298ms
-Rebuilding DAG because FileSignature timestamp changed: Library/Bee/1900b0aE-inputdata.json
-*** Tundra requires additional run (1.28 seconds), 2 items updated, 907 evaluated
-ExitCode: 0 Duration: 0s495ms
-Starting: C:\Program Files\Unity\Hub\Editor\6000.4.3f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --dagfilejson="Library\Bee\1900b0aE.dag.json" --profile="Library/Bee/backend2.traceevents" ScriptAssemblies
-WorkingDir: C:/Users/jwmcg/OneDrive/Documents/AI Projects/Live Envirnments/extraction-weight-game
-ExitCode: 0 Duration: 1s800ms
-Finished compiling graph: 936 nodes, 17572 flattened edges (16190 ToBuild, 184 ToUse), maximum node priority 625
-[276/932    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/ExtractionWeight.Core.rsp
-[343/932    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/ExtractionWeight.Core.Runtime.rsp
-[397/932    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/ExtractionWeight.UI.rsp
-[500/932    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/ExtractionWeight.Tests.PlayMode.rsp
-[508/932    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/ExtractionWeight.Tests.EditMode.rsp
-[887/932    0s] Csc Library/Bee/artifacts/1900b0aE.dag/ExtractionWeight.Core.dll (+2 others)
-[888/932    0s] CopyFiles Library/ScriptAssemblies/ExtractionWeight.Core.pdb
-[889/932    0s] CopyFiles Library/ScriptAssemblies/ExtractionWeight.Core.dll
-[890/932    0s] Csc Library/Bee/artifacts/1900b0aE.dag/ExtractionWeight.Audio.dll (+2 others)
-[891/932    0s] CopyFiles Library/ScriptAssemblies/ExtractionWeight.Audio.pdb
-[892/932    0s] CopyFiles Library/ScriptAssemblies/ExtractionWeight.Audio.dll
-[893/932    0s] Csc Library/Bee/artifacts/1900b0aE.dag/ExtractionWeight.Weight.dll (+2 others)
-[894/932    0s] CopyFiles Library/ScriptAssemblies/ExtractionWeight.Weight.pdb
-[895/932    0s] Csc Library/Bee/artifacts/1900b0aE.dag/ExtractionWeight.Loot.dll (+2 others)
-[896/932    0s] CopyFiles Library/ScriptAssemblies/ExtractionWeight.Loot.pdb
-[897/932    0s] CopyFiles Library/ScriptAssemblies/ExtractionWeight.Weight.dll
-[898/932    0s] CopyFiles Library/ScriptAssemblies/ExtractionWeight.Loot.dll
-[899/932    0s] Csc Library/Bee/artifacts/1900b0aE.dag/ExtractionWeight.Core.Runtime.dll (+2 others)
-Assets\_Project\Core\Runtime\InteractionTracker.cs(174,37): warning CS8625: Cannot convert null literal to non-nullable reference type.
-[900/932    0s] CopyFiles Library/ScriptAssemblies/ExtractionWeight.Core.Runtime.pdb
-[901/932    0s] Csc Library/Bee/artifacts/1900b0aE.dag/ExtractionWeight.Loot.Editor.dll (+2 others)
-Assets\_Project\Loot\Editor\LootSeedDataUtility.cs(189,30): warning CS8604: Possible null reference argument for parameter 'path' in 'void LootSeedDataUtility.EnsureFolder(string path)'.
-[902/932    0s] CopyFiles Library/ScriptAssemblies/ExtractionWeight.Loot.Editor.pdb
-[903/932    0s] CopyFiles Library/ScriptAssemblies/ExtractionWeight.Core.Runtime.dll
-[904/932    0s] CopyFiles Library/ScriptAssemblies/ExtractionWeight.Loot.Editor.dll
-[905/932    0s] Csc Library/Bee/artifacts/1900b0aE.dag/ExtractionWeight.Threat.dll (+2 others)
-[906/932    0s] CopyFiles Library/ScriptAssemblies/ExtractionWeight.Threat.pdb
-[907/932    0s] Csc Library/Bee/artifacts/1900b0aE.dag/ExtractionWeight.Zone.dll (+2 others)
-[908/932    0s] CopyFiles Library/ScriptAssemblies/ExtractionWeight.Zone.pdb
-[909/932    0s] CopyFiles Library/ScriptAssemblies/ExtractionWeight.Threat.dll
+ExitCode: 0 Duration: 3s571ms
+[908/932    1s] Csc Library/Bee/artifacts/1900b0aE.dag/ExtractionWeight.Zone.dll (+2 others)
+[909/932    0s] CopyFiles Library/ScriptAssemblies/ExtractionWeight.Zone.pdb
 [910/932    0s] CopyFiles Library/ScriptAssemblies/ExtractionWeight.Zone.dll
 [911/932    0s] Csc Library/Bee/artifacts/1900b0aE.dag/ExtractionWeight.MetaState.dll (+2 others)
 [912/932    0s] CopyFiles Library/ScriptAssemblies/ExtractionWeight.MetaState.pdb
@@ -264,30 +227,31 @@ Assets\_Project\Loot\Editor\LootSeedDataUtility.cs(189,30): warning CS8604: Poss
 [916/932    0s] CopyFiles Library/ScriptAssemblies/ExtractionWeight.Extraction.dll
 [917/932    0s] Csc Library/Bee/artifacts/1900b0aE.dag/ExtractionWeight.UI.dll (+2 others)
 [918/932    0s] CopyFiles Library/ScriptAssemblies/ExtractionWeight.UI.pdb
-[919/932    0s] CopyFiles Library/ScriptAssemblies/ExtractionWeight.UI.dll
-[920/932    0s] Csc Library/Bee/artifacts/1900b0aE.dag/ExtractionWeight.Core.Runtime.Editor.dll (+2 others)
-[921/932    0s] CopyFiles Library/ScriptAssemblies/ExtractionWeight.Core.Runtime.Editor.pdb
-[922/932    0s] CopyFiles Library/ScriptAssemblies/ExtractionWeight.Core.Runtime.Editor.dll
-[923/932    0s] Csc Library/Bee/artifacts/1900b0aE.dag/ExtractionWeight.Tests.EditMode.dll (+2 others)
-[924/932    0s] CopyFiles Library/ScriptAssemblies/ExtractionWeight.Tests.EditMode.pdb
-[925/932    0s] Csc Library/Bee/artifacts/1900b0aE.dag/ExtractionWeight.Tests.PlayMode.dll (+2 others)
+[922/932    0s] CopyFiles Library/ScriptAssemblies/ExtractionWeight.UI.dll
+[923/932    0s] Csc Library/Bee/artifacts/1900b0aE.dag/ExtractionWeight.Tests.PlayMode.dll (+2 others)
 Assets\_Project\Tests\PlayMode\ExtractionFlowTests.cs(44,77): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
 
 Assets\_Project\Tests\PlayMode\ExtractionFlowTests.cs(44,40): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
-[926/932    0s] CopyFiles Library/ScriptAssemblies/ExtractionWeight.Tests.PlayMode.pdb
-[927/932    0s] Csc Library/Bee/artifacts/1900b0aE.dag/ExtractionWeight.Zone.Editor.dll (+2 others)
+[924/932    0s] CopyFiles Library/ScriptAssemblies/ExtractionWeight.Tests.PlayMode.pdb
+[925/932    0s] CopyFiles Library/ScriptAssemblies/ExtractionWeight.Tests.PlayMode.dll
+[926/932    1s] Csc Library/Bee/artifacts/1900b0aE.dag/ExtractionWeight.Tests.EditMode.dll (+2 others)
+[927/932    0s] CopyFiles Library/ScriptAssemblies/ExtractionWeight.Tests.EditMode.pdb
+[928/932    1s] Csc Library/Bee/artifacts/1900b0aE.dag/ExtractionWeight.Zone.Editor.dll (+2 others)
+Assets\_Project\Zone\Editor\Phase1MetaBootstrapUtility.cs(110,70): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\_Project\Zone\Editor\Phase1MetaBootstrapUtility.cs(110,32): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
 Assets\_Project\Zone\Editor\ZoneSeedDataUtility.cs(547,30): warning CS8604: Possible null reference argument for parameter 'path' in 'void ZoneSeedDataUtility.EnsureFolder(string path)'.
-[928/932    0s] CopyFiles Library/ScriptAssemblies/ExtractionWeight.Zone.Editor.pdb
-[929/932    0s] CopyFiles Library/ScriptAssemblies/ExtractionWeight.Tests.PlayMode.dll
-[930/932    0s] CopyFiles Library/ScriptAssemblies/ExtractionWeight.Zone.Editor.dll
-[931/932    0s] CopyFiles Library/ScriptAssemblies/ExtractionWeight.Tests.EditMode.dll
-*** Tundra build success (1.78 seconds), 50 items updated, 932 evaluated
-Assets\_Project\Core\Runtime\InteractionTracker.cs(174,37): warning CS8625: Cannot convert null literal to non-nullable reference type.
-Assets\_Project\Loot\Editor\LootSeedDataUtility.cs(189,30): warning CS8604: Possible null reference argument for parameter 'path' in 'void LootSeedDataUtility.EnsureFolder(string path)'.
+[929/932    0s] CopyFiles Library/ScriptAssemblies/ExtractionWeight.Zone.Editor.pdb
+[930/932    0s] CopyFiles Library/ScriptAssemblies/ExtractionWeight.Tests.EditMode.dll
+[931/932    0s] CopyFiles Library/ScriptAssemblies/ExtractionWeight.Zone.Editor.dll
+*** Tundra build success (3.54 seconds), 21 items updated, 932 evaluated
 Assets\_Project\Tests\PlayMode\ExtractionFlowTests.cs(44,77): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
 Assets\_Project\Tests\PlayMode\ExtractionFlowTests.cs(44,40): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\_Project\Zone\Editor\Phase1MetaBootstrapUtility.cs(110,70): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\_Project\Zone\Editor\Phase1MetaBootstrapUtility.cs(110,32): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
 Assets\_Project\Zone\Editor\ZoneSeedDataUtility.cs(547,30): warning CS8604: Possible null reference argument for parameter 'path' in 'void ZoneSeedDataUtility.EnsureFolder(string path)'.
-AssetDatabase: script compilation time: 3.890987s
+AssetDatabase: script compilation time: 3.940101s
 Begin MonoManager ReloadAssembly
 Assembly Assembly-CSharp-Editor-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll not valid. Loading of assembly skipped.
 Assembly Assembly-CSharp-Editor.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor.dll not valid. Loading of assembly skipped.
@@ -323,136 +287,130 @@ Assembly UnityEngine.Purchasing.Security.dll at Library/ScriptAssemblies/UnityEn
 Assembly UnityEngine.Purchasing.WinRT.dll at Library/ScriptAssemblies/UnityEngine.Purchasing.WinRT.dll not valid. Loading of assembly skipped.
 Assembly UnityEngine.SpatialTracking.Tests.dll at Library/ScriptAssemblies/UnityEngine.SpatialTracking.Tests.dll not valid. Loading of assembly skipped.
 Assembly UnityEngine.UI.Tests.dll at Library/ScriptAssemblies/UnityEngine.UI.Tests.dll not valid. Loading of assembly skipped.
-Start importing Assets/_Project/UI/ExtractionWeight.UI.asmdef using Guid(2f5fa4a5afaeb8a48817a348a29d1e74) (AssemblyDefinitionImporter) -> (Import Result ID: '1fe1f5784d2d72af3a85456d392d2aa6') in 0.0093878 seconds [static dependencies only]. Details - ImportResultOutputID=5be4bd93537da263af76c9bce7372311 DependenciesID=d522f071477dadcbed88c5f4ceea26a1 StaticDependenciesID=f0b08c2870057adbbd6a396b08e29e16 
-Refreshing native plugins compatible for Editor in 4.87 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 4.54 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.724 seconds
-Domain Reload Profiling: 2131ms
-	BeginReloadAssembly (251ms)
-		DisableScriptedObjects (14ms)
-		CreateAndSetChildDomain (145ms)
+- Finished resetting the current domain, in  0.693 seconds
+Domain Reload Profiling: 1834ms
+	BeginReloadAssembly (259ms)
+		DisableScriptedObjects (27ms)
+		CreateAndSetChildDomain (146ms)
 	RebuildCommonClasses (23ms)
 	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (750ms)
-	LoadAllAssembliesAndSetupDomain (375ms)
-		LoadAssemblies (320ms)
-		AnalyzeDomain (118ms)
-			TypeCache.Refresh (81ms)
-				TypeCache.ScanAssembly (72ms)
-			BuildScriptInfoCaches (33ms)
+	initialDomainReloadingComplete (523ms)
+	LoadAllAssembliesAndSetupDomain (327ms)
+		LoadAssemblies (266ms)
+		AnalyzeDomain (120ms)
+			TypeCache.Refresh (82ms)
+				TypeCache.ScanAssembly (73ms)
+			BuildScriptInfoCaches (34ms)
 			ResolveRequiredComponents (3ms)
-	FinalizeReload (724ms)
+	FinalizeReload (694ms)
 		SetupLoadedEditorAssemblies (0ms)
-			InitializePlatformSupportModulesInManaged (16ms)
-			BeforeProcessingInitializeOnLoad (129ms)
-			ProcessInitializeOnLoadAttributes (332ms)
-			ProcessInitializeOnLoadMethodAttributes (143ms)
+			InitializePlatformSupportModulesInManaged (15ms)
+			BeforeProcessingInitializeOnLoad (125ms)
+			ProcessInitializeOnLoadAttributes (312ms)
+			ProcessInitializeOnLoadMethodAttributes (138ms)
 			AfterProcessingInitializeOnLoad (4ms)
 		AwakeInstancesAfterBackupRestoration (12ms)
-Refreshing native plugins compatible for Editor in 4.23 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 4.71 ms, found 3 plugins.
 (Values over 0.050ms)
-Asset Pipeline Refresh (id=f14387fe4cfe226428b0468e8524301f): Total: 6.483 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+Asset Pipeline Refresh (id=7f4c5adcf67992b42ab6192ed155bb2b): Total: 6.222 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
 	Summary:
-		Imports: total=1 (actual=1, local cache=0, cache server=0)
-		Asset DB Process Time: managed=1 ms, native=1035 ms
-		Asset DB Callback time: managed=62 ms, native=20 ms
-		Scripting: domain reloads=1, domain reload time=1410 ms, compile time=3892 ms, other=59 ms
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=1007 ms
+		Asset DB Callback time: managed=57 ms, native=18 ms
+		Scripting: domain reloads=1, domain reload time=1143 ms, compile time=3941 ms, other=53 ms
 		Project Asset Count: scripts=1105, non-scripts=1410
-		Asset File Changes: new=5, changed=15, moved=0, deleted=1
+		Asset File Changes: new=0, changed=3, moved=0, deleted=0
 		Scan Filter Count: 0
-	InvokePackagesCallback: 13.236ms
-	ApplyChangesToAssetFolders: 0.508ms
-	Scan: 107.930ms
-	OnSourceAssetsModified: 0.645ms
-	CategorizeScriptCompilationAssets: 18.599ms
-	ProcessAssetsWithTransientArtifactChanges: 34.428ms
-	CategorizeAssets: 13.174ms
-	CompileScripts: 3891.934ms
-	ImportOutOfDateAssets: 750.827ms (737.133ms without children)
-		ImportManagerImport: 12.144ms (2.532ms without children)
-		UnloadImportedAssets: 1.088ms
-		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.252ms
-		OnDemandSchedulerStart: 0.208ms
-	PostProcessAllAssets: 64.673ms
-		AssemblyValidation.PostprocessAllAssets 1.169ms
-		XRBuildSystem.XRAssetImported 0.806ms
-		VCAutoAddAssetPostprocess 0.680ms
-		VersionControlSettings.HiddenFilePostprocess 0.129ms
-		MonoPostProcessAllAssets: 61.230ms
-			AssetPostprocessor.OnPostprocessAllAssets 23.192ms
-			StyleCatalogPostProcessor.OnPostprocessAllAssets 11.950ms
-			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 4.628ms
-			BuilderAssetPostprocessor.OnPostprocessAllAssets 3.876ms
-			AssetChangedListener.OnPostprocessAllAssets 1.399ms
-			PackageManagerResolver.OnPostprocessAllAssets 1.260ms
-			VersionHandlerImpl.OnPostprocessAllAssets 1.083ms
-			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 0.860ms
-			AddressablesAssetPostProcessor.OnPostprocessAllAssets 0.621ms
-			SpeedTree9Postprocessor.OnPostprocessAllAssets 0.516ms
-			TextAssetPostProcessor.OnPostprocessAllAssets 0.405ms
-			SpriteEditorTexturePostprocessor.OnPostprocessAllAssets 0.370ms
-			AssetPathToTypes.OnPostprocessAllAssets 0.352ms
-			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.284ms
-			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.250ms
-			PlayServicesResolver.OnPostprocessAllAssets 0.244ms
-			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.232ms
-			UVCSAssetPostprocessor.OnPostprocessAllAssets 0.229ms
-			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.226ms
-			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.212ms
-			AssetProcessor.OnPostprocessAllAssets 0.195ms
-			SyncVS.PostprocessSyncProject 0.190ms
-			CinemachineSettings.OnPostprocessAllAssets 0.188ms
-			IOSResolver.OnPostprocessAllAssets 0.185ms
-			AssetEvents.OnPostprocessAllAssets 0.150ms
-			AudioMixerPostprocessor.OnPostprocessAllAssets 0.149ms
-			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.112ms
-			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.109ms
-			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.107ms
+	InvokePackagesCallback: 12.510ms
+	ApplyChangesToAssetFolders: 0.488ms
+	Scan: 133.418ms
+	OnSourceAssetsModified: 0.579ms
+	CategorizeScriptCompilationAssets: 17.416ms
+	ProcessAssetsWithTransientArtifactChanges: 33.486ms
+	CategorizeAssets: 12.398ms
+	CompileScripts: 3940.966ms
+	ImportOutOfDateAssets: 707.476ms (706.070ms without children)
+		UnloadImportedAssets: 0.964ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.233ms
+		OnDemandSchedulerStart: 0.206ms
+	PostProcessAllAssets: 58.754ms
+		VCAutoAddAssetPostprocess 0.825ms
+		XRBuildSystem.XRAssetImported 0.798ms
+		MonoPostProcessAllAssets: 56.811ms
+			AssetPostprocessor.OnPostprocessAllAssets 21.830ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 10.321ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 4.330ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 4.057ms
+			AssetChangedListener.OnPostprocessAllAssets 1.083ms
+			VersionHandlerImpl.OnPostprocessAllAssets 1.033ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 0.815ms
+			PackageManagerResolver.OnPostprocessAllAssets 0.639ms
+			AddressablesAssetPostProcessor.OnPostprocessAllAssets 0.612ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 0.568ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.441ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 0.375ms
+			SpriteEditorTexturePostprocessor.OnPostprocessAllAssets 0.362ms
+			AssetPathToTypes.OnPostprocessAllAssets 0.330ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.249ms
+			PlayServicesResolver.OnPostprocessAllAssets 0.243ms
+			CinemachineSettings.OnPostprocessAllAssets 0.214ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.214ms
+			UVCSAssetPostprocessor.OnPostprocessAllAssets 0.200ms
+			IOSResolver.OnPostprocessAllAssets 0.196ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.181ms
+			AssetProcessor.OnPostprocessAllAssets 0.177ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.173ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.159ms
+			AssetEvents.OnPostprocessAllAssets 0.138ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.116ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.104ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.100ms
 			SamplePostprocessor.OnPostprocessAllAssets 0.095ms
-			SpeedTreePostProcessor.OnPostprocessAllAssets 0.094ms
-			ConfigAssetsTracker.OnPostprocessAllAssets 0.082ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.086ms
 			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.075ms
-			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.065ms
-	PostAssetChangesProfiler: 5.529ms
-	UnloadStreamsBegin: 0.894ms
-	PersistCurrentRevisions: 0.103ms
-	GenerateScriptTypeHashes: 1.555ms
-	GenerateScriptTypeSerializationHashes: 2.919ms
-	Untracked: 1577.088ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.075ms
+			SyncVS.PostprocessSyncProject 0.063ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.062ms
+	PostAssetChangesProfiler: 5.342ms
+	UnloadStreamsBegin: 0.892ms
+	PersistCurrentRevisions: 0.055ms
+	GenerateScriptTypeHashes: 1.417ms
+	GenerateScriptTypeSerializationHashes: 2.688ms
+	Untracked: 1294.721ms
 
 Application.AssetDatabase Initial Refresh End
-Scanning for USB devices : 17.164ms
+Scanning for USB devices : 17.194ms
 Initializing Unity extensions:
 [MODES] ModeService[none].Initialize
 [MODES] ModeService[none].LoadModes
 [MODES] Loading mode Default (0) for mode-current-id-extraction-weight-game
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 4551 unused Assets / (1.7 MB). Loaded Objects now: 5149.
-Memory consumption went from 141.5 MB to 139.8 MB.
-Total: 8.126900 ms (FindLiveObjects: 0.231800 ms CreateObjectMapping: 0.126700 ms MarkObjects: 6.751300 ms  DeleteObjects: 1.014500 ms)
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 4551 unused Assets / (2.0 MB). Loaded Objects now: 5148.
+Memory consumption went from 140.8 MB to 138.7 MB.
+Total: 7.291200 ms (FindLiveObjects: 0.228600 ms CreateObjectMapping: 0.120800 ms MarkObjects: 6.139500 ms  DeleteObjects: 0.800500 ms)
 
-Start importing Assets/_Project/Data/Player/Prefabs/Phase1Player.prefab using Guid(bd0b46af6eba94f4cb18fc438eae9e94) (PrefabImporter) -> (Import Result ID: 'e52defa59660f7eefd5212e9fa2af663') in 0.0048336 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c9530cbea5b31f204fbe71dc30498102 DependenciesID=3a8b9a9c32e46885aef630e8fbb0fe65 StaticDependenciesID=765dac7821d344b36e0c366d5f37bed3 
-Refreshing native plugins compatible for Editor in 4.41 ms, found 3 plugins.
-Asset Pipeline Refresh (id=fc93a7e580c33ab4e9262e58a7321c5b): Total: 0.081 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=46233c99300c5644a800020313cfdefd): Total: 0.024 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
 Opening scene 'Assets/_Project/Scenes/Zones/Drydock.unity'
-Unloading 9 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
 Loaded scene 'Assets/_Project/Scenes/Zones/Drydock.unity'
-	Deserialize:            3.666 ms
-	Integration:            7.727 ms
-	Integration of assets:  0.021 ms
-	Thread Wait Time:       0.009 ms
-	Total Operation Time:   11.424 ms
-Unloading 53 unused Assets / (14.8 MB). Loaded Objects now: 5488.
-Memory consumption went from 150.8 MB to 136.0 MB.
-Total: 6.138600 ms (FindLiveObjects: 0.177400 ms CreateObjectMapping: 0.057000 ms MarkObjects: 5.868000 ms  DeleteObjects: 0.035400 ms)
+	Deserialize:            4.076 ms
+	Integration:            6.520 ms
+	Integration of assets:  0.019 ms
+	Thread Wait Time:       0.010 ms
+	Total Operation Time:   10.625 ms
+Unloading 42 unused Assets / (4.0 KB). Loaded Objects now: 5412.
+Memory consumption went from 135.0 MB to 135.0 MB.
+Total: 5.929400 ms (FindLiveObjects: 0.144300 ms CreateObjectMapping: 0.054800 ms MarkObjects: 5.683200 ms  DeleteObjects: 0.046600 ms)
 
-Asset Pipeline Refresh (id=5a9c431781ba0d74e98bf8507fd21d04): Total: 0.007 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
-Start importing Assets/_Project/Scenes/Zones/Drydock.unity using Guid(6e09551260c0215499ebc809e44dee42) (DefaultImporter) -> (Import Result ID: '9c2397d4278fb452db49ea8fdbe9f387') in 0.0007607 seconds [static dependencies only]. Details - ImportResultOutputID=c5abde0a348ef45f195b6f57e0dfadd0 DependenciesID=a0883bf7e629d423f8aa505f6ecfe345 StaticDependenciesID=e99068e5b06fc1b668f24995070bdc71 
-Refreshing native plugins compatible for Editor in 3.93 ms, found 3 plugins.
-Asset Pipeline Refresh (id=93e82913774d1d648a83cd67ca82b3b3): Total: 0.023 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=57020c22f8efe5447a703dc5ba9bf557): Total: 0.006 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Start importing Assets/_Project/Scenes/Zones/Drydock.unity using Guid(6e09551260c0215499ebc809e44dee42) (DefaultImporter) -> (Import Result ID: 'fc92f698d3a9bad26fe5e18b72b79849') in 0.0027365 seconds [static dependencies only]. Details - ImportResultOutputID=c5abde0a348ef45f195b6f57e0dfadd0 DependenciesID=ebc56f6e27e07c27e6010cac3172af2a StaticDependenciesID=483578713618f69a7635cf475f705c17 
+Refreshing native plugins compatible for Editor in 4.53 ms, found 3 plugins.
+Asset Pipeline Refresh (id=d6d525bc69a29b841a5ffef0ea2142c8): Total: 0.055 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
 Phase 1 player content generated.
 UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
@@ -466,6 +424,7 @@ ExtractionWeight.Core.Editor.PlayerPhase1BootstrapUtility:BuildPhase1PlayerConte
 (Filename: Assets/_Project/Core/Runtime/Editor/PlayerPhase1BootstrapUtility.cs Line: 35)
 
 Batchmode quit successfully invoked - shutting down!
+Curl error 42: Callback aborted
 [Physics::Module] Cleanup current backend.
 [Physics::Module] Id: 0xf2b8ea05
 Input System module state changed to: ShutdownInProgress.
