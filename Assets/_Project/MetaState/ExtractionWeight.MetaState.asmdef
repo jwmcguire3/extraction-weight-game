@@ -6,7 +6,8 @@
     "ExtractionWeight.Core.Runtime",
     "ExtractionWeight.Weight",
     "ExtractionWeight.Loot",
-    "ExtractionWeight.Zone"
+    "ExtractionWeight.Zone",
+    "ExtractionWeight.Telemetry"
   ],
   "includePlatforms": [],
   "excludePlatforms": [],

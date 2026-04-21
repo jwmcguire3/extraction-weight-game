@@ -1,13 +1,15 @@
 {
-  "name": "ExtractionWeight.Threat",
-  "rootNamespace": "ExtractionWeight.Threat",
+  "name": "ExtractionWeight.Tools.Editor",
+  "rootNamespace": "ExtractionWeight.Tools.Editor",
   "references": [
     "ExtractionWeight.Core",
     "ExtractionWeight.Core.Runtime",
-    "ExtractionWeight.Weight",
-    "ExtractionWeight.Telemetry"
+    "ExtractionWeight.Zone",
+    "ExtractionWeight.Zone.Editor"
   ],
-  "includePlatforms": [],
+  "includePlatforms": [
+    "Editor"
+  ],
   "excludePlatforms": [],
   "allowUnsafeCode": false,
   "overrideReferences": false,

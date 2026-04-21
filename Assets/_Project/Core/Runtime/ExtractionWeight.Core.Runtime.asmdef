@@ -4,6 +4,7 @@
   "references": [
     "ExtractionWeight.Core",
     "ExtractionWeight.Weight",
+    "ExtractionWeight.Telemetry",
     "Unity.InputSystem",
     "Cinemachine"
   ],

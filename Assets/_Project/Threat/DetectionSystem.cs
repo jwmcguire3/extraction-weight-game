@@ -92,36 +92,12 @@ namespace ExtractionWeight.Threat
             }
 
             direction /= distance;
-            var hits = Physics.RaycastAll(origin, direction, distance, lineOfSightMask, QueryTriggerInteraction.Collide);
-            if (hits.Length == 0)
+            if (!Physics.Raycast(origin, direction, out var hit, distance, lineOfSightMask, QueryTriggerInteraction.Ignore))
             {
                 return true;
             }
 
-            System.Array.Sort(hits, (left, right) => left.distance.CompareTo(right.distance));
-
-            for (var i = 0; i < hits.Length; i++)
-            {
-                var collider = hits[i].collider;
-                if (collider == null)
-                {
-                    continue;
-                }
-
-                if (playerCollider != null && IsPlayerCollider(collider, playerCollider))
-                {
-                    continue;
-                }
-
-                if (collider.isTrigger)
-                {
-                    continue;
-                }
-
-                return false;
-            }
-
-            return true;
+            return playerCollider != null && IsPlayerCollider(hit.collider, playerCollider);
         }
 
         private static bool IsPlayerCollider(Collider collider, Collider playerCollider)

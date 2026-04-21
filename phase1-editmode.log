@@ -1,0 +1,512 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.4/staging' branch; Version is '6000.4.3f1 (39d1a88d4dd1) revision 3789224'; Using compiler version '194234433'; Build Type 'Release'
+OS: 'Windows 11  (10.0.26200) Core' Language: 'en' Physical Memory: 32609 MB
+[Licensing::IpcConnector] Channel LicenseClient-jwmcg doesn't exist
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+Process architecture: x64
+Date: 2026-04-21T04:57:44Z
+[Licensing::Module] Successfully launched the LicensingClient (PId: 34636)
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.4.3f1\Editor\Unity.exe
+-batchmode
+-nographics
+-projectPath
+C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game
+-runTests
+-testPlatform
+editmode
+-testResults
+C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\phase1-editmode-results.xml
+-logFile
+C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\phase1-editmode.log
+Successfully changed project path to: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game
+C:/Users/jwmcg/OneDrive/Documents/AI Projects/Live Envirnments/extraction-weight-game
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+Player connection [31036]  Target information:
+
+Player connection [31036]  * "[IP] 10.0.0.151 [Port] 55504 [Flags] 2 [Guid] 4094967496 [EditorId] 4094967496 [Version] 1048832 [Id] WindowsEditor(7,Johnnys_Super) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [31036] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [31036] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-jwmcg" at "2026-04-21T04:57:44.3836667Z"
+[Package Manager] Connected to IPC stream "Upm-8064" after 0.2 seconds.
+[Licensing::Module] Licensing is not yet initialized.
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.1+9fbee8e
+  Session Id:              b80f6c1b886c43dbbf7056991026767e
+  Correlation Id:          a7d3808a490698e37239c606e2370ccc
+  External correlation Id: 6044292323923908242
+  Machine Id:              1BeB/TLi2XvtpQs0S1BLgEO37gQ=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-jwmcg" (connect: 0.16s, validation: 0.04s, handshake: 1.27s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-jwmcg-notifications" at "2026-04-21T04:57:45.6872908Z"
+[Licensing::Module] Connected to LicensingClient (PId: 34636, launch time: 0.00, total connection time: 1.46s)
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 2475969837267-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.00
+[Licensing::Module] Licensing Background thread has ended after 1.48s
+[Licensing::Module] Licensing is initialized (took 1.16s).
+[Licensing::Client] Successfully resolved entitlement details
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Initialize engine version: 6000.4.3f1 (39d1a88d4dd1)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.4.3f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/jwmcg/OneDrive/Documents/AI Projects/Live Envirnments/extraction-weight-game/Assets
+Forcing GfxDevice: Null
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+NullGfxDevice:
+    Version:  NULL 1.0 [1.0]
+    Renderer: Null Device
+    Vendor:   Unity Technologies
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.4.3f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.4.3f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.4.3f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56064
+CodeReloadManager initialized
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.4.3f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.4.3f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001342 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Package Manager log level set to [2]
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:False
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.249 seconds
+Domain Reload Profiling: 536ms
+	BeginReloadAssembly (87ms)
+		CreateAndSetChildDomain (10ms)
+	RebuildCommonClasses (23ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (39ms)
+	LoadAllAssembliesAndSetupDomain (127ms)
+		LoadAssemblies (76ms)
+		AnalyzeDomain (121ms)
+			TypeCache.Refresh (120ms)
+				TypeCache.ScanAssembly (110ms)
+	FinalizeReload (250ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (33ms)
+			BeforeProcessingInitializeOnLoad (52ms)
+			ProcessInitializeOnLoadAttributes (68ms)
+			ProcessInitializeOnLoadMethodAttributes (57ms)
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 59 packages:
+  Packages from [https://packages.unity.com]:
+    com.unity.addressables@2.9.1 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.addressables@8460f1c9c927)
+    com.unity.ads@4.16.4 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.ads@e89225828059)
+    com.unity.ai.navigation@2.0.12 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.ai.navigation@734c2c4c5591)
+    com.unity.analytics@3.8.2 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.analytics@c9d14a6bdec6)
+    com.unity.cinemachine@2.10.7 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.cinemachine@631385387c5a)
+    com.unity.collab-proxy@2.12.4 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.collab-proxy@0b1559bcd34e)
+    com.unity.ide.rider@3.0.39 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.ide.rider@4504839d03f7)
+    com.unity.ide.visualstudio@2.0.27 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.ide.visualstudio@dc1ddd4f09b6)
+    com.unity.inputsystem@1.19.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.inputsystem@21a28c3a6c83)
+    com.unity.purchasing@4.15.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.purchasing@ffbc76639aab)
+    com.unity.timeline@1.8.12 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.timeline@8cd8509afae5)
+    com.unity.xr.legacyinputhelpers@3.0.1 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.xr.legacyinputhelpers@3f62d634f63b)
+    com.unity.services.core@1.16.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.services.core@8ba50f624741)
+    com.unity.services.analytics@6.3.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.services.analytics@cde4e6cf92f9)
+    com.unity.profiling.core@1.0.3 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.profiling.core@8a49f7027d06)
+    com.unity.scriptablebuildpipeline@2.6.1 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.scriptablebuildpipeline@36e3b5898ee2)
+    com.unity.nuget.newtonsoft-json@3.2.2 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.nuget.newtonsoft-json@4dfd81071c64)
+  Built-in packages:
+    com.unity.2d.sprite@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.2d.sprite@929df5adbb1f)
+    com.unity.2d.tilemap@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.2d.tilemap@c457c5249013)
+    com.unity.multiplayer.center@1.0.1 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.multiplayer.center@f01f4ba8d00a)
+    com.unity.test-framework@1.6.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.test-framework@76560ee600cb)
+    com.unity.ugui@2.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.ugui@d8a2716f3013)
+    com.unity.modules.accessibility@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.accessibility)
+    com.unity.modules.adaptiveperformance@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.adaptiveperformance)
+    com.unity.modules.ai@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.ai)
+    com.unity.modules.androidjni@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.androidjni)
+    com.unity.modules.animation@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.animation)
+    com.unity.modules.assetbundle@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.assetbundle)
+    com.unity.modules.audio@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.audio)
+    com.unity.modules.cloth@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.cloth)
+    com.unity.modules.director@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.director)
+    com.unity.modules.imageconversion@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.imageconversion)
+    com.unity.modules.imgui@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.imgui)
+    com.unity.modules.jsonserialize@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.jsonserialize)
+    com.unity.modules.particlesystem@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.particlesystem)
+    com.unity.modules.physics@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.physics)
+    com.unity.modules.physics2d@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.physics2d)
+    com.unity.modules.screencapture@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.screencapture)
+    com.unity.modules.terrain@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.terrain)
+    com.unity.modules.terrainphysics@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.terrainphysics)
+    com.unity.modules.tilemap@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.tilemap)
+    com.unity.modules.ui@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.ui)
+    com.unity.modules.uielements@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.uielements)
+    com.unity.modules.umbra@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.umbra)
+    com.unity.modules.unityanalytics@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.unityanalytics)
+    com.unity.modules.unitywebrequest@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.unitywebrequest)
+    com.unity.modules.unitywebrequestassetbundle@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle)
+    com.unity.modules.unitywebrequestaudio@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.unitywebrequestaudio)
+    com.unity.modules.unitywebrequesttexture@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.unitywebrequesttexture)
+    com.unity.modules.unitywebrequestwww@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.unitywebrequestwww)
+    com.unity.modules.vectorgraphics@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.vectorgraphics)
+    com.unity.modules.vehicles@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.vehicles)
+    com.unity.modules.video@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.video)
+    com.unity.modules.vr@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.vr)
+    com.unity.modules.wind@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.wind)
+    com.unity.modules.xr@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.xr)
+    com.unity.modules.subsystems@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.subsystems)
+    com.unity.modules.hierarchycore@1.0.0 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.modules.hierarchycore)
+    com.unity.ext.nunit@2.0.5 (location: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\Library\PackageCache\com.unity.ext.nunit@d8c07649098d)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.01 seconds
+[ScriptCompilation] Requested script compilation because: AssetDatabase observed changes in script compilation related files
+Starting: C:\Program Files\Unity\Hub\Editor\6000.4.3f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: C:/Users/jwmcg/OneDrive/Documents/AI Projects/Live Envirnments/extraction-weight-game
+DisplayProgressbar: Compiling Scripts
+ExitCode: 0 Duration: 1s375ms
+[945/948    1s] Csc Library/Bee/artifacts/1900b0aE.dag/ExtractionWeight.Tests.EditMode.dll (+2 others)
+[946/948    0s] CopyFiles Library/ScriptAssemblies/ExtractionWeight.Tests.EditMode.pdb
+[947/948    0s] CopyFiles Library/ScriptAssemblies/ExtractionWeight.Tests.EditMode.dll
+*** Tundra build success (1.36 seconds), 3 items updated, 948 evaluated
+AssetDatabase: script compilation time: 1.659006s
+Begin MonoManager ReloadAssembly
+Assembly Assembly-CSharp-Editor-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll not valid. Loading of assembly skipped.
+Assembly Assembly-CSharp-Editor.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor.dll not valid. Loading of assembly skipped.
+Assembly Assembly-CSharp-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll not valid. Loading of assembly skipped.
+Assembly Assembly-CSharp.dll at Library/ScriptAssemblies/Assembly-CSharp.dll not valid. Loading of assembly skipped.
+Assembly Cinemachine.Editor.Tests.dll at Library/ScriptAssemblies/Cinemachine.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Cinemachine.Runtime.Tests.dll at Library/ScriptAssemblies/Cinemachine.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly DocCodeExamples.dll at Library/ScriptAssemblies/DocCodeExamples.dll not valid. Loading of assembly skipped.
+Assembly TestNewCustomAssembly.dll at Library/ScriptAssemblies/TestNewCustomAssembly.dll not valid. Loading of assembly skipped.
+Assembly Unity.2D.Sprite.Package.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Sprite.Package.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.2D.Tilemap.Package.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Tilemap.Package.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Addressables.Editor.Tests.dll at Library/ScriptAssemblies/Unity.Addressables.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Addressables.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.Addressables.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Analytics.DataPrivacy.Tests.dll at Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Analytics.StandardEvents.EditorTests.dll at Library/ScriptAssemblies/Unity.Analytics.StandardEvents.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.InputSystem.IntegrationTests.dll at Library/ScriptAssemblies/Unity.InputSystem.IntegrationTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Multiplayer.Center.Editor.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Multiplayer.Center.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.ResourceManager.Tests.dll at Library/ScriptAssemblies/Unity.ResourceManager.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.ScriptableBuildPipeline.Editor.Tests.dll at Library/ScriptAssemblies/Unity.ScriptableBuildPipeline.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.ScriptableBuildPipeline.Tests.dll at Library/ScriptAssemblies/Unity.ScriptableBuildPipeline.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.ScriptableBuildPipelineTests.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.ScriptableBuildPipelineTests.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.TextMeshPro.Editor.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.TextMeshPro.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.UI.Common.Tests.dll at Library/ScriptAssemblies/UnityEditor.UI.Common.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.UI.EditorTests.dll at Library/ScriptAssemblies/UnityEditor.UI.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.XR.LegacyInputHelpers.Tests.dll at Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.Advertisements.Editor.Tests.dll at Library/ScriptAssemblies/UnityEngine.Advertisements.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.Advertisements.Tests.dll at Library/ScriptAssemblies/UnityEngine.Advertisements.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.Purchasing.Apple.dll at Library/ScriptAssemblies/UnityEngine.Purchasing.Apple.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.Purchasing.AppleMacos.dll at Library/ScriptAssemblies/UnityEngine.Purchasing.AppleMacos.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.Purchasing.Security.dll at Library/ScriptAssemblies/UnityEngine.Purchasing.Security.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.Purchasing.WinRT.dll at Library/ScriptAssemblies/UnityEngine.Purchasing.WinRT.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.SpatialTracking.Tests.dll at Library/ScriptAssemblies/UnityEngine.SpatialTracking.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.UI.Tests.dll at Library/ScriptAssemblies/UnityEngine.UI.Tests.dll not valid. Loading of assembly skipped.
+Refreshing native plugins compatible for Editor in 4.40 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:False
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.632 seconds
+Domain Reload Profiling: 1400ms
+	BeginReloadAssembly (274ms)
+		DisableScriptedObjects (37ms)
+		CreateAndSetChildDomain (147ms)
+	RebuildCommonClasses (23ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (161ms)
+	LoadAllAssembliesAndSetupDomain (301ms)
+		LoadAssemblies (245ms)
+		AnalyzeDomain (116ms)
+			TypeCache.Refresh (79ms)
+				TypeCache.ScanAssembly (70ms)
+			BuildScriptInfoCaches (32ms)
+			ResolveRequiredComponents (3ms)
+	FinalizeReload (632ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (17ms)
+			BeforeProcessingInitializeOnLoad (128ms)
+			ProcessInitializeOnLoadAttributes (236ms)
+			ProcessInitializeOnLoadMethodAttributes (143ms)
+			AfterProcessingInitializeOnLoad (4ms)
+		AwakeInstancesAfterBackupRestoration (12ms)
+Refreshing native plugins compatible for Editor in 4.33 ms, found 3 plugins.
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=8e25bc0ab12e0864ab64ed0a6cfcc2f3): Total: 3.597 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=994 ms
+		Asset DB Callback time: managed=95 ms, native=18 ms
+		Scripting: domain reloads=1, domain reload time=771 ms, compile time=1660 ms, other=56 ms
+		Project Asset Count: scripts=1110, non-scripts=1410
+		Asset File Changes: new=0, changed=1, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 12.858ms
+	ApplyChangesToAssetFolders: 0.499ms
+	Scan: 147.026ms
+	OnSourceAssetsModified: 0.577ms
+	CategorizeScriptCompilationAssets: 18.386ms
+	ProcessAssetsWithTransientArtifactChanges: 32.738ms
+	CategorizeAssets: 13.407ms
+	CompileScripts: 1659.907ms
+	ImportOutOfDateAssets: 646.283ms (644.899ms without children)
+		UnloadImportedAssets: 0.897ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.242ms
+		OnDemandSchedulerStart: 0.242ms
+	PostProcessAllAssets: 96.938ms
+		XRBuildSystem.XRAssetImported 0.804ms
+		VCAutoAddAssetPostprocess 0.659ms
+		MonoPostProcessAllAssets: 95.139ms
+			AssetPostprocessor.OnPostprocessAllAssets 54.871ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 9.530ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 4.964ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 4.012ms
+			PackageManagerResolver.OnPostprocessAllAssets 2.844ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 1.117ms
+			AssetChangedListener.OnPostprocessAllAssets 1.114ms
+			VersionHandlerImpl.OnPostprocessAllAssets 0.896ms
+			AddressablesAssetPostProcessor.OnPostprocessAllAssets 0.668ms
+			AssetPathToTypes.OnPostprocessAllAssets 0.530ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 0.526ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.399ms
+			SpriteEditorTexturePostprocessor.OnPostprocessAllAssets 0.395ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 0.392ms
+			PlayServicesResolver.OnPostprocessAllAssets 0.264ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.263ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.230ms
+			UVCSAssetPostprocessor.OnPostprocessAllAssets 0.229ms
+			IOSResolver.OnPostprocessAllAssets 0.209ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.205ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.203ms
+			AssetProcessor.OnPostprocessAllAssets 0.194ms
+			CinemachineSettings.OnPostprocessAllAssets 0.181ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.168ms
+			AssetEvents.OnPostprocessAllAssets 0.162ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.115ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.110ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.105ms
+			SamplePostprocessor.OnPostprocessAllAssets 0.094ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.087ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.084ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.075ms
+			SyncVS.PostprocessSyncProject 0.066ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.066ms
+	PostAssetChangesProfiler: 5.031ms
+	UnloadStreamsBegin: 0.924ms
+	PersistCurrentRevisions: 0.053ms
+	GenerateScriptTypeHashes: 1.686ms
+	GenerateScriptTypeSerializationHashes: 3.158ms
+	Untracked: 937.282ms
+
+Application.AssetDatabase Initial Refresh End
+Scanning for USB devices : 17.521ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-extraction-weight-game
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 4552 unused Assets / (2.1 MB). Loaded Objects now: 5158.
+Memory consumption went from 137.2 MB to 135.1 MB.
+Total: 7.645300 ms (FindLiveObjects: 0.252900 ms CreateObjectMapping: 0.130300 ms MarkObjects: 6.350100 ms  DeleteObjects: 0.910100 ms)
+
+Microsoft Media Foundation video decoding to texture disabled: graphics device is Null, only Direct3D 11 and Direct3D 12 (only on desktop) are supported for hardware-accelerated video decoding.
+[Project] Loading completed in 5.992 seconds
+	Project init time: 				5.747 seconds
+		Template init time: 		0.000 seconds
+		Package Manager init time: 		1.331 seconds
+		Asset Database init time: 		0.104 seconds
+		Global illumination init time: 	0.002 seconds
+		Assemblies load time: 			0.561 seconds
+		Unity extensions init time: 	0.003 seconds
+		Asset Database refresh time: 	3.597 seconds
+	Scene opening time: 			0.092 seconds
+##utp:{"type":"ProjectInfo","version":2,"phase":"Immediate","time":1776747470209,"processId":8064,"projectLoad":5.9923178,"projectInit":5.7468291,"templateInit":0.0,"packageManagerInit":1.3305833,"assetDatabaseInit":0.1042311,"globalIlluminationInit":0.0019195,"assembliesLoad":0.5612763,"unityExtensionsInit":0.0032436,"assetDatabaseRefresh":3.5973795,"sceneOpening":0.092065}
+##utp:{"type":"EditorInfo","version":2,"phase":"Immediate","time":1776747470209,"processId":8064,"editorVersion":"6000.4.3f1 (39d1a88d4dd1)","branch":"6000.4/staging","buildType":"Release","platform":"Windows"}
+[Licensing::Client] Successfully resolved entitlement details
+Running tests for ExecutionSettings with details:
+targetPlatform = 
+playerHeartbeatTimeout = 600
+filters[0] = 
+   Filter with settings:
+   testMode = EditMode
+   targetPlatform = 
+   testNames = null
+   groupNames = null
+   categoryNames = null
+   assemblyNames = null
+ignoreTests = {}
+featureFlags = null
+
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UnityEditor.TestTools.TestRunner.CommandLineTest.Executer:InitializeAndExecuteRun (string[]) (at ./Library/PackageCache/com.unity.test-framework@76560ee600cb/UnityEditor.TestRunner/CommandLineTest/Executer.cs:53)
+UnityEditor.TestTools.TestRunner.CommandLineTest.TestStarter:InitializeAndExecuteRun () (at ./Library/PackageCache/com.unity.test-framework@76560ee600cb/UnityEditor.TestRunner/CommandLineTest/TestStarter.cs:64)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: ./Library/PackageCache/com.unity.test-framework@76560ee600cb/UnityEditor.TestRunner/CommandLineTest/Executer.cs Line: 53)
+
+A scene from the EditorBuildScenes list has been marked as addressable. It has thus been disabled in the build scenes list.  Assets/_Project/Scenes/Zones/Drydock.unity
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogWarning (object)
+UnityEditor.AddressableAssets.Settings.AddressableScenesManager:CheckForScenesInBuildList (System.Collections.Generic.IList`1<UnityEditor.AddressableAssets.Settings.AddressableAssetEntry>) (at ./Library/PackageCache/com.unity.addressables@8460f1c9c927/Editor/Settings/AddressableScenesManager.cs:82)
+UnityEditor.AddressableAssets.Settings.AddressableScenesManager:OnSettingsChanged (UnityEditor.AddressableAssets.Settings.AddressableAssetSettings,UnityEditor.AddressableAssets.Settings.AddressableAssetSettings/ModificationEvent,object) (at ./Library/PackageCache/com.unity.addressables@8460f1c9c927/Editor/Settings/AddressableScenesManager.cs:36)
+UnityEditor.AddressableAssets.Settings.AddressableAssetSettings:SetDirty (UnityEditor.AddressableAssets.Settings.AddressableAssetSettings/ModificationEvent,object,bool,bool) (at ./Library/PackageCache/com.unity.addressables@8460f1c9c927/Editor/Settings/AddressableAssetSettings.cs:2268)
+UnityEditor.AddressableAssets.Settings.AddressableAssetGroup:SetDirty (UnityEditor.AddressableAssets.Settings.AddressableAssetSettings/ModificationEvent,object,bool,bool) (at ./Library/PackageCache/com.unity.addressables@8460f1c9c927/Editor/Settings/AddressableAssetGroup.cs:678)
+UnityEditor.AddressableAssets.Settings.AddressableAssetGroup:AddAssetEntry (UnityEditor.AddressableAssets.Settings.AddressableAssetEntry,bool) (at ./Library/PackageCache/com.unity.addressables@8460f1c9c927/Editor/Settings/AddressableAssetGroup.cs:626)
+UnityEditor.AddressableAssets.Settings.AddressableAssetSettings:MoveEntry (UnityEditor.AddressableAssets.Settings.AddressableAssetEntry,UnityEditor.AddressableAssets.Settings.AddressableAssetGroup,bool,bool) (at ./Library/PackageCache/com.unity.addressables@8460f1c9c927/Editor/Settings/AddressableAssetSettings.cs:2529)
+UnityEditor.AddressableAssets.Settings.AddressableAssetSettings:CreateOrMoveEntry (string,UnityEditor.AddressableAssets.Settings.AddressableAssetGroup,bool,bool) (at ./Library/PackageCache/com.unity.addressables@8460f1c9c927/Editor/Settings/AddressableAssetSettings.cs:2553)
+ExtractionWeight.Zone.Editor.ZoneSeedDataUtility:ConfigureAddressables () (at Assets/_Project/Zone/Editor/ZoneSeedDataUtility.cs:227)
+ExtractionWeight.Zone.Editor.ZoneSeedDataUtility:EnsureSeedDataExists () (at Assets/_Project/Zone/Editor/ZoneSeedDataUtility.cs:96)
+ExtractionWeight.Zone.Editor.ZoneSeedDataUtility/<>c:<EnsureSeedDataExistsOnLoad>b__12_0 () (at Assets/_Project/Zone/Editor/ZoneSeedDataUtility.cs:44)
+UnityEditor.EditorApplication:Internal_CallDelayFunctions ()
+
+(Filename: ./Library/PackageCache/com.unity.addressables@8460f1c9c927/Editor/Settings/AddressableScenesManager.cs Line: 82)
+
+Opening scene 'Assets/_Project/Scenes/Boot.unity'
+Unloading 54 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/_Project/Scenes/Boot.unity'
+	Deserialize:            3.190 ms
+	Integration:            5.308 ms
+	Integration of assets:  0.017 ms
+	Thread Wait Time:       0.013 ms
+	Total Operation Time:   8.528 ms
+Unloading 22 unused Assets / (55.0 KB). Loaded Objects now: 5242.
+Memory consumption went from 131.0 MB to 131.0 MB.
+Total: 6.618200 ms (FindLiveObjects: 0.153700 ms CreateObjectMapping: 0.051500 ms MarkObjects: 6.334200 ms  DeleteObjects: 0.078100 ms)
+
+Start importing ProjectSettings/EditorBuildSettings.asset using Guid(0000000000000000b000000000000000) (LibraryAssetImporter) -> (Import Result ID: 'd110840816b267df56543bfc01369682') in 0.0038129 seconds [static dependencies only]. Details - ImportResultOutputID=d777934f36c664454d62eda103573334 DependenciesID=645cfb0448cdbd8bd0429b10d452284a StaticDependenciesID=112bf3d9ac15e1c94c9aa0250f75500a 
+Start importing Assets/AddressableAssetsData/AssetGroups/Zones.asset using Guid(76208f5deb6ed3344841909dd1da4611) (NativeFormatImporter) -> (Import Result ID: '4b3587bc6c9507a9329a8c2cf8fab609') in 0.0011101 seconds [static dependencies only]. Details - ImportResultOutputID=6d9a9c068bc3f14721ac9724cbaa9d96 DependenciesID=07066772179b2949a8a9cc89ab6abaec StaticDependenciesID=dcd1df86635860d7ebe571ad1e2474fc 
+Start importing Assets/AddressableAssetsData/AddressableAssetSettings.asset using Guid(7920b8a7d83ffef4396c7c9aeab6e0fe) (NativeFormatImporter) -> (Import Result ID: '28ea1e413e85adf041d6ae22481900f6') in 0.0010987 seconds [static dependencies only]. Details - ImportResultOutputID=f86a6aae8793ea573f655f5a887bd193 DependenciesID=529015d52094adc022fe00aee08e6a3b StaticDependenciesID=1815a0a73278fdb451566dbc3c42d8f5 
+Refreshing native plugins compatible for Editor in 4.01 ms, found 3 plugins.
+Asset Pipeline Refresh (id=8f2d9f180d4c4f845994280f0f9d1ef2): Total: 0.034 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/_Project/Scenes/Boot.unity using Guid(d6c7d0af33823664dbf2070202b73cd4) (DefaultImporter) -> (Import Result ID: 'd71385e4289f6efcecf8e166495cbfe0') in 0.0006729 seconds [static dependencies only]. Details - ImportResultOutputID=f79860d5602d1efb372f873e1da78988 DependenciesID=20c67f8366369f8435a527a3cb7095c0 StaticDependenciesID=371b6d6668961bce27d5cd8fff65be2e 
+Refreshing native plugins compatible for Editor in 4.07 ms, found 3 plugins.
+Asset Pipeline Refresh (id=cf5ecb44b6c5b4740a900cfed0267fb8): Total: 0.015 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+[UnityConnectServicesConfig] config is NOT valid, switching to default
+Created GICache directory at C:/Users/jwmcg/AppData/LocalLow/Unity/Caches/GiCache. Took: 0.009s, timestamps: [5.994 - 6.003]
+[Licensing::Client] Successfully resolved entitlement details
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 52 unused Assets / (4.4 KB). Loaded Objects now: 5235.
+Memory consumption went from 131.6 MB to 131.6 MB.
+Total: 6.788300 ms (FindLiveObjects: 0.129200 ms CreateObjectMapping: 0.047000 ms MarkObjects: 6.572800 ms  DeleteObjects: 0.038600 ms)
+
+Start importing ProjectSettings/EditorBuildSettings.asset using Guid(0000000000000000b000000000000000) (LibraryAssetImporter) -> (Import Result ID: '5cd2cc5c00e211834ff287392fb43b83') in 0.0012249 seconds [static dependencies only]. Details - ImportResultOutputID=d777934f36c664454d62eda103573334 DependenciesID=f4c0031b11cbc9df567d7f137d434d86 StaticDependenciesID=c53ba2c51e6408867b9dcb20ffe66c87 
+Start importing Assets/_Project/Data/Loot/relic-medium-painting.asset using Guid(1335ac54227f55b41bf6ea55b7855a01) (NativeFormatImporter) -> (Import Result ID: '5a809895de2f673da66f4050177dae63') in 0.0012892 seconds [static dependencies only]. Details - ImportResultOutputID=7cd0dcc7735dc680e075e8c076a2561b DependenciesID=197622d6aec5b8dd8f4bdb46e41b26ff StaticDependenciesID=c145aef25595504c7e58861052c683fc 
+Start importing Assets/_Project/Data/Loot/currency-cash-roll.asset using Guid(54e2cc7e4318c7142a93201db325bba1) (NativeFormatImporter) -> (Import Result ID: 'a473e86385935a802a20f6eee3285eab') in 0.0012902 seconds [static dependencies only]. Details - ImportResultOutputID=4b7401cb2d241d44082d159de36942ba DependenciesID=b251de46c50fb099ae9cf01b7e44ee68 StaticDependenciesID=6e31db5932aa4ea19ac69ad7e32bdcd0 
+Start importing Assets/_Project/Data/Loot/relic-large-machine.asset using Guid(84852a5c3d4536c47b4346dd36c90539) (NativeFormatImporter) -> (Import Result ID: 'dac7450e01f201d5396c5ecf2144c091') in 0.0009698 seconds [static dependencies only]. Details - ImportResultOutputID=4f9345c82dd001cc2d95b83ebfb47fe0 DependenciesID=e4a74fd76ec1124ab77eb549cb4af498 StaticDependenciesID=bd4618f2ec566071397078d5a5e9ce8f 
+Start importing Assets/_Project/Data/Loot/volatile-cracked-vial.asset using Guid(25c95f018ffdaff4aacd92e1b240fddd) (NativeFormatImporter) -> (Import Result ID: '8135cd0714a2e8d57b4a1f630d29d97f') in 0.0011399 seconds [static dependencies only]. Details - ImportResultOutputID=ff938cac8833097a622612c165259240 DependenciesID=4a7ed886394aeab03cd6d6f0f2853120 StaticDependenciesID=469a57feccfc22c9f4e573e9226f8f2f 
+Start importing Assets/_Project/Data/Loot/LootDatabase.asset using Guid(e61f9b18aeb49054fa0fde51c716fe59) (NativeFormatImporter) -> (Import Result ID: 'cc3e98d6f5739c5f6c0ce0bdda897fd5') in 0.0010296 seconds [static dependencies only]. Details - ImportResultOutputID=9d10fb0a37d3db271653371ef6deb5b9 DependenciesID=dc73b43351bd3389de0654aada957cde StaticDependenciesID=2a4b5b0b59a6818e26d4a688feb325ff 
+Start importing Assets/_Project/Data/Loot/relic-preserved-specimen.asset using Guid(07726e4b2decbee41bbcc21df443a7f5) (NativeFormatImporter) -> (Import Result ID: 'fab7e25e83dc003928194bab9bb750fe') in 0.0009915 seconds [static dependencies only]. Details - ImportResultOutputID=67a93842efd82031680c5083a2c49ece DependenciesID=530304b8e7b5d9bdc2792db57788ed92 StaticDependenciesID=241d63bf425b9fb0efb9f9af72d18d2e 
+Start importing Assets/_Project/Data/Loot/relic-old-console.asset using Guid(77904a72d1781c547b7b4e493e6408f3) (NativeFormatImporter) -> (Import Result ID: 'a3cfaa8a9570755c0096e22d2629be66') in 0.0013014 seconds [static dependencies only]. Details - ImportResultOutputID=68a4f3afcf46f72c4e5075a8f60c0a0d DependenciesID=b825338be4417637297f4fd7d9b3bec5 StaticDependenciesID=3856d99b4383c31672fdec017f24b61d 
+Start importing Assets/_Project/Data/Loot/volatile-leaking-battery.asset using Guid(f7fcbfb101f2c564c9264a7cc05498f6) (NativeFormatImporter) -> (Import Result ID: '952d2edd47de91fb6c3e475a9adeb607') in 0.0011386 seconds [static dependencies only]. Details - ImportResultOutputID=9fe8c258b5bae287ad2c562c77efbc12 DependenciesID=0983f5232f31765329524cf19636eb63 StaticDependenciesID=664b7b4aad1292f69c79fa6576170543 
+Start importing Assets/_Project/Data/Loot/currency-coin-stack.asset using Guid(6a023e1b95042dc4f9180464a8aae710) (NativeFormatImporter) -> (Import Result ID: '51bf7a68dd718a11f2101297527c2bf3') in 0.0011337 seconds [static dependencies only]. Details - ImportResultOutputID=7a47b2fbcb4e8ef47f9877b2da35a9e4 DependenciesID=135df8d62a2bbfa0260de59bde41d6a5 StaticDependenciesID=01e2a03b83bd4195a827d72db1d8d9c0 
+Start importing Assets/_Project/Data/Loot/volatile-caged-bird.asset using Guid(ea9e200eee165e14884b4a99e96bf131) (NativeFormatImporter) -> (Import Result ID: '799d4c3c4ad6892d78f6d804bbf5e13c') in 0.0011429 seconds [static dependencies only]. Details - ImportResultOutputID=e0b7c22483af1c1dba41b955c87f6685 DependenciesID=468cc8773dcba3dade863f033493e635 StaticDependenciesID=30c4bc0a08a83aa6ee4967e26c6d71d5 
+Start importing Assets/_Project/Data/Loot/relic-small-sculpture.asset using Guid(0b9d8b48630a02b44bf9fee969ad7a6b) (NativeFormatImporter) -> (Import Result ID: '4a28736b8b6adeba18f75b39c8090442') in 0.0011439 seconds [static dependencies only]. Details - ImportResultOutputID=11e112cbbe7732707919365ee392b7aa DependenciesID=38d4fcb95cd435f6bca474782f570805 StaticDependenciesID=2c9bfc5184e74e736395fcd5ea3c99d2 
+Start importing Assets/_Project/Data/Loot/currency-data-chip.asset using Guid(2d8c39186f09fce49a4716e979103996) (NativeFormatImporter) -> (Import Result ID: '9153e37ed0e7e3ea3c12c595bf60f9ac') in 0.0011181 seconds [static dependencies only]. Details - ImportResultOutputID=be0befdee63e7e3a67ea294c58962ec1 DependenciesID=ada6ac30a5ed5c3624e14ab547339378 StaticDependenciesID=628d55446162b613a176287367a88d49 
+Start importing Assets/_Project/Data/Loot/currency-small-bag.asset using Guid(2ed6f16b3511cf24895f998bcc692d1f) (NativeFormatImporter) -> (Import Result ID: '32fb00e1aacaae4280ba4759d99f4f8f') in 0.0014509 seconds [static dependencies only]. Details - ImportResultOutputID=810c32153d635ca9716a24953fcae89e DependenciesID=783129dfcbbd4db01a4a0c9cf803f894 StaticDependenciesID=b20b72a8c2085973ca48b73a642be090 
+Refreshing native plugins compatible for Editor in 4.32 ms, found 3 plugins.
+Asset Pipeline Refresh (id=d3564cfe86962b84f8b87921a5b62579): Total: 0.042 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=5c1a63ee62bed0a45ab57d2f5088c035): Total: 0.007 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Saving results to: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\phase1-editmode-results.xml
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/_Project/Scenes/Boot.unity'
+	Deserialize:            0.936 ms
+	Integration:            5.123 ms
+	Integration of assets:  0.017 ms
+	Thread Wait Time:       0.011 ms
+	Total Operation Time:   6.087 ms
+Unloading 57 unused Assets / (83.7 KB). Loaded Objects now: 5262.
+Memory consumption went from 132.1 MB to 132.0 MB.
+Total: 7.386600 ms (FindLiveObjects: 0.154800 ms CreateObjectMapping: 0.055900 ms MarkObjects: 7.066400 ms  DeleteObjects: 0.108600 ms)
+
+DisplayProgressbar: Undo
+Test run completed. Exiting with code 0 (Ok). Run completed.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UnityEditor.TestTools.TestRunner.CommandLineTest.Executer:ExitApplication (UnityEditor.TestTools.TestRunner.CommandLineTest.Executer/ReturnCodes,string) (at ./Library/PackageCache/com.unity.test-framework@76560ee600cb/UnityEditor.TestRunner/CommandLineTest/Executer.cs:81)
+UnityEditor.TestTools.TestRunner.CommandLineTest.Executer:ExitIfRunIsCompleted () (at ./Library/PackageCache/com.unity.test-framework@76560ee600cb/UnityEditor.TestRunner/CommandLineTest/Executer.cs:74)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: ./Library/PackageCache/com.unity.test-framework@76560ee600cb/UnityEditor.TestRunner/CommandLineTest/Executer.cs Line: 81)
+
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+[Licensing::IpcConnector] LicenseClient-jwmcg-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-jwmcg channel disconnected successfully.
+AcceleratorClientConnectionCallback - disconnected - :0
+Cleanup mono
+CodeReloadManager destroyed
+Checking for leaked weakptr:
+  Found no leaked weakptrs.
+[Package Manager] Server process was shutdown
+##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1776747471532,"processId":8064,"allocatedMemory":13254240,"memoryLabels":[{"Default":169291},{"Permanent":15276},{"NewDelete":65299},{"Thread":4230344},{"Manager":50981},{"VertexData":8},{"Geometry":816},{"Texture":24},{"Shader":851967},{"Material":24},{"GfxDevice":55321},{"Animation":392},{"Audio":3008},{"FreeType":8},{"FontEngine":736},{"Physics":2090},{"Physics2D":16},{"Serialization":1016},{"Input":9880},{"JobScheduler":33024},{"TextLib":216},{"Mono":32},{"ScriptingNativeRuntime":155052},{"BaseObject":1625008},{"Resource":1184},{"Renderer":3008},{"Transform":4685},{"File":30370},{"WebCam":616},{"Culling":32},{"Terrain":11394},{"Wind":24},{"STL":40},{"String":13081},{"StaticString":6718},{"Utility":2675494},{"Curl":2559},{"PoolAlloc":2072},{"AI":80},{"TypeTree":13637},{"ScriptManager":448},{"RuntimeInitializeOnLoadManager":64},{"SpriteAtlas":120},{"GI":7792},{"Director":8320},{"CloudService":288},{"WebRequest":808},{"VR":48050},{"SceneManager":504},{"Video":64},{"LazyScriptCache":32},{"Camera":17},{"Secure":2113},{"SerializationCache":1576},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57888},{"StaticSafetyDebugInfo":278528},{"Analytics":336},{"Hierarchy":608},{"CoreStats":13032},{"Identifiers":12960},{"Gui":128},{"EditorUtility":111482},{"VersionControl":4},{"Undo":931},{"AssetDatabase":2608303},{"EditorGi":328},{"UnityConnect":37777},{"Upm":1912},{"UpmDiagnostics":8},{"AssetCompliance":64},{"DrivenProperties":72},{"LocalIPC":211},{"ProfilerEditor":9746},{"CoreBusinessMetrics":2599},{"Windowing":456},{"Licensing":1232},{"AssetReference":32},{"IPCStream":32}]}

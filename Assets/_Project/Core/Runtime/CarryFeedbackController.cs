@@ -1,6 +1,7 @@
 #nullable enable
 using ExtractionWeight.Weight;
 using Cinemachine;
+using ExtractionWeight.Telemetry;
 using UnityEngine;
 
 namespace ExtractionWeight.Core
@@ -72,6 +73,8 @@ namespace ExtractionWeight.Core
 
         public event System.Action<CarryBreakpoint>? BreakpointCrossedUpward;
 
+        public event System.Action<CarryBreakpoint>? BreakpointCrossedDownward;
+
         public event System.Action<CarryBreakpoint>? FootstepTriggered;
 
         private void Awake()
@@ -115,9 +118,9 @@ namespace ExtractionWeight.Core
             }
 
             var currentBreakpoint = _playerController.CurrentBreakpoint;
-            if (currentBreakpoint > _lastBreakpoint)
+            if (currentBreakpoint != _lastBreakpoint)
             {
-                HandleBreakpointCrossed(_lastBreakpoint, currentBreakpoint);
+                HandleBreakpointTransition(_lastBreakpoint, currentBreakpoint);
             }
 
             _lastBreakpoint = currentBreakpoint;
@@ -138,9 +141,9 @@ namespace ExtractionWeight.Core
             }
 
             var currentBreakpoint = _playerController.CurrentBreakpoint;
-            if (currentBreakpoint > _lastBreakpoint)
+            if (currentBreakpoint != _lastBreakpoint)
             {
-                HandleBreakpointCrossed(_lastBreakpoint, currentBreakpoint);
+                HandleBreakpointTransition(_lastBreakpoint, currentBreakpoint);
             }
 
             _lastBreakpoint = currentBreakpoint;
@@ -161,6 +164,19 @@ namespace ExtractionWeight.Core
             }
 
             BreakpointCrossedUpward?.Invoke(currentBreakpoint);
+        }
+
+        private void HandleBreakpointTransition(CarryBreakpoint previousBreakpoint, CarryBreakpoint currentBreakpoint)
+        {
+            if (currentBreakpoint > previousBreakpoint)
+            {
+                HandleBreakpointCrossed(previousBreakpoint, currentBreakpoint);
+                Phase1TelemetryService.Instance?.LogBreakpointCrossed(currentBreakpoint.ToString(), "Up", _playerController!.CarryState.CapacityFraction);
+                return;
+            }
+
+            BreakpointCrossedDownward?.Invoke(currentBreakpoint);
+            Phase1TelemetryService.Instance?.LogBreakpointCrossed(currentBreakpoint.ToString(), "Down", _playerController!.CarryState.CapacityFraction);
         }
 
         private void UpdateFootsteps()

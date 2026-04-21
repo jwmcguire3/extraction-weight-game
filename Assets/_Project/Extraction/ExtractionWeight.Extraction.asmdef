@@ -8,7 +8,8 @@
     "ExtractionWeight.Zone",
     "ExtractionWeight.Threat",
     "ExtractionWeight.Loot",
-    "ExtractionWeight.MetaState"
+    "ExtractionWeight.MetaState",
+    "ExtractionWeight.Telemetry"
   ],
   "includePlatforms": [],
   "excludePlatforms": [],

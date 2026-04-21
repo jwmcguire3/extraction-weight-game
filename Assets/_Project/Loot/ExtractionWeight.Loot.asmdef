@@ -2,7 +2,11 @@
   "name": "ExtractionWeight.Loot",
   "rootNamespace": "ExtractionWeight.Loot",
   "references": [
-    "ExtractionWeight.Core"
+    "ExtractionWeight.Core",
+    "ExtractionWeight.Core.Runtime",
+    "ExtractionWeight.Weight",
+    "ExtractionWeight.Audio",
+    "ExtractionWeight.Telemetry"
   ],
   "includePlatforms": [],
   "excludePlatforms": [],

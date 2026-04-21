@@ -1,12 +1,7 @@
 {
-  "name": "ExtractionWeight.Threat",
-  "rootNamespace": "ExtractionWeight.Threat",
-  "references": [
-    "ExtractionWeight.Core",
-    "ExtractionWeight.Core.Runtime",
-    "ExtractionWeight.Weight",
-    "ExtractionWeight.Telemetry"
-  ],
+  "name": "ExtractionWeight.Telemetry",
+  "rootNamespace": "ExtractionWeight.Telemetry",
+  "references": [],
   "includePlatforms": [],
   "excludePlatforms": [],
   "allowUnsafeCode": false,

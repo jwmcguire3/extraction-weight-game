@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="64" result="Passed" total="64" passed="64" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:51Z" duration="0.5022845">
+  <test-suite type="TestSuite" id="1000" name="extraction-weight-game" fullname="extraction-weight-game" runstate="Runnable" testcasecount="64" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:51Z" duration="0.502285" total="64" passed="64" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1078" name="ExtractionWeight.Tests.EditMode.dll" fullname="C:/Users/jwmcg/OneDrive/Documents/AI Projects/Live Envirnments/extraction-weight-game/Library/ScriptAssemblies/ExtractionWeight.Tests.EditMode.dll" runstate="Runnable" testcasecount="63" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:51Z" duration="0.496286" total="63" passed="63" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="8064" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1079" name="ExtractionWeight" fullname="ExtractionWeight" runstate="Runnable" testcasecount="63" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:51Z" duration="0.496030" total="63" passed="63" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1080" name="Tests" fullname="ExtractionWeight.Tests" runstate="Runnable" testcasecount="63" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:51Z" duration="0.495953" total="63" passed="63" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1081" name="EditMode" fullname="ExtractionWeight.Tests.EditMode" runstate="Runnable" testcasecount="63" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:51Z" duration="0.495826" total="63" passed="63" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1001" name="DetectionSystemTests" fullname="ExtractionWeight.Tests.EditMode.DetectionSystemTests" classname="ExtractionWeight.Tests.EditMode.DetectionSystemTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.023202" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1003" name="BeyondBaseRangeTimesOnePointFive_IsAlwaysUnaware" fullname="ExtractionWeight.Tests.EditMode.DetectionSystemTests.BeyondBaseRangeTimesOnePointFive_IsAlwaysUnaware" methodname="BeyondBaseRangeTimesOnePointFive_IsAlwaysUnaware" classname="ExtractionWeight.Tests.EditMode.DetectionSystemTests" runstate="Runnable" seed="1154721573" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.009291" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1007" name="LineOfSightBlocking_PreventsWardenDetection" fullname="ExtractionWeight.Tests.EditMode.DetectionSystemTests.LineOfSightBlocking_PreventsWardenDetection" methodname="LineOfSightBlocking_PreventsWardenDetection" classname="ExtractionWeight.Tests.EditMode.DetectionSystemTests" runstate="Runnable" seed="1104535910" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.002732" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1006" name="NoiseHeavyLoot_DoesNotSignificantlyShiftWardenDetection" fullname="ExtractionWeight.Tests.EditMode.DetectionSystemTests.NoiseHeavyLoot_DoesNotSignificantlyShiftWardenDetection" methodname="NoiseHeavyLoot_DoesNotSignificantlyShiftWardenDetection" classname="ExtractionWeight.Tests.EditMode.DetectionSystemTests" runstate="Runnable" seed="1798841758" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.002032" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1004" name="NoiseHeavyLoot_ShiftsListenerDetectionDistanceProportionally" fullname="ExtractionWeight.Tests.EditMode.DetectionSystemTests.NoiseHeavyLoot_ShiftsListenerDetectionDistanceProportionally" methodname="NoiseHeavyLoot_ShiftsListenerDetectionDistanceProportionally" classname="ExtractionWeight.Tests.EditMode.DetectionSystemTests" runstate="Runnable" seed="2004258476" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.000749" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1002" name="Overlap_AlwaysDetected" fullname="ExtractionWeight.Tests.EditMode.DetectionSystemTests.Overlap_AlwaysDetected" methodname="Overlap_AlwaysDetected" classname="ExtractionWeight.Tests.EditMode.DetectionSystemTests" runstate="Runnable" seed="570272172" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.000147" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1005" name="SilhouetteHeavyLoot_ShiftsWardenDetectionDistanceProportionally" fullname="ExtractionWeight.Tests.EditMode.DetectionSystemTests.SilhouetteHeavyLoot_ShiftsWardenDetectionDistanceProportionally" methodname="SilhouetteHeavyLoot_ShiftsWardenDetectionDistanceProportionally" classname="ExtractionWeight.Tests.EditMode.DetectionSystemTests" runstate="Runnable" seed="793898890" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.000206" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1008" name="ExtractionLogicTests" fullname="ExtractionWeight.Tests.EditMode.ExtractionLogicTests" classname="ExtractionWeight.Tests.EditMode.ExtractionLogicTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.007724" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1010" name="CarryCapacityCheck_RejectsOverweightForCapacityLimitedExits" fullname="ExtractionWeight.Tests.EditMode.ExtractionLogicTests.CarryCapacityCheck_RejectsOverweightForCapacityLimitedExits" methodname="CarryCapacityCheck_RejectsOverweightForCapacityLimitedExits" classname="ExtractionWeight.Tests.EditMode.ExtractionLogicTests" runstate="Runnable" seed="2068671835" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.000385" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1009" name="CarryCompatibilityCheck_RejectsOversizedItemsForSmallOnlyFilter" fullname="ExtractionWeight.Tests.EditMode.ExtractionLogicTests.CarryCompatibilityCheck_RejectsOversizedItemsForSmallOnlyFilter" methodname="CarryCompatibilityCheck_RejectsOversizedItemsForSmallOnlyFilter" classname="ExtractionWeight.Tests.EditMode.ExtractionLogicTests" runstate="Runnable" seed="434805202" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.001944" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1012" name="StateMachineTransitionsOnlyFireInValidOrders" fullname="ExtractionWeight.Tests.EditMode.ExtractionLogicTests.StateMachineTransitionsOnlyFireInValidOrders" methodname="StateMachineTransitionsOnlyFireInValidOrders" classname="ExtractionWeight.Tests.EditMode.ExtractionLogicTests" runstate="Runnable" seed="258529495" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.002065" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1011" name="TideClosesExtractionsAtCorrectTime" fullname="ExtractionWeight.Tests.EditMode.ExtractionLogicTests.TideClosesExtractionsAtCorrectTime" methodname="TideClosesExtractionsAtCorrectTime" classname="ExtractionWeight.Tests.EditMode.ExtractionLogicTests" runstate="Runnable" seed="214870400" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.000361" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1013" name="HealthSystemTests" fullname="ExtractionWeight.Tests.EditMode.HealthSystemTests" classname="ExtractionWeight.Tests.EditMode.HealthSystemTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.002107" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1014" name="Damage_ReducesHealthCorrectly" fullname="ExtractionWeight.Tests.EditMode.HealthSystemTests.Damage_ReducesHealthCorrectly" methodname="Damage_ReducesHealthCorrectly" classname="ExtractionWeight.Tests.EditMode.HealthSystemTests" runstate="Runnable" seed="200165960" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.000611" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1016" name="Death_FiresOnPlayerDeathOnce" fullname="ExtractionWeight.Tests.EditMode.HealthSystemTests.Death_FiresOnPlayerDeathOnce" methodname="Death_FiresOnPlayerDeathOnce" classname="ExtractionWeight.Tests.EditMode.HealthSystemTests" runstate="Runnable" seed="187427364" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.000476" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1015" name="Regen_TriggersAfterFiveSeconds_AndCapsAtEightyPercent" fullname="ExtractionWeight.Tests.EditMode.HealthSystemTests.Regen_TriggersAfterFiveSeconds_AndCapsAtEightyPercent" methodname="Regen_TriggersAfterFiveSeconds_AndCapsAtEightyPercent" classname="ExtractionWeight.Tests.EditMode.HealthSystemTests" runstate="Runnable" seed="582346897" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.000294" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1017" name="LootDefinitionTests" fullname="ExtractionWeight.Tests.EditMode.LootDefinitionTests" classname="ExtractionWeight.Tests.EditMode.LootDefinitionTests" runstate="Runnable" testcasecount="17" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.079536" total="17" passed="17" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1035" name="AddingFiveAuthoredLootItemsProducesExpectedCapacityFraction" fullname="ExtractionWeight.Tests.EditMode.LootDefinitionTests.AddingFiveAuthoredLootItemsProducesExpectedCapacityFraction" methodname="AddingFiveAuthoredLootItemsProducesExpectedCapacityFraction" classname="ExtractionWeight.Tests.EditMode.LootDefinitionTests" runstate="Runnable" seed="2082101107" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.002004" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1032" name="GetByCategoryFiltersCorrectly" fullname="ExtractionWeight.Tests.EditMode.LootDefinitionTests.GetByCategoryFiltersCorrectly" methodname="GetByCategoryFiltersCorrectly" classname="ExtractionWeight.Tests.EditMode.LootDefinitionTests" runstate="Runnable" seed="1248004800" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.000599" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1031" name="GetByIdReturnsCorrectDefinitionForEachSeededItem" fullname="ExtractionWeight.Tests.EditMode.LootDefinitionTests.GetByIdReturnsCorrectDefinitionForEachSeededItem" classname="ExtractionWeight.Tests.EditMode.LootDefinitionTests" runstate="Runnable" testcasecount="12" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.002138" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1019" name="GetByIdReturnsCorrectDefinitionForEachSeededItem(&quot;currency-small-bag&quot;)" fullname="ExtractionWeight.Tests.EditMode.LootDefinitionTests.GetByIdReturnsCorrectDefinitionForEachSeededItem(&quot;currency-small-bag&quot;)" methodname="GetByIdReturnsCorrectDefinitionForEachSeededItem" classname="ExtractionWeight.Tests.EditMode.LootDefinitionTests" runstate="Runnable" seed="2120501447" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.000340" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1020" name="GetByIdReturnsCorrectDefinitionForEachSeededItem(&quot;currency-cash-roll&quot;)" fullname="ExtractionWeight.Tests.EditMode.LootDefinitionTests.GetByIdReturnsCorrectDefinitionForEachSeededItem(&quot;currency-cash-roll&quot;)" methodname="GetByIdReturnsCorrectDefinitionForEachSeededItem" classname="ExtractionWeight.Tests.EditMode.LootDefinitionTests" runstate="Runnable" seed="1849705075" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.000088" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1021" name="GetByIdReturnsCorrectDefinitionForEachSeededItem(&quot;currency-data-chip&quot;)" fullname="ExtractionWeight.Tests.EditMode.LootDefinitionTests.GetByIdReturnsCorrectDefinitionForEachSeededItem(&quot;currency-data-chip&quot;)" methodname="GetByIdReturnsCorrectDefinitionForEachSeededItem" classname="ExtractionWeight.Tests.EditMode.LootDefinitionTests" runstate="Runnable" seed="9651253" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.000069" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1022" name="GetByIdReturnsCorrectDefinitionForEachSeededItem(&quot;currency-coin-stack&quot;)" fullname="ExtractionWeight.Tests.EditMode.LootDefinitionTests.GetByIdReturnsCorrectDefinitionForEachSeededItem(&quot;currency-coin-stack&quot;)" methodname="GetByIdReturnsCorrectDefinitionForEachSeededItem" classname="ExtractionWeight.Tests.EditMode.LootDefinitionTests" runstate="Runnable" seed="792352104" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.000057" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1023" name="GetByIdReturnsCorrectDefinitionForEachSeededItem(&quot;relic-small-sculpture&quot;)" fullname="ExtractionWeight.Tests.EditMode.LootDefinitionTests.GetByIdReturnsCorrectDefinitionForEachSeededItem(&quot;relic-small-sculpture&quot;)" methodname="GetByIdReturnsCorrectDefinitionForEachSeededItem" classname="ExtractionWeight.Tests.EditMode.LootDefinitionTests" runstate="Runnable" seed="1663357789" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.000056" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1024" name="GetByIdReturnsCorrectDefinitionForEachSeededItem(&quot;relic-medium-painting&quot;)" fullname="ExtractionWeight.Tests.EditMode.LootDefinitionTests.GetByIdReturnsCorrectDefinitionForEachSeededItem(&quot;relic-medium-painting&quot;)" methodname="GetByIdReturnsCorrectDefinitionForEachSeededItem" classname="ExtractionWeight.Tests.EditMode.LootDefinitionTests" runstate="Runnable" seed="546808217" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.000058" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1025" name="GetByIdReturnsCorrectDefinitionForEachSeededItem(&quot;relic-large-machine&quot;)" fullname="ExtractionWeight.Tests.EditMode.LootDefinitionTests.GetByIdReturnsCorrectDefinitionForEachSeededItem(&quot;relic-large-machine&quot;)" methodname="GetByIdReturnsCorrectDefinitionForEachSeededItem" classname="ExtractionWeight.Tests.EditMode.LootDefinitionTests" runstate="Runnable" seed="656093432" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.000063" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1026" name="GetByIdReturnsCorrectDefinitionForEachSeededItem(&quot;relic-old-console&quot;)" fullname="ExtractionWeight.Tests.EditMode.LootDefinitionTests.GetByIdReturnsCorrectDefinitionForEachSeededItem(&quot;relic-old-console&quot;)" methodname="GetByIdReturnsCorrectDefinitionForEachSeededItem" classname="ExtractionWeight.Tests.EditMode.LootDefinitionTests" runstate="Runnable" seed="937359786" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.000055" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1027" name="GetByIdReturnsCorrectDefinitionForEachSeededItem(&quot;relic-preserved-specimen&quot;)" fullname="ExtractionWeight.Tests.EditMode.LootDefinitionTests.GetByIdReturnsCorrectDefinitionForEachSeededItem(&quot;relic-preserved-specimen&quot;)" methodname="GetByIdReturnsCorrectDefinitionForEachSeededItem" classname="ExtractionWeight.Tests.EditMode.LootDefinitionTests" runstate="Runnable" seed="2054059770" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.000060" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1028" name="GetByIdReturnsCorrectDefinitionForEachSeededItem(&quot;volatile-leaking-battery&quot;)" fullname="ExtractionWeight.Tests.EditMode.LootDefinitionTests.GetByIdReturnsCorrectDefinitionForEachSeededItem(&quot;volatile-leaking-battery&quot;)" methodname="GetByIdReturnsCorrectDefinitionForEachSeededItem" classname="ExtractionWeight.Tests.EditMode.LootDefinitionTests" runstate="Runnable" seed="884019577" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.000061" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1029" name="GetByIdReturnsCorrectDefinitionForEachSeededItem(&quot;volatile-caged-bird&quot;)" fullname="ExtractionWeight.Tests.EditMode.LootDefinitionTests.GetByIdReturnsCorrectDefinitionForEachSeededItem(&quot;volatile-caged-bird&quot;)" methodname="GetByIdReturnsCorrectDefinitionForEachSeededItem" classname="ExtractionWeight.Tests.EditMode.LootDefinitionTests" runstate="Runnable" seed="1494991452" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.000075" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1030" name="GetByIdReturnsCorrectDefinitionForEachSeededItem(&quot;volatile-cracked-vial&quot;)" fullname="ExtractionWeight.Tests.EditMode.LootDefinitionTests.GetByIdReturnsCorrectDefinitionForEachSeededItem(&quot;volatile-cracked-vial&quot;)" methodname="GetByIdReturnsCorrectDefinitionForEachSeededItem" classname="ExtractionWeight.Tests.EditMode.LootDefinitionTests" runstate="Runnable" seed="813771933" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.000060" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-case id="1018" name="LootDatabaseDetectsDuplicateIds" fullname="ExtractionWeight.Tests.EditMode.LootDefinitionTests.LootDatabaseDetectsDuplicateIds" methodname="LootDatabaseDetectsDuplicateIds" classname="ExtractionWeight.Tests.EditMode.LootDefinitionTests" runstate="Runnable" seed="1259975987" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.001104" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1033" name="LootItemCorrectlyExposesILoadoutItemInterface" fullname="ExtractionWeight.Tests.EditMode.LootDefinitionTests.LootItemCorrectlyExposesILoadoutItemInterface" methodname="LootItemCorrectlyExposesILoadoutItemInterface" classname="ExtractionWeight.Tests.EditMode.LootDefinitionTests" runstate="Runnable" seed="1211705693" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.000812" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1034" name="SeededLootDatabaseValidationPasses" fullname="ExtractionWeight.Tests.EditMode.LootDefinitionTests.SeededLootDatabaseValidationPasses" methodname="SeededLootDatabaseValidationPasses" classname="ExtractionWeight.Tests.EditMode.LootDefinitionTests" runstate="Runnable" seed="734174089" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.000600" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1036" name="LootSpawnerTests" fullname="ExtractionWeight.Tests.EditMode.LootSpawnerTests" classname="ExtractionWeight.Tests.EditMode.LootSpawnerTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.014484" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-suite type="ParameterizedMethod" id="1041" name="CategoryDistribution_PerTierStaysWithinExpectedBounds" fullname="ExtractionWeight.Tests.EditMode.LootSpawnerTests.CategoryDistribution_PerTierStaysWithinExpectedBounds" classname="ExtractionWeight.Tests.EditMode.LootSpawnerTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.012348" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1038" name="CategoryDistribution_PerTierStaysWithinExpectedBounds(0.0f,0.7f,0.25f,0.05f)" fullname="ExtractionWeight.Tests.EditMode.LootSpawnerTests.CategoryDistribution_PerTierStaysWithinExpectedBounds(0.0f,0.7f,0.25f,0.05f)" methodname="CategoryDistribution_PerTierStaysWithinExpectedBounds" classname="ExtractionWeight.Tests.EditMode.LootSpawnerTests" runstate="Runnable" seed="116942607" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.007078" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1039" name="CategoryDistribution_PerTierStaysWithinExpectedBounds(0.5f,0.4f,0.5f,0.1f)" fullname="ExtractionWeight.Tests.EditMode.LootSpawnerTests.CategoryDistribution_PerTierStaysWithinExpectedBounds(0.5f,0.4f,0.5f,0.1f)" methodname="CategoryDistribution_PerTierStaysWithinExpectedBounds" classname="ExtractionWeight.Tests.EditMode.LootSpawnerTests" runstate="Runnable" seed="1391580147" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.002532" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1040" name="CategoryDistribution_PerTierStaysWithinExpectedBounds(1.0f,0.15f,0.6f,0.25f)" fullname="ExtractionWeight.Tests.EditMode.LootSpawnerTests.CategoryDistribution_PerTierStaysWithinExpectedBounds(1.0f,0.15f,0.6f,0.25f)" methodname="CategoryDistribution_PerTierStaysWithinExpectedBounds" classname="ExtractionWeight.Tests.EditMode.LootSpawnerTests" runstate="Runnable" seed="2115903613" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.002359" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-case id="1037" name="FixedSeed_ProducesDeterministicOutput" fullname="ExtractionWeight.Tests.EditMode.LootSpawnerTests.FixedSeed_ProducesDeterministicOutput" methodname="FixedSeed_ProducesDeterministicOutput" classname="ExtractionWeight.Tests.EditMode.LootSpawnerTests" runstate="Runnable" seed="114788692" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.000789" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1042" name="SpawnPositions_NeverLeaveRegionRadius" fullname="ExtractionWeight.Tests.EditMode.LootSpawnerTests.SpawnPositions_NeverLeaveRegionRadius" methodname="SpawnPositions_NeverLeaveRegionRadius" classname="ExtractionWeight.Tests.EditMode.LootSpawnerTests" runstate="Runnable" seed="400516055" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.000552" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1043" name="PlayerControllerTests" fullname="ExtractionWeight.Tests.EditMode.PlayerControllerTests" classname="ExtractionWeight.Tests.EditMode.PlayerControllerTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.001867" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1044" name="CalculateSpeed_UsesExpectedMobilityMultiplier" fullname="ExtractionWeight.Tests.EditMode.PlayerControllerTests.CalculateSpeed_UsesExpectedMobilityMultiplier" methodname="CalculateSpeed_UsesExpectedMobilityMultiplier" classname="ExtractionWeight.Tests.EditMode.PlayerControllerTests" runstate="Runnable" seed="1653240366" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.000195" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1052" name="CanSprint_RespectsBreakpointAndState" fullname="ExtractionWeight.Tests.EditMode.PlayerControllerTests.CanSprint_RespectsBreakpointAndState" classname="ExtractionWeight.Tests.EditMode.PlayerControllerTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.000980" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1046" name="CanSprint_RespectsBreakpointAndState(Light,False,10.0f,True)" fullname="ExtractionWeight.Tests.EditMode.PlayerControllerTests.CanSprint_RespectsBreakpointAndState(Light,False,10.0f,True)" methodname="CanSprint_RespectsBreakpointAndState" classname="ExtractionWeight.Tests.EditMode.PlayerControllerTests" runstate="Runnable" seed="717377608" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.000210" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1047" name="CanSprint_RespectsBreakpointAndState(Loaded,False,10.0f,True)" fullname="ExtractionWeight.Tests.EditMode.PlayerControllerTests.CanSprint_RespectsBreakpointAndState(Loaded,False,10.0f,True)" methodname="CanSprint_RespectsBreakpointAndState" classname="ExtractionWeight.Tests.EditMode.PlayerControllerTests" runstate="Runnable" seed="249506780" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.000086" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1048" name="CanSprint_RespectsBreakpointAndState(Overburdened,False,10.0f,False)" fullname="ExtractionWeight.Tests.EditMode.PlayerControllerTests.CanSprint_RespectsBreakpointAndState(Overburdened,False,10.0f,False)" methodname="CanSprint_RespectsBreakpointAndState" classname="ExtractionWeight.Tests.EditMode.PlayerControllerTests" runstate="Runnable" seed="1607865840" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.000056" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1049" name="CanSprint_RespectsBreakpointAndState(SoftCeiling,False,10.0f,False)" fullname="ExtractionWeight.Tests.EditMode.PlayerControllerTests.CanSprint_RespectsBreakpointAndState(SoftCeiling,False,10.0f,False)" methodname="CanSprint_RespectsBreakpointAndState" classname="ExtractionWeight.Tests.EditMode.PlayerControllerTests" runstate="Runnable" seed="1238452983" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.000044" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1050" name="CanSprint_RespectsBreakpointAndState(Light,True,10.0f,False)" fullname="ExtractionWeight.Tests.EditMode.PlayerControllerTests.CanSprint_RespectsBreakpointAndState(Light,True,10.0f,False)" methodname="CanSprint_RespectsBreakpointAndState" classname="ExtractionWeight.Tests.EditMode.PlayerControllerTests" runstate="Runnable" seed="1643458137" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.000049" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1051" name="CanSprint_RespectsBreakpointAndState(Light,False,0.0f,False)" fullname="ExtractionWeight.Tests.EditMode.PlayerControllerTests.CanSprint_RespectsBreakpointAndState(Light,False,0.0f,False)" methodname="CanSprint_RespectsBreakpointAndState" classname="ExtractionWeight.Tests.EditMode.PlayerControllerTests" runstate="Runnable" seed="655386436" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.000043" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-case id="1045" name="StaminaDrainAndRegen_FollowsConfiguredRates" fullname="ExtractionWeight.Tests.EditMode.PlayerControllerTests.StaminaDrainAndRegen_FollowsConfiguredRates" methodname="StaminaDrainAndRegen_FollowsConfiguredRates" classname="ExtractionWeight.Tests.EditMode.PlayerControllerTests" runstate="Runnable" seed="860155541" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.000172" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1053" name="PlayerStashTests" fullname="ExtractionWeight.Tests.EditMode.PlayerStashTests" classname="ExtractionWeight.Tests.EditMode.PlayerStashTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.005945" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1054" name="BankingItems_AddsCountsAndPreservesTotalValue" fullname="ExtractionWeight.Tests.EditMode.PlayerStashTests.BankingItems_AddsCountsAndPreservesTotalValue" methodname="BankingItems_AddsCountsAndPreservesTotalValue" classname="ExtractionWeight.Tests.EditMode.PlayerStashTests" runstate="Runnable" seed="192127829" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.003732" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1055" name="Clearing_RemovesAllItems" fullname="ExtractionWeight.Tests.EditMode.PlayerStashTests.Clearing_RemovesAllItems" methodname="Clearing_RemovesAllItems" classname="ExtractionWeight.Tests.EditMode.PlayerStashTests" runstate="Runnable" seed="2041146320" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.000604" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1056" name="PersistenceRoundTrip_ViaJsonRestoresContents" fullname="ExtractionWeight.Tests.EditMode.PlayerStashTests.PersistenceRoundTrip_ViaJsonRestoresContents" methodname="PersistenceRoundTrip_ViaJsonRestoresContents" classname="ExtractionWeight.Tests.EditMode.PlayerStashTests" runstate="Runnable" seed="306728437" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.001016" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1057" name="ProjectStructureTests" fullname="ExtractionWeight.Tests.EditMode.ProjectStructureTests" classname="ExtractionWeight.Tests.EditMode.ProjectStructureTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.002139" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1058" name="ExpectedFoldersAndAssembliesExist" fullname="ExtractionWeight.Tests.EditMode.ProjectStructureTests.ExpectedFoldersAndAssembliesExist" methodname="ExpectedFoldersAndAssembliesExist" classname="ExtractionWeight.Tests.EditMode.ProjectStructureTests" runstate="Runnable" seed="1416020199" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:50Z" duration="0.001596" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1059" name="TelemetryLoggerTests" fullname="ExtractionWeight.Tests.EditMode.TelemetryLoggerTests" classname="ExtractionWeight.Tests.EditMode.TelemetryLoggerTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:51Z" duration="0.320557" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1060" name="EventsAreWrittenCorrectlyToLogFile" fullname="ExtractionWeight.Tests.EditMode.TelemetryLoggerTests.EventsAreWrittenCorrectlyToLogFile" methodname="EventsAreWrittenCorrectlyToLogFile" classname="ExtractionWeight.Tests.EditMode.TelemetryLoggerTests" runstate="Runnable" seed="322388554" result="Passed" start-time="2026-04-21 04:57:50Z" end-time="2026-04-21 04:57:51Z" duration="0.123113" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1062" name="HighEventRatesUseAsyncQueueWithoutBlockingMainThread" fullname="ExtractionWeight.Tests.EditMode.TelemetryLoggerTests.HighEventRatesUseAsyncQueueWithoutBlockingMainThread" methodname="HighEventRatesUseAsyncQueueWithoutBlockingMainThread" classname="ExtractionWeight.Tests.EditMode.TelemetryLoggerTests" runstate="Runnable" seed="1628474588" result="Passed" start-time="2026-04-21 04:57:51Z" end-time="2026-04-21 04:57:51Z" duration="0.097139" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1061" name="LogFileIsReadableAsValidJsonLines" fullname="ExtractionWeight.Tests.EditMode.TelemetryLoggerTests.LogFileIsReadableAsValidJsonLines" methodname="LogFileIsReadableAsValidJsonLines" classname="ExtractionWeight.Tests.EditMode.TelemetryLoggerTests" runstate="Runnable" seed="1687689064" result="Passed" start-time="2026-04-21 04:57:51Z" end-time="2026-04-21 04:57:51Z" duration="0.099119" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1063" name="TideControllerTests" fullname="ExtractionWeight.Tests.EditMode.TideControllerTests" classname="ExtractionWeight.Tests.EditMode.TideControllerTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-04-21 04:57:51Z" end-time="2026-04-21 04:57:51Z" duration="0.023522" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1066" name="ExtractionPointsRegisterClosedWhenTideReachesThem" fullname="ExtractionWeight.Tests.EditMode.TideControllerTests.ExtractionPointsRegisterClosedWhenTideReachesThem" methodname="ExtractionPointsRegisterClosedWhenTideReachesThem" classname="ExtractionWeight.Tests.EditMode.TideControllerTests" runstate="Runnable" seed="5252789" result="Passed" start-time="2026-04-21 04:57:51Z" end-time="2026-04-21 04:57:51Z" duration="0.013008" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1064" name="TideProgressesLinearlyOverConfiguredDuration" fullname="ExtractionWeight.Tests.EditMode.TideControllerTests.TideProgressesLinearlyOverConfiguredDuration" methodname="TideProgressesLinearlyOverConfiguredDuration" classname="ExtractionWeight.Tests.EditMode.TideControllerTests" runstate="Runnable" seed="1125834879" result="Passed" start-time="2026-04-21 04:57:51Z" end-time="2026-04-21 04:57:51Z" duration="0.004594" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1065" name="TideStateIsQueryableByPosition" fullname="ExtractionWeight.Tests.EditMode.TideControllerTests.TideStateIsQueryableByPosition" methodname="TideStateIsQueryableByPosition" classname="ExtractionWeight.Tests.EditMode.TideControllerTests" runstate="Runnable" seed="2088616392" result="Passed" start-time="2026-04-21 04:57:51Z" end-time="2026-04-21 04:57:51Z" duration="0.004597" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1067" name="WeightSystemTests" fullname="ExtractionWeight.Tests.EditMode.WeightSystemTests" classname="ExtractionWeight.Tests.EditMode.WeightSystemTests" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-04-21 04:57:51Z" end-time="2026-04-21 04:57:51Z" duration="0.013474" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1069" name="AddingItems_AccumulatesTotalCost" fullname="ExtractionWeight.Tests.EditMode.WeightSystemTests.AddingItems_AccumulatesTotalCost" methodname="AddingItems_AccumulatesTotalCost" classname="ExtractionWeight.Tests.EditMode.WeightSystemTests" runstate="Runnable" seed="1756924797" result="Passed" start-time="2026-04-21 04:57:51Z" end-time="2026-04-21 04:57:51Z" duration="0.000385" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1071" name="BreakpointTransitions_HappenAtExpectedThresholds" fullname="ExtractionWeight.Tests.EditMode.WeightSystemTests.BreakpointTransitions_HappenAtExpectedThresholds" methodname="BreakpointTransitions_HappenAtExpectedThresholds" classname="ExtractionWeight.Tests.EditMode.WeightSystemTests" runstate="Runnable" seed="1761427671" result="Passed" start-time="2026-04-21 04:57:51Z" end-time="2026-04-21 04:57:51Z" duration="0.000377" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1070" name="CapacityFraction_MatchesExpectedMagnitudeOverCapacity" fullname="ExtractionWeight.Tests.EditMode.WeightSystemTests.CapacityFraction_MatchesExpectedMagnitudeOverCapacity" methodname="CapacityFraction_MatchesExpectedMagnitudeOverCapacity" classname="ExtractionWeight.Tests.EditMode.WeightSystemTests" runstate="Runnable" seed="1250046048" result="Passed" start-time="2026-04-21 04:57:51Z" end-time="2026-04-21 04:57:51Z" duration="0.000127" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1068" name="EmptyCarryState_ReturnsBaselinePenalties" fullname="ExtractionWeight.Tests.EditMode.WeightSystemTests.EmptyCarryState_ReturnsBaselinePenalties" methodname="EmptyCarryState_ReturnsBaselinePenalties" classname="ExtractionWeight.Tests.EditMode.WeightSystemTests" runstate="Runnable" seed="720172356" result="Passed" start-time="2026-04-21 04:57:51Z" end-time="2026-04-21 04:57:51Z" duration="0.000150" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1077" name="OnCarryChanged_FiresExactlyOncePerAddRemove" fullname="ExtractionWeight.Tests.EditMode.WeightSystemTests.OnCarryChanged_FiresExactlyOncePerAddRemove" methodname="OnCarryChanged_FiresExactlyOncePerAddRemove" classname="ExtractionWeight.Tests.EditMode.WeightSystemTests" runstate="Runnable" seed="175974817" result="Passed" start-time="2026-04-21 04:57:51Z" end-time="2026-04-21 04:57:51Z" duration="0.000369" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1073" name="PenaltyCurve_IsContinuousAcrossBreakpoints" fullname="ExtractionWeight.Tests.EditMode.WeightSystemTests.PenaltyCurve_IsContinuousAcrossBreakpoints" methodname="PenaltyCurve_IsContinuousAcrossBreakpoints" classname="ExtractionWeight.Tests.EditMode.WeightSystemTests" runstate="Runnable" seed="772613219" result="Passed" start-time="2026-04-21 04:57:51Z" end-time="2026-04-21 04:57:51Z" duration="0.005766" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1072" name="PenaltyCurve_IsMonotonicAsCapacityIncreases" fullname="ExtractionWeight.Tests.EditMode.WeightSystemTests.PenaltyCurve_IsMonotonicAsCapacityIncreases" methodname="PenaltyCurve_IsMonotonicAsCapacityIncreases" classname="ExtractionWeight.Tests.EditMode.WeightSystemTests" runstate="Runnable" seed="527292918" result="Passed" start-time="2026-04-21 04:57:51Z" end-time="2026-04-21 04:57:51Z" duration="0.002197" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1076" name="Remove_DecreasesTotalCost" fullname="ExtractionWeight.Tests.EditMode.WeightSystemTests.Remove_DecreasesTotalCost" methodname="Remove_DecreasesTotalCost" classname="ExtractionWeight.Tests.EditMode.WeightSystemTests" runstate="Runnable" seed="1595388052" result="Passed" start-time="2026-04-21 04:57:51Z" end-time="2026-04-21 04:57:51Z" duration="0.000246" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1075" name="TryAdd_FailsPastSoftCeiling" fullname="ExtractionWeight.Tests.EditMode.WeightSystemTests.TryAdd_FailsPastSoftCeiling" methodname="TryAdd_FailsPastSoftCeiling" classname="ExtractionWeight.Tests.EditMode.WeightSystemTests" runstate="Runnable" seed="985044773" result="Passed" start-time="2026-04-21 04:57:51Z" end-time="2026-04-21 04:57:51Z" duration="0.000235" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1074" name="ZoneAxisWeights_AmplifiesAsSpecified" fullname="ExtractionWeight.Tests.EditMode.WeightSystemTests.ZoneAxisWeights_AmplifiesAsSpecified" methodname="ZoneAxisWeights_AmplifiesAsSpecified" classname="ExtractionWeight.Tests.EditMode.WeightSystemTests" runstate="Runnable" seed="1536701709" result="Passed" start-time="2026-04-21 04:57:51Z" end-time="2026-04-21 04:57:51Z" duration="0.000169" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+    <test-suite type="Assembly" id="1084" name="Unity.Addressables.DocExampleCode.Editor.Tests.dll" fullname="C:/Users/jwmcg/OneDrive/Documents/AI Projects/Live Envirnments/extraction-weight-game/Library/ScriptAssemblies/Unity.Addressables.DocExampleCode.Editor.Tests.dll" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-04-21 04:57:51Z" end-time="2026-04-21 04:57:51Z" duration="0.000942" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="8064" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1085" name="AddressableAssets" fullname="AddressableAssets" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-04-21 04:57:51Z" end-time="2026-04-21 04:57:51Z" duration="0.000754" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1086" name="DocExampleCode" fullname="AddressableAssets.DocExampleCode" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-04-21 04:57:51Z" end-time="2026-04-21 04:57:51Z" duration="0.000671" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1082" name="TestStub" fullname="AddressableAssets.DocExampleCode.TestStub" classname="AddressableAssets.DocExampleCode.TestStub" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-04-21 04:57:51Z" end-time="2026-04-21 04:57:51Z" duration="0.000589" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1083" name="RequiredTest" fullname="AddressableAssets.DocExampleCode.TestStub.RequiredTest" methodname="RequiredTest" classname="AddressableAssets.DocExampleCode.TestStub" runstate="Runnable" seed="1904963218" result="Passed" start-time="2026-04-21 04:57:51Z" end-time="2026-04-21 04:57:51Z" duration="0.000063" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\phase1-editmode-results.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

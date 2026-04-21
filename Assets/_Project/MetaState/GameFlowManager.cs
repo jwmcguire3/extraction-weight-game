@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using ExtractionWeight.Core;
 using ExtractionWeight.Loot;
+using ExtractionWeight.Telemetry;
 using ExtractionWeight.Zone;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -127,6 +128,7 @@ namespace ExtractionWeight.MetaState
 
             CurrentRunContext = new RunContext(zoneDefinition.ZoneId, zoneDefinition.DisplayName, LightPack);
             _runStartRealtimeSeconds = Time.realtimeSinceStartup;
+            Phase1TelemetryService.Instance?.BeginRun(zoneDefinition.ZoneId, zoneDefinition.DisplayName);
             SetState(GameFlowState.EnteringZone);
 
             await UnloadBaseSceneIfLoadedAsync();
@@ -463,6 +465,7 @@ namespace ExtractionWeight.MetaState
             var presentation = playerHealth.GetComponent<IPlayerDeathPresentation>();
             var presentationDelay = presentation?.GetPresentationDurationSeconds() ?? 0f;
             presentation?.Play(lostLootValue);
+            Phase1TelemetryService.Instance?.LogPlayerDied(lostLootValue, Mathf.Max(0f, Time.realtimeSinceStartup - _runStartRealtimeSeconds));
 
             _ = ReturnToBaseAfterRunAsync(
                 wasSuccessful: false,
@@ -491,6 +494,11 @@ namespace ExtractionWeight.MetaState
             _zoneLoader = zoneLoader;
             _lootDatabase = lootDatabase;
             ConfigureStashResolver();
+        }
+
+        public void EditorSetRunStartRealtimeSeconds(float runStartRealtimeSeconds)
+        {
+            _runStartRealtimeSeconds = runStartRealtimeSeconds;
         }
 #endif
     }

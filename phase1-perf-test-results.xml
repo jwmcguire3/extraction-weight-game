@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Passed" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-04-21 05:29:24Z" end-time="2026-04-21 05:30:25Z" duration="61.2576856">
+  <test-suite type="TestSuite" id="1050" name="extraction-weight-game" fullname="extraction-weight-game" runstate="Runnable" testcasecount="33" result="Passed" start-time="2026-04-21 05:29:24Z" end-time="2026-04-21 05:30:25Z" duration="61.257686" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1044" name="ExtractionWeight.Tests.PlayMode.dll" fullname="C:/Users/jwmcg/OneDrive/Documents/AI Projects/Live Envirnments/extraction-weight-game/Library/ScriptAssemblies/ExtractionWeight.Tests.PlayMode.dll" runstate="Runnable" testcasecount="33" result="Passed" start-time="2026-04-21 05:29:24Z" end-time="2026-04-21 05:30:25Z" duration="61.252833" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="29408" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1045" name="ExtractionWeight" fullname="ExtractionWeight" runstate="Runnable" testcasecount="33" result="Passed" start-time="2026-04-21 05:29:24Z" end-time="2026-04-21 05:30:25Z" duration="61.252369" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1046" name="Tests" fullname="ExtractionWeight.Tests" runstate="Runnable" testcasecount="33" result="Passed" start-time="2026-04-21 05:29:24Z" end-time="2026-04-21 05:30:25Z" duration="61.252058" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1047" name="PlayMode" fullname="ExtractionWeight.Tests.PlayMode" runstate="Runnable" testcasecount="33" result="Passed" start-time="2026-04-21 05:29:24Z" end-time="2026-04-21 05:30:25Z" duration="61.251673" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1018" name="PerformanceRegressionTests" fullname="ExtractionWeight.Tests.PlayMode.PerformanceRegressionTests" classname="ExtractionWeight.Tests.PlayMode.PerformanceRegressionTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-04-21 05:29:24Z" end-time="2026-04-21 05:30:25Z" duration="61.250480" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1019" name="DrydockRun_AveragesAtLeast55Fps_AndCapturesExpectedTelemetry" fullname="ExtractionWeight.Tests.PlayMode.PerformanceRegressionTests.DrydockRun_AveragesAtLeast55Fps_AndCapturesExpectedTelemetry" methodname="DrydockRun_AveragesAtLeast55Fps_AndCapturesExpectedTelemetry" classname="ExtractionWeight.Tests.PlayMode.PerformanceRegressionTests" runstate="Runnable" seed="513610673" result="Passed" start-time="2026-04-21 05:29:24Z" end-time="2026-04-21 05:30:25Z" duration="61.243144" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+PHASE1_DRYDOCK_AVG_FPS=14726.70; PHASE1_DRYDOCK_AVG_FRAME_MS=0.07
+Saving results to: C:\Users\jwmcg\OneDrive\Documents\AI Projects\Live Envirnments\extraction-weight-game\phase1-perf-test-results.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

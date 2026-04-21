@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using ExtractionWeight.Core;
 using ExtractionWeight.MetaState;
+using ExtractionWeight.Telemetry;
 using ExtractionWeight.Threat;
 using ExtractionWeight.Zone;
 using UnityEngine;
@@ -128,6 +129,7 @@ namespace ExtractionWeight.Extraction
 
             _activePlayer = playerController;
             GameFlowManager.Instance?.NotifyExtractionStarted();
+            Phase1TelemetryService.Instance?.LogExtractionInitiated(_pointData.PointId, _pointData.ExtractionType.ToString(), _zoneRuntime.ElapsedRunSeconds);
             _stateMachine.TransitionTo(ExtractionPhaseState.Initiation);
             _stateElapsedSeconds = 0f;
             _extraThreatSpawned = false;
@@ -238,6 +240,12 @@ namespace ExtractionWeight.Extraction
             }
 
             var bankedItems = CollectLootItems(_activePlayer.CarryState);
+            Phase1TelemetryService.Instance?.LogExtractionCompleted(
+                _pointData.PointId,
+                _pointData.ExtractionType.ToString(),
+                _zoneRuntime.ElapsedRunSeconds,
+                bankedItems.Count,
+                CalculateBankedValue(bankedItems));
             GameFlowManager.Instance?.CompleteSuccessfulRun(_zoneRuntime.CurrentZoneDefinition.ZoneId, bankedItems);
             Phase1RunResultStore.CompleteSuccessfulExtraction(
                 _zoneRuntime.CurrentZoneDefinition.ZoneId,
@@ -342,6 +350,17 @@ namespace ExtractionWeight.Extraction
             }
 
             return items;
+        }
+
+        private static float CalculateBankedValue(IReadOnlyList<ExtractionWeight.Loot.LootItem> items)
+        {
+            var total = 0f;
+            for (var i = 0; i < items.Count; i++)
+            {
+                total += items[i].Value;
+            }
+
+            return total;
         }
 
         private string GetActionLabel(ExtractionPointData pointData)

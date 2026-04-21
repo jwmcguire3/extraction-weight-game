@@ -11,7 +11,8 @@
     "ExtractionWeight.Extraction",
     "ExtractionWeight.MetaState",
     "ExtractionWeight.UI",
-    "ExtractionWeight.Audio"
+    "ExtractionWeight.Audio",
+    "ExtractionWeight.Telemetry"
   ],
   "includePlatforms": [],
   "excludePlatforms": [],

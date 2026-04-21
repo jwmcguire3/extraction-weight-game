@@ -1,5 +1,7 @@
 #nullable enable
 using ExtractionWeight.Core;
+using ExtractionWeight.Audio;
+using ExtractionWeight.Telemetry;
 using UnityEngine;
 
 namespace ExtractionWeight.Loot
@@ -92,9 +94,17 @@ namespace ExtractionWeight.Loot
 
             if (_definition.PickupSound != null)
             {
-                AudioSource.PlayClipAtPoint(_definition.PickupSound, transform.position);
+                PooledAudioSourcePlayer.Instance.PlayClipAtPoint(_definition.PickupSound, transform.position);
             }
 
+            var playerController = player as PlayerController;
+            Phase1TelemetryService.Instance?.LogItemPickedUp(
+                _definition.ItemId,
+                _definition.DisplayName,
+                _definition.Value,
+                playerController?.CurrentBreakpoint.ToString() ?? "Unknown",
+                _definition.IsVolatile,
+                playerController?.CapacityFraction ?? 0f);
             gameObject.SetActive(false);
             return true;
         }

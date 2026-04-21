@@ -1,5 +1,6 @@
 #nullable enable
 using ExtractionWeight.Core;
+using ExtractionWeight.Telemetry;
 using ExtractionWeight.Weight;
 using UnityEngine;
 using WeightCarryState = ExtractionWeight.Weight.CarryState;
@@ -8,6 +9,8 @@ namespace ExtractionWeight.Threat
 {
     public abstract class ThreatBehaviourBase : MonoBehaviour, IThreat
     {
+        private const float DefaultDetectionTickIntervalSeconds = 0.1f;
+
         [SerializeField]
         private string _threatId = string.Empty;
 
@@ -23,6 +26,10 @@ namespace ExtractionWeight.Threat
 
         [SerializeField]
         private LayerMask _lineOfSightMask = ~0;
+
+        [Min(0.02f)]
+        [SerializeField]
+        private float _detectionTickIntervalSeconds = DefaultDetectionTickIntervalSeconds;
 
         [Header("Audio")]
         [SerializeField]
@@ -40,6 +47,9 @@ namespace ExtractionWeight.Threat
 
         private float _giveUpTimerSeconds;
         private bool _alertQueued;
+        private bool _hasEvaluatedDetection;
+        private float _detectionTickTimerSeconds;
+        private DetectionState _lastEvaluatedState;
         private PlayerHealth? _playerHealth;
 
         public string ThreatId => _threatId;
@@ -76,6 +86,7 @@ namespace ExtractionWeight.Threat
             ResolvePlayerReferences();
             ConfigureAudioSource(_idleAudioSource, loop: true);
             ConfigureAudioSource(_alertAudioSource, loop: false);
+            _detectionTickTimerSeconds = Mathf.Abs(name.GetHashCode() % 10) * (_detectionTickIntervalSeconds / 10f);
         }
 
         protected virtual void Start()
@@ -98,14 +109,7 @@ namespace ExtractionWeight.Threat
 
             var playerPosition = _player.transform.position;
             var distanceToPlayer = Vector3.Distance(transform.position, playerPosition);
-            var detectedState = DetectionSystem.Evaluate(
-                playerPosition,
-                _player.CarryState,
-                _player.CurrentPenalty,
-                transform.position,
-                _profile,
-                _playerCollider,
-                _lineOfSightMask);
+            var detectedState = EvaluateDetection(playerPosition);
 
             UpdatePursuitState(detectedState, distanceToPlayer);
             var effectiveState = _isPursuing ? DetectionState.Detected : detectedState;
@@ -133,6 +137,11 @@ namespace ExtractionWeight.Threat
             else if (nextState != DetectionState.Detected)
             {
                 _alertQueued = false;
+            }
+
+            if (nextState == DetectionState.Detected && previousState != DetectionState.Detected)
+            {
+                Phase1TelemetryService.Instance?.LogThreatDetected(_threatId, previousState.ToString(), nextState.ToString(), transform.position);
             }
         }
 
@@ -244,6 +253,27 @@ namespace ExtractionWeight.Threat
             source.spatialBlend = 1f;
             source.dopplerLevel = 0f;
             source.rolloffMode = AudioRolloffMode.Linear;
+        }
+
+        private DetectionState EvaluateDetection(Vector3 playerPosition)
+        {
+            _detectionTickTimerSeconds -= Time.deltaTime;
+            if (_hasEvaluatedDetection && _detectionTickTimerSeconds > 0f)
+            {
+                return _lastEvaluatedState;
+            }
+
+            _lastEvaluatedState = DetectionSystem.Evaluate(
+                playerPosition,
+                _player!.CarryState,
+                _player.CurrentPenalty,
+                transform.position,
+                _profile,
+                _playerCollider,
+                _lineOfSightMask);
+            _hasEvaluatedDetection = true;
+            _detectionTickTimerSeconds = Mathf.Max(0.02f, _detectionTickIntervalSeconds);
+            return _lastEvaluatedState;
         }
 
         private void ApplyContactDamage(DetectionState state, float distanceToPlayer, float deltaTime)

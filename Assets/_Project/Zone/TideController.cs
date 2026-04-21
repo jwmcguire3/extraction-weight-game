@@ -200,7 +200,7 @@ namespace ExtractionWeight.Zone
             CurrentSafeMax = Vector2.Lerp(boundsMax, target, Progress);
 
             var height = CurrentFogHeight;
-            UpdateFogSegments(boundsMin, boundsMax, height);
+            UpdateFogSegments(boundsMin, boundsMax, GetPhase1FogHeight(height));
             UpdateRumble();
         }
 
@@ -383,9 +383,15 @@ namespace ExtractionWeight.Zone
 
         private static Material CreateMaterial(string materialName, Color color)
         {
-            var shader = Shader.Find("Universal Render Pipeline/Unlit") ??
-                         Shader.Find("Unlit/Color") ??
-                         Shader.Find("Standard");
+            var shader =
+#if PHASE_1
+                Shader.Find("Unlit/Color") ??
+#else
+                Shader.Find("Universal Render Pipeline/Unlit") ??
+#endif
+                Shader.Find("Universal Render Pipeline/Unlit") ??
+                Shader.Find("Unlit/Color") ??
+                Shader.Find("Standard");
             var material = new Material(shader)
             {
                 name = materialName,
@@ -402,6 +408,15 @@ namespace ExtractionWeight.Zone
             }
 
             return material;
+        }
+
+        private static float GetPhase1FogHeight(float height)
+        {
+#if PHASE_1
+            return Mathf.Max(0.2f, height * 0.35f);
+#else
+            return height;
+#endif
         }
 
         private static AudioClip CreateRumbleClip(string clipName)
