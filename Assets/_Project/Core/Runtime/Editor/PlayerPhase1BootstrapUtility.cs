@@ -74,6 +74,7 @@ namespace ExtractionWeight.Core.Editor
 
                 playerRoot.AddComponent<InteractionTracker>();
                 var playerController = playerRoot.AddComponent<PlayerController>();
+                var playerHealth = playerRoot.AddComponent<PlayerHealth>();
                 var carryFeedbackController = playerRoot.AddComponent<CarryFeedbackController>();
                 var footstepLightSource = playerRoot.AddComponent<AudioSource>();
                 var footstepLoadedSource = playerRoot.AddComponent<AudioSource>();
@@ -119,6 +120,7 @@ namespace ExtractionWeight.Core.Editor
                 var hudObject = new GameObject("MobileHUD", typeof(RectTransform), typeof(Canvas), typeof(CanvasScaler), typeof(GraphicRaycaster), typeof(MobileUIHUD));
                 hudObject.transform.SetParent(playerRoot.transform, false);
                 var mobileHud = hudObject.GetComponent<MobileUIHUD>();
+                var deathPresentation = playerRoot.AddComponent<PlayerDeathPresentation>();
 
                 playerController.EditorConfigure(characterController, inputAsset, playerRoot.transform);
                 carryFeedbackController.EditorConfigure(
@@ -131,6 +133,13 @@ namespace ExtractionWeight.Core.Editor
                     breathSource,
                     ambientItemSource);
                 mobileHud.EditorConfigure(playerController);
+                deathPresentation.EditorConfigure(
+                    playerHealth,
+                    cameraRoot,
+                    mainCameraObject.GetComponent<Camera>(),
+                    mainCameraObject.GetComponent<CinemachineBrain>(),
+                    virtualCamera,
+                    mobileHud);
 
                 return PrefabUtility.SaveAsPrefabAsset(playerRoot, PlayerPrefabPath);
             }

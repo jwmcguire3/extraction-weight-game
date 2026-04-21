@@ -15,6 +15,8 @@ namespace ExtractionWeight.MetaState
 
         public float TotalBankedValue { get; set; }
 
+        public float LostLootValue { get; set; }
+
         public IReadOnlyList<StoredLootItem> BankedItems { get; set; } = System.Array.Empty<StoredLootItem>();
     }
 }

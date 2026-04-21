@@ -7,6 +7,7 @@ using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem.UI;
 using UnityEngine.UI;
 
 namespace ExtractionWeight.Zone.Editor
@@ -53,8 +54,6 @@ namespace ExtractionWeight.Zone.Editor
             var controller = canvasObject.AddComponent<BaseScreenController>();
             CreatePanelLayout(canvasObject.transform, controller, lootDatabase);
 
-            new GameObject("EventSystem", typeof(EventSystem), typeof(StandaloneInputModule));
-
             EditorSceneManager.SaveScene(scene, BaseScenePath);
         }
 
@@ -85,12 +84,40 @@ namespace ExtractionWeight.Zone.Editor
                 manager = bootstrap.AddComponent<GameFlowManager>();
             }
 
+            var eventSystemObject = GameObject.Find("PersistentEventSystem");
+            if (eventSystemObject == null)
+            {
+                eventSystemObject = new GameObject(
+                    "PersistentEventSystem",
+                    typeof(EventSystem),
+                    typeof(InputSystemUIInputModule),
+                    typeof(PersistentEventSystem));
+            }
+
+            RemoveDuplicateEventSystems(eventSystemObject);
+
             loader.EditorConfigure(new List<ZoneDefinition> { definition }, markerPrefab);
             manager.EditorConfigure(loader, lootDatabase);
 
             EditorUtility.SetDirty(loader);
             EditorUtility.SetDirty(manager);
+            EditorUtility.SetDirty(eventSystemObject);
             EditorSceneManager.SaveScene(scene);
+        }
+
+        private static void RemoveDuplicateEventSystems(GameObject keeper)
+        {
+            var eventSystems = Object.FindObjectsByType<EventSystem>(FindObjectsSortMode.None);
+            for (var i = 0; i < eventSystems.Length; i++)
+            {
+                var candidate = eventSystems[i];
+                if (candidate == null || candidate.gameObject == keeper)
+                {
+                    continue;
+                }
+
+                Object.DestroyImmediate(candidate.gameObject);
+            }
         }
 
         private static void CreatePanelLayout(Transform canvasTransform, BaseScreenController controller, LootDatabase lootDatabase)

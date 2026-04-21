@@ -40,6 +40,7 @@ namespace ExtractionWeight.Threat
 
         private float _giveUpTimerSeconds;
         private bool _alertQueued;
+        private PlayerHealth? _playerHealth;
 
         public string ThreatId => _threatId;
 
@@ -52,6 +53,10 @@ namespace ExtractionWeight.Threat
         protected Collider? PlayerCollider => _playerCollider;
 
         protected virtual float GiveUpDelaySeconds => 0f;
+
+        protected virtual float ContactDamagePerSecond => 0f;
+
+        protected virtual float ContactDamageRange => 0f;
 
         protected virtual void Reset()
         {
@@ -106,6 +111,7 @@ namespace ExtractionWeight.Threat
             var effectiveState = _isPursuing ? DetectionState.Detected : detectedState;
             SetState(effectiveState);
             TickState(_currentState, _player, distanceToPlayer, Time.deltaTime);
+            ApplyContactDamage(_currentState, distanceToPlayer, Time.deltaTime);
         }
 
         protected virtual void OnNoPlayer()
@@ -140,6 +146,11 @@ namespace ExtractionWeight.Threat
             if (_playerCollider == null && _player != null)
             {
                 _playerCollider = _player.GetComponent<Collider>();
+            }
+
+            if (_playerHealth == null && _player != null)
+            {
+                _playerHealth = _player.GetComponent<PlayerHealth>();
             }
         }
 
@@ -233,6 +244,21 @@ namespace ExtractionWeight.Threat
             source.spatialBlend = 1f;
             source.dopplerLevel = 0f;
             source.rolloffMode = AudioRolloffMode.Linear;
+        }
+
+        private void ApplyContactDamage(DetectionState state, float distanceToPlayer, float deltaTime)
+        {
+            if (state != DetectionState.Detected ||
+                ContactDamagePerSecond <= 0f ||
+                ContactDamageRange <= 0f ||
+                _playerHealth == null ||
+                _playerHealth.IsDead ||
+                distanceToPlayer > ContactDamageRange)
+            {
+                return;
+            }
+
+            _playerHealth.TakeDamage(ContactDamagePerSecond * deltaTime, this);
         }
 
 #if UNITY_EDITOR

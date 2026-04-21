@@ -171,9 +171,18 @@ namespace ExtractionWeight.UI
             }
 
             var itemsText = itemLines.Count == 0 ? "No items banked" : string.Join(", ", itemLines);
+            if (summary.WasSuccessful)
+            {
+                _lastRunText.text =
+                    $"Success - {summary.ZoneDisplayName}\n" +
+                    $"{itemsText}\n" +
+                    $"Duration: {summary.DurationSeconds:0.0}s";
+                return;
+            }
+
             _lastRunText.text =
-                $"{(summary.WasSuccessful ? "Success" : "Failed")} - {summary.ZoneDisplayName}\n" +
-                $"{itemsText}\n" +
+                $"Failed - {summary.ZoneDisplayName}\n" +
+                $"Lost Loot: ${summary.LostLootValue:0}\n" +
                 $"Duration: {summary.DurationSeconds:0.0}s";
         }
 

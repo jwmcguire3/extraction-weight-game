@@ -10,6 +10,7 @@
     "ExtractionWeight.Extraction",
     "ExtractionWeight.MetaState",
     "ExtractionWeight.UI",
+    "Unity.InputSystem",
     "Unity.Addressables.Editor",
     "Unity.Addressables",
     "Unity.ResourceManager"

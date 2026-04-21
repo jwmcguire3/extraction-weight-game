@@ -12,12 +12,14 @@ GameObject:
   - component: {fileID: 6204900890310134389}
   - component: {fileID: 6092274469389354923}
   - component: {fileID: 7892041639746827444}
+  - component: {fileID: 6070533743400415568}
   - component: {fileID: 1043498253737726202}
   - component: {fileID: 5606311482254509391}
   - component: {fileID: 4312041348241745282}
   - component: {fileID: 3685880104188119163}
   - component: {fileID: 1626126026665249956}
   - component: {fileID: 8595101394191688302}
+  - component: {fileID: 7583847230099330825}
   m_Layer: 0
   m_Name: Phase1Player
   m_TagString: Untagged
@@ -119,6 +121,19 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   _initialTideSecondsRemaining: 150
+--- !u!114 &6070533743400415568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928218244016203653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c265589087919ee40ba93e90665afcf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ExtractionWeight.Core.Runtime::ExtractionWeight.Core.PlayerHealth
+  _maxHealth: 100
 --- !u!114 &1043498253737726202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -630,6 +645,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7583847230099330825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928218244016203653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e0e92e9af064c34d8fa3e1371fc9f73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ExtractionWeight.UI::ExtractionWeight.UI.PlayerDeathPresentation
+  _playerHealth: {fileID: 6070533743400415568}
+  _cameraRoot: {fileID: 5124950082274600437}
+  _mainCamera: {fileID: 442581202538885217}
+  _cameraBrain: {fileID: 1962946463694891286}
+  _virtualCamera: {fileID: 8879196502051764315}
+  _mobileHud: {fileID: 5256457554372949356}
 --- !u!1 &2111411573633207969
 GameObject:
   m_ObjectHideFlags: 0

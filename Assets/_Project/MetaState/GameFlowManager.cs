@@ -7,6 +7,7 @@ using ExtractionWeight.Loot;
 using ExtractionWeight.Zone;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 namespace ExtractionWeight.MetaState
 {
@@ -14,6 +15,7 @@ namespace ExtractionWeight.MetaState
     public sealed class GameFlowManager : MonoBehaviour
     {
         private const string BaseSceneName = "Base";
+        private const string BootSceneName = "Boot";
         private static readonly RunLoadoutSelection LightPack = new("light-pack", "Light Pack", 100f);
 
         private static GameFlowManager? s_instance;
@@ -24,7 +26,9 @@ namespace ExtractionWeight.MetaState
         [SerializeField]
         private LootDatabase? _lootDatabase;
 
+        private PlayerHealth? _activePlayerHealth;
         private bool _isTransitioning;
+        private bool _isQueuingBaseReload;
         private float _runStartRealtimeSeconds;
 
         public static GameFlowManager? Instance => s_instance;
@@ -64,9 +68,21 @@ namespace ExtractionWeight.MetaState
             SceneManager.sceneLoaded += HandleSceneLoaded;
         }
 
-        private async void Start()
+        private void Update()
         {
-            await EnsureBaseSceneLoadedAsync();
+            var activeScene = SceneManager.GetActiveScene();
+            var baseScene = SceneManager.GetSceneByName(BaseSceneName);
+            if (activeScene.name == BootSceneName &&
+                !baseScene.isLoaded &&
+                (CurrentRunContext == null || State == GameFlowState.AtBase || State == GameFlowState.ReturningToBase))
+            {
+                QueueBaseSceneReload();
+            }
+        }
+
+        private void Start()
+        {
+            QueueBaseSceneReload();
         }
 
         private void OnDisable()
@@ -140,14 +156,14 @@ namespace ExtractionWeight.MetaState
                 return;
             }
 
-            var player = FindAnyObjectByType<PlayerController>();
-            if (player == null)
-            {
-                return;
-            }
-
-            player.CarryState.Clear();
-            CompleteFailedRun(CurrentRunContext.ZoneId);
+            _ = ReturnToBaseAfterRunAsync(
+                wasSuccessful: false,
+                CurrentRunContext.ZoneId,
+                new List<LootItem>(),
+                totalBankedValue: 0f,
+                lostLootValue: 0f,
+                presentationDelaySeconds: 0f,
+                clearCarryOnFinish: false);
         }
 
         public void ResetProgressForTests()
@@ -170,7 +186,12 @@ namespace ExtractionWeight.MetaState
             if (scene.name == BaseSceneName)
             {
                 SceneManager.SetActiveScene(scene);
+                _isQueuingBaseReload = false;
+                UnsubscribeFromActivePlayerHealth();
+                return;
             }
+
+            HookActivePlayerHealth();
         }
 
         public void CompleteSuccessfulRun(string zoneId, List<LootItem> bankedItems)
@@ -180,7 +201,7 @@ namespace ExtractionWeight.MetaState
                 return;
             }
 
-            _ = ReturnToBaseAfterRunAsync(true, zoneId, bankedItems, CalculateTotalValue(bankedItems));
+            _ = ReturnToBaseAfterRunAsync(true, zoneId, bankedItems, CalculateTotalValue(bankedItems), 0f, 0f, false);
         }
 
         public void CompleteFailedRun(string zoneId)
@@ -190,10 +211,17 @@ namespace ExtractionWeight.MetaState
                 return;
             }
 
-            _ = ReturnToBaseAfterRunAsync(false, zoneId, new List<LootItem>(), 0f);
+            _ = ReturnToBaseAfterRunAsync(false, zoneId, new List<LootItem>(), 0f, 0f, 0f, false);
         }
 
-        private async Task ReturnToBaseAfterRunAsync(bool wasSuccessful, string zoneId, List<LootItem> bankedItems, float totalBankedValue)
+        private async Task ReturnToBaseAfterRunAsync(
+            bool wasSuccessful,
+            string zoneId,
+            List<LootItem> bankedItems,
+            float totalBankedValue,
+            float lostLootValue,
+            float presentationDelaySeconds,
+            bool clearCarryOnFinish)
         {
             _isTransitioning = true;
             SetState(GameFlowState.ReturningToBase);
@@ -206,8 +234,19 @@ namespace ExtractionWeight.MetaState
                 StashChanged?.Invoke();
             }
 
-            LastRunSummary = BuildLastRunSummary(wasSuccessful, zoneId, bankedItems, totalBankedValue);
+            LastRunSummary = BuildLastRunSummary(wasSuccessful, zoneId, bankedItems, totalBankedValue, lostLootValue);
             LastRunChanged?.Invoke();
+
+            if (presentationDelaySeconds > 0f)
+            {
+                await Task.Delay(Mathf.CeilToInt(presentationDelaySeconds * 1000f));
+            }
+
+            if (clearCarryOnFinish)
+            {
+                var player = FindAnyObjectByType<PlayerController>();
+                player?.CarryState.Clear();
+            }
 
             if (_zoneLoader != null)
             {
@@ -273,6 +312,28 @@ namespace ExtractionWeight.MetaState
             }
         }
 
+        private IEnumerator EnsureBaseSceneLoadedOnNextFrame()
+        {
+            _isQueuingBaseReload = true;
+            yield return null;
+            var loadTask = EnsureBaseSceneLoadedAsync();
+            while (!loadTask.IsCompleted)
+            {
+                yield return null;
+            }
+        }
+
+        private void QueueBaseSceneReload()
+        {
+            if (_isQueuingBaseReload)
+            {
+                return;
+            }
+
+            _isQueuingBaseReload = true;
+            StartCoroutine(EnsureBaseSceneLoadedOnNextFrame());
+        }
+
         private async Task UnloadBaseSceneIfLoadedAsync()
         {
             var baseScene = SceneManager.GetSceneByName(BaseSceneName);
@@ -288,7 +349,7 @@ namespace ExtractionWeight.MetaState
             }
         }
 
-        private LastRunSummary BuildLastRunSummary(bool wasSuccessful, string zoneId, List<LootItem> bankedItems, float totalBankedValue)
+        private LastRunSummary BuildLastRunSummary(bool wasSuccessful, string zoneId, List<LootItem> bankedItems, float totalBankedValue, float lostLootValue)
         {
             var countsById = new Dictionary<string, int>(StringComparer.Ordinal);
             for (var i = 0; i < bankedItems.Count; i++)
@@ -318,6 +379,7 @@ namespace ExtractionWeight.MetaState
                 ZoneDisplayName = CurrentRunContext?.ZoneDisplayName ?? zoneId,
                 DurationSeconds = durationSeconds,
                 TotalBankedValue = totalBankedValue,
+                LostLootValue = lostLootValue,
                 BankedItems = storedItems,
             };
         }
@@ -337,6 +399,67 @@ namespace ExtractionWeight.MetaState
         {
             State = nextState;
             StateChanged?.Invoke();
+        }
+
+        private void HookActivePlayerHealth()
+        {
+            var playerHealth = FindAnyObjectByType<PlayerHealth>();
+            if (ReferenceEquals(_activePlayerHealth, playerHealth))
+            {
+                return;
+            }
+
+            UnsubscribeFromActivePlayerHealth();
+            _activePlayerHealth = playerHealth;
+            if (_activePlayerHealth != null)
+            {
+                _activePlayerHealth.OnPlayerDeath += HandlePlayerDeath;
+            }
+        }
+
+        private void UnsubscribeFromActivePlayerHealth()
+        {
+            if (_activePlayerHealth == null)
+            {
+                return;
+            }
+
+            _activePlayerHealth.OnPlayerDeath -= HandlePlayerDeath;
+            _activePlayerHealth = null;
+        }
+
+        private void HandlePlayerDeath(PlayerHealth playerHealth)
+        {
+            if (CurrentRunContext == null || _isTransitioning)
+            {
+                return;
+            }
+
+            var player = playerHealth.GetComponent<PlayerController>();
+            var lostLootValue = player != null ? CalculateLostLootValue(player.CarryState.Items) : 0f;
+            var presentation = playerHealth.GetComponent<IPlayerDeathPresentation>();
+            var presentationDelay = presentation?.GetPresentationDurationSeconds() ?? 0f;
+            presentation?.Play(lostLootValue);
+
+            _ = ReturnToBaseAfterRunAsync(
+                wasSuccessful: false,
+                CurrentRunContext.ZoneId,
+                new List<LootItem>(),
+                totalBankedValue: 0f,
+                lostLootValue,
+                presentationDelay,
+                clearCarryOnFinish: true);
+        }
+
+        private static float CalculateLostLootValue(IReadOnlyList<ILoadoutItem> items)
+        {
+            var total = 0f;
+            for (var i = 0; i < items.Count; i++)
+            {
+                total += items[i].Value;
+            }
+
+            return total;
         }
 
 #if UNITY_EDITOR

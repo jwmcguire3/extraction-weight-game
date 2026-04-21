@@ -4,16 +4,15 @@ using System.Collections.Generic;
 using ExtractionWeight.Core;
 using ExtractionWeight.Loot;
 using ExtractionWeight.MetaState;
-using ExtractionWeight.UI;
-using ExtractionWeight.Zone;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
+using ExtractionWeight.Zone;
 
 namespace ExtractionWeight.Tests.PlayMode
 {
-    public class RunLoopTests
+    public class DeathFlowTests
     {
         private Sprite _icon = null!;
         private List<LootDefinition> _originalLootDefinitions = null!;
@@ -57,7 +56,7 @@ namespace ExtractionWeight.Tests.PlayMode
 
             foreach (var definition in Resources.FindObjectsOfTypeAll<ScriptableObject>())
             {
-                if (definition != null && definition.name.StartsWith("run-loop-", System.StringComparison.Ordinal))
+                if (definition != null && definition.name.StartsWith("death-flow-", System.StringComparison.Ordinal))
                 {
                     Object.DestroyImmediate(definition);
                 }
@@ -73,73 +72,63 @@ namespace ExtractionWeight.Tests.PlayMode
         }
 
         [UnityTest]
-        public IEnumerator FullLoop_BaseToDrydockPickupExtractToBase_UpdatesStash()
+        public IEnumerator LethalDamage_TransitionsPlayerIntoDeathFlow()
         {
-            yield return RunSuccessfulExtraction("run-loop-cash", 25f);
+            yield return EnterZone();
+            var playerHealth = Object.FindAnyObjectByType<PlayerHealth>();
+            Assert.That(playerHealth, Is.Not.Null);
 
-            var stash = PlayerStash.Instance;
-            Assert.That(stash.Items, Has.Count.EqualTo(1));
-            Assert.That(stash.Items[0].ItemId, Is.EqualTo("run-loop-cash"));
-            Assert.That(stash.Items[0].Count, Is.EqualTo(1));
+            playerHealth!.TakeDamage(200f, new TestThreat("test-warden"));
+            yield return null;
 
-            var baseScreen = Object.FindAnyObjectByType<BaseScreenController>();
-            Assert.That(baseScreen, Is.Not.Null);
-            Assert.That(baseScreen!.LastRunText, Does.StartWith("Success"));
-        }
-
-        [UnityTest]
-        public IEnumerator FailedRun_BaseToDrydockDeathToBase_LeavesStashUnchangedAndShowsFailure()
-        {
-            yield return RunSuccessfulExtraction("run-loop-starter", 20f);
-            var startingValue = PlayerStash.Instance.TotalValue;
-
-            GameFlowManager.Instance!.EnterZone("drydock");
-            yield return new WaitUntil(() => GameFlowManager.Instance!.State == GameFlowState.InZone);
-            var player = Object.FindAnyObjectByType<PlayerController>();
-            Assert.That(player, Is.Not.Null);
-            CreateLootPickupNearPlayer(player!, "run-loop-lost", 40f).TryCompletePickup(player!, out _);
-
-            GameFlowManager.Instance!.FailCurrentRun();
+            Assert.That(playerHealth.IsDead, Is.True);
+            Assert.That(GameFlowManager.Instance!.State, Is.EqualTo(GameFlowState.ReturningToBase));
             yield return new WaitUntil(() => GameFlowManager.Instance!.State == GameFlowState.AtBase);
-
-            Assert.That(PlayerStash.Instance.TotalValue, Is.EqualTo(startingValue).Within(0.0001f));
-
-            var baseScreen = Object.FindAnyObjectByType<BaseScreenController>();
-            Assert.That(baseScreen, Is.Not.Null);
-            Assert.That(baseScreen!.LastRunText, Does.StartWith("Failed"));
         }
 
         [UnityTest]
-        public IEnumerator MultipleSequentialRuns_AccumulateCorrectly()
+        public IEnumerator LethalRun_ReturnsFailureWithLostLootValue()
         {
-            yield return RunSuccessfulExtraction("run-loop-chip", 30f);
-            yield return RunSuccessfulExtraction("run-loop-chip", 30f);
-            yield return RunSuccessfulExtraction("run-loop-relic", 45f);
-
-            Assert.That(PlayerStash.Instance.Items, Has.Count.EqualTo(2));
-            Assert.That(PlayerStash.Instance.TotalValue, Is.EqualTo(105f).Within(0.0001f));
-            Assert.That(GameFlowManager.Instance!.SessionStats.RunsAttempted, Is.EqualTo(3));
-            Assert.That(GameFlowManager.Instance!.SessionStats.RunsSuccessful, Is.EqualTo(3));
-        }
-
-        private IEnumerator RunSuccessfulExtraction(string itemId, float value)
-        {
-            GameFlowManager.Instance!.EnterZone("drydock");
-            yield return new WaitUntil(() => GameFlowManager.Instance!.State == GameFlowState.InZone);
-
+            yield return EnterZone();
             var player = Object.FindAnyObjectByType<PlayerController>();
+            var health = Object.FindAnyObjectByType<PlayerHealth>();
             Assert.That(player, Is.Not.Null);
+            Assert.That(health, Is.Not.Null);
 
-            var pickup = CreateLootPickupNearPlayer(player!, itemId, value);
+            var pickup = CreateLootPickupNearPlayer(player!, "death-flow-chip", 35f);
             Assert.That(pickup.TryCompletePickup(player!, out var failureMessage), Is.True, failureMessage);
 
-            var extractionRoot = GameObject.Find("ExtractionPoint_A");
-            var extractionController = extractionRoot != null ? extractionRoot.GetComponent<ExtractionWeight.Extraction.ExtractionController>() : null;
-            Assert.That(extractionController, Is.Not.Null);
-            extractionController!.TriggerExtraction(player!);
-
+            health!.TakeDamage(200f, new TestThreat("test-listener"));
             yield return new WaitUntil(() => GameFlowManager.Instance!.State == GameFlowState.AtBase);
-            yield return null;
+
+            Assert.That(GameFlowManager.Instance!.LastRunSummary, Is.Not.Null);
+            Assert.That(GameFlowManager.Instance!.LastRunSummary!.WasSuccessful, Is.False);
+            Assert.That(GameFlowManager.Instance!.LastRunSummary!.LostLootValue, Is.EqualTo(35f).Within(0.0001f));
+        }
+
+        [UnityTest]
+        public IEnumerator ReturningToBaseAfterDeath_DoesNotPersistCarriedLoot()
+        {
+            yield return EnterZone();
+            var player = Object.FindAnyObjectByType<PlayerController>();
+            var health = Object.FindAnyObjectByType<PlayerHealth>();
+            Assert.That(player, Is.Not.Null);
+            Assert.That(health, Is.Not.Null);
+
+            var pickup = CreateLootPickupNearPlayer(player!, "death-flow-relic", 45f);
+            Assert.That(pickup.TryCompletePickup(player!, out var failureMessage), Is.True, failureMessage);
+
+            health!.TakeDamage(200f, new TestThreat("test-warden"));
+            yield return new WaitUntil(() => GameFlowManager.Instance!.State == GameFlowState.AtBase);
+
+            Assert.That(PlayerStash.Instance.TotalValue, Is.EqualTo(0f).Within(0.0001f));
+            Assert.That(PlayerStash.Instance.Items, Is.Empty);
+        }
+
+        private IEnumerator EnterZone()
+        {
+            GameFlowManager.Instance!.EnterZone("drydock");
+            yield return new WaitUntil(() => GameFlowManager.Instance!.State == GameFlowState.InZone);
         }
 
         private void ConfigureFastDrydockDefinition()
@@ -148,7 +137,7 @@ namespace ExtractionWeight.Tests.PlayMode
             Assert.That(loader, Is.Not.Null);
 
             var definition = ScriptableObject.CreateInstance<ZoneDefinition>();
-            definition.name = "run-loop-drydock";
+            definition.name = "death-flow-drydock";
             definition.EditorSetData(
                 "drydock",
                 "Drydock",
@@ -198,6 +187,19 @@ namespace ExtractionWeight.Tests.PlayMode
             var updatedDefinitions = new List<LootDefinition>(LootDatabase.Instance!.Definitions);
             updatedDefinitions.Add(definition);
             LootDatabase.Instance.EditorSetDefinitions(updatedDefinitions);
+        }
+
+        private sealed class TestThreat : IThreat
+        {
+            public TestThreat(string threatId)
+            {
+                ThreatId = threatId;
+                Profile = new DetectionProfile(1f, 1f, 5f, 5f, 5f);
+            }
+
+            public string ThreatId { get; }
+
+            public DetectionProfile Profile { get; }
         }
     }
 }

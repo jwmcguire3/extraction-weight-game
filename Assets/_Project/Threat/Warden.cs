@@ -31,6 +31,10 @@ namespace ExtractionWeight.Threat
 
         protected override float GiveUpDelaySeconds => 5f;
 
+        protected override float ContactDamagePerSecond => 15f;
+
+        protected override float ContactDamageRange => 3f;
+
         protected override void Reset()
         {
             base.Reset();

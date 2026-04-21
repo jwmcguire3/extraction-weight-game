@@ -2,9 +2,7 @@
 using ExtractionWeight.Core;
 using ExtractionWeight.Zone;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.InputSystem.OnScreen;
-using UnityEngine.InputSystem.UI;
 using UnityEngine.UI;
 
 namespace ExtractionWeight.UI
@@ -47,6 +45,9 @@ namespace ExtractionWeight.UI
         private Image? _crouchButtonImage;
         private Text? _crouchButtonText;
         private Text? _hudMessageText;
+        private Image? _deathFadeImage;
+        private Text? _deathTitleText;
+        private Text? _deathValueText;
         private static Sprite? s_fallbackSprite;
         private ZoneRuntime? _zoneRuntime;
 
@@ -60,7 +61,6 @@ namespace ExtractionWeight.UI
             scaler.referenceResolution = new Vector2(1920f, 1080f);
             scaler.matchWidthOrHeight = 1f;
             _font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
-            EnsureEventSystem();
             EnsureLayout();
         }
 
@@ -141,6 +141,21 @@ namespace ExtractionWeight.UI
                 _hudMessageText.text = _playerController.CurrentHudMessage;
                 _hudMessageText.enabled = !string.IsNullOrWhiteSpace(_playerController.CurrentHudMessage);
             }
+        }
+
+        public void SetDeathOverlay(Color fadeColor, float lostLootValue)
+        {
+            if (_deathFadeImage == null || _deathTitleText == null || _deathValueText == null)
+            {
+                return;
+            }
+
+            _deathFadeImage.enabled = fadeColor.a > 0f;
+            _deathFadeImage.color = fadeColor;
+            _deathTitleText.enabled = fadeColor.a > 0.01f;
+            _deathValueText.enabled = fadeColor.a > 0.01f;
+            _deathTitleText.text = "You died";
+            _deathValueText.text = $"Lost Loot: ${lostLootValue:0}";
         }
 
         private void EnsureLayout()
@@ -238,6 +253,28 @@ namespace ExtractionWeight.UI
             var crouchButton = _crouchButtonImage.gameObject.AddComponent<OnScreenButton>();
             crouchButton.controlPath = "<Gamepad>/buttonEast";
             _crouchButtonText = CreateText("CrouchButtonText", crouchButtonRoot, Vector2.zero, 18, TextAnchor.MiddleCenter, "Crouch");
+
+            _deathFadeImage = CreateImage("DeathFade", rootRect, builtinSprite, new Color(0f, 0f, 0f, 0f));
+            _deathFadeImage.rectTransform.anchorMin = Vector2.zero;
+            _deathFadeImage.rectTransform.anchorMax = Vector2.one;
+            _deathFadeImage.rectTransform.offsetMin = Vector2.zero;
+            _deathFadeImage.rectTransform.offsetMax = Vector2.zero;
+            _deathFadeImage.enabled = false;
+            _deathFadeImage.transform.SetAsLastSibling();
+
+            _deathTitleText = CreateText("DeathTitleText", rootRect, new Vector2(0f, 32f), 54, TextAnchor.MiddleCenter, "You died");
+            _deathTitleText.rectTransform.anchorMin = new Vector2(0.5f, 0.5f);
+            _deathTitleText.rectTransform.anchorMax = new Vector2(0.5f, 0.5f);
+            _deathTitleText.rectTransform.sizeDelta = new Vector2(520f, 72f);
+            _deathTitleText.enabled = false;
+            _deathTitleText.transform.SetAsLastSibling();
+
+            _deathValueText = CreateText("DeathValueText", rootRect, new Vector2(0f, -28f), 30, TextAnchor.MiddleCenter, string.Empty);
+            _deathValueText.rectTransform.anchorMin = new Vector2(0.5f, 0.5f);
+            _deathValueText.rectTransform.anchorMax = new Vector2(0.5f, 0.5f);
+            _deathValueText.rectTransform.sizeDelta = new Vector2(520f, 48f);
+            _deathValueText.enabled = false;
+            _deathValueText.transform.SetAsLastSibling();
         }
 
         private void CacheExistingReferences()
@@ -254,6 +291,9 @@ namespace ExtractionWeight.UI
             _crouchButtonImage = transform.Find("CrouchButton/CrouchButtonImage")?.GetComponent<Image>();
             _crouchButtonText = transform.Find("CrouchButton/CrouchButtonText")?.GetComponent<Text>();
             _hudMessageText = transform.Find("HudMessageText")?.GetComponent<Text>();
+            _deathFadeImage = transform.Find("DeathFade")?.GetComponent<Image>();
+            _deathTitleText = transform.Find("DeathTitleText")?.GetComponent<Text>();
+            _deathValueText = transform.Find("DeathValueText")?.GetComponent<Text>();
         }
 
         private Color GetCarryColor(int breakpointIndex)
@@ -305,17 +345,6 @@ namespace ExtractionWeight.UI
             text.color = Color.white;
             text.text = value;
             return text;
-        }
-
-        private static void EnsureEventSystem()
-        {
-            if (EventSystem.current != null)
-            {
-                return;
-            }
-
-            var eventSystemObject = new GameObject("EventSystem", typeof(EventSystem), typeof(InputSystemUIInputModule));
-            DontDestroyOnLoad(eventSystemObject);
         }
 
         private static Sprite LoadBuiltinSprite(string resourcePath)

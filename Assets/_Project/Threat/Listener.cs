@@ -24,6 +24,10 @@ namespace ExtractionWeight.Threat
 
         public bool IsResting => !_isPursuing && CurrentState == DetectionState.Unaware && Vector3.Distance(transform.position, _restPosition) <= 0.1f;
 
+        protected override float ContactDamagePerSecond => 25f;
+
+        protected override float ContactDamageRange => 2f;
+
         protected override void Reset()
         {
             base.Reset();
