@@ -169,7 +169,7 @@ namespace ExtractionWeight.Tests.PlayMode
             controller.TriggerExtraction(player);
             yield return null;
 
-            Assert.That(controller.CurrentState, Is.EqualTo(ExtractionPhaseState.Idle));
+            Assert.That(controller.CurrentState, Is.EqualTo(ExtractionPhaseState.Closed));
             Assert.That(controller.LastFailureMessage, Is.EqualTo("Extraction closed"));
         }
 

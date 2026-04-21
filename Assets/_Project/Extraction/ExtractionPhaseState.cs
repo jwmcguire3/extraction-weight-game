@@ -10,5 +10,6 @@ namespace ExtractionWeight.Extraction
         Hold = 3,
         Departure = 4,
         Completed = 5,
+        Closed = 6,
     }
 }

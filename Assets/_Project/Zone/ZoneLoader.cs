@@ -268,13 +268,15 @@ namespace ExtractionWeight.Zone
 
             var rootObjects = _loadedScene.Value.GetRootGameObjects();
             ZoneRuntime? zoneRuntime = null;
+            TideController? tideController = null;
             for (var i = 0; i < rootObjects.Length; i++)
             {
-                zoneRuntime = rootObjects[i].GetComponentInChildren<ZoneRuntime>(true);
-                if (zoneRuntime != null)
+                zoneRuntime ??= rootObjects[i].GetComponentInChildren<ZoneRuntime>(true);
+                tideController ??= rootObjects[i].GetComponentInChildren<TideController>(true);
+                if (zoneRuntime != null && tideController != null)
                 {
                     break;
-                }
+                } 
             }
 
             if (zoneRuntime == null)
@@ -284,7 +286,15 @@ namespace ExtractionWeight.Zone
                 zoneRuntime = runtimeRoot.AddComponent<ZoneRuntime>();
             }
 
+            if (tideController == null)
+            {
+                var tideRoot = new GameObject("TideController");
+                SceneManager.MoveGameObjectToScene(tideRoot, _loadedScene.Value);
+                tideController = tideRoot.AddComponent<TideController>();
+            }
+
             zoneRuntime.Initialize(zoneDefinition);
+            tideController.Initialize(zoneDefinition);
         }
 
         private void DestroySpawnedMarkers()

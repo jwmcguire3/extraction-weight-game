@@ -74,6 +74,7 @@ namespace ExtractionWeight.Extraction
         {
             _zoneRuntime ??= FindAnyObjectByType<ZoneRuntime>();
             ResolvePointData();
+            SyncClosedState();
             UpdateActionAvailability();
 
             if (_pointData == null || _activePlayer == null)
@@ -287,6 +288,26 @@ namespace ExtractionWeight.Extraction
             _contextActionTarget.enabled = isAvailable;
         }
 
+        private void SyncClosedState()
+        {
+            if (_pointData == null || _zoneRuntime == null)
+            {
+                return;
+            }
+
+            var isClosed = !_zoneRuntime.IsExtractionOpen(_pointData.PointId);
+            if (isClosed && _stateMachine.State == ExtractionPhaseState.Idle)
+            {
+                _stateMachine.TransitionTo(ExtractionPhaseState.Closed);
+                return;
+            }
+
+            if (!isClosed && _stateMachine.State == ExtractionPhaseState.Closed)
+            {
+                _stateMachine.ResetToIdle();
+            }
+        }
+
         private void ResolvePointData()
         {
             if (_pointData != null || _zoneRuntime == null)
@@ -353,6 +374,8 @@ namespace ExtractionWeight.Extraction
             {
                 _extraThreat.gameObject.SetActive(false);
             }
+
+            SyncClosedState();
         }
 
 #if UNITY_EDITOR

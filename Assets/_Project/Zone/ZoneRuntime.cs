@@ -18,6 +18,9 @@ namespace ExtractionWeight.Zone
         [SerializeField]
         private PlayerController? _playerController;
 
+        [SerializeField]
+        private TideController? _tideController;
+
         public ZoneDefinition? CurrentZoneDefinition => _zoneDefinition;
 
         public float ElapsedRunSeconds { get; private set; }
@@ -29,6 +32,7 @@ namespace ExtractionWeight.Zone
         private void Awake()
         {
             _playerController ??= FindAnyObjectByType<PlayerController>();
+            _tideController ??= FindAnyObjectByType<TideController>();
             RebuildLookup();
         }
 
@@ -39,24 +43,20 @@ namespace ExtractionWeight.Zone
                 return;
             }
 
-            ElapsedRunSeconds += Time.deltaTime;
-            _playerController ??= FindAnyObjectByType<PlayerController>();
-            _playerController?.SetTideSecondsRemaining(_zoneDefinition.TideDurationSeconds - ElapsedRunSeconds);
-
-            var changed = RefreshOpenStates();
-            if (changed)
+            _tideController ??= FindAnyObjectByType<TideController>();
+            if (_tideController != null && _tideController.IsInitialized)
             {
-                TideStateChanged?.Invoke();
+                return;
             }
+
+            SetElapsedRunSeconds(ElapsedRunSeconds + Time.deltaTime);
         }
 
         public void Initialize(ZoneDefinition zoneDefinition)
         {
             _zoneDefinition = zoneDefinition;
-            ElapsedRunSeconds = 0f;
             RebuildLookup();
-            RefreshOpenStates(force: true);
-            TideStateChanged?.Invoke();
+            SetElapsedRunSeconds(0f, force: true);
         }
 
         public bool TryGetExtractionPointData(string pointId, out ExtractionPointData pointData)
@@ -77,6 +77,22 @@ namespace ExtractionWeight.Zone
             }
 
             return elapsedRunSeconds < pointData.TideCloseTime;
+        }
+
+        public void SetElapsedRunSeconds(float elapsedRunSeconds, bool force = false)
+        {
+            ElapsedRunSeconds = Mathf.Max(0f, elapsedRunSeconds);
+            _playerController ??= FindAnyObjectByType<PlayerController>();
+            if (_zoneDefinition != null)
+            {
+                _playerController?.SetTideSecondsRemaining(_zoneDefinition.TideDurationSeconds - ElapsedRunSeconds);
+            }
+
+            var changed = RefreshOpenStates(force);
+            if (changed)
+            {
+                TideStateChanged?.Invoke();
+            }
         }
 
         private void RebuildLookup()
@@ -156,8 +172,8 @@ namespace ExtractionWeight.Zone
         public void EditorConfigure(ZoneDefinition zoneDefinition)
         {
             _zoneDefinition = zoneDefinition;
-            ElapsedRunSeconds = 0f;
             RebuildLookup();
+            SetElapsedRunSeconds(0f, force: true);
         }
 #endif
     }

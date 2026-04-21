@@ -1,4 +1,5 @@
 #nullable enable
+using System.Collections.Generic;
 using ExtractionWeight.Core;
 using ExtractionWeight.Zone;
 using UnityEngine;
@@ -39,6 +40,8 @@ namespace ExtractionWeight.UI
         private Text? _staminaText;
         private Text? _tideTimerText;
         private Text? _openExitsText;
+        private Image? _tideBarFill;
+        private Image? _tideBarBackdrop;
         private Image? _actionButtonImage;
         private Image? _actionButtonFillRing;
         private Text? _actionButtonText;
@@ -48,8 +51,10 @@ namespace ExtractionWeight.UI
         private Image? _deathFadeImage;
         private Text? _deathTitleText;
         private Text? _deathValueText;
+        private readonly List<Image> _tideMarkers = new();
         private static Sprite? s_fallbackSprite;
         private ZoneRuntime? _zoneRuntime;
+        private TideController? _tideController;
 
         private void Awake()
         {
@@ -99,10 +104,13 @@ namespace ExtractionWeight.UI
             }
 
             _zoneRuntime ??= FindAnyObjectByType<ZoneRuntime>();
+            _tideController ??= FindAnyObjectByType<TideController>();
             if (_openExitsText != null)
             {
                 _openExitsText.text = _zoneRuntime?.OpenExtractionSummary ?? string.Empty;
             }
+
+            UpdateTideBar();
 
             if (_actionButtonText != null)
             {
@@ -204,6 +212,7 @@ namespace ExtractionWeight.UI
 
             _carryGaugeText = CreateText("CarryGaugeText", gaugeRoot, new Vector2(0f, 2f), 26, TextAnchor.MiddleCenter, "0%");
             _staminaText = CreateText("StaminaText", gaugeRoot, new Vector2(0f, -104f), 16, TextAnchor.MiddleCenter, "STA 100");
+            CreateTideBar(rootRect, builtinSprite);
             _tideTimerText = CreateText("TideTimer", rootRect, new Vector2(-90f, -52f), 22, TextAnchor.MiddleRight, "150s");
             _tideTimerText.rectTransform.anchorMin = new Vector2(1f, 1f);
             _tideTimerText.rectTransform.anchorMax = new Vector2(1f, 1f);
@@ -283,6 +292,8 @@ namespace ExtractionWeight.UI
             _carryGaugeText = transform.Find("TopCenter/CarryGaugeText")?.GetComponent<Text>();
             _staminaFill = transform.Find("TopCenter/StaminaBack/StaminaFill")?.GetComponent<Image>();
             _staminaText = transform.Find("TopCenter/StaminaText")?.GetComponent<Text>();
+            _tideBarBackdrop = transform.Find("TideBar/TideBarBackdrop")?.GetComponent<Image>();
+            _tideBarFill = transform.Find("TideBar/TideBarBackdrop/TideBarFill")?.GetComponent<Image>();
             _tideTimerText = transform.Find("TideTimer")?.GetComponent<Text>();
             _openExitsText = transform.Find("OpenExitsText")?.GetComponent<Text>();
             _actionButtonImage = transform.Find("ActionButton/ActionButtonImage")?.GetComponent<Image>();
@@ -294,6 +305,7 @@ namespace ExtractionWeight.UI
             _deathFadeImage = transform.Find("DeathFade")?.GetComponent<Image>();
             _deathTitleText = transform.Find("DeathTitleText")?.GetComponent<Text>();
             _deathValueText = transform.Find("DeathValueText")?.GetComponent<Text>();
+            CacheTideMarkers();
         }
 
         private Color GetCarryColor(int breakpointIndex)
@@ -367,6 +379,108 @@ namespace ExtractionWeight.UI
 
             s_fallbackSprite = Sprite.Create(texture, new Rect(0f, 0f, texture.width, texture.height), new Vector2(0.5f, 0.5f));
             return s_fallbackSprite;
+        }
+
+        public float TideBarFillAmount => _tideBarFill?.fillAmount ?? 0f;
+
+        private void CreateTideBar(RectTransform rootRect, Sprite builtinSprite)
+        {
+            var tideBarRoot = CreateRect("TideBar", rootRect, new Vector2(0.5f, 1f), new Vector2(0.5f, 1f), new Vector2(0f, -16f), new Vector2(900f, 30f));
+            _tideBarBackdrop = CreateImage("TideBarBackdrop", tideBarRoot, builtinSprite, new Color(0.06f, 0.09f, 0.11f, 0.85f));
+            _tideBarBackdrop.type = Image.Type.Sliced;
+            _tideBarBackdrop.rectTransform.sizeDelta = new Vector2(900f, 16f);
+            _tideBarFill = CreateImage("TideBarFill", _tideBarBackdrop.rectTransform, builtinSprite, new Color(0.72f, 0.8f, 0.88f, 0.98f));
+            _tideBarFill.type = Image.Type.Filled;
+            _tideBarFill.fillMethod = Image.FillMethod.Horizontal;
+            _tideBarFill.fillAmount = 0f;
+            _tideBarFill.rectTransform.anchorMin = Vector2.zero;
+            _tideBarFill.rectTransform.anchorMax = Vector2.one;
+            _tideBarFill.rectTransform.offsetMin = new Vector2(2f, 2f);
+            _tideBarFill.rectTransform.offsetMax = new Vector2(-2f, -2f);
+        }
+
+        private void UpdateTideBar()
+        {
+            if (_tideBarFill == null || _zoneRuntime?.CurrentZoneDefinition == null)
+            {
+                return;
+            }
+
+            _tideBarFill.fillAmount = _tideController?.Progress ?? 0f;
+            EnsureTideMarkers();
+
+            var zoneDefinition = _zoneRuntime.CurrentZoneDefinition;
+            for (var i = 0; i < _tideMarkers.Count && i < zoneDefinition.ExtractionPoints.Count; i++)
+            {
+                var point = zoneDefinition.ExtractionPoints[i];
+                var isClosed = _zoneRuntime.IsExtractionOpen(point.PointId) == false;
+                _tideMarkers[i].color = isClosed
+                    ? new Color(0.24f, 0.27f, 0.31f, 1f)
+                    : new Color(1f, 0.94f, 0.76f, 1f);
+            }
+        }
+
+        private void EnsureTideMarkers()
+        {
+            if (_tideBarBackdrop == null || _zoneRuntime?.CurrentZoneDefinition == null || _tideController == null)
+            {
+                return;
+            }
+
+            var expectedCount = _zoneRuntime.CurrentZoneDefinition.ExtractionPoints.Count;
+            if (_tideMarkers.Count == expectedCount)
+            {
+                return;
+            }
+
+            var markerRoot = _tideBarBackdrop.rectTransform.Find("TideMarkers") as RectTransform;
+            if (markerRoot != null)
+            {
+                for (var i = markerRoot.childCount - 1; i >= 0; i--)
+                {
+                    Destroy(markerRoot.GetChild(i).gameObject);
+                }
+            }
+            else
+            {
+                markerRoot = CreateRect("TideMarkers", _tideBarBackdrop.rectTransform, Vector2.zero, Vector2.one, Vector2.zero, Vector2.zero);
+                markerRoot.offsetMin = Vector2.zero;
+                markerRoot.offsetMax = Vector2.zero;
+            }
+
+            _tideMarkers.Clear();
+            var width = _tideBarBackdrop.rectTransform.rect.width;
+            for (var i = 0; i < expectedCount; i++)
+            {
+                var point = _zoneRuntime.CurrentZoneDefinition.ExtractionPoints[i];
+                var closePercent = _tideController.GetClosePercent(point);
+                var marker = CreateImage($"Marker_{point.PointId}", markerRoot ?? _tideBarBackdrop.rectTransform, LoadBuiltinSprite("UI/Skin/UISprite.psd"), new Color(1f, 0.94f, 0.76f, 1f));
+                marker.rectTransform.anchorMin = new Vector2(0f, 0.5f);
+                marker.rectTransform.anchorMax = new Vector2(0f, 0.5f);
+                marker.rectTransform.pivot = new Vector2(0.5f, 0.5f);
+                marker.rectTransform.sizeDelta = new Vector2(6f, 22f);
+                marker.rectTransform.anchoredPosition = new Vector2(Mathf.Lerp(2f, width - 2f, closePercent), 0f);
+                _tideMarkers.Add(marker);
+            }
+        }
+
+        private void CacheTideMarkers()
+        {
+            _tideMarkers.Clear();
+            var markerRoot = transform.Find("TideBar/TideBarBackdrop/TideMarkers");
+            if (markerRoot == null)
+            {
+                return;
+            }
+
+            for (var i = 0; i < markerRoot.childCount; i++)
+            {
+                var image = markerRoot.GetChild(i).GetComponent<Image>();
+                if (image != null)
+                {
+                    _tideMarkers.Add(image);
+                }
+            }
         }
 
 #if UNITY_EDITOR

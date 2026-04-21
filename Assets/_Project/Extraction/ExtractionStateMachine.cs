@@ -11,12 +11,13 @@ namespace ExtractionWeight.Extraction
         {
             return from switch
             {
-                ExtractionPhaseState.Idle => to is ExtractionPhaseState.Initiation,
-                ExtractionPhaseState.Initiation => to is ExtractionPhaseState.Approach or ExtractionPhaseState.Hold or ExtractionPhaseState.Idle,
-                ExtractionPhaseState.Approach => to is ExtractionPhaseState.Hold or ExtractionPhaseState.Departure or ExtractionPhaseState.Idle,
-                ExtractionPhaseState.Hold => to is ExtractionPhaseState.Departure or ExtractionPhaseState.Idle,
+                ExtractionPhaseState.Idle => to is ExtractionPhaseState.Initiation or ExtractionPhaseState.Closed,
+                ExtractionPhaseState.Initiation => to is ExtractionPhaseState.Approach or ExtractionPhaseState.Hold or ExtractionPhaseState.Idle or ExtractionPhaseState.Closed,
+                ExtractionPhaseState.Approach => to is ExtractionPhaseState.Hold or ExtractionPhaseState.Departure or ExtractionPhaseState.Idle or ExtractionPhaseState.Closed,
+                ExtractionPhaseState.Hold => to is ExtractionPhaseState.Departure or ExtractionPhaseState.Idle or ExtractionPhaseState.Closed,
                 ExtractionPhaseState.Departure => to is ExtractionPhaseState.Completed,
                 ExtractionPhaseState.Completed => false,
+                ExtractionPhaseState.Closed => false,
                 _ => false,
             };
         }
